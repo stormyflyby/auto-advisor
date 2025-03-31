@@ -1,0 +1,2 @@
+3/30/25 4:00 PM to 5:30 PM - reviewed the SRS and SDD and assigned team roles
+3/31/25 11:45 to 12:30 PM - set up GitHub repository and briefly discussed some aspects of implementation
