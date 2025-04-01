@@ -1,3 +1,17 @@
-First, you'll need to download git to your device.
-Go to https://git-scm.com/downloads and download the appropriate version of git.
+Setting up git with your GitHub account:
 
+First, you'll need to download git to your device.
+Go to https://git-scm.com/downloads and download and install the appropriate version of git.
+Next, download and install GitHub CLI at https://cli.github.com.
+Open the command line.
+Type "gh auth login".
+Select the appropriate options for the prompts (GitHub.com, HTTPS, Y, Login with a web browser).
+Press enter to follow the link and enter the given code to authenticate your account.
+You're all set!
+
+
+Getting the project onto your device:
+
+Open the command line.
+Navigate to the directory where you want to clone a repository.
+Type the command "git clone [repository_url]"
