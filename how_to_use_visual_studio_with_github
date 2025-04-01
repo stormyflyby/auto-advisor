@@ -10,8 +10,24 @@ Press enter to follow the link and enter the given code to authenticate your acc
 You're all set!
 
 
+
 Getting the project onto your device:
 
 Open the command line.
 Navigate to the directory where you want to clone a repository.
-Type the command "git clone [repository_url]"
+Type the command "git clone [repository_url]" (https://github.com/stormyflyby/auto-advisor for main branch, branch-specific URL for other branches;
+  square brackets not to be included in command).
+A new directory will appear in your current directory. Open it up and work on the project!
+
+
+
+Passing changes back to GitHub:
+
+Open the command line.
+Navigate to the directory of the cloned repository.
+Type "git status" to see all the files that have been changed.
+For each changed file, type "git add ." (or "git add [file_name]" to only add specific files)
+Type "git commit -m "Your commit message here"" to send a commit to GitHub.
+To push the changes, type "git push origin [branch_name]".
+The changes should now be on GitHub.
+If you wish, you can delete the cloned repository from your device to more easily clone it again in the future.
