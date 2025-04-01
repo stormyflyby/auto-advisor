@@ -1,0 +1,17 @@
+C:\Users\Bryson Moses\Documents\AutoAdvisor\auto-advisor\Auto-Advisor\bin\Debug\net7.0-windows\Auto-Advisor.exe
+C:\Users\Bryson Moses\Documents\AutoAdvisor\auto-advisor\Auto-Advisor\bin\Debug\net7.0-windows\Auto-Advisor.deps.json
+C:\Users\Bryson Moses\Documents\AutoAdvisor\auto-advisor\Auto-Advisor\bin\Debug\net7.0-windows\Auto-Advisor.runtimeconfig.json
+C:\Users\Bryson Moses\Documents\AutoAdvisor\auto-advisor\Auto-Advisor\bin\Debug\net7.0-windows\Auto-Advisor.dll
+C:\Users\Bryson Moses\Documents\AutoAdvisor\auto-advisor\Auto-Advisor\bin\Debug\net7.0-windows\Auto-Advisor.pdb
+C:\Users\Bryson Moses\Documents\AutoAdvisor\auto-advisor\Auto-Advisor\obj\Debug\net7.0-windows\Auto_Advisor.Form1.resources
+C:\Users\Bryson Moses\Documents\AutoAdvisor\auto-advisor\Auto-Advisor\obj\Debug\net7.0-windows\Auto-Advisor.csproj.GenerateResource.cache
+C:\Users\Bryson Moses\Documents\AutoAdvisor\auto-advisor\Auto-Advisor\obj\Debug\net7.0-windows\Auto-Advisor.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Bryson Moses\Documents\AutoAdvisor\auto-advisor\Auto-Advisor\obj\Debug\net7.0-windows\Auto-Advisor.AssemblyInfoInputs.cache
+C:\Users\Bryson Moses\Documents\AutoAdvisor\auto-advisor\Auto-Advisor\obj\Debug\net7.0-windows\Auto-Advisor.AssemblyInfo.cs
+C:\Users\Bryson Moses\Documents\AutoAdvisor\auto-advisor\Auto-Advisor\obj\Debug\net7.0-windows\Auto-Advisor.csproj.CoreCompileInputs.cache
+C:\Users\Bryson Moses\Documents\AutoAdvisor\auto-advisor\Auto-Advisor\obj\Debug\net7.0-windows\Auto-Advisor.sourcelink.json
+C:\Users\Bryson Moses\Documents\AutoAdvisor\auto-advisor\Auto-Advisor\obj\Debug\net7.0-windows\Auto-Advisor.dll
+C:\Users\Bryson Moses\Documents\AutoAdvisor\auto-advisor\Auto-Advisor\obj\Debug\net7.0-windows\refint\Auto-Advisor.dll
+C:\Users\Bryson Moses\Documents\AutoAdvisor\auto-advisor\Auto-Advisor\obj\Debug\net7.0-windows\Auto-Advisor.pdb
+C:\Users\Bryson Moses\Documents\AutoAdvisor\auto-advisor\Auto-Advisor\obj\Debug\net7.0-windows\Auto-Advisor.genruntimeconfig.cache
+C:\Users\Bryson Moses\Documents\AutoAdvisor\auto-advisor\Auto-Advisor\obj\Debug\net7.0-windows\ref\Auto-Advisor.dll
