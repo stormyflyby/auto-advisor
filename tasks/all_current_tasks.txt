@@ -1,1 +1,2 @@
-
+Bryson - create the starting screen
+Cameron - look into GitHub stuff, including merge conflicts
