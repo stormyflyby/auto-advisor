@@ -15,3 +15,20 @@ C:\Users\Bryson Moses\Documents\AutoAdvisor\auto-advisor\Auto-Advisor\obj\Debug\
 C:\Users\Bryson Moses\Documents\AutoAdvisor\auto-advisor\Auto-Advisor\obj\Debug\net7.0-windows\Auto-Advisor.pdb
 C:\Users\Bryson Moses\Documents\AutoAdvisor\auto-advisor\Auto-Advisor\obj\Debug\net7.0-windows\Auto-Advisor.genruntimeconfig.cache
 C:\Users\Bryson Moses\Documents\AutoAdvisor\auto-advisor\Auto-Advisor\obj\Debug\net7.0-windows\ref\Auto-Advisor.dll
+C:\Course Files\Junior Year Semester 2\Software Engineering I\Coursework\auto-advisor\Auto-Advisor\bin\Debug\net7.0-windows\Auto-Advisor.exe
+C:\Course Files\Junior Year Semester 2\Software Engineering I\Coursework\auto-advisor\Auto-Advisor\bin\Debug\net7.0-windows\Auto-Advisor.deps.json
+C:\Course Files\Junior Year Semester 2\Software Engineering I\Coursework\auto-advisor\Auto-Advisor\bin\Debug\net7.0-windows\Auto-Advisor.runtimeconfig.json
+C:\Course Files\Junior Year Semester 2\Software Engineering I\Coursework\auto-advisor\Auto-Advisor\bin\Debug\net7.0-windows\Auto-Advisor.dll
+C:\Course Files\Junior Year Semester 2\Software Engineering I\Coursework\auto-advisor\Auto-Advisor\bin\Debug\net7.0-windows\Auto-Advisor.pdb
+C:\Course Files\Junior Year Semester 2\Software Engineering I\Coursework\auto-advisor\Auto-Advisor\obj\Debug\net7.0-windows\Auto-Advisor.csproj.AssemblyReference.cache
+C:\Course Files\Junior Year Semester 2\Software Engineering I\Coursework\auto-advisor\Auto-Advisor\obj\Debug\net7.0-windows\Auto_Advisor.Form1.resources
+C:\Course Files\Junior Year Semester 2\Software Engineering I\Coursework\auto-advisor\Auto-Advisor\obj\Debug\net7.0-windows\Auto-Advisor.csproj.GenerateResource.cache
+C:\Course Files\Junior Year Semester 2\Software Engineering I\Coursework\auto-advisor\Auto-Advisor\obj\Debug\net7.0-windows\Auto-Advisor.GeneratedMSBuildEditorConfig.editorconfig
+C:\Course Files\Junior Year Semester 2\Software Engineering I\Coursework\auto-advisor\Auto-Advisor\obj\Debug\net7.0-windows\Auto-Advisor.AssemblyInfoInputs.cache
+C:\Course Files\Junior Year Semester 2\Software Engineering I\Coursework\auto-advisor\Auto-Advisor\obj\Debug\net7.0-windows\Auto-Advisor.AssemblyInfo.cs
+C:\Course Files\Junior Year Semester 2\Software Engineering I\Coursework\auto-advisor\Auto-Advisor\obj\Debug\net7.0-windows\Auto-Advisor.csproj.CoreCompileInputs.cache
+C:\Course Files\Junior Year Semester 2\Software Engineering I\Coursework\auto-advisor\Auto-Advisor\obj\Debug\net7.0-windows\Auto-Advisor.dll
+C:\Course Files\Junior Year Semester 2\Software Engineering I\Coursework\auto-advisor\Auto-Advisor\obj\Debug\net7.0-windows\refint\Auto-Advisor.dll
+C:\Course Files\Junior Year Semester 2\Software Engineering I\Coursework\auto-advisor\Auto-Advisor\obj\Debug\net7.0-windows\Auto-Advisor.pdb
+C:\Course Files\Junior Year Semester 2\Software Engineering I\Coursework\auto-advisor\Auto-Advisor\obj\Debug\net7.0-windows\Auto-Advisor.genruntimeconfig.cache
+C:\Course Files\Junior Year Semester 2\Software Engineering I\Coursework\auto-advisor\Auto-Advisor\obj\Debug\net7.0-windows\ref\Auto-Advisor.dll

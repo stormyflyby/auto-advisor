@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Bryson Moses\\Documents\\AutoAdvisor\\auto-advisor\\Auto-Advisor\\Auto-Advisor.csproj": {}
+    "C:\\Course Files\\Junior Year Semester 2\\Software Engineering I\\Coursework\\auto-advisor\\Auto-Advisor\\Auto-Advisor.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Bryson Moses\\Documents\\AutoAdvisor\\auto-advisor\\Auto-Advisor\\Auto-Advisor.csproj": {
+    "C:\\Course Files\\Junior Year Semester 2\\Software Engineering I\\Coursework\\auto-advisor\\Auto-Advisor\\Auto-Advisor.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Bryson Moses\\Documents\\AutoAdvisor\\auto-advisor\\Auto-Advisor\\Auto-Advisor.csproj",
+        "projectUniqueName": "C:\\Course Files\\Junior Year Semester 2\\Software Engineering I\\Coursework\\auto-advisor\\Auto-Advisor\\Auto-Advisor.csproj",
         "projectName": "Auto-Advisor",
-        "projectPath": "C:\\Users\\Bryson Moses\\Documents\\AutoAdvisor\\auto-advisor\\Auto-Advisor\\Auto-Advisor.csproj",
-        "packagesPath": "C:\\Users\\Bryson Moses\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Bryson Moses\\Documents\\AutoAdvisor\\auto-advisor\\Auto-Advisor\\obj\\",
+        "projectPath": "C:\\Course Files\\Junior Year Semester 2\\Software Engineering I\\Coursework\\auto-advisor\\Auto-Advisor\\Auto-Advisor.csproj",
+        "packagesPath": "C:\\Users\\montg\\.nuget\\packages\\",
+        "outputPath": "C:\\Course Files\\Junior Year Semester 2\\Software Engineering I\\Coursework\\auto-advisor\\Auto-Advisor\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Bryson Moses\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\montg\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -26,7 +22,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -39,13 +34,7 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
-        },
-        "SdkAnalysisLevel": "9.0.100"
+        }
       },
       "frameworks": {
         "net7.0-windows7.0": {
@@ -69,7 +58,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
         }
       }
     }
