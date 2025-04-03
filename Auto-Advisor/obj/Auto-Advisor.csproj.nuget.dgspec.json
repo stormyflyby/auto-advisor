@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\justi\\OneDrive\\Documents\\SPRING 2025\\Software Engineering\\auto-advisor\\Auto-Advisor\\Auto-Advisor.csproj": {}
+    "C:\\Users\\Bryson Moses\\Documents\\auto\\auto-advisor\\Auto-Advisor\\Auto-Advisor.csproj": {}
   },
   "projects": {
-    "C:\\Users\\justi\\OneDrive\\Documents\\SPRING 2025\\Software Engineering\\auto-advisor\\Auto-Advisor\\Auto-Advisor.csproj": {
+    "C:\\Users\\Bryson Moses\\Documents\\auto\\auto-advisor\\Auto-Advisor\\Auto-Advisor.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\justi\\OneDrive\\Documents\\SPRING 2025\\Software Engineering\\auto-advisor\\Auto-Advisor\\Auto-Advisor.csproj",
+        "projectUniqueName": "C:\\Users\\Bryson Moses\\Documents\\auto\\auto-advisor\\Auto-Advisor\\Auto-Advisor.csproj",
         "projectName": "Auto-Advisor",
-        "projectPath": "C:\\Users\\justi\\OneDrive\\Documents\\SPRING 2025\\Software Engineering\\auto-advisor\\Auto-Advisor\\Auto-Advisor.csproj",
-        "packagesPath": "C:\\Users\\justi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\justi\\OneDrive\\Documents\\SPRING 2025\\Software Engineering\\auto-advisor\\Auto-Advisor\\obj\\",
+        "projectPath": "C:\\Users\\Bryson Moses\\Documents\\auto\\auto-advisor\\Auto-Advisor\\Auto-Advisor.csproj",
+        "packagesPath": "C:\\Users\\Bryson Moses\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Bryson Moses\\Documents\\auto\\auto-advisor\\Auto-Advisor\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\justi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Bryson Moses\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,6 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
