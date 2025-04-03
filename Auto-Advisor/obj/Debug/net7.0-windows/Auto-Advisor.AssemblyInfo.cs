@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Auto-Advisor")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+22c9db75798b9eb317cfc1a85aa72164794d382e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+71d254cb44735522acfae607a7ee2876e7b7608a")]
 [assembly: System.Reflection.AssemblyProductAttribute("Auto-Advisor")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Auto-Advisor")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

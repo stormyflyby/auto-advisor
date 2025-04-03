@@ -1,13 +1,13 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Bryson Moses\\Documents\\AutoAdvisor\\auto-advisor\\Auto-Advisor\\",
+  "WorkspaceRootPath": "C:\\Users\\justi\\OneDrive\\Documents\\SPRING 2025\\Software Engineering\\auto-advisor\\Auto-Advisor\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4E351177-5420-4D54-AD11-FB2FAFC76AE7}|Auto-Advisor.csproj|c:\\users\\bryson moses\\documents\\autoadvisor\\auto-advisor\\auto-advisor\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{4E351177-5420-4D54-AD11-FB2FAFC76AE7}|Auto-Advisor.csproj|c:\\users\\justi\\onedrive\\documents\\spring 2025\\software engineering\\auto-advisor\\auto-advisor\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{4E351177-5420-4D54-AD11-FB2FAFC76AE7}|Auto-Advisor.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4E351177-5420-4D54-AD11-FB2FAFC76AE7}|Auto-Advisor.csproj|c:\\users\\bryson moses\\documents\\autoadvisor\\auto-advisor\\auto-advisor\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{4E351177-5420-4D54-AD11-FB2FAFC76AE7}|Auto-Advisor.csproj|c:\\users\\justi\\onedrive\\documents\\spring 2025\\software engineering\\auto-advisor\\auto-advisor\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4E351177-5420-4D54-AD11-FB2FAFC76AE7}|Auto-Advisor.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -24,9 +24,9 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Form1.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Bryson Moses\\Documents\\AutoAdvisor\\auto-advisor\\Auto-Advisor\\Form1.cs",
+              "DocumentMoniker": "C:\\Users\\justi\\OneDrive\\Documents\\SPRING 2025\\Software Engineering\\auto-advisor\\Auto-Advisor\\Form1.cs",
               "RelativeDocumentMoniker": "Form1.cs",
-              "ToolTip": "C:\\Users\\Bryson Moses\\Documents\\AutoAdvisor\\auto-advisor\\Auto-Advisor\\Form1.cs [Design]*",
+              "ToolTip": "C:\\Users\\justi\\OneDrive\\Documents\\SPRING 2025\\Software Engineering\\auto-advisor\\Auto-Advisor\\Form1.cs [Design]*",
               "RelativeToolTip": "Form1.cs [Design]*",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-01T05:20:09.352Z",
@@ -37,11 +37,11 @@
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "Form1.cs",
-              "DocumentMoniker": "C:\\Users\\Bryson Moses\\Documents\\AutoAdvisor\\auto-advisor\\Auto-Advisor\\Form1.cs",
+              "DocumentMoniker": "C:\\Users\\justi\\OneDrive\\Documents\\SPRING 2025\\Software Engineering\\auto-advisor\\Auto-Advisor\\Form1.cs",
               "RelativeDocumentMoniker": "Form1.cs",
-              "ToolTip": "C:\\Users\\Bryson Moses\\Documents\\AutoAdvisor\\auto-advisor\\Auto-Advisor\\Form1.cs*",
+              "ToolTip": "C:\\Users\\justi\\OneDrive\\Documents\\SPRING 2025\\Software Engineering\\auto-advisor\\Auto-Advisor\\Form1.cs*",
               "RelativeToolTip": "Form1.cs*",
-              "ViewState": "AgIAADoAAAAAAAAAAADgv00AAAAUAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-01T05:23:55.182Z",
               "EditorCaption": ""
