@@ -23,6 +23,9 @@ A new directory will appear in your current directory. Open it up and work on th
 
 Passing changes back to GitHub:
 
+**IMPORTANT** Delete the .vs, obj, and bin folders from your cloned repository before sending changes.
+If these folders were sent to GitHub by you or someone else, delete them.
+
 Open the command line.
 Navigate to the directory of the cloned repository.
 Type "git status" to see all the files that have been changed.
