@@ -52,8 +52,24 @@
             MinorBox2 = new ComboBox();
             textBox1 = new TextBox();
             textBox2 = new TextBox();
+            mainScreenPanel = new Panel();
+            label13 = new Label();
+            label12 = new Label();
+            tableLayoutPanel1 = new TableLayoutPanel();
+            tableLayoutPanel2 = new TableLayoutPanel();
+            listBox4 = new ListBox();
+            listBox3 = new ListBox();
+            listBox2 = new ListBox();
+            listBox1 = new ListBox();
+            label10 = new Label();
+            label11 = new Label();
+            button2 = new Button();
+            button1 = new Button();
             tableLayoutPanel3.SuspendLayout();
             tableLayoutPanel4.SuspendLayout();
+            mainScreenPanel.SuspendLayout();
+            tableLayoutPanel1.SuspendLayout();
+            tableLayoutPanel2.SuspendLayout();
             SuspendLayout();
             // 
             // label1
@@ -73,7 +89,7 @@
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
             label2.ForeColor = Color.White;
-            label2.Location = new Point(316, 267);
+            label2.Location = new Point(316, 231);
             label2.Margin = new Padding(4, 0, 4, 0);
             label2.Name = "label2";
             label2.Size = new Size(309, 41);
@@ -85,7 +101,7 @@
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
             label3.ForeColor = Color.White;
-            label3.Location = new Point(316, 338);
+            label3.Location = new Point(316, 302);
             label3.Margin = new Padding(4, 0, 4, 0);
             label3.Name = "label3";
             label3.Size = new Size(303, 41);
@@ -98,7 +114,7 @@
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
             label4.ForeColor = Color.White;
-            label4.Location = new Point(316, 412);
+            label4.Location = new Point(316, 376);
             label4.Margin = new Padding(4, 0, 4, 0);
             label4.Name = "label4";
             label4.Size = new Size(416, 41);
@@ -110,7 +126,7 @@
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
             label5.ForeColor = Color.White;
-            label5.Location = new Point(316, 483);
+            label5.Location = new Point(316, 447);
             label5.Margin = new Padding(4, 0, 4, 0);
             label5.Name = "label5";
             label5.Size = new Size(558, 41);
@@ -122,7 +138,7 @@
             label6.AutoSize = true;
             label6.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
             label6.ForeColor = Color.White;
-            label6.Location = new Point(316, 555);
+            label6.Location = new Point(316, 519);
             label6.Margin = new Padding(4, 0, 4, 0);
             label6.Name = "label6";
             label6.Size = new Size(499, 41);
@@ -134,7 +150,7 @@
             label7.AutoSize = true;
             label7.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
             label7.ForeColor = Color.White;
-            label7.Location = new Point(316, 833);
+            label7.Location = new Point(316, 797);
             label7.Margin = new Padding(4, 0, 4, 0);
             label7.Name = "label7";
             label7.Size = new Size(541, 41);
@@ -168,7 +184,7 @@
             comboBox3.DropDownStyle = ComboBoxStyle.DropDownList;
             comboBox3.FormattingEnabled = true;
             comboBox3.Items.AddRange(new object[] { "No", "Yes" });
-            comboBox3.Location = new Point(867, 412);
+            comboBox3.Location = new Point(866, 385);
             comboBox3.Margin = new Padding(4, 5, 4, 5);
             comboBox3.Name = "comboBox3";
             comboBox3.Size = new Size(171, 33);
@@ -179,7 +195,7 @@
             comboBox4.DropDownStyle = ComboBoxStyle.DropDownList;
             comboBox4.FormattingEnabled = true;
             comboBox4.Items.AddRange(new object[] { "1", "2", "3", "4", "5", "6", "7", "8" });
-            comboBox4.Location = new Point(867, 483);
+            comboBox4.Location = new Point(867, 456);
             comboBox4.Margin = new Padding(4, 5, 4, 5);
             comboBox4.Name = "comboBox4";
             comboBox4.Size = new Size(171, 33);
@@ -191,7 +207,7 @@
             label8.BackColor = Color.Transparent;
             label8.Font = new Font("Segoe UI", 8F, FontStyle.Regular, GraphicsUnit.Point);
             label8.ForeColor = Color.White;
-            label8.Location = new Point(351, 602);
+            label8.Location = new Point(351, 566);
             label8.Margin = new Padding(4, 0, 4, 0);
             label8.Name = "label8";
             label8.Size = new Size(312, 63);
@@ -205,7 +221,7 @@
             label9.BackColor = Color.Transparent;
             label9.Font = new Font("Segoe UI", 8F, FontStyle.Regular, GraphicsUnit.Point);
             label9.ForeColor = Color.White;
-            label9.Location = new Point(351, 895);
+            label9.Location = new Point(351, 859);
             label9.Margin = new Padding(4, 0, 4, 0);
             label9.Name = "label9";
             label9.Size = new Size(312, 63);
@@ -214,7 +230,7 @@
             // 
             // button3
             // 
-            button3.Location = new Point(1050, 1200);
+            button3.Location = new Point(794, 1057);
             button3.Margin = new Padding(4, 5, 4, 5);
             button3.Name = "button3";
             button3.Size = new Size(150, 38);
@@ -224,7 +240,7 @@
             // 
             // button4
             // 
-            button4.Location = new Point(1240, 1200);
+            button4.Location = new Point(984, 1058);
             button4.Margin = new Padding(4, 5, 4, 5);
             button4.Name = "button4";
             button4.Size = new Size(150, 38);
@@ -234,13 +250,14 @@
             // 
             // button5
             // 
-            button5.Location = new Point(1423, 1200);
+            button5.Location = new Point(1167, 1057);
             button5.Margin = new Padding(4, 5, 4, 5);
             button5.Name = "button5";
             button5.Size = new Size(104, 38);
             button5.TabIndex = 20;
             button5.Text = "Continue";
             button5.UseVisualStyleBackColor = true;
+            button5.Click += button5_Click;
             // 
             // tableLayoutPanel3
             // 
@@ -249,7 +266,7 @@
             tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
             tableLayoutPanel3.Controls.Add(MajorList2, 1, 0);
             tableLayoutPanel3.Controls.Add(MajorList, 0, 0);
-            tableLayoutPanel3.Location = new Point(849, 267);
+            tableLayoutPanel3.Location = new Point(849, 231);
             tableLayoutPanel3.Margin = new Padding(4, 5, 4, 5);
             tableLayoutPanel3.Name = "tableLayoutPanel3";
             tableLayoutPanel3.RowCount = 1;
@@ -271,7 +288,7 @@
             // 
             // MajorButton
             // 
-            MajorButton.Location = new Point(739, 278);
+            MajorButton.Location = new Point(739, 235);
             MajorButton.Margin = new Padding(4, 5, 4, 5);
             MajorButton.Name = "MajorButton";
             MajorButton.Size = new Size(106, 38);
@@ -282,7 +299,7 @@
             // 
             // button6
             // 
-            button6.Location = new Point(739, 347);
+            button6.Location = new Point(739, 314);
             button6.Margin = new Padding(4, 5, 4, 5);
             button6.Name = "button6";
             button6.Size = new Size(106, 38);
@@ -298,7 +315,7 @@
             tableLayoutPanel4.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
             tableLayoutPanel4.Controls.Add(MinorBox2, 1, 0);
             tableLayoutPanel4.Controls.Add(MinorBox, 0, 0);
-            tableLayoutPanel4.Location = new Point(849, 347);
+            tableLayoutPanel4.Location = new Point(849, 311);
             tableLayoutPanel4.Margin = new Padding(4, 5, 4, 5);
             tableLayoutPanel4.Name = "tableLayoutPanel4";
             tableLayoutPanel4.RowCount = 1;
@@ -320,7 +337,7 @@
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(849, 565);
+            textBox1.Location = new Point(849, 529);
             textBox1.Multiline = true;
             textBox1.Name = "textBox1";
             textBox1.ScrollBars = ScrollBars.Vertical;
@@ -329,12 +346,179 @@
             // 
             // textBox2
             // 
-            textBox2.Location = new Point(849, 844);
+            textBox2.Location = new Point(849, 808);
             textBox2.Multiline = true;
             textBox2.Name = "textBox2";
             textBox2.ScrollBars = ScrollBars.Vertical;
             textBox2.Size = new Size(299, 194);
             textBox2.TabIndex = 25;
+            // 
+            // mainScreenPanel
+            // 
+            mainScreenPanel.Controls.Add(label13);
+            mainScreenPanel.Controls.Add(label12);
+            mainScreenPanel.Controls.Add(tableLayoutPanel1);
+            mainScreenPanel.Controls.Add(button1);
+            mainScreenPanel.Location = new Point(1, 1);
+            mainScreenPanel.Name = "mainScreenPanel";
+            mainScreenPanel.Size = new Size(1922, 1141);
+            mainScreenPanel.TabIndex = 26;
+            // 
+            // label13
+            // 
+            label13.BackColor = SystemColors.ControlLight;
+            label13.Location = new Point(1498, -6);
+            label13.MaximumSize = new Size(250, 2500);
+            label13.Name = "label13";
+            label13.Size = new Size(3, 1147);
+            label13.TabIndex = 4;
+            label13.Text = " ";
+            // 
+            // label12
+            // 
+            label12.AutoSize = true;
+            label12.Location = new Point(602, 407);
+            label12.Name = "label12";
+            label12.Size = new Size(132, 25);
+            label12.TabIndex = 2;
+            label12.Text = "Stuff goes here";
+            // 
+            // tableLayoutPanel1
+            // 
+            tableLayoutPanel1.ColumnCount = 1;
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle());
+            tableLayoutPanel1.Controls.Add(tableLayoutPanel2, 0, 4);
+            tableLayoutPanel1.Controls.Add(listBox2, 0, 3);
+            tableLayoutPanel1.Controls.Add(listBox1, 0, 1);
+            tableLayoutPanel1.Controls.Add(label10, 0, 0);
+            tableLayoutPanel1.Controls.Add(label11, 0, 2);
+            tableLayoutPanel1.Controls.Add(button2, 0, 5);
+            tableLayoutPanel1.Location = new Point(1514, 12);
+            tableLayoutPanel1.Name = "tableLayoutPanel1";
+            tableLayoutPanel1.RowCount = 7;
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 4.410441F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 8.370837F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 4.320432F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 7.830783F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 22.50225F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 6.840684F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 46.2646255F));
+            tableLayoutPanel1.Size = new Size(401, 1111);
+            tableLayoutPanel1.TabIndex = 1;
+            // 
+            // tableLayoutPanel2
+            // 
+            tableLayoutPanel2.Anchor = AnchorStyles.None;
+            tableLayoutPanel2.ColumnCount = 2;
+            tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
+            tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 176F));
+            tableLayoutPanel2.Controls.Add(listBox4, 1, 0);
+            tableLayoutPanel2.Controls.Add(listBox3, 0, 0);
+            tableLayoutPanel2.Location = new Point(16, 306);
+            tableLayoutPanel2.Name = "tableLayoutPanel2";
+            tableLayoutPanel2.RightToLeft = RightToLeft.No;
+            tableLayoutPanel2.RowCount = 1;
+            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
+            tableLayoutPanel2.Size = new Size(368, 182);
+            tableLayoutPanel2.TabIndex = 5;
+            // 
+            // listBox4
+            // 
+            listBox4.Anchor = AnchorStyles.Left;
+            listBox4.BackColor = SystemColors.ControlDarkDark;
+            listBox4.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
+            listBox4.FormattingEnabled = true;
+            listBox4.ItemHeight = 30;
+            listBox4.Items.AddRange(new object[] { "0", "0", "0", "0" });
+            listBox4.Location = new Point(195, 29);
+            listBox4.Name = "listBox4";
+            listBox4.Size = new Size(170, 124);
+            listBox4.TabIndex = 5;
+            listBox4.SelectedIndexChanged += listBox4_SelectedIndexChanged;
+            // 
+            // listBox3
+            // 
+            listBox3.Anchor = AnchorStyles.Left;
+            listBox3.BackColor = SystemColors.ControlDarkDark;
+            listBox3.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
+            listBox3.FormattingEnabled = true;
+            listBox3.ItemHeight = 30;
+            listBox3.Items.AddRange(new object[] { "Current semester:", "Total hours:", "Total needed", "Still need:" });
+            listBox3.Location = new Point(3, 29);
+            listBox3.Name = "listBox3";
+            listBox3.Size = new Size(186, 124);
+            listBox3.TabIndex = 4;
+            // 
+            // listBox2
+            // 
+            listBox2.Anchor = AnchorStyles.Top;
+            listBox2.BackColor = SystemColors.ControlDark;
+            listBox2.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
+            listBox2.FormattingEnabled = true;
+            listBox2.ItemHeight = 30;
+            listBox2.Items.AddRange(new object[] { "Minor 1", "Minor 2" });
+            listBox2.Location = new Point(73, 190);
+            listBox2.Name = "listBox2";
+            listBox2.Size = new Size(255, 64);
+            listBox2.TabIndex = 3;
+            // 
+            // listBox1
+            // 
+            listBox1.Anchor = AnchorStyles.Top;
+            listBox1.BackColor = SystemColors.ControlDark;
+            listBox1.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
+            listBox1.FormattingEnabled = true;
+            listBox1.ItemHeight = 30;
+            listBox1.Items.AddRange(new object[] { "Major 1", "Major 2" });
+            listBox1.Location = new Point(73, 51);
+            listBox1.Name = "listBox1";
+            listBox1.Size = new Size(255, 64);
+            listBox1.TabIndex = 2;
+            // 
+            // label10
+            // 
+            label10.Anchor = AnchorStyles.Top;
+            label10.AutoSize = true;
+            label10.Font = new Font("Segoe UI", 17F, FontStyle.Regular, GraphicsUnit.Point);
+            label10.Location = new Point(126, 0);
+            label10.Name = "label10";
+            label10.Size = new Size(149, 46);
+            label10.TabIndex = 0;
+            label10.Text = "Major(s):";
+            label10.TextAlign = ContentAlignment.MiddleCenter;
+            label10.Click += label10_Click;
+            // 
+            // label11
+            // 
+            label11.Anchor = AnchorStyles.Top;
+            label11.AutoSize = true;
+            label11.Font = new Font("Segoe UI", 17F, FontStyle.Regular, GraphicsUnit.Point);
+            label11.Location = new Point(125, 140);
+            label11.Name = "label11";
+            label11.Size = new Size(151, 46);
+            label11.TabIndex = 2;
+            label11.Text = "Minor(s):";
+            label11.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // button2
+            // 
+            button2.Anchor = AnchorStyles.None;
+            button2.Location = new Point(104, 528);
+            button2.Name = "button2";
+            button2.Size = new Size(192, 60);
+            button2.TabIndex = 6;
+            button2.Text = "Download data";
+            button2.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            button1.Location = new Point(26, 21);
+            button1.Name = "button1";
+            button1.Size = new Size(191, 36);
+            button1.TabIndex = 0;
+            button1.Text = "Back";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // Form1
             // 
@@ -342,7 +526,8 @@
             AutoScaleMode = AutoScaleMode.Font;
             AutoSize = true;
             BackColor = SystemColors.ControlDarkDark;
-            ClientSize = new Size(1924, 1050);
+            ClientSize = new Size(1924, 1138);
+            Controls.Add(mainScreenPanel);
             Controls.Add(textBox2);
             Controls.Add(textBox1);
             Controls.Add(tableLayoutPanel4);
@@ -369,6 +554,11 @@
             Text = "Form1";
             tableLayoutPanel3.ResumeLayout(false);
             tableLayoutPanel4.ResumeLayout(false);
+            mainScreenPanel.ResumeLayout(false);
+            mainScreenPanel.PerformLayout();
+            tableLayoutPanel1.ResumeLayout(false);
+            tableLayoutPanel1.PerformLayout();
+            tableLayoutPanel2.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -399,5 +589,18 @@
         private ComboBox MinorBox2;
         private TextBox textBox1;
         private TextBox textBox2;
+        private Panel mainScreenPanel;
+        private Button button1;
+        private TableLayoutPanel tableLayoutPanel1;
+        private Label label10;
+        private Label label11;
+        private ListBox listBox1;
+        private TableLayoutPanel tableLayoutPanel2;
+        private ListBox listBox3;
+        private ListBox listBox2;
+        private ListBox listBox4;
+        private Label label12;
+        private Button button2;
+        private Label label13;
     }
 }
