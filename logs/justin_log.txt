@@ -1,1 +1,2 @@
 Added scrollable text boxes to the start screen
+Prototyped UI for the main screen side bar
