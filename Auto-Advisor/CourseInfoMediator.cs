@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Numerics;
+using System.Runtime.InteropServices;
 using System.Text;
+using System.Text.Json;
 using System.Threading.Tasks;
 
 namespace Auto_Advisor
@@ -18,15 +20,28 @@ namespace Auto_Advisor
         private static readonly Lazy<CourseInfoMediator> instance = new Lazy<CourseInfoMediator>(() => new CourseInfoMediator());
         public static CourseInfoMediator Instance => instance.Value;
 
+        // ID for the Windows downloads folder
+        public static readonly Guid FOLDERID_Downloads = new("374DE290-123F-4565-9164-39C4925E467B");
+
+        // shell32.dll and ole32.dll contain necessary functions to access the Downloads folder
+        [DllImport("shell32.dll")]
+        public static extern int SHGetKnownFolderPath(
+            [MarshalAs(UnmanagedType.LPStruct)] Guid rfid,
+            uint dwFlags,
+            IntPtr hToken,
+            out IntPtr ppszPath);
+
+        [DllImport("ole32.dll")]
+        public static extern void CoTaskMemFree(IntPtr ptr);
+
         public string Major0 { get; set; }
         public string Major1 { get; set; }
+        public string Minor0 { get; set; }
+        public string Minor1 { get; set; }
         public bool Honors { get; set; }
         public short SemesterNumber { get; set; }
         public List<string> CompletedCourses { get; }
         public List<string> InProgressCourses { get; }
-
-
-
 
         private CourseInfoMediator()
         {
@@ -67,5 +82,40 @@ namespace Auto_Advisor
         {
             InProgressCourses.Clear();
         }
+
+        // Returns a JSON string representing this object
+        public string ToJson()
+        {
+            return JsonSerializer.Serialize(this);
+        }
+
+        // Sends a JSON file representing this objects to the user's downloads folder
+        public void SendToDownloads()
+        {
+            string jString = ToJson();
+            string sPath = "./auto_advisor_save.json";
+
+            File.WriteAllText(sPath, jString);
+
+            IntPtr outPath;
+            int hr = SHGetKnownFolderPath(FOLDERID_Downloads, 0, IntPtr.Zero, out outPath);
+            if (hr == 0) // S_OK
+            {
+                string downPath = Marshal.PtrToStringUni(outPath);
+                CoTaskMemFree(outPath);
+                downPath += "/auto_advisor_save.json";
+                if (File.Exists(downPath))
+                {
+                    File.Delete(downPath);
+                }
+
+                File.Move(sPath, downPath);
+            }
+            else
+            {
+                throw new Exception("Downloads folder not found");
+            }
+        }
     }
 }
+
