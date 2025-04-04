@@ -46,11 +46,7 @@
     1.5.1 Make Course Descriptions/Special Conditions
 
     1.5.2 Determine Prerequisites
-
     
-
-    
-
 2. Code Changes Complete
 Description: After making the prototype, we'll go through the program, making changes to improve UX and add additional
   functionality specified in the SDD
@@ -63,7 +59,6 @@ start 4/8, done 4/10
 Description: Each part of the program should be tested thoroughly before being integrated into the system.
   This means searching for edge cases in the output by testing a variety of inputs.
 Risks: Incomplete testing of parts could require substantial debugging and code changes.
-                                                                                                                  3.5.1 Create ChatGPT (from Scratch, to unit test, but remove all restrictions)
 
 4. System Tests Fully Complete
 Description: The software works fully as intended. We'll have system testing for the prototype
