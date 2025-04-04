@@ -1,0 +1,51 @@
+[
+  {
+    "code": "CoSC 1303",
+    "name": "Computer Science I",
+    "prerequisites": [],
+    "hours": 3,
+	"description": "An introduction to the field of computer science. Problem solving strategies, basic data structures, and an introduction to algorithms in the context of a modern programming language. A first course in programming with an emphasis on scientific and engineering applications."
+  },
+  {
+    "code": "COSC 2103",
+    "name": "Computer Science II",
+    "prerequisites": ["COSC 1303"],
+    "hours": 3,
+	"description": "A second semester study of computing principles. Abstract data types, object-oriented programming concepts, and introductory topics of graphical-user interfaces, unit testing, and file structures. Students hone their problem solving skills through a variety of programming assignments."
+  },
+  {
+    "code": "COSC 2203",
+    "name": "Data Structures",
+    "prerequisites": ["COSC 2103", "MATH 2003"],
+    "hours": 3,
+	"description": "A second-year course in data structures and algorithms. Topics include commonly used data structures, recursive algorithms, computational complexity, sorting and searching techniques, and an introduction to run-time storage management. Course assignments emphasize both program design and implementation."
+  },
+  {
+    "code": "COSC 3303",
+    "name": "Computer Architecture",
+    "prerequisites": ["COSC 2203"],
+    "hours": 3,
+	"description": "A study of design alternatives in computer architecture. Topics include machine organization, memory subsystem organization, interfacing concepts, issues that arise in managing communication with the processor, and alternative computer architectures. Assembly language is studied and used to implement a variety of small programs."
+  },
+  {
+    "code": "COSC 3403",
+    "name": "Software Engineering I",
+    "prerequisites": ["COSC 2103", "COSC 2203"],
+    "hours": 3,
+	"description": "The application of object-oriented analysis and design methods to develop commercial software. Emphasis is placed on software process maturity, software development life cycles, software documentation, and team projects."
+  },
+  {
+    "code": "COSC 3503",
+    "name": "Operating Systems",
+    "prerequisites": ["COSC 2103", "COSC 2203"],
+    "hours": 3,
+	"description": "An introduction to the principles and concepts of operating systems to include process management, memory management, and storage management. Emphasis is placed on learning the principles and then applying them in various systems programming exercises."
+  },
+  {
+    "code": "COSC 3523",
+    "name": "Analysis Of Algorithms",
+    "prerequisites": ["COSC 2203"],
+    "hours": 3,
+	"description": "The analysis, design, and implementation of popular algorithms methods. Topics include specific algorithms for searching, sorting, set operations, and graph-related operations. Emphasis on empirical and theoretical measures of the space and time efficiency."
+  }
+]
