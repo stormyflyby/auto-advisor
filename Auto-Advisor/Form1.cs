@@ -38,8 +38,32 @@ namespace Auto_Advisor
 
         }
 
+        // This is the continue button
         private void button5_Click(object sender, EventArgs e)
         {
+            // First, check that all boxes are populated (code needed)
+            
+            // Populate majors display
+            majorDisplay.Items.Clear();
+            majorDisplay.Items.Add(MajorList.SelectedItem);
+            if(MajorList2.SelectedItem != null)
+            {
+                majorDisplay.Items.Add(MajorList2.SelectedItem);
+            }
+            // Populate minors display
+            minorDisplay.Items.Clear();
+            if (MinorBox.SelectedItem != null && MinorBox.SelectedItem.ToString() != "None")
+            {
+                minorDisplay.Items.Add(MinorBox.SelectedItem);
+            }
+            if (MinorBox2.SelectedItem != null)
+            {
+                majorDisplay.Items.Add(MinorBox2.SelectedItem);
+            }
+            // Populate other sidebar data
+            listBox4.Items.Clear();
+            listBox4.Items.Add(comboBox4.SelectedItem); // Load current semester
+            
             mainScreenPanel.Visible = true;
         }
 
@@ -55,7 +79,7 @@ namespace Auto_Advisor
 
         private void listBox4_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            
         }
     }
 }
