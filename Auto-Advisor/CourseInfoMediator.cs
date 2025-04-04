@@ -20,6 +20,8 @@ namespace Auto_Advisor
 
         public string Major0 { get; set; }
         public string Major1 { get; set; }
+        public string Minor0 { get; set; }
+        public string Minor1 { get; set; }
         public bool Honors { get; set; }
         public short SemesterNumber { get; set; }
         public List<string> CompletedCourses { get; }
