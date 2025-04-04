@@ -27,11 +27,11 @@ namespace Auto_Advisor
                 row.Cells["Hours"].Value = course.hours;
 
                 // Setup 'Prerequisites' cell with a dropdown
-                var comboCell = new DataGridViewComboBoxCell();
-                comboCell.Items.Add(""); // Blank entry as the default
-                comboCell.Items.AddRange(course.prerequisites.Any() ? course.prerequisites.ToArray() : new[] { "None" }); // If course has prereqs, add them. Otherwise just show "None"
-                comboCell.Value = "";
-                row.Cells["Prerequisites"] = comboCell; // Assign comboCell to the prereqs column
+                //var comboCell = new DataGridViewComboBoxCell();
+                //comboCell.Items.Add(""); // Blank entry as the default
+                //comboCell.Items.AddRange(course.prerequisites.Any() ? course.prerequisites.ToArray() : new[] { "None" }); // If course has prereqs, add them. Otherwise just show "None"
+                //comboCell.Value = "";
+                //row.Cells["Prerequisites"] = comboCell; // Assign comboCell to the prereqs column
             }
         }
 
