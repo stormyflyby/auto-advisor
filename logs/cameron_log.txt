@@ -1,1 +1,2 @@
-3/31/25 8:50 to 9:45 - didn't work on the project during this whole period, but I did some research into GitHub and added multiple things to our repository, including instructions for using Git and files for recording tasks.
+3/31/25 8:50 PM to 9:45 PM - didn't work on the project during this whole period, but I did some research into GitHub and added multiple things to our repository, including instructions for using Git and files for recording tasks.
+4/3/25 8:45 PM to 9:15 PM - looked into moving save data to the user's Downloads folder.
