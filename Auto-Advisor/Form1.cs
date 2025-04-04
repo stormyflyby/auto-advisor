@@ -68,7 +68,12 @@ namespace Auto_Advisor
         // This is the continue button
         private void button5_Click(object sender, EventArgs e)
         {
-            // First, check that all boxes are populated (code needed)
+            // First, check that all boxes are populated
+            if (MajorList.SelectedItem == null || comboBox3.SelectedItem == null || comboBox4.SelectedItem == null)
+            {
+                MessageBox.Show("Fields missing", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
 
             // Populate majors display
             majorDisplay.Items.Clear();
