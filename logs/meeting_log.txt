@@ -3,3 +3,4 @@
 4/2/25 12:15 PM to 12:40 PM - discussed project milestones
 4/2/25 7:00 PM to 8:30 PM - discussed early implementation and wrote some code for the startup screen
 4/3/25 7:50 PM to 8:35 PM - Cameron and Justin; worked on save data implementation and main screen implementation
+4:4/25 11:45am to 12:40pm - Cameron, Justin and Bryson; worked on the save data implementation and made changes to how the data is shown on the registration screen
