@@ -1,3 +1,4 @@
 3/30/25 4:00 PM to 5:30 PM - reviewed the SRS and SDD and assigned team roles
-3/31/25 11:45 to 12:30 PM - set up GitHub repository and briefly discussed some aspects of implementation
-3/31/25 7:00 to 8:45 PM - discussed changes to UI from SDD, researched GitHub, discussed how to use Git on the command line, agreed on some tasks for before the next meeting
+3/31/25 11:45 AM to 12:30 PM - set up GitHub repository and briefly discussed some aspects of implementation
+4/2/25 12:15 PM to 12:40 PM - discussed project milestones
+4/2/25 7:00 PM to 8:30 PM - discussed early implementation and wrote some code for the startup screen
