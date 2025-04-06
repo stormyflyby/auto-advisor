@@ -1,4 +1,6 @@
+using System.Linq;
 using System.Text.Json;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace Auto_Advisor
 {
@@ -114,6 +116,22 @@ namespace Auto_Advisor
             }
         }
 
+        // Check that required course info is filled on first screen
+        private bool CheckCourseInfo()
+        {
+            if (MajorList.SelectedItem == null || comboBox3.SelectedItem == null || comboBox4.SelectedItem == null)
+            {
+                return false;
+            }
+            return true;
+        }
+
+        private void FieldsMissingError()
+        {
+            MessageBox.Show("Fields missing", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            return;
+        }
+
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
@@ -148,9 +166,9 @@ namespace Auto_Advisor
         private void button5_Click(object sender, EventArgs e)
         {
             // First, check that all boxes are populated
-            if (MajorList.SelectedItem == null || comboBox3.SelectedItem == null || comboBox4.SelectedItem == null)
+            if (!CheckCourseInfo())
             {
-                MessageBox.Show("Fields missing", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                FieldsMissingError();
                 return;
             }
 
@@ -226,6 +244,57 @@ namespace Auto_Advisor
         private void textBox3_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        // Download button - places a json file containing course data in the user's Downloads folder
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if (!CheckCourseInfo())
+            {
+                FieldsMissingError();
+                return;
+            }
+
+            CourseInfoMediator.Instance.Major0 = MajorList.Text;
+            CourseInfoMediator.Instance.Major1 = MajorList2.Text;
+            CourseInfoMediator.Instance.Minor0 = MinorBox.Text;
+            CourseInfoMediator.Instance.Minor1 = MinorBox2.Text;
+            CourseInfoMediator.Instance.Honors = comboBox3.SelectedItem == comboBox3.Items[1] ? true : false;
+            CourseInfoMediator.Instance.SemesterNumber = short.Parse(comboBox4.SelectedItem.ToString());
+
+            string tb1Txt = textBox1.Text;
+            string compCourseStr = new string(tb1Txt.Where(c => c != '\r').ToArray());
+            string[] compCourses = compCourseStr.Split('\n');
+
+            CourseInfoMediator.Instance.ClearCompletedCourses();
+            foreach (string s in compCourses)
+            {
+                CourseInfoMediator.Instance.AddCompletedCourse(s);
+            }
+
+            string tb2Txt = textBox2.Text;
+            string inPrCourseStr = new string(tb2Txt.Where(c => c != '\r').ToArray());
+            string[] inPrCourses = inPrCourseStr.Split('\n').Where(s => s.Length != 0).ToArray();
+
+            CourseInfoMediator.Instance.ClearInProgressCourses();
+            foreach (string s in inPrCourses)
+            {
+                CourseInfoMediator.Instance.AddInProgressCourse(s);
+            }
+
+            // Download save
+            CourseInfoMediator.Instance.SendToDownloads();
+
+            // Notify user of download
+            MessageBox.Show("A save file has been sent to your downloads folder.");
+        }
+
+        private void CourseListTestButton_Click(object sender, EventArgs e)
+        {
+            string txt = textBox1.Text;
+            string testtxt0 = new string(txt.Where(c => c != '\r').ToArray());
+            string testtxt1 = new string(testtxt0.Select(c => c == '\n' ? '.' : c).ToArray());
+            MessageBox.Show(testtxt1);
         }
     }
 

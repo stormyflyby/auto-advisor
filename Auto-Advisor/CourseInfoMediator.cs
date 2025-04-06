@@ -47,6 +47,8 @@ namespace Auto_Advisor
         {
             Major0 = string.Empty;
             Major1 = string.Empty;
+            Minor0 = string.Empty;
+            Minor1 = string.Empty;
             Honors = false;
             SemesterNumber = 0;
             CompletedCourses = new List<string>();
