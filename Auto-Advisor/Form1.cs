@@ -25,6 +25,85 @@ namespace Auto_Advisor
                 row.Cells["ClassCode"].Value = course.code;
                 row.Cells["ClassName"].Value = course.name;
                 row.Cells["Hours"].Value = course.hours;
+                row.Cells["Details"].Value = course.description;
+
+
+                // Setup 'Prerequisites' cell with a dropdown
+                //var comboCell = new DataGridViewComboBoxCell();
+                //comboCell.Items.Add(""); // Blank entry as the default
+                //comboCell.Items.AddRange(course.prerequisites.Any() ? course.prerequisites.ToArray() : new[] { "None" }); // If course has prereqs, add them. Otherwise just show "None"
+                //comboCell.Value = "";
+                //row.Cells["Prerequisites"] = comboCell; // Assign comboCell to the prereqs column
+            }
+        }
+
+        private void moreButtonCell(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LoadElectivesIntoGrid(string filePath)
+        {
+            string json = File.ReadAllText(filePath); // Read the file
+            var courses = JsonSerializer.Deserialize<List<DegreeCourse>>(json);
+            dataGridView2.Rows.Clear();
+
+            foreach (var course in courses)
+            {
+                // Store each course in a grid row
+                int rowIndexs = dataGridView2.Rows.Add();
+                var rows = dataGridView2.Rows[rowIndexs];
+                rows.Cells["ClassCode2"].Value = course.code;
+                rows.Cells["ClassName2"].Value = course.name;
+                rows.Cells["Hours2"].Value = course.hours;
+
+                // Setup 'Prerequisites' cell with a dropdown
+                //var comboCell = new DataGridViewComboBoxCell();
+                //comboCell.Items.Add(""); // Blank entry as the default
+                //comboCell.Items.AddRange(course.prerequisites.Any() ? course.prerequisites.ToArray() : new[] { "None" }); // If course has prereqs, add them. Otherwise just show "None"
+                //comboCell.Value = "";
+                //row.Cells["Prerequisites"] = comboCell; // Assign comboCell to the prereqs column
+            }
+        }
+
+        private void LoadGeneralEducationIntoGrid(string filePath)
+        {
+            string json = File.ReadAllText(filePath); // Read the file
+            var courses = JsonSerializer.Deserialize<List<DegreeCourse>>(json);
+            dataGridView5.Rows.Clear();
+
+            foreach (var course in courses)
+            {
+                // Store each course in a grid row
+                int rowIndexs = dataGridView5.Rows.Add();
+                var rows = dataGridView5.Rows[rowIndexs];
+                rows.Cells["ClassCode3"].Value = course.code;
+                rows.Cells["ClassName3"].Value = course.name;
+                rows.Cells["Hours3"].Value = course.hours;
+
+                // Setup 'Prerequisites' cell with a dropdown
+                //var comboCell = new DataGridViewComboBoxCell();
+                //comboCell.Items.Add(""); // Blank entry as the default
+                //comboCell.Items.AddRange(course.prerequisites.Any() ? course.prerequisites.ToArray() : new[] { "None" }); // If course has prereqs, add them. Otherwise just show "None"
+                //comboCell.Value = "";
+                //row.Cells["Prerequisites"] = comboCell; // Assign comboCell to the prereqs column
+            }
+        }
+
+        private void LoadTheologyIntoGrid(string filePath)
+        {
+            string json = File.ReadAllText(filePath); // Read the file
+            var courses = JsonSerializer.Deserialize<List<DegreeCourse>>(json);
+            dataGridView3.Rows.Clear();
+
+            foreach (var course in courses)
+            {
+                // Store each course in a grid row
+                int rowIndexs = dataGridView3.Rows.Add();
+                var rows = dataGridView3.Rows[rowIndexs];
+                rows.Cells["ClassCode4"].Value = course.code;
+                rows.Cells["ClassName4"].Value = course.name;
+                rows.Cells["Hours4"].Value = course.hours;
 
                 // Setup 'Prerequisites' cell with a dropdown
                 //var comboCell = new DataGridViewComboBoxCell();
@@ -98,6 +177,15 @@ namespace Auto_Advisor
             // Populate Computer Science major courses from JSON file (other majors will be added later)
             LoadCoursesIntoGrid("major_classes.json");
             mainScreenPanel.Visible = true;
+
+            LoadElectivesIntoGrid("Cognate.json");
+            mainScreenPanel.Visible = true;
+
+            LoadGeneralEducationIntoGrid("General_Education.json");
+            mainScreenPanel.Visible = true;
+
+            LoadTheologyIntoGrid("Theology_Courses.json");
+            mainScreenPanel.Visible = true;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -116,6 +204,26 @@ namespace Auto_Advisor
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void textBox74_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listBox3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
         {
 
         }

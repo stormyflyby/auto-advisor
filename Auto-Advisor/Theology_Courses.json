@@ -1,0 +1,26 @@
+[
+    {
+        "code": "BIBL 1033",
+        "name": "Biblical Literature",
+        "prerequisites": [],
+        "hours": 3,
+        "description": "This course surveys the content and theological message of biblical story. Special emphasis is placed on considering the biblical story of redemption as a unified and coherent narrative of God’s ongoing work within his kingdom. Understanding the Bible within historical, cultural, and literary settings is highlighted. Throughout the course the students will begin to develop skills in interpreting the Bible with care and wisdom as well as move toward finding and articulating their place within God’s story of redemption."
+    },
+    {
+        "code": "THEO 2043",
+        "name": "Biblical Theology for the Christian Life",
+        "prerequisites": [ "BIBL 1033" ],
+        "hours": 3,
+        "description": "An introduction to the relationship between Christian teaching and the Christian life.  This course focuses on the way in which the identity of God as Father, Son and Holy Spirit sharpens our understanding of the coherence of the Bible, the purpose for creation (and by extension humans), the meaning of salvation, the place of work, and the basis for ethics.  Special attention is given to sustained analysis of biblical texts, attending to the way in which the biblical witness integrates theology and ethics, faith and work, worship and discipleship. "
+    },
+    {
+        "name": "Biblical Engagement Electives",
+        "hours": 3,
+        "description": "Any Bible course numbered 2000-level or above."
+    },
+    {
+        "name": "Biblical or Theological Engagement",
+        "hours": 3,
+        "description": "2000-level or above BIBL, CCLT 3103 - Cultural Anthropology, CCLT 3203 - Religions Of The World, CCLT 4103 - Biblical & Strategic Paradigms for Missions, CMIN 3303 - Evangelism And Discipleship, CMIN 3403 - Ministry of Teaching, THEO 3063 - Christian Ethics, THEO 3103 - Christian Doctrine, THEO 3133 - The History of Christian Thought, THEO 3203 - Christian Apologetics, THEO 4941-4993 - Special Topics classes that engage Theology and specific disciplines."
+    }
+]
