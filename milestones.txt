@@ -76,4 +76,4 @@ Description: The software works fully as intended. We'll have system testing for
 Deliverable: The final software
 Success criteria: Our QA Manager fully approves all aspects of the program or believes the program works reasonably well given our time constraints
 Risks: We'll need to aim for fairly regular system tests to prevent large implementation problems.
-Date: done 4/11 (final due date)
+Date: Done 4/11 (final due date)
