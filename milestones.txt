@@ -16,7 +16,7 @@
 
   1.3 Main Screen
   Deliverable: Main Screen with all functions, including access to Course Description Screen
-  Success criteria: Everyting on the main menu except the More Details buttons (for the course details screen) work
+  Success criteria: Everything on the main menu except the More Details buttons (for the course details screen) work
   Risks: This screen is complicated. We'll need most of the data structures completed before we can test/implement it properly.
   Date: Start 4/3, done 4/8
 
