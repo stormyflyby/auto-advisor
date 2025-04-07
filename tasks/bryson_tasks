@@ -1,2 +1,4 @@
 make startup screen
 pull info from first screen onto second screen
+add courses into the remaining data grids and make those grids
+make it where recommended courses respond to the correct semester entered

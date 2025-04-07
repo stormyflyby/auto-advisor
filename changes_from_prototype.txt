@@ -1,0 +1,16 @@
+Removed functionality (planned for future updates):
+- Search feature
+- Filter feature
+- GPA display
+- Dynamic connection to LETU course databases
+- Access to myLETU accounts
+
+Added functionality:
+- An option for the user to select whether they are an honors student
+- A display of the user's total hours taken and still needed
+- A box at the top of the main page showing what classes are recommended to be taken in the selected semester
+
+Changed functionality:
+- User enters next semester # instead of academic rank
+- To declutter the interface, prerequisites are now only visible on the details page for each class instead of the main page
+- Classes are grouped by type (theology, cognate, etc.) instead of displayed all together
