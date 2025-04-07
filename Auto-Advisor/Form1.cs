@@ -95,7 +95,7 @@ namespace Auto_Advisor
             // Populate other sidebar data
             listBox4.Items.Clear();
             listBox4.Items.Add(comboBox4.SelectedItem); // Load current semester
-            
+
             // Populate Computer Science courses from JSON files (other majors will be added later)
             LoadCoursesIntoGrid("major_classes.json", dataGridMajors);
             LoadCoursesIntoGrid("Cognate.json", dataGridCognate);
@@ -124,7 +124,11 @@ namespace Auto_Advisor
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            if (e.ColumnIndex == 3)
+            {
+                string? classCode = dataGridMajors.Rows[e.RowIndex].Cells[0].Value.ToString();
+                MessageBox.Show($"Button clicked in row {e.RowIndex}, class: {classCode}");
+            }
         }
 
         private void textBox74_TextChanged(object sender, EventArgs e)
@@ -143,6 +147,11 @@ namespace Auto_Advisor
         }
 
         private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox5_TextChanged(object sender, EventArgs e)
         {
 
         }
