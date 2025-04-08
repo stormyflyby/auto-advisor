@@ -140,12 +140,24 @@ namespace Auto_Advisor
 
         }
 
+        // This currently only applies to the majors datagridview buttons, will be generalized later
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.ColumnIndex == 3)
             {
-                string? classCode = dataGridMajors.Rows[e.RowIndex].Cells[0].Value.ToString();
-                MessageBox.Show($"Button clicked in row {e.RowIndex}, class: {classCode}");
+                string? classCode = dataGridMajors.Rows[e.RowIndex].Cells[0].Value.ToString(); // Determine which class the user clicked
+                string json = File.ReadAllText("major_classes.json");
+                var courses = JsonSerializer.Deserialize<List<DegreeCourse>>(json);
+                foreach (var course in courses)
+                {
+                    if(course.code == classCode)
+                    {
+                        // Pass course details to form2 for display
+                        Form2 form2 = new Form2(course.code, course.name, course.prerequisites, course.hours, course.description);
+                        form2.Show();
+                        break;
+                    }
+                }
             }
         }
 
