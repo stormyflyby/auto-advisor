@@ -291,10 +291,7 @@ namespace Auto_Advisor
 
         private void CourseListTestButton_Click(object sender, EventArgs e)
         {
-            string txt = textBox1.Text;
-            string testtxt0 = new string(txt.Where(c => c != '\r').ToArray());
-            string testtxt1 = new string(testtxt0.Select(c => c == '\n' ? '.' : c).ToArray());
-            MessageBox.Show(testtxt1);
+
         }
     }
 
