@@ -40,8 +40,8 @@ namespace Auto_Advisor
         public string Minor1 { get; set; }
         public bool Honors { get; set; }
         public short SemesterNumber { get; set; }
-        public List<string> CompletedCourses { get; }
-        public List<string> InProgressCourses { get; }
+        public List<string> CompletedCourses { get; set; }
+        public List<string> InProgressCourses { get; set; }
 
         private CourseInfoMediator()
         {

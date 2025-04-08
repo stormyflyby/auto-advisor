@@ -161,7 +161,7 @@ namespace Auto_Advisor
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            Download();
         }
 
         private void textBox3_TextChanged(object sender, EventArgs e)
@@ -169,8 +169,13 @@ namespace Auto_Advisor
 
         }
 
-        // Download button - places a json file containing course data in the user's Downloads folder
         private void button3_Click(object sender, EventArgs e)
+        {
+            Download();
+        }
+
+        // Download button - places a json file containing course data in the user's Downloads folder
+        private void Download()
         {
             if (!CheckCourseInfo())
             {
@@ -213,6 +218,46 @@ namespace Auto_Advisor
         }
 
         private void textBox5_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        // Save button; display an open file dialog and populate input boxes if the file is save data
+        private void button4_Click(object sender, EventArgs e)
+        {
+            if (openSaveFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                try
+                {
+                    string jstring = File.ReadAllText(openSaveFileDialog.FileName);
+                    CourseInfoStructure? cis = JsonSerializer.Deserialize<CourseInfoStructure>(jstring);
+                    MajorList.Text = cis.Major0;
+                    MajorList2.Text = cis.Major1;
+                    MinorBox.Text = cis.Minor0;
+                    MinorBox2.Text = cis.Minor1;
+                    comboBox3.SelectedItem = cis.Honors ? comboBox3.Items[1] : comboBox3.Items[0];
+                    comboBox4.SelectedItem = comboBox4.Items[cis.SemesterNumber - 1];
+
+                    textBox1.Clear();
+                    foreach (string s in cis.CompletedCourses) {
+                        textBox1.Text += $"{s} \r\n";
+                    }
+
+                    textBox2.Clear();
+                    foreach (string s in cis.InProgressCourses)
+                    {
+                        textBox2.Text += $"{s} \r\n";
+                    }
+                }
+                catch
+                {
+                    MessageBox.Show("Error: Selected file is not save data.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+            }
+        }
+
+        private void openSaveFileDialog_FileOk(object sender, System.ComponentModel.CancelEventArgs e)
         {
 
         }
