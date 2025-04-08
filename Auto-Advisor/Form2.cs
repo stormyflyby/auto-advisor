@@ -15,13 +15,27 @@ namespace Auto_Advisor
         public Form2(string code, string name, List<String> prerequisites, int hours, string description)
         {
             InitializeComponent();
-            courseTitleLabel.Text = code + " - " + name;
+            if(code != null)
+            {
+                courseTitleLabel.Text = code + " - " + name;
+            }
+            else
+            {
+                courseTitleLabel.Text = name;
+            }
             courseTitleLabel.Left = (this.ClientSize.Width - courseTitleLabel.Width) / 2;
             descriptionLabel.Text = description;
             prereqsLabel.Text = "";
-            foreach(string prerequisite in prerequisites)
+            if(prerequisites != null)
             {
-                prereqsLabel.Text += prerequisite + "\n";
+                foreach (string prerequisite in prerequisites)
+                {
+                    prereqsLabel.Text += prerequisite + "\n";
+                }
+            }
+            else
+            {
+                prereqsLabel.Text = "Not applicable.";
             }
         }
 

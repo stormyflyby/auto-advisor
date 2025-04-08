@@ -175,18 +175,23 @@ namespace Auto_Advisor
         {
             if (e.ColumnIndex == 3)
             {
-                string? classCode = dataGridMajors.Rows[e.RowIndex].Cells[0].Value.ToString(); // Determine which class the user clicked
-                string json = File.ReadAllText("major_classes.json");
-                var courses = JsonConvert.DeserializeObject<List<DegreeCourse>>(json);
-                foreach (var course in courses)
+                displayCourseDetails(dataGridMajors, e.RowIndex, "major_classes.json");
+            }
+        }
+
+        private void displayCourseDetails(DataGridView grid, int rowIndex, string filePath)
+        {
+            string? className = grid.Rows[rowIndex].Cells[1].Value.ToString(); // Determine which course the user clicked
+            string json = File.ReadAllText(filePath);
+            var courses = JsonConvert.DeserializeObject<List<DegreeCourse>>(json);
+            foreach (var course in courses)
+            {
+                if (course.name == className)
                 {
-                    if (course.code == classCode)
-                    {
-                        // Pass course details to form2 for display
-                        Form2 form2 = new Form2(course.code, course.name, course.prerequisites, course.hours, course.description);
-                        form2.Show();
-                        break;
-                    }
+                    // Pass course details to form2 for display (course.code may be null)
+                    Form2 form2 = new Form2(course.code, course.name, course.prerequisites, course.hours, course.description);
+                    form2.Show();
+                    break;
                 }
             }
         }
@@ -308,6 +313,38 @@ namespace Auto_Advisor
         private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void dataGridRecommended_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == 3)
+            {
+                displayCourseDetails(dataGridRecommended, e.RowIndex, "recommended.json");
+            }
+        }
+
+        private void dataGridCognate_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == 3)
+            {
+                displayCourseDetails(dataGridCognate, e.RowIndex, "Cognate.json");
+            }
+        }
+
+        private void dataGridGenEd_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == 3)
+            {
+                displayCourseDetails(dataGridGenEd, e.RowIndex, "General_Education.json");
+            }
+        }
+
+        private void dataGridTheology_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == 3)
+            {
+                displayCourseDetails(dataGridTheology, e.RowIndex, "Theology_Courses.json");
+            }
         }
     }
 
