@@ -3,6 +3,8 @@ using System.Linq;
 using System.Text.Json;
 using static System.Net.Mime.MediaTypeNames;
 using Newtonsoft.Json;
+using System.Windows.Forms;
+using Microsoft.VisualBasic.Devices;
 
 namespace Auto_Advisor
 {
@@ -17,9 +19,9 @@ namespace Auto_Advisor
         public class User
         {
             public string semester { get; set; }
-            public string Code { get; set; }
-            public string Name { get; set; }
-            public int Hours { get; set; }
+            public string code { get; set; }
+            public string name { get; set; }
+            public int hours { get; set; }
         }
 
         // Loads a JSON file with course info into the display grid
@@ -37,7 +39,25 @@ namespace Auto_Advisor
                 row.Cells[0].Value = course.code;
                 row.Cells[1].Value = course.name;
                 row.Cells[2].Value = course.hours;
+
+                // Determine color of row
+                if(courseInTextBox(course.code, textBox1)) // Course already taken
+                {
+                    row.DefaultCellStyle.BackColor = Color.LightGreen;
+                    row.DefaultCellStyle.SelectionBackColor = Color.LightGreen;
+                    
+                }
+                else if(courseInTextBox(course.code, textBox2)) // Course currently being taken
+                {
+                    row.DefaultCellStyle.BackColor = Color.Yellow;
+                    row.DefaultCellStyle.SelectionBackColor = Color.Yellow;
+                }
+                else
+                {
+                    row.DefaultCellStyle.SelectionBackColor = grid.DefaultCellStyle.BackColor;
+                }
             }
+            grid.DefaultCellStyle.SelectionForeColor = grid.DefaultCellStyle.ForeColor;
         }
 
         private void recommendedCourses(string filePath, DataGridView grid)
@@ -45,18 +65,56 @@ namespace Auto_Advisor
             string json = File.ReadAllText(filePath);
             List<User> users = JsonConvert.DeserializeObject<List<User>>(json);
             grid.Rows.Clear();
-            foreach (var rec in users)
+            foreach (var course in users)
             {
                 string dog = comboBox4.SelectedItem.ToString();
-                if (rec.semester == dog)
+                DataGridViewRow row = null;
+                if (course.semester == dog)
                 {
                     int rowIndex = grid.Rows.Add();
-                    var row = grid.Rows[rowIndex];
-                    row.Cells[0].Value = rec.Code;          // Course Code
-                    row.Cells[1].Value = rec.Name;          // Course Name
-                    row.Cells[2].Value = rec.Hours;         // Hours
+                    row = grid.Rows[rowIndex];
+                    row.Cells[0].Value = course.code;          // Course Code
+                    row.Cells[1].Value = course.name;          // Course Name
+                    row.Cells[2].Value = course.hours;         // Hours
+                }
+
+                // Determine color of row
+                if(row != null)
+                {
+                    if (courseInTextBox(course.code, textBox1)) // Course already taken
+                    {
+                        row.DefaultCellStyle.BackColor = Color.LightGreen;
+                        row.DefaultCellStyle.SelectionBackColor = Color.LightGreen;
+
+                    }
+                    else if (courseInTextBox(course.code, textBox2)) // Course currently being taken
+                    {
+                        row.DefaultCellStyle.BackColor = Color.Yellow;
+                        row.DefaultCellStyle.SelectionBackColor = Color.Yellow;
+                    }
+                    else
+                    {
+                        row.DefaultCellStyle.SelectionBackColor = grid.DefaultCellStyle.BackColor;
+                    }
+                }
+                
+            }
+            grid.DefaultCellStyle.SelectionForeColor = grid.DefaultCellStyle.ForeColor;
+        }
+
+        private bool courseInTextBox(string code, TextBox textbox)
+        {
+            // Split textbox content by line
+            string[] lines = textbox.Text.Split(new[] { Environment.NewLine }, StringSplitOptions.None);
+            // Check if code exists on any line
+            foreach(var line in lines)
+            {
+                if(line.Trim() == code)
+                {
+                    return true; // Code was found
                 }
             }
+            return false; // Code not found
         }
 
         private void moreButtonCell(object sender, EventArgs e)
