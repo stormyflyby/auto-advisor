@@ -1,6 +1,8 @@
+using Microsoft.VisualBasic.ApplicationServices;
 using System.Linq;
 using System.Text.Json;
 using static System.Net.Mime.MediaTypeNames;
+using Newtonsoft.Json;
 
 namespace Auto_Advisor
 {
@@ -12,11 +14,19 @@ namespace Auto_Advisor
             mainScreenPanel.Visible = false;
         }
 
+        public class User
+        {
+            public string semester { get; set; }
+            public string Code { get; set; }
+            public string Name { get; set; }
+            public int Hours { get; set; }
+        }
+
         // Loads a JSON file with course info into the display grid
         private void LoadCoursesIntoGrid(string filePath, DataGridView grid)
         {
             string json = File.ReadAllText(filePath); // Read the file to a string
-            var courses = JsonSerializer.Deserialize<List<DegreeCourse>>(json);
+            var courses = JsonConvert.DeserializeObject<List<DegreeCourse>>(json);
             grid.Rows.Clear();
 
             foreach (var course in courses)
@@ -27,6 +37,25 @@ namespace Auto_Advisor
                 row.Cells[0].Value = course.code;
                 row.Cells[1].Value = course.name;
                 row.Cells[2].Value = course.hours;
+            }
+        }
+
+        private void recommendedCourses(string filePath, DataGridView grid)
+        {
+            string json = File.ReadAllText(filePath);
+            List<User> users = JsonConvert.DeserializeObject<List<User>>(json);
+            grid.Rows.Clear();
+            foreach (var rec in users)
+            {
+                string dog = comboBox4.SelectedItem.ToString();
+                if (rec.semester == dog)
+                {
+                    int rowIndex = grid.Rows.Add();
+                    var row = grid.Rows[rowIndex];
+                    row.Cells[0].Value = rec.Code;          // Course Code
+                    row.Cells[1].Value = rec.Name;          // Course Name
+                    row.Cells[2].Value = rec.Hours;         // Hours
+                }
             }
         }
 
@@ -119,6 +148,7 @@ namespace Auto_Advisor
             LoadCoursesIntoGrid("Cognate.json", dataGridCognate);
             LoadCoursesIntoGrid("General_Education.json", dataGridGenEd);
             LoadCoursesIntoGrid("Theology_Courses.json", dataGridTheology);
+            recommendedCourses("recommended.json", dataGridRecommended);
 
             // Only make main screen visible once everything has been loaded
             mainScreenPanel.Visible = true;
@@ -147,10 +177,10 @@ namespace Auto_Advisor
             {
                 string? classCode = dataGridMajors.Rows[e.RowIndex].Cells[0].Value.ToString(); // Determine which class the user clicked
                 string json = File.ReadAllText("major_classes.json");
-                var courses = JsonSerializer.Deserialize<List<DegreeCourse>>(json);
+                var courses = JsonConvert.DeserializeObject<List<DegreeCourse>>(json);
                 foreach (var course in courses)
                 {
-                    if(course.code == classCode)
+                    if (course.code == classCode)
                     {
                         // Pass course details to form2 for display
                         Form2 form2 = new Form2(course.code, course.name, course.prerequisites, course.hours, course.description);
@@ -242,7 +272,7 @@ namespace Auto_Advisor
                 try
                 {
                     string jstring = File.ReadAllText(openSaveFileDialog.FileName);
-                    CourseInfoStructure? cis = JsonSerializer.Deserialize<CourseInfoStructure>(jstring);
+                    CourseInfoStructure? cis = JsonConvert.DeserializeObject<CourseInfoStructure>(jstring);
                     MajorList.Text = cis.Major0;
                     MajorList2.Text = cis.Major1;
                     MinorBox.Text = cis.Minor0;
@@ -251,7 +281,8 @@ namespace Auto_Advisor
                     comboBox4.SelectedItem = comboBox4.Items[cis.SemesterNumber - 1];
 
                     textBox1.Clear();
-                    foreach (string s in cis.CompletedCourses) {
+                    foreach (string s in cis.CompletedCourses)
+                    {
                         textBox1.Text += $"{s} \r\n";
                     }
 
@@ -270,6 +301,11 @@ namespace Auto_Advisor
         }
 
         private void openSaveFileDialog_FileOk(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+
+        }
+
+        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
 
         }
