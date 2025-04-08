@@ -1,2 +1,3 @@
 04/01/2025 12:30am - 2:20am - I added the home screen
-04/02/2035 12:15am - 2:00am - I added onto the registration screen on top of justins design
+04/03/2025 12:15am - 2:00am - I added onto the registration screen on top of justins design
+04/05/2025 9:00 pm - 11:30pm - I added the rest of the courses and their info into the deat grids and I also created two more date grids to hold the data and did a touch up to some of the UI.
