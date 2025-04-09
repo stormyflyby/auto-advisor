@@ -30,6 +30,10 @@ namespace Auto_Advisor
         {
             string json = File.ReadAllText(filePath); // Read the file to a string
             var courses = JsonConvert.DeserializeObject<List<DegreeCourse>>(json);
+
+            if (courses == null) {
+                courses = new List<DegreeCourse>();
+            }
             grid.Rows.Clear();
 
             foreach (var course in courses)
@@ -42,13 +46,13 @@ namespace Auto_Advisor
                 row.Cells[2].Value = course.hours;
 
                 // Determine color of row
-                if(courseInTextBox(course.code, textBox1)) // Course already taken
+                if (courseInTextBox(course.code, textBox1)) // Course already taken
                 {
                     row.DefaultCellStyle.BackColor = Color.LightGreen;
                     row.DefaultCellStyle.SelectionBackColor = Color.LightGreen;
-                    
+
                 }
-                else if(courseInTextBox(course.code, textBox2)) // Course currently being taken
+                else if (courseInTextBox(course.code, textBox2)) // Course currently being taken
                 {
                     row.DefaultCellStyle.BackColor = Color.Yellow;
                     row.DefaultCellStyle.SelectionBackColor = Color.Yellow;
@@ -80,7 +84,7 @@ namespace Auto_Advisor
                 }
 
                 // Determine color of row
-                if(row != null)
+                if (row != null)
                 {
                     if (courseInTextBox(course.code, textBox1)) // Course already taken
                     {
@@ -98,7 +102,7 @@ namespace Auto_Advisor
                         row.DefaultCellStyle.SelectionBackColor = grid.DefaultCellStyle.BackColor;
                     }
                 }
-                
+
             }
             grid.DefaultCellStyle.SelectionForeColor = grid.DefaultCellStyle.ForeColor;
         }
@@ -108,9 +112,9 @@ namespace Auto_Advisor
             // Split textbox content by line
             string[] lines = textbox.Text.Split(new[] { Environment.NewLine }, StringSplitOptions.None);
             // Check if code exists on any line
-            foreach(var line in lines)
+            foreach (var line in lines)
             {
-                if(line.Trim() == code)
+                if (line.Trim() == code)
                 {
                     return true; // Code was found
                 }
@@ -412,6 +416,11 @@ namespace Auto_Advisor
             {
                 displayCourseDetails(dataGridTheology, e.RowIndex, Path.Combine(majorPath, "Theology_Courses.json"));
             }
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 

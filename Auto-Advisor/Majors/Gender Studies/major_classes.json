@@ -10,7 +10,7 @@
         "code": "GENS 1012",
         "name": "Starbucks Training",
         "prerequisites": [],
-        "hours": 4.2,
+        "hours": 4,
         "description": "A study of duties and work environments in Starbucks sites worldwide. Study topics include preparing food, interacting with customers, and lethal self-defense."
     },
     {
@@ -59,7 +59,7 @@
         "code": "GENS 3032",
         "name": "Gender Biology",
         "prerequisites": [],
-        "hours": 0.7,
+        "hours": 1,
         "description": "A study into the biology behind the human genders"
     },
     {
