@@ -10,6 +10,7 @@ namespace Auto_Advisor
 {
     public partial class Form1 : Form
     {
+        string majorPath = "";
         public Form1()
         {
             InitializeComponent();
@@ -180,6 +181,11 @@ namespace Auto_Advisor
                 return;
             }
 
+            // Establish file path for selected major
+            string majorsRootPath = Path.Combine(System.Windows.Forms.Application.StartupPath, "Majors");
+            string selectedMajor = MajorList.SelectedItem.ToString();
+            majorPath = Path.Combine(majorsRootPath, selectedMajor);
+
             // Populate majors display
             majorDisplay.Items.Clear();
             majorDisplay.Items.Add(MajorList.SelectedItem);
@@ -201,12 +207,12 @@ namespace Auto_Advisor
             listBox4.Items.Clear();
             listBox4.Items.Add(comboBox4.SelectedItem); // Load current semester
 
-            // Populate Computer Science courses from JSON files (other majors will be added later)
-            LoadCoursesIntoGrid("major_classes.json", dataGridMajors);
-            LoadCoursesIntoGrid("Cognate.json", dataGridCognate);
-            LoadCoursesIntoGrid("General_Education.json", dataGridGenEd);
-            LoadCoursesIntoGrid("Theology_Courses.json", dataGridTheology);
-            recommendedCourses("recommended.json", dataGridRecommended);
+            // Populate all courses from JSON files
+            LoadCoursesIntoGrid(Path.Combine(majorPath, "major_classes.json"), dataGridMajors);
+            LoadCoursesIntoGrid(Path.Combine(majorPath, "Cognate.json"), dataGridCognate);
+            LoadCoursesIntoGrid(Path.Combine(majorPath, "General_Education.json"), dataGridGenEd);
+            LoadCoursesIntoGrid(Path.Combine(majorPath, "Theology_Courses.json"), dataGridTheology);
+            recommendedCourses(Path.Combine(majorPath, "recommended.json"), dataGridRecommended);
 
             // Only make main screen visible once everything has been loaded
             mainScreenPanel.Visible = true;
@@ -228,12 +234,12 @@ namespace Auto_Advisor
 
         }
 
-        // This currently only applies to the majors datagridview buttons, will be generalized later
+        // Displays details view for major classes
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.ColumnIndex == 3)
             {
-                displayCourseDetails(dataGridMajors, e.RowIndex, "major_classes.json");
+                displayCourseDetails(dataGridMajors, e.RowIndex, Path.Combine(majorPath, "major_classes.json"));
             }
         }
 
@@ -377,7 +383,7 @@ namespace Auto_Advisor
         {
             if (e.ColumnIndex == 3)
             {
-                displayCourseDetails(dataGridRecommended, e.RowIndex, "recommended.json");
+                displayCourseDetails(dataGridRecommended, e.RowIndex, Path.Combine(majorPath, "recommended.json"));
             }
         }
 
@@ -385,7 +391,7 @@ namespace Auto_Advisor
         {
             if (e.ColumnIndex == 3)
             {
-                displayCourseDetails(dataGridCognate, e.RowIndex, "Cognate.json");
+                displayCourseDetails(dataGridCognate, e.RowIndex, Path.Combine(majorPath, "Cognate.json"));
             }
         }
 
@@ -393,7 +399,7 @@ namespace Auto_Advisor
         {
             if (e.ColumnIndex == 3)
             {
-                displayCourseDetails(dataGridGenEd, e.RowIndex, "General_Education.json");
+                displayCourseDetails(dataGridGenEd, e.RowIndex, Path.Combine(majorPath, "General_Education.json"));
             }
         }
 
@@ -401,7 +407,7 @@ namespace Auto_Advisor
         {
             if (e.ColumnIndex == 3)
             {
-                displayCourseDetails(dataGridTheology, e.RowIndex, "Theology_Courses.json");
+                displayCourseDetails(dataGridTheology, e.RowIndex, Path.Combine(majorPath, "Theology_Courses.json"));
             }
         }
     }
