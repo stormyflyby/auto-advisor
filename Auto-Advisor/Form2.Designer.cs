@@ -68,7 +68,7 @@
             descriptionLabel.ForeColor = Color.White;
             descriptionLabel.Location = new Point(76, 145);
             descriptionLabel.Name = "descriptionLabel";
-            descriptionLabel.Size = new Size(363, 187);
+            descriptionLabel.Size = new Size(363, 349);
             descriptionLabel.TabIndex = 2;
             descriptionLabel.Text = resources.GetString("descriptionLabel.Text");
             // 

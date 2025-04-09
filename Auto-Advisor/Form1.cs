@@ -1,6 +1,10 @@
+using Microsoft.VisualBasic.ApplicationServices;
 using System.Linq;
 using System.Text.Json;
 using static System.Net.Mime.MediaTypeNames;
+using Newtonsoft.Json;
+using System.Windows.Forms;
+using Microsoft.VisualBasic.Devices;
 
 namespace Auto_Advisor
 {
@@ -12,11 +16,19 @@ namespace Auto_Advisor
             mainScreenPanel.Visible = false;
         }
 
+        public class User
+        {
+            public string semester { get; set; }
+            public string code { get; set; }
+            public string name { get; set; }
+            public int hours { get; set; }
+        }
+
         // Loads a JSON file with course info into the display grid
         private void LoadCoursesIntoGrid(string filePath, DataGridView grid)
         {
             string json = File.ReadAllText(filePath); // Read the file to a string
-            var courses = JsonSerializer.Deserialize<List<DegreeCourse>>(json);
+            var courses = JsonConvert.DeserializeObject<List<DegreeCourse>>(json);
             grid.Rows.Clear();
 
             foreach (var course in courses)
@@ -27,7 +39,82 @@ namespace Auto_Advisor
                 row.Cells[0].Value = course.code;
                 row.Cells[1].Value = course.name;
                 row.Cells[2].Value = course.hours;
+
+                // Determine color of row
+                if(courseInTextBox(course.code, textBox1)) // Course already taken
+                {
+                    row.DefaultCellStyle.BackColor = Color.LightGreen;
+                    row.DefaultCellStyle.SelectionBackColor = Color.LightGreen;
+                    
+                }
+                else if(courseInTextBox(course.code, textBox2)) // Course currently being taken
+                {
+                    row.DefaultCellStyle.BackColor = Color.Yellow;
+                    row.DefaultCellStyle.SelectionBackColor = Color.Yellow;
+                }
+                else
+                {
+                    row.DefaultCellStyle.SelectionBackColor = grid.DefaultCellStyle.BackColor;
+                }
             }
+            grid.DefaultCellStyle.SelectionForeColor = grid.DefaultCellStyle.ForeColor;
+        }
+
+        private void recommendedCourses(string filePath, DataGridView grid)
+        {
+            string json = File.ReadAllText(filePath);
+            List<User> users = JsonConvert.DeserializeObject<List<User>>(json);
+            grid.Rows.Clear();
+            foreach (var course in users)
+            {
+                string dog = comboBox4.SelectedItem.ToString();
+                DataGridViewRow row = null;
+                if (course.semester == dog)
+                {
+                    int rowIndex = grid.Rows.Add();
+                    row = grid.Rows[rowIndex];
+                    row.Cells[0].Value = course.code;          // Course Code
+                    row.Cells[1].Value = course.name;          // Course Name
+                    row.Cells[2].Value = course.hours;         // Hours
+                }
+
+                // Determine color of row
+                if(row != null)
+                {
+                    if (courseInTextBox(course.code, textBox1)) // Course already taken
+                    {
+                        row.DefaultCellStyle.BackColor = Color.LightGreen;
+                        row.DefaultCellStyle.SelectionBackColor = Color.LightGreen;
+
+                    }
+                    else if (courseInTextBox(course.code, textBox2)) // Course currently being taken
+                    {
+                        row.DefaultCellStyle.BackColor = Color.Yellow;
+                        row.DefaultCellStyle.SelectionBackColor = Color.Yellow;
+                    }
+                    else
+                    {
+                        row.DefaultCellStyle.SelectionBackColor = grid.DefaultCellStyle.BackColor;
+                    }
+                }
+                
+            }
+            grid.DefaultCellStyle.SelectionForeColor = grid.DefaultCellStyle.ForeColor;
+        }
+
+        private bool courseInTextBox(string code, TextBox textbox)
+        {
+            // Split textbox content by line
+            string[] lines = textbox.Text.Split(new[] { Environment.NewLine }, StringSplitOptions.None);
+            // Check if code exists on any line
+            foreach(var line in lines)
+            {
+                if(line.Trim() == code)
+                {
+                    return true; // Code was found
+                }
+            }
+            return false; // Code not found
         }
 
         private void moreButtonCell(object sender, EventArgs e)
@@ -119,6 +206,7 @@ namespace Auto_Advisor
             LoadCoursesIntoGrid("Cognate.json", dataGridCognate);
             LoadCoursesIntoGrid("General_Education.json", dataGridGenEd);
             LoadCoursesIntoGrid("Theology_Courses.json", dataGridTheology);
+            recommendedCourses("recommended.json", dataGridRecommended);
 
             // Only make main screen visible once everything has been loaded
             mainScreenPanel.Visible = true;
@@ -145,18 +233,23 @@ namespace Auto_Advisor
         {
             if (e.ColumnIndex == 3)
             {
-                string? classCode = dataGridMajors.Rows[e.RowIndex].Cells[0].Value.ToString(); // Determine which class the user clicked
-                string json = File.ReadAllText("major_classes.json");
-                var courses = JsonSerializer.Deserialize<List<DegreeCourse>>(json);
-                foreach (var course in courses)
+                displayCourseDetails(dataGridMajors, e.RowIndex, "major_classes.json");
+            }
+        }
+
+        private void displayCourseDetails(DataGridView grid, int rowIndex, string filePath)
+        {
+            string? className = grid.Rows[rowIndex].Cells[1].Value.ToString(); // Determine which course the user clicked
+            string json = File.ReadAllText(filePath);
+            var courses = JsonConvert.DeserializeObject<List<DegreeCourse>>(json);
+            foreach (var course in courses)
+            {
+                if (course.name == className)
                 {
-                    if(course.code == classCode)
-                    {
-                        // Pass course details to form2 for display
-                        Form2 form2 = new Form2(course.code, course.name, course.prerequisites, course.hours, course.description);
-                        form2.Show();
-                        break;
-                    }
+                    // Pass course details to form2 for display (course.code may be null)
+                    Form2 form2 = new Form2(course.code, course.name, course.prerequisites, course.hours, course.description);
+                    form2.Show();
+                    break;
                 }
             }
         }
@@ -242,7 +335,7 @@ namespace Auto_Advisor
                 try
                 {
                     string jstring = File.ReadAllText(openSaveFileDialog.FileName);
-                    CourseInfoStructure? cis = JsonSerializer.Deserialize<CourseInfoStructure>(jstring);
+                    CourseInfoStructure? cis = JsonConvert.DeserializeObject<CourseInfoStructure>(jstring);
                     MajorList.Text = cis.Major0;
                     MajorList2.Text = cis.Major1;
                     MinorBox.Text = cis.Minor0;
@@ -251,7 +344,8 @@ namespace Auto_Advisor
                     comboBox4.SelectedItem = comboBox4.Items[cis.SemesterNumber - 1];
 
                     textBox1.Clear();
-                    foreach (string s in cis.CompletedCourses) {
+                    foreach (string s in cis.CompletedCourses)
+                    {
                         textBox1.Text += $"{s} \r\n";
                     }
 
@@ -275,6 +369,43 @@ namespace Auto_Advisor
         private void openSaveFileDialog_FileOk(object sender, System.ComponentModel.CancelEventArgs e)
         {
 
+        }
+
+        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void dataGridRecommended_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == 3)
+            {
+                displayCourseDetails(dataGridRecommended, e.RowIndex, "recommended.json");
+            }
+        }
+
+        private void dataGridCognate_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == 3)
+            {
+                displayCourseDetails(dataGridCognate, e.RowIndex, "Cognate.json");
+            }
+        }
+
+        private void dataGridGenEd_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == 3)
+            {
+                displayCourseDetails(dataGridGenEd, e.RowIndex, "General_Education.json");
+            }
+        }
+
+        private void dataGridTheology_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == 3)
+            {
+                displayCourseDetails(dataGridTheology, e.RowIndex, "Theology_Courses.json");
+            }
         }
     }
 
