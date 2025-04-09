@@ -1,3 +1,12 @@
 3/31/25 - Added scrollable text boxes to the start screen
 4/2/25 - Prototyped UI for the main screen side bar
-4/3/25 - Made a JSON file for major required courses and created a way to load it into the main screen
+4/3/25 - Made a .json file for major required courses and created a way to load it into the main screen
+4/4/25 Added buttons to the course list display
+4/6/25 Cleaned up the code and deleted redundant methods
+4/6/25 Added a scrolling feature on the display page
+4/6/25 Added popup boxes that display course details upon clicking the corresponding button
+4/7/25 Expanded button functionality to all course categories
+4/7/25 Added colored rows to signify course status
+4/8/25 Created a folder structure for storing all .json files relating to majors and minors
+4/8/25 Added a display grid for minor courses that is only visible when the user has a minor
+4/9/25 Made it so you can't select a major or minor twice
