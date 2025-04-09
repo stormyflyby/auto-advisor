@@ -260,6 +260,9 @@ namespace Auto_Advisor
                     {
                         textBox2.Text += $"{s} \r\n";
                     }
+
+                    if (cis.Major1 != string.Empty) MajorList2.Visible = true;
+                    if (cis.Minor1 != string.Empty) MinorBox2.Visible = true;
                 }
                 catch
                 {
