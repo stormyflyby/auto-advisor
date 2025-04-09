@@ -1,0 +1,41 @@
+[
+    {
+        "code": "BIBL 1033",
+        "name": "Biblical Literature",
+        "prerequisites": [],
+        "hours": 3,
+        "description": "This course surveys the content and theological message of biblical story. Special emphasis is placed on considering the biblical story of redemption as a unified and coherent narrative of God’s ongoing work within his kingdom. Understanding the Bible within historical, cultural, and literary settings is highlighted. Throughout the course the students will begin to develop skills in interpreting the Bible with care and wisdom as well as move toward finding and articulating their place within God’s story of redemption."
+    },
+    {
+        "name": "BIBL New Testament Jr. Level Elective",
+        "prerequisites": [],
+        "hours": 3,
+        "description": "Must be Jr. Level or above"
+    },
+    {
+        "name": "BIBL Old Testament Jr. Level Elective",
+        "prerequisites": [],
+        "hours": 3,
+        "description": "Must be Jr. Level or above"
+    },
+    {
+        "name": "BIBL 2000 Level or above Elective",
+        "prerequisites": [],
+        "hours": 3,
+        "description": "Any Bible course numbered 2000-level or above."
+    },
+    {
+        "code": "THEO 3103",
+        "name": "Christian Doctrine",
+        "prerequisites": ["BIBL 1033", "THEO 2043"],
+        "hours": 3,
+        "description": "Rooted in scripture and in conversation with Christians throughout time and from across the globe, this course introduces students to evangelical Christian teaching.  Beginning with a study of the gospel, students will encounter the major topics of the Christian faith: revelation; scripture; the identity, character, and attributes of the triune God; creation; providence; humanity; the person and work of Christ; sin; the Holy Spirit; the church; and the last things.  Students will explore the relationship between these topics in evangelical theology and ethics, ministry, practice, and mission. This course satisfies the General Education Theological Engagement requirements."
+    },
+    {
+        "code": "THEO 3133",
+        "name": "The History of Christian Thought",
+        "prerequisites": [ "BIBL 1033", "THEO 2043" ],
+        "hours": 3,
+        "description": "Beginning with an introduction to the task and method of Christian theology, this course surveys the history of Christian thought from the early church to the modern era.  Attention will be given to areas of consensus, important thinkers, crucial controversies, and the ways in which Christians have engaged their surrounding cultures.  Students will reflect on their own location in history and contemporary churches’ interaction with surrounding cultures.  Special focus may be given to one particular time period (for instance, the patristic or modern eras), a topic of thought (for instance, the understanding of the person of Christ or the church), or a Christian practive (for instance, prayer or the interpretation of Scripture). This course satisfies the General Education Theological Engagement requirements."
+    }
+]
