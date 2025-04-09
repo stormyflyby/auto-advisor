@@ -11,6 +11,7 @@ namespace Auto_Advisor
     public partial class Form1 : Form
     {
         string majorPath = "";
+        string minorPath = "";
         public Form1()
         {
             InitializeComponent();
@@ -31,7 +32,8 @@ namespace Auto_Advisor
             string json = File.ReadAllText(filePath); // Read the file to a string
             var courses = JsonConvert.DeserializeObject<List<DegreeCourse>>(json);
 
-            if (courses == null) {
+            if (courses == null)
+            {
                 courses = new List<DegreeCourse>();
             }
             grid.Rows.Clear();
@@ -189,15 +191,22 @@ namespace Auto_Advisor
             string majorsRootPath = Path.Combine(System.Windows.Forms.Application.StartupPath, "Majors");
             string selectedMajor = MajorList.SelectedItem.ToString();
             majorPath = Path.Combine(majorsRootPath, selectedMajor);
+            if (MinorBox.SelectedItem != null && MinorBox.SelectedItem.ToString() != "None")
+            {
+                string minorsRootPath = Path.Combine(System.Windows.Forms.Application.StartupPath, "Minors");
+                string selectedMinor = MinorBox.SelectedItem.ToString();
+                minorPath = Path.Combine(minorsRootPath, selectedMinor);
+            }
 
-            // Populate majors display
+
+            // Populate majors sidebar display
             majorDisplay.Items.Clear();
             majorDisplay.Items.Add(MajorList.SelectedItem);
             if (MajorList2.SelectedItem != null)
             {
                 majorDisplay.Items.Add(MajorList2.SelectedItem);
             }
-            // Populate minors display
+            // Populate minors sidebar display
             minorDisplay.Items.Clear();
             if (MinorBox.SelectedItem != null && MinorBox.SelectedItem.ToString() != "None")
             {
@@ -217,6 +226,19 @@ namespace Auto_Advisor
             LoadCoursesIntoGrid(Path.Combine(majorPath, "General_Education.json"), dataGridGenEd);
             LoadCoursesIntoGrid(Path.Combine(majorPath, "Theology_Courses.json"), dataGridTheology);
             recommendedCourses(Path.Combine(majorPath, "recommended.json"), dataGridRecommended);
+
+            // Load minor info if it exists, else delete it
+            if (MinorBox.SelectedItem != null && MinorBox.SelectedItem.ToString() != "None")
+            {
+                LoadCoursesIntoGrid(Path.Combine(minorPath, "minor_classes.json"), dataGridMinors);
+                dataGridMinors.Visible = true;
+                textBox5.Visible = true;
+            }
+            else
+            {
+                dataGridMinors.Visible = false;
+                textBox5.Visible = false;
+            }
 
             // Only make main screen visible once everything has been loaded
             mainScreenPanel.Visible = true;
@@ -421,6 +443,14 @@ namespace Auto_Advisor
         private void Form1_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void dataGridMinors_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == 3)
+            {
+                displayCourseDetails(dataGridMinors, e.RowIndex, Path.Combine(minorPath, "minor_classes.json"));
+            }
         }
     }
 
