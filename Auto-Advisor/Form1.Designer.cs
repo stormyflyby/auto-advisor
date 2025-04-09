@@ -60,12 +60,12 @@
             textBox2 = new TextBox();
             mainScreenPanel = new Panel();
             panel1 = new Panel();
-            textBox5 = new TextBox();
             dataGridMinors = new DataGridView();
             dataGridViewTextBoxColumn13 = new DataGridViewTextBoxColumn();
             dataGridViewTextBoxColumn14 = new DataGridViewTextBoxColumn();
             dataGridViewTextBoxColumn15 = new DataGridViewTextBoxColumn();
             dataGridViewButtonColumn5 = new DataGridViewButtonColumn();
+            textBox5 = new TextBox();
             dataGridTheology = new DataGridView();
             dataGridViewTextBoxColumn10 = new DataGridViewTextBoxColumn();
             dataGridViewTextBoxColumn11 = new DataGridViewTextBoxColumn();
@@ -224,6 +224,7 @@
             MajorList.Name = "MajorList";
             MajorList.Size = new Size(165, 33);
             MajorList.TabIndex = 8;
+            MajorList.SelectedIndexChanged += MajorList_SelectedIndexChanged;
             // 
             // MinorBox
             // 
@@ -235,6 +236,7 @@
             MinorBox.Name = "MinorBox";
             MinorBox.Size = new Size(165, 33);
             MinorBox.TabIndex = 9;
+            MinorBox.SelectedIndexChanged += MinorBox_SelectedIndexChanged;
             // 
             // comboBox3
             // 
@@ -421,7 +423,7 @@
             mainScreenPanel.Controls.Add(label13);
             mainScreenPanel.Controls.Add(tableLayoutPanel1);
             mainScreenPanel.Controls.Add(button1);
-            mainScreenPanel.Location = new Point(-1, 1);
+            mainScreenPanel.Location = new Point(0, 1);
             mainScreenPanel.Margin = new Padding(2);
             mainScreenPanel.Name = "mainScreenPanel";
             mainScreenPanel.Size = new Size(1966, 1118);
@@ -449,20 +451,6 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(1286, 1108);
             panel1.TabIndex = 242;
-            // 
-            // textBox5
-            // 
-            textBox5.BackColor = Color.DimGray;
-            textBox5.Font = new Font("Segoe UI", 25F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox5.ForeColor = Color.White;
-            textBox5.Location = new Point(75, 1996);
-            textBox5.Margin = new Padding(4, 5, 4, 5);
-            textBox5.Name = "textBox5";
-            textBox5.ReadOnly = true;
-            textBox5.Size = new Size(1083, 74);
-            textBox5.TabIndex = 247;
-            textBox5.Text = "Minor Courses";
-            textBox5.TextAlign = HorizontalAlignment.Center;
             // 
             // dataGridMinors
             // 
@@ -533,6 +521,20 @@
             dataGridViewButtonColumn5.Text = "More...";
             dataGridViewButtonColumn5.UseColumnTextForButtonValue = true;
             dataGridViewButtonColumn5.Width = 178;
+            // 
+            // textBox5
+            // 
+            textBox5.BackColor = Color.DimGray;
+            textBox5.Font = new Font("Segoe UI", 25F, FontStyle.Regular, GraphicsUnit.Point);
+            textBox5.ForeColor = Color.White;
+            textBox5.Location = new Point(75, 1996);
+            textBox5.Margin = new Padding(4, 5, 4, 5);
+            textBox5.Name = "textBox5";
+            textBox5.ReadOnly = true;
+            textBox5.Size = new Size(1083, 74);
+            textBox5.TabIndex = 247;
+            textBox5.Text = "Minor Courses";
+            textBox5.TextAlign = HorizontalAlignment.Center;
             // 
             // dataGridTheology
             // 
@@ -1267,7 +1269,7 @@
             AutoScroll = true;
             AutoSize = true;
             BackColor = SystemColors.ControlDarkDark;
-            ClientSize = new Size(1958, 1104);
+            ClientSize = new Size(1961, 1104);
             Controls.Add(mainScreenPanel);
             Controls.Add(textBox2);
             Controls.Add(textBox1);

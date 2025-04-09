@@ -12,6 +12,8 @@ namespace Auto_Advisor
     {
         string majorPath = "";
         string minorPath = "";
+        string removedMajor = null;
+        string removedMinor = null;
         public Form1()
         {
             InitializeComponent();
@@ -160,16 +162,36 @@ namespace Auto_Advisor
 
         }
 
-        // Adding a second major
+        // Adding/removing a second major
         private void button6_Click(object sender, EventArgs e)
         {
-            MajorList2.Visible = true;
+            if (MajorList2.Visible == false) // make visible
+            {
+                MajorList2.Visible = true;
+                MajorButton.Text = "Remove";
+            }
+            else // make invisible
+            {
+                MajorList2.Visible = false;
+                MajorButton.Text = "Add Major";
+                MajorList2.SelectedItem = null;
+            }
         }
 
         // Adding a second minor
         private void button6_Click_1(object sender, EventArgs e)
         {
-            MinorBox2.Visible = true;
+            if (MinorBox2.Visible == false) // make visible
+            {
+                MinorBox2.Visible = true;
+                button6.Text = "Remove";
+            }
+            else // make invisible
+            {
+                MinorBox2.Visible = false;
+                button6.Text = "Add Minor";
+                MinorBox2.SelectedItem = null;
+            }
         }
 
         private void label8_Click(object sender, EventArgs e)
@@ -450,6 +472,40 @@ namespace Auto_Advisor
             if (e.ColumnIndex == 3)
             {
                 displayCourseDetails(dataGridMinors, e.RowIndex, Path.Combine(minorPath, "minor_classes.json"));
+            }
+        }
+
+        // This method makes major selections non-duplicable
+        private void MajorList_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var item = MajorList.SelectedItem;
+
+            if (removedMajor != null && !MajorList2.Items.Contains(removedMajor))
+            {
+                MajorList2.Items.Add(removedMajor);
+            }
+
+            if (MajorList2.Items.Contains(item))
+            {
+                MajorList2.Items.Remove(item);
+                removedMajor = item.ToString();
+            }
+        }
+
+        // This method makes minor selections non-duplicable
+        private void MinorBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var item = MinorBox.SelectedItem;
+
+            if (removedMinor != null && !MinorBox2.Items.Contains(removedMinor))
+            {
+                MinorBox2.Items.Add(removedMinor);
+            }
+
+            if (MinorBox2.Items.Contains(item))
+            {
+                MinorBox2.Items.Remove(item);
+                removedMinor = item.ToString();
             }
         }
     }
