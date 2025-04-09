@@ -1,0 +1,93 @@
+[
+    {
+        "code": "GENS 1011",
+        "name": "What is a Woman?",
+        "prerequisites": [],
+        "hours": 21,
+        "description": "Daily three-hour sessions watching political commentator Matt Walsh's documentary, 'What is a Woman?'. Study topics include people portrayed in the documentary, dialogue in various scenes, and the innotations of Walsh's voice.'"
+    },
+    {
+        "code": "GENS 1012",
+        "name": "Starbucks Training",
+        "prerequisites": [],
+        "hours": 4.2,
+        "description": "A study of duties and work environments in Starbucks sites worldwide. Study topics include preparing food, interacting with customers, and lethal self-defense."
+    },
+    {
+        "code": "GENS 1031",
+        "name": "History of Gender Studies",
+        "prerequisites": [],
+        "hours": 2,
+        "description": "A study of the field of gender studies across history. Special attention will be given to trends like the LGBTQ movement and the Salem witch trials."
+    },
+    {
+        "code": "GENS 2013",
+        "name": "Internet Meme History",
+        "prerequisites": [ "GENS 1031" ],
+        "hours": 8,
+        "description": "A study of memes through the history of the Internet. Special attention will be given to the gender-related undertones of memes and how memes can be weaponized for political gain"
+    },
+    {
+        "code": "GENS 2054",
+        "name": "Gender Reveal Parties",
+        "prerequisites": [ "GENS 1031" ],
+        "hours": 5,
+        "description": "A course exploring gender reveal parties"
+    },
+    {
+        "code": "GENS 2063",
+        "name": "Evils of Generation Z",
+        "prerequisites": [ "GENS 1031" ],
+        "hours": 7,
+        "description": "A course on the evil nature of Generation Z-ers. Readings and class discussions will explore Gen Z's impact on anti-feminism, occultic Gen Z rituals, and students' personal hatred toward people in Gen Z"
+    },
+    {
+        "code": "GENS 2086",
+        "name": "Dating and Marriage",
+        "prerequisites": [],
+        "hours": 90,
+        "description": "A course on dating with a major focus on hands-on experience. By the end of the course, students will be married."
+    },
+    {
+        "code": "GENS 3011",
+        "name": "Divorce",
+        "prerequisites": [ "GENS 2086" ],
+        "hours": 1,
+        "description": "A course on divorce with a major focus on hands-on experience. Students will file divorce papers in court."
+    },
+    {
+        "code": "GENS 3032",
+        "name": "Gender Biology",
+        "prerequisites": [],
+        "hours": 0.7,
+        "description": "A study into the biology behind the human genders"
+    },
+    {
+        "code": "GENS 4054",
+        "name": "Learning to Love Again",
+        "prerequisites": [ "GENS 3011" ],
+        "hours": 70,
+        "description": "A course on recovering from a broken relationship. By the end of this course, students will have recovered from their losses, found new suitable partners, and remarried."
+    },
+    {
+        "code": "GENS 4067",
+        "name": "Gender Psychology",
+        "prerequisites": [ "GENS 3032" ],
+        "hours": 2,
+        "description": "A study into the psychological distinctions of the human genders"
+    },
+    {
+        "code": "GENS 4073",
+        "name": "Dr. Rouse",
+        "prerequisites": [],
+        "hours": 1,
+        "description": "A study into Dr. Rouse, the ultimate embodiment of the male gender."
+    },
+    {
+        "code": "GENS 4089",
+        "name": "Psychological Warfare",
+        "prerequisites": [ "GENS 4054", "GENS 4067", "GENS 4073" ],
+        "hours": 150,
+        "description": "The capstone class for gender studies. An in-depth study into using the knowledge in previous classes for domination and suppression of political enemies. Topics will include blackmail, deception, girlbossing, operating military weapons, raising children, and persuading Dr. Rouse to do one's bidding. The course will end with a forceful takeover of LeTourneau and Longview."
+    }
+]
