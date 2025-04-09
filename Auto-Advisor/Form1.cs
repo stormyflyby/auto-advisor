@@ -1,10 +1,5 @@
-using Microsoft.VisualBasic.ApplicationServices;
-using System.Linq;
-using System.Text.Json;
-using static System.Net.Mime.MediaTypeNames;
+
 using Newtonsoft.Json;
-using System.Windows.Forms;
-using Microsoft.VisualBasic.Devices;
 
 namespace Auto_Advisor
 {
@@ -12,6 +7,9 @@ namespace Auto_Advisor
     {
         string majorPath = "";
         string minorPath = "";
+        int TotalHours = 0;
+        int TotalHoursStillNeeded = 126;
+        int TotalHoursNeeded = 126;
         public Form1()
         {
             InitializeComponent();
@@ -52,6 +50,14 @@ namespace Auto_Advisor
                 {
                     row.DefaultCellStyle.BackColor = Color.LightGreen;
                     row.DefaultCellStyle.SelectionBackColor = Color.LightGreen;
+                    TotalHours += course.hours;
+                    listBox6.Items.Clear();
+                    listBox6.Items.Add(TotalHours);
+                    TotalHoursStillNeeded -= TotalHours;
+                    listBox5.Items.Clear();
+                    listBox5.Items.Add(TotalHoursStillNeeded);
+                    listBox2.Items.Clear();
+                    listBox2.Items.Add(TotalHoursNeeded);
 
                 }
                 else if (courseInTextBox(course.code, textBox2)) // Course currently being taken
@@ -74,9 +80,9 @@ namespace Auto_Advisor
             grid.Rows.Clear();
             foreach (var course in users)
             {
-                string dog = comboBox4.SelectedItem.ToString();
+                string sem = comboBox4.SelectedItem.ToString();
                 DataGridViewRow row = null;
-                if (course.semester == dog)
+                if (course.semester == sem)
                 {
                     int rowIndex = grid.Rows.Add();
                     row = grid.Rows[rowIndex];
@@ -230,12 +236,16 @@ namespace Auto_Advisor
             // Load minor info if it exists, else delete it
             if (MinorBox.SelectedItem != null && MinorBox.SelectedItem.ToString() != "None")
             {
+                TotalHoursNeeded = 144;
+                TotalHoursStillNeeded = 144;
                 LoadCoursesIntoGrid(Path.Combine(minorPath, "minor_classes.json"), dataGridMinors);
                 dataGridMinors.Visible = true;
                 textBox5.Visible = true;
             }
             else
             {
+                TotalHoursNeeded = 126;
+                TotalHoursStillNeeded = 126;
                 dataGridMinors.Visible = false;
                 textBox5.Visible = false;
             }
@@ -248,6 +258,7 @@ namespace Auto_Advisor
         private void button1_Click(object sender, EventArgs e)
         {
             mainScreenPanel.Visible = false;
+            TotalHours = 0;
         }
 
         private void label10_Click(object sender, EventArgs e)
