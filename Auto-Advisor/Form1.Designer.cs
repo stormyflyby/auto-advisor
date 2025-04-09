@@ -28,11 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle7 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle8 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle9 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle10 = new DataGridViewCellStyle();
             label1 = new Label();
             label2 = new Label();
             label3 = new Label();
@@ -210,7 +210,7 @@
             // 
             MajorList.DropDownStyle = ComboBoxStyle.DropDownList;
             MajorList.FormattingEnabled = true;
-            MajorList.Items.AddRange(new object[] { "Computer Science(CS)", "Gender Studies" });
+            MajorList.Items.AddRange(new object[] { "Computer Science", "Gender Studies" });
             MajorList.Location = new Point(4, 5);
             MajorList.Margin = new Padding(4, 5, 4, 5);
             MajorList.Name = "MajorList";
@@ -329,7 +329,7 @@
             // 
             MajorList2.DropDownStyle = ComboBoxStyle.DropDownList;
             MajorList2.FormattingEnabled = true;
-            MajorList2.Items.AddRange(new object[] { "Computer Science(CS)", "Gender Studies" });
+            MajorList2.Items.AddRange(new object[] { "Computer Science", "Gender Studies" });
             MajorList2.Location = new Point(179, 5);
             MajorList2.Margin = new Padding(4, 5, 4, 5);
             MajorList2.Name = "MajorList2";
@@ -411,7 +411,7 @@
             mainScreenPanel.Controls.Add(label13);
             mainScreenPanel.Controls.Add(tableLayoutPanel1);
             mainScreenPanel.Controls.Add(button1);
-            mainScreenPanel.Location = new Point(1, 2);
+            mainScreenPanel.Location = new Point(1, 1);
             mainScreenPanel.Name = "mainScreenPanel";
             mainScreenPanel.Size = new Size(1966, 1118);
             mainScreenPanel.TabIndex = 26;
@@ -441,12 +441,12 @@
             dataGridTheology.AllowUserToDeleteRows = false;
             dataGridTheology.AllowUserToResizeColumns = false;
             dataGridTheology.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = Color.White;
-            dataGridViewCellStyle1.Font = new Font("Microsoft Sans Serif", 8F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle1.ForeColor = Color.Black;
-            dataGridViewCellStyle1.SelectionBackColor = Color.White;
-            dataGridViewCellStyle1.SelectionForeColor = Color.Black;
-            dataGridTheology.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle6.BackColor = Color.White;
+            dataGridViewCellStyle6.Font = new Font("Microsoft Sans Serif", 8F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle6.ForeColor = Color.Black;
+            dataGridViewCellStyle6.SelectionBackColor = Color.White;
+            dataGridViewCellStyle6.SelectionForeColor = Color.Black;
+            dataGridTheology.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
             dataGridTheology.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridTheology.BorderStyle = BorderStyle.None;
             dataGridTheology.CellBorderStyle = DataGridViewCellBorderStyle.Raised;
@@ -510,12 +510,12 @@
             dataGridRecommended.AllowUserToDeleteRows = false;
             dataGridRecommended.AllowUserToResizeColumns = false;
             dataGridRecommended.AllowUserToResizeRows = false;
-            dataGridViewCellStyle2.BackColor = Color.White;
-            dataGridViewCellStyle2.Font = new Font("Microsoft Sans Serif", 8F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle2.ForeColor = Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = Color.White;
-            dataGridViewCellStyle2.SelectionForeColor = Color.Black;
-            dataGridRecommended.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle7.BackColor = Color.White;
+            dataGridViewCellStyle7.Font = new Font("Microsoft Sans Serif", 8F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle7.ForeColor = Color.Black;
+            dataGridViewCellStyle7.SelectionBackColor = Color.White;
+            dataGridViewCellStyle7.SelectionForeColor = Color.Black;
+            dataGridRecommended.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
             dataGridRecommended.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridRecommended.BorderStyle = BorderStyle.None;
             dataGridRecommended.CellBorderStyle = DataGridViewCellBorderStyle.Raised;
@@ -579,12 +579,12 @@
             dataGridGenEd.AllowUserToDeleteRows = false;
             dataGridGenEd.AllowUserToResizeColumns = false;
             dataGridGenEd.AllowUserToResizeRows = false;
-            dataGridViewCellStyle3.BackColor = Color.White;
-            dataGridViewCellStyle3.Font = new Font("Microsoft Sans Serif", 8F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle3.ForeColor = Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = Color.White;
-            dataGridViewCellStyle3.SelectionForeColor = Color.Black;
-            dataGridGenEd.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle8.BackColor = Color.White;
+            dataGridViewCellStyle8.Font = new Font("Microsoft Sans Serif", 8F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle8.ForeColor = Color.Black;
+            dataGridViewCellStyle8.SelectionBackColor = Color.White;
+            dataGridViewCellStyle8.SelectionForeColor = Color.Black;
+            dataGridGenEd.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle8;
             dataGridGenEd.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridGenEd.BorderStyle = BorderStyle.None;
             dataGridGenEd.CellBorderStyle = DataGridViewCellBorderStyle.Raised;
@@ -662,12 +662,12 @@
             dataGridCognate.AllowUserToDeleteRows = false;
             dataGridCognate.AllowUserToResizeColumns = false;
             dataGridCognate.AllowUserToResizeRows = false;
-            dataGridViewCellStyle4.BackColor = Color.White;
-            dataGridViewCellStyle4.Font = new Font("Microsoft Sans Serif", 8F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle4.ForeColor = Color.Black;
-            dataGridViewCellStyle4.SelectionBackColor = Color.White;
-            dataGridViewCellStyle4.SelectionForeColor = Color.Black;
-            dataGridCognate.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle9.BackColor = Color.White;
+            dataGridViewCellStyle9.Font = new Font("Microsoft Sans Serif", 8F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle9.ForeColor = Color.Black;
+            dataGridViewCellStyle9.SelectionBackColor = Color.White;
+            dataGridViewCellStyle9.SelectionForeColor = Color.Black;
+            dataGridCognate.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle9;
             dataGridCognate.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridCognate.BorderStyle = BorderStyle.None;
             dataGridCognate.CellBorderStyle = DataGridViewCellBorderStyle.Raised;
@@ -775,12 +775,12 @@
             dataGridMajors.AllowUserToDeleteRows = false;
             dataGridMajors.AllowUserToResizeColumns = false;
             dataGridMajors.AllowUserToResizeRows = false;
-            dataGridViewCellStyle5.BackColor = Color.White;
-            dataGridViewCellStyle5.Font = new Font("Microsoft Sans Serif", 8F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle5.ForeColor = Color.Black;
-            dataGridViewCellStyle5.SelectionBackColor = Color.White;
-            dataGridViewCellStyle5.SelectionForeColor = Color.Black;
-            dataGridMajors.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle10.BackColor = Color.White;
+            dataGridViewCellStyle10.Font = new Font("Microsoft Sans Serif", 8F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle10.ForeColor = Color.Black;
+            dataGridViewCellStyle10.SelectionBackColor = Color.White;
+            dataGridViewCellStyle10.SelectionForeColor = Color.Black;
+            dataGridMajors.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
             dataGridMajors.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridMajors.BorderStyle = BorderStyle.None;
             dataGridMajors.CellBorderStyle = DataGridViewCellBorderStyle.Raised;
@@ -1145,7 +1145,7 @@
             AutoScroll = true;
             AutoSize = true;
             BackColor = SystemColors.ControlDarkDark;
-            ClientSize = new Size(1998, 1013);
+            ClientSize = new Size(1924, 1013);
             Controls.Add(mainScreenPanel);
             Controls.Add(textBox2);
             Controls.Add(textBox1);
