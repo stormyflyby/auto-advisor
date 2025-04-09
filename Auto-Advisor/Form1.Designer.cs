@@ -216,6 +216,7 @@
             MajorList.Name = "MajorList";
             MajorList.Size = new Size(117, 23);
             MajorList.TabIndex = 8;
+            MajorList.SelectedIndexChanged += MajorList_SelectedIndexChanged;
             // 
             // MinorBox
             // 
@@ -226,6 +227,7 @@
             MinorBox.Name = "MinorBox";
             MinorBox.Size = new Size(117, 23);
             MinorBox.TabIndex = 9;
+            MinorBox.SelectedIndexChanged += MinorBox_SelectedIndexChanged;
             // 
             // comboBox3
             // 
@@ -399,8 +401,8 @@
             mainScreenPanel.Controls.Add(label13);
             mainScreenPanel.Controls.Add(tableLayoutPanel1);
             mainScreenPanel.Controls.Add(button1);
-            mainScreenPanel.Location = new Point(-1, 1);
-            mainScreenPanel.Margin = new Padding(1, 1, 1, 1);
+            mainScreenPanel.Location = new Point(0, 1);
+            mainScreenPanel.Margin = new Padding(2);
             mainScreenPanel.Name = "mainScreenPanel";
             mainScreenPanel.Size = new Size(1376, 671);
             mainScreenPanel.TabIndex = 26;
@@ -503,10 +505,11 @@
             textBox5.BackColor = Color.DimGray;
             textBox5.Font = new Font("Segoe UI", 25F, FontStyle.Regular, GraphicsUnit.Point);
             textBox5.ForeColor = Color.White;
-            textBox5.Location = new Point(52, 1198);
+            textBox5.Location = new Point(75, 1996);
+            textBox5.Margin = new Padding(4, 5, 4, 5);
             textBox5.Name = "textBox5";
             textBox5.ReadOnly = true;
-            textBox5.Size = new Size(759, 52);
+            textBox5.Size = new Size(1083, 74);
             textBox5.TabIndex = 247;
             textBox5.Text = "Minor Courses";
             textBox5.TextAlign = HorizontalAlignment.Center;
@@ -1239,7 +1242,7 @@
             AutoScroll = true;
             AutoSize = true;
             BackColor = SystemColors.ControlDarkDark;
-            ClientSize = new Size(1347, 637);
+            ClientSize = new Size(1961, 1104);
             Controls.Add(mainScreenPanel);
             Controls.Add(textBox2);
             Controls.Add(textBox1);
