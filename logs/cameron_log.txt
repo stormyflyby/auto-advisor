@@ -1,3 +1,4 @@
 3/31/25 8:50 PM to 9:45 PM - didn't work on the project during this whole period, but I did some research into GitHub and added multiple things to our repository, including instructions for using Git and files for recording tasks.
 4/3/25 8:45 PM to 9:15 PM - looked into moving save data to the user's Downloads folder.
 4/6/25 3:20 PM to 4:25 PM - completed download button functionality
+4/8/25 9:35 PM to 9:45 PM - debugged an issue from the end of the meeting
