@@ -12,6 +12,7 @@ namespace Auto_Advisor
         int TotalHours = 0;
         int TotalHoursStillNeeded = 0;
         int TotalHoursNeeded = 0;
+        bool suppressMajorDisplayEvent = false;
         public Form1()
         {
             InitializeComponent();
@@ -203,6 +204,13 @@ namespace Auto_Advisor
         // This is the continue button
         private void button5_Click(object sender, EventArgs e)
         {
+            suppressMajorDisplayEvent = true;
+            continueFunction();
+            suppressMajorDisplayEvent = false;
+        }
+
+        public void continueFunction()
+        {
             // First, check that all boxes are populated
             if (!CheckCourseInfo())
             {
@@ -227,22 +235,24 @@ namespace Auto_Advisor
             }
 
             // Populate majors sidebar display
-            majorDisplay.Items.Clear();
-            majorDisplay.Items.Add(MajorList.SelectedItem);
+            majorDisplay1.Items.Clear();
+            majorDisplay1.Items.Add(MajorList.SelectedItem);
             if (MajorList2.SelectedItem != null)
             {
-                majorDisplay.Items.Add(MajorList2.SelectedItem);
+                majorDisplay1.Items.Add(MajorList2.SelectedItem);
             }
+            majorDisplay1.SelectedItem = MajorList.SelectedItem; // recursion error
             // Populate minors sidebar display
-            minorDisplay.Items.Clear();
+            minorDisplay1.Items.Clear();
             if (MinorBox.SelectedItem != null && MinorBox.SelectedItem.ToString() != "None")
             {
-                minorDisplay.Items.Add(MinorBox.SelectedItem);
+                minorDisplay1.Items.Add(MinorBox.SelectedItem);
             }
             if (MinorBox2.SelectedItem != null)
             {
-                majorDisplay.Items.Add(MinorBox2.SelectedItem);
+                minorDisplay1.Items.Add(MinorBox2.SelectedItem);
             }
+            minorDisplay1.SelectedItem = MinorBox.SelectedItem;
 
             // Populate all courses from JSON files
             LoadCoursesIntoGrid(Path.Combine(majorPath, "major_classes.json"), dataGridMajors);
@@ -521,6 +531,25 @@ namespace Auto_Advisor
                 MinorBox2.Items.Remove(item);
                 removedMinor = item.ToString();
             }
+        }
+
+        private void majorDisplay_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+        // Switch which major is displayed from the main page
+        private void majorDisplay1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (suppressMajorDisplayEvent) return;
+            if (MajorList2.SelectedItem == null) return; // no second major was selected
+            suppressMajorDisplayEvent = true;
+
+            var temp = MajorList.SelectedItem;
+            MajorList.SelectedItem = MajorList2.SelectedItem;
+            MajorList2.SelectedItem = temp;
+            continueFunction();
+
+            suppressMajorDisplayEvent = false;
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
