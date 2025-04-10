@@ -431,7 +431,7 @@
             mainScreenPanel.Location = new Point(1, 1);
             mainScreenPanel.Margin = new Padding(2, 4, 2, 4);
             mainScreenPanel.Name = "mainScreenPanel";
-            mainScreenPanel.Size = new Size(1966, 1119);
+            mainScreenPanel.Size = new Size(1930, 1119);
             mainScreenPanel.TabIndex = 26;
             // 
             // panel1
@@ -484,7 +484,7 @@
             dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
             dataGridMinors.DefaultCellStyle = dataGridViewCellStyle2;
-            dataGridMinors.Location = new Point(58, 1697);
+            dataGridMinors.Location = new Point(72, 2092);
             dataGridMinors.Margin = new Padding(1);
             dataGridMinors.Name = "dataGridMinors";
             dataGridMinors.RowHeadersVisible = false;
@@ -541,11 +541,11 @@
             textBox5.BackColor = Color.DimGray;
             textBox5.Font = new Font("Segoe UI", 25F, FontStyle.Regular, GraphicsUnit.Point);
             textBox5.ForeColor = Color.White;
-            textBox5.Location = new Point(56, 1626);
+            textBox5.Location = new Point(75, 2006);
             textBox5.Margin = new Padding(5, 7, 5, 7);
             textBox5.Name = "textBox5";
             textBox5.ReadOnly = true;
-            textBox5.Size = new Size(872, 63);
+            textBox5.Size = new Size(1085, 74);
             textBox5.TabIndex = 247;
             textBox5.Text = "Minor Courses";
             textBox5.TextAlign = HorizontalAlignment.Center;
@@ -576,7 +576,7 @@
             dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle4.WrapMode = DataGridViewTriState.False;
             dataGridTheology.DefaultCellStyle = dataGridViewCellStyle4;
-            dataGridTheology.Location = new Point(57, 1367);
+            dataGridTheology.Location = new Point(71, 1705);
             dataGridTheology.Margin = new Padding(1);
             dataGridTheology.Name = "dataGridTheology";
             dataGridTheology.RowHeadersVisible = false;
@@ -724,7 +724,7 @@
             dataGridViewCellStyle7.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle7.WrapMode = DataGridViewTriState.False;
             dataGridGenEd.DefaultCellStyle = dataGridViewCellStyle7;
-            dataGridGenEd.Location = new Point(57, 1055);
+            dataGridGenEd.Location = new Point(71, 1316);
             dataGridGenEd.Margin = new Padding(1);
             dataGridGenEd.Name = "dataGridGenEd";
             dataGridGenEd.RowHeadersVisible = false;
@@ -816,7 +816,7 @@
             dataGridViewCellStyle9.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle9.WrapMode = DataGridViewTriState.False;
             dataGridCognate.DefaultCellStyle = dataGridViewCellStyle9;
-            dataGridCognate.Location = new Point(57, 737);
+            dataGridCognate.Location = new Point(71, 927);
             dataGridCognate.Margin = new Padding(1);
             dataGridCognate.Name = "dataGridCognate";
             dataGridCognate.RowHeadersVisible = false;
@@ -938,7 +938,7 @@
             dataGridViewCellStyle11.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle11.WrapMode = DataGridViewTriState.False;
             dataGridMajors.DefaultCellStyle = dataGridViewCellStyle11;
-            dataGridMajors.Location = new Point(57, 428);
+            dataGridMajors.Location = new Point(71, 536);
             dataGridMajors.Margin = new Padding(1);
             dataGridMajors.Name = "dataGridMajors";
             dataGridMajors.RowHeadersVisible = false;
@@ -1036,7 +1036,7 @@
             tableLayoutPanel1.Controls.Add(tableLayoutPanel2, 0, 4);
             tableLayoutPanel1.Controls.Add(majorDisplay1, 0, 1);
             tableLayoutPanel1.Controls.Add(minorDisplay1, 0, 3);
-            tableLayoutPanel1.Location = new Point(1529, 25);
+            tableLayoutPanel1.Location = new Point(1515, 25);
             tableLayoutPanel1.Margin = new Padding(1);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.RowCount = 9;
@@ -1314,7 +1314,7 @@
             AutoScroll = true;
             AutoSize = true;
             BackColor = SystemColors.ControlDarkDark;
-            ClientSize = new Size(1924, 1050);
+            ClientSize = new Size(1961, 1084);
             Controls.Add(mainScreenPanel);
             Controls.Add(textBox2);
             Controls.Add(textBox1);
