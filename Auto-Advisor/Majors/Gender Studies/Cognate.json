@@ -1,9 +1,34 @@
 [
     {
-        "code": "",
-        "name": "",
-        "prerequisites": [],
-        "hours": 0,
-        "description": ""
+        "code": "MATH 1903",
+        "name": "Calculus 1",
+        "prerequisites": [ "MATH 1304 OR MATH 1203 & MATH 1253" ],
+        "hours": 3,
+        "description": "An introduction to calculus with emphasis on concepts and principles. Topics studied include limits, derivatives, applications of derivatives, and antiderivatives."
+    },
+    {
+        "code": "MATH 2003",
+        "name": "Discrete Mathematics",
+        "prerequisites": [ "MATH 1203" ],
+        "hours": 3,
+        "description": "Discrete mathematical structures (in contrast to continuous functions) are essential for many mathematical disciplines, including computer science.  This course provides a foundation for the study of such structures by introducing students to set theory, propositional logic, proofs, induction, relations, algorithms, number theory, and graph theory."
+    },
+    {
+        "code": "COUN 5113",
+        "name": "Human Sexuality & Sex Therapy",
+        "prerequisites": [ "COUN 5023", "COUN 5043", "COUN 5083", "COUN 5383" ],
+        "hours": 3,
+        "description": "This course provides an introduction to counseling for sexual issues. Students are introduced to a theology of sexuality, a basic model of addressing sexual issues in counseling, basics of sexual biology and psychology, and sexual development. Students will take an in-depth look at asessment and treaatment of sexual dysfunctions and sexual problems. Students are also challenged in their own growth and development in this area."
+    },
+    {
+        "name": "Cognate Elective Courses",
+        "hours": 24,
+        "description": "Half of the required cognate courses must be Jr.-Sr. level."
+    },
+    {
+        "code": "ENGL ELEV",
+        "name": "Literature Elective",
+        "hours": 3,
+        "description": "Any ENGL class."
     }
 ]
