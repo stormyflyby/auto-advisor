@@ -21,7 +21,7 @@ namespace Auto_Advisor
 
         public class User
         {
-            public string semester { get; set; }
+            public int semester { get; set; }
             public string code { get; set; }
             public string name { get; set; }
             public int hours { get; set; }
@@ -78,9 +78,9 @@ namespace Auto_Advisor
             grid.Rows.Clear();
             foreach (var course in users)
             {
-                string sem = comboBox4.SelectedItem.ToString();
+                int sem = int.Parse(comboBox4.SelectedItem.ToString());
                 DataGridViewRow row = null;
-                if (course.semester == sem)
+                if (course.semester <= sem && (!courseInTextBox(course.code, textBox1) && !courseInTextBox(course.code, textBox2)))
                 {
                     int rowIndex = grid.Rows.Add();
                     row = grid.Rows[rowIndex];
