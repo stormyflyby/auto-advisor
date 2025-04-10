@@ -210,6 +210,11 @@ namespace Auto_Advisor
                 return;
             }
 
+            // Reset calculated hours values
+            TotalHours = 0;
+            TotalHoursStillNeeded = 0;
+            TotalHoursNeeded = 0;
+
             // Establish file path for selected major
             string majorsRootPath = Path.Combine(System.Windows.Forms.Application.StartupPath, "Majors");
             string selectedMajor = MajorList.SelectedItem.ToString();
@@ -220,7 +225,6 @@ namespace Auto_Advisor
                 string selectedMinor = MinorBox.SelectedItem.ToString();
                 minorPath = Path.Combine(minorsRootPath, selectedMinor);
             }
-
 
             // Populate majors sidebar display
             majorDisplay.Items.Clear();
@@ -261,16 +265,12 @@ namespace Auto_Advisor
             // Load minor info if it exists, else delete it
             if (MinorBox.SelectedItem != null && MinorBox.SelectedItem.ToString() != "None")
             {
-                TotalHoursNeeded = 144;
-                TotalHoursStillNeeded = 144;
                 LoadCoursesIntoGrid(Path.Combine(minorPath, "minor_classes.json"), dataGridMinors);
                 dataGridMinors.Visible = true;
                 textBox5.Visible = true;
             }
             else
             {
-                TotalHoursNeeded = 126;
-                TotalHoursStillNeeded = 126;
                 dataGridMinors.Visible = false;
                 textBox5.Visible = false;
             }
