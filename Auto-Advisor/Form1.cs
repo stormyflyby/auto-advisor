@@ -223,7 +223,37 @@ namespace Auto_Advisor
             TotalHoursStillNeeded = 0;
             TotalHoursNeeded = 0;
 
-            // Establish file path for selected major
+            // Populate majors sidebar display
+            majorDisplay1.Items.Clear();
+            majorDisplay1.Items.Add(MajorList.SelectedItem);
+            if (MajorList2.SelectedItem != null)
+            {
+                majorDisplay1.Items.Add(MajorList2.SelectedItem);
+            }
+            majorDisplay1.SelectedItem = MajorList.SelectedItem;
+
+            // Populate minors sidebar display
+            minorDisplay1.Items.Clear();
+            if (MinorBox.SelectedItem != null && MinorBox.SelectedItem.ToString() == "None")
+            {
+                MinorBox.SelectedItem = MinorBox2.SelectedItem;
+                MinorBox2.SelectedItem = null;
+            }
+            if (MinorBox2.SelectedItem != null && MinorBox2.SelectedItem.ToString() == "None")
+            {
+                MinorBox2.SelectedItem = null;
+            }
+            if (MinorBox.SelectedItem != null)
+            {
+                minorDisplay1.Items.Add(MinorBox.SelectedItem);
+            }
+            if (MinorBox2.SelectedItem != null)
+            {
+                minorDisplay1.Items.Add(MinorBox2.SelectedItem);
+            }
+            minorDisplay1.SelectedItem = MinorBox.SelectedItem;
+
+            // Establish file path for selected major and minor
             string majorsRootPath = Path.Combine(System.Windows.Forms.Application.StartupPath, "Majors");
             string selectedMajor = MajorList.SelectedItem.ToString();
             majorPath = Path.Combine(majorsRootPath, selectedMajor);
@@ -234,27 +264,7 @@ namespace Auto_Advisor
                 minorPath = Path.Combine(minorsRootPath, selectedMinor);
             }
 
-            // Populate majors sidebar display
-            majorDisplay1.Items.Clear();
-            majorDisplay1.Items.Add(MajorList.SelectedItem);
-            if (MajorList2.SelectedItem != null)
-            {
-                majorDisplay1.Items.Add(MajorList2.SelectedItem);
-            }
-            majorDisplay1.SelectedItem = MajorList.SelectedItem; // recursion error
-            // Populate minors sidebar display
-            minorDisplay1.Items.Clear();
-            if (MinorBox.SelectedItem != null && MinorBox.SelectedItem.ToString() != "None")
-            {
-                minorDisplay1.Items.Add(MinorBox.SelectedItem);
-            }
-            if (MinorBox2.SelectedItem != null)
-            {
-                minorDisplay1.Items.Add(MinorBox2.SelectedItem);
-            }
-            minorDisplay1.SelectedItem = MinorBox.SelectedItem;
-
-            // Populate all courses from JSON files
+            // Populate all major courses from JSON files
             LoadCoursesIntoGrid(Path.Combine(majorPath, "major_classes.json"), dataGridMajors);
             LoadCoursesIntoGrid(Path.Combine(majorPath, "Cognate.json"), dataGridCognate);
             LoadCoursesIntoGrid(Path.Combine(majorPath, "General_Education.json"), dataGridGenEd);
@@ -272,8 +282,8 @@ namespace Auto_Advisor
             listBox2.Items.Clear();
             listBox2.Items.Add(TotalHoursNeeded); // Load total hours for major
 
-            // Load minor info if it exists, else delete it
-            if (MinorBox.SelectedItem != null && MinorBox.SelectedItem.ToString() != "None")
+            // Load minor courses if one was selected, else delete display box
+            if (MinorBox.SelectedItem != null)
             {
                 LoadCoursesIntoGrid(Path.Combine(minorPath, "minor_classes.json"), dataGridMinors);
                 dataGridMinors.Visible = true;
@@ -555,6 +565,20 @@ namespace Auto_Advisor
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void minorDisplay1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (suppressMajorDisplayEvent) return;
+            if (MinorBox2.SelectedItem == null) return; // no second minor was selected
+            suppressMajorDisplayEvent = true;
+
+            var temp = MinorBox.SelectedItem;
+            MinorBox.SelectedItem = MinorBox2.SelectedItem;
+            MinorBox2.SelectedItem = temp;
+            continueFunction();
+
+            suppressMajorDisplayEvent = false;
         }
     }
 

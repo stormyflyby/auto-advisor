@@ -1,0 +1,42 @@
+[
+    {
+        "code": "BAGP 1012",
+        "name": "Introduction to Loud Noises",
+        "prerequisites": [],
+        "hours": 3,
+        "description": "A foundational course in making sound travel unreasonably far. Students will learn basic techniques in breath control, instrument tuning, and how to clear a room in under five seconds."
+    },
+    {
+        "code": "BAGP 2043",
+        "name": "Advanced Squeezing Techniques",
+        "prerequisites": [ "BAGP 1012" ],
+        "hours": 3,
+        "description": "Explores the delicate art of applying precise pressure to inflatable livestock. Emphasis on rhythm, endurance, and not popping the bag mid-solo."
+    },
+    {
+        "name": "Celtic Sound Design Elective",
+        "prerequisites": [],
+        "hours": 3,
+        "description": "Students choose from a selection of sound design courses involving improvised sound effects, distortion, and the mystical power of reverb in stone castles."
+    },
+    {
+        "code": "BAGP 3103",
+        "name": "Bagpipe Maintenance and Emergency Repairs",
+        "prerequisites": [ "BAGP 2043" ],
+        "hours": 3,
+        "description": "Covers the anatomy of the bagpipe, how to soothe an angry reed, and what to do when your bagpipe starts playing jazz unprompted."
+    },
+    {
+        "code": "BAGP 3705",
+        "name": "Marching in Plaid: Movement for Musicians",
+        "prerequisites": [],
+        "hours": 3,
+        "description": "Learn to march with swagger while wearing a kilt and playing the pipes. Includes bagpipe yoga and tactical pivoting for parades and spontaneous duels."
+    },
+    {
+        "name": "Experimental Bagpipe Elective",
+        "prerequisites": [],
+        "hours": 3,
+        "description": "Explore cross-disciplinary experiments such as bagpipe dubstep, underwater piping, and duets with angry geese."
+    }
+]

@@ -235,7 +235,7 @@
             // 
             MinorBox.DropDownStyle = ComboBoxStyle.DropDownList;
             MinorBox.FormattingEnabled = true;
-            MinorBox.Items.AddRange(new object[] { "None", "Biblical Studies" });
+            MinorBox.Items.AddRange(new object[] { "None", "Biblical Studies", "Bagpipe Engineering", "Evil Science" });
             MinorBox.Location = new Point(4, 5);
             MinorBox.Margin = new Padding(4, 5, 4, 5);
             MinorBox.Name = "MinorBox";
@@ -393,7 +393,7 @@
             // 
             MinorBox2.DropDownStyle = ComboBoxStyle.DropDownList;
             MinorBox2.FormattingEnabled = true;
-            MinorBox2.Items.AddRange(new object[] { "None", "Biblical Studies" });
+            MinorBox2.Items.AddRange(new object[] { "None", "Biblical Studies", "Bagpipe Engineering", "Evil Science" });
             MinorBox2.Location = new Point(179, 5);
             MinorBox2.Margin = new Padding(4, 5, 4, 5);
             MinorBox2.Name = "MinorBox2";
@@ -1289,6 +1289,7 @@
             minorDisplay1.Name = "minorDisplay1";
             minorDisplay1.Size = new Size(320, 40);
             minorDisplay1.TabIndex = 250;
+            minorDisplay1.SelectedIndexChanged += minorDisplay1_SelectedIndexChanged;
             // 
             // button1
             // 
