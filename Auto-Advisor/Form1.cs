@@ -250,7 +250,7 @@ namespace Auto_Advisor
             LoadCoursesIntoGrid(Path.Combine(majorPath, "General_Education.json"), dataGridGenEd);
             LoadCoursesIntoGrid(Path.Combine(majorPath, "Theology_Courses.json"), dataGridTheology);
             recommendedCourses(Path.Combine(majorPath, "recommended.json"), dataGridRecommended);
-            
+
             // Populate other sidebar data
             listBox4.Items.Clear();
             listBox4.Items.Add(comboBox4.SelectedItem); // Load current semester
@@ -521,6 +521,11 @@ namespace Auto_Advisor
                 MinorBox2.Items.Remove(item);
                 removedMinor = item.ToString();
             }
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 
