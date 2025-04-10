@@ -537,10 +537,11 @@ namespace Auto_Advisor
         {
 
         }
-
+        // Switch which major is displayed from the main page
         private void majorDisplay1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(suppressMajorDisplayEvent) return;
+            if (suppressMajorDisplayEvent) return;
+            if (MajorList2.SelectedItem == null) return; // no second major was selected
             suppressMajorDisplayEvent = true;
 
             var temp = MajorList.SelectedItem;
