@@ -10,8 +10,8 @@ namespace Auto_Advisor
         string removedMajor = null;
         string removedMinor = null;
         int TotalHours = 0;
-        int TotalHoursStillNeeded = 126;
-        int TotalHoursNeeded = 126;
+        int TotalHoursStillNeeded = 0;
+        int TotalHoursNeeded = 0;
         public Form1()
         {
             InitializeComponent();
@@ -47,20 +47,15 @@ namespace Auto_Advisor
                 row.Cells[1].Value = course.name;
                 row.Cells[2].Value = course.hours;
 
+                // Update the total hours for the given major
+                TotalHoursNeeded += course.hours;
+
                 // Determine color of row
                 if (courseInTextBox(course.code, textBox1)) // Course already taken
                 {
                     row.DefaultCellStyle.BackColor = Color.LightGreen;
                     row.DefaultCellStyle.SelectionBackColor = Color.LightGreen;
                     TotalHours += course.hours;
-                    listBox6.Items.Clear();
-                    listBox6.Items.Add(TotalHours);
-                    TotalHoursStillNeeded -= TotalHours;
-                    listBox5.Items.Clear();
-                    listBox5.Items.Add(TotalHoursStillNeeded);
-                    listBox2.Items.Clear();
-                    listBox2.Items.Add(TotalHoursNeeded);
-
                 }
                 else if (courseInTextBox(course.code, textBox2)) // Course currently being taken
                 {
@@ -215,6 +210,11 @@ namespace Auto_Advisor
                 return;
             }
 
+            // Reset calculated hours values
+            TotalHours = 0;
+            TotalHoursStillNeeded = 0;
+            TotalHoursNeeded = 0;
+
             // Establish file path for selected major
             string majorsRootPath = Path.Combine(System.Windows.Forms.Application.StartupPath, "Majors");
             string selectedMajor = MajorList.SelectedItem.ToString();
@@ -225,7 +225,6 @@ namespace Auto_Advisor
                 string selectedMinor = MinorBox.SelectedItem.ToString();
                 minorPath = Path.Combine(minorsRootPath, selectedMinor);
             }
-
 
             // Populate majors sidebar display
             majorDisplay.Items.Clear();
@@ -244,9 +243,6 @@ namespace Auto_Advisor
             {
                 majorDisplay.Items.Add(MinorBox2.SelectedItem);
             }
-            // Populate other sidebar data
-            listBox4.Items.Clear();
-            listBox4.Items.Add(comboBox4.SelectedItem); // Load current semester
 
             // Populate all courses from JSON files
             LoadCoursesIntoGrid(Path.Combine(majorPath, "major_classes.json"), dataGridMajors);
@@ -254,20 +250,27 @@ namespace Auto_Advisor
             LoadCoursesIntoGrid(Path.Combine(majorPath, "General_Education.json"), dataGridGenEd);
             LoadCoursesIntoGrid(Path.Combine(majorPath, "Theology_Courses.json"), dataGridTheology);
             recommendedCourses(Path.Combine(majorPath, "recommended.json"), dataGridRecommended);
+            
+            // Populate other sidebar data
+            listBox4.Items.Clear();
+            listBox4.Items.Add(comboBox4.SelectedItem); // Load current semester
+            listBox6.Items.Clear();
+            listBox6.Items.Add(TotalHours); // Load total hours taken
+            TotalHoursStillNeeded = TotalHoursNeeded - TotalHours;
+            listBox5.Items.Clear();
+            listBox5.Items.Add(TotalHoursStillNeeded); // Load hours still needed
+            listBox2.Items.Clear();
+            listBox2.Items.Add(TotalHoursNeeded); // Load total hours for major
 
             // Load minor info if it exists, else delete it
             if (MinorBox.SelectedItem != null && MinorBox.SelectedItem.ToString() != "None")
             {
-                TotalHoursNeeded = 144;
-                TotalHoursStillNeeded = 144;
                 LoadCoursesIntoGrid(Path.Combine(minorPath, "minor_classes.json"), dataGridMinors);
                 dataGridMinors.Visible = true;
                 textBox5.Visible = true;
             }
             else
             {
-                TotalHoursNeeded = 126;
-                TotalHoursStillNeeded = 126;
                 dataGridMinors.Visible = false;
                 textBox5.Visible = false;
             }
