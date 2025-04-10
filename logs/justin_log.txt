@@ -10,3 +10,5 @@
 4/8/25 Created a folder structure for storing all .json files relating to majors and minors
 4/8/25 Added a display grid for minor courses that is only visible when the user has a minor
 4/9/25 Made it so you can't select a major or minor twice
+4/9/25 Added the ability to switch between majors being displayed on the main page
+4/9/25 Lots of bug fixing
