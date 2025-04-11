@@ -109,19 +109,19 @@
             button2 = new Button();
             tableLayoutPanel2 = new TableLayoutPanel();
             listBox4 = new ListBox();
-            listBox2 = new ListBox();
-            listBox5 = new ListBox();
             listBox6 = new ListBox();
             listBox7 = new ListBox();
             listBox8 = new ListBox();
             listBox1 = new ListBox();
+            listBox5 = new ListBox();
+            listBox2 = new ListBox();
             listBox9 = new ListBox();
+            listBox3 = new ListBox();
+            listBox10 = new ListBox();
             majorDisplay1 = new ComboBox();
             minorDisplay1 = new ComboBox();
             button1 = new Button();
             openSaveFileDialog = new OpenFileDialog();
-            listBox3 = new ListBox();
-            listBox10 = new ListBox();
             tableLayoutPanel3.SuspendLayout();
             tableLayoutPanel4.SuspendLayout();
             mainScreenPanel.SuspendLayout();
@@ -171,7 +171,6 @@
             label3.Size = new Size(303, 41);
             label3.TabIndex = 3;
             label3.Text = "Select your Minor(s)- ";
-            label3.Click += label3_Click;
             // 
             // label4
             // 
@@ -1145,40 +1144,6 @@
             listBox4.TabIndex = 5;
             listBox4.SelectedIndexChanged += listBox4_SelectedIndexChanged;
             // 
-            // listBox2
-            // 
-            listBox2.Anchor = AnchorStyles.Left;
-            listBox2.BackColor = SystemColors.ControlDarkDark;
-            listBox2.BorderStyle = BorderStyle.None;
-            listBox2.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
-            listBox2.ForeColor = Color.White;
-            listBox2.FormattingEnabled = true;
-            listBox2.ItemHeight = 30;
-            listBox2.Items.AddRange(new object[] { "126" });
-            listBox2.Location = new Point(277, 130);
-            listBox2.Margin = new Padding(1);
-            listBox2.Name = "listBox2";
-            listBox2.SelectionMode = SelectionMode.None;
-            listBox2.Size = new Size(84, 30);
-            listBox2.TabIndex = 7;
-            // 
-            // listBox5
-            // 
-            listBox5.Anchor = AnchorStyles.Left;
-            listBox5.BackColor = SystemColors.ControlDarkDark;
-            listBox5.BorderStyle = BorderStyle.None;
-            listBox5.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
-            listBox5.ForeColor = Color.White;
-            listBox5.FormattingEnabled = true;
-            listBox5.ItemHeight = 30;
-            listBox5.Items.AddRange(new object[] { "0" });
-            listBox5.Location = new Point(277, 171);
-            listBox5.Margin = new Padding(1);
-            listBox5.Name = "listBox5";
-            listBox5.SelectionMode = SelectionMode.None;
-            listBox5.Size = new Size(84, 30);
-            listBox5.TabIndex = 8;
-            // 
             // listBox6
             // 
             listBox6.Anchor = AnchorStyles.Left;
@@ -1247,6 +1212,40 @@
             listBox1.Size = new Size(251, 30);
             listBox1.TabIndex = 6;
             // 
+            // listBox5
+            // 
+            listBox5.Anchor = AnchorStyles.Left;
+            listBox5.BackColor = SystemColors.ControlDarkDark;
+            listBox5.BorderStyle = BorderStyle.None;
+            listBox5.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
+            listBox5.ForeColor = Color.White;
+            listBox5.FormattingEnabled = true;
+            listBox5.ItemHeight = 30;
+            listBox5.Items.AddRange(new object[] { "0" });
+            listBox5.Location = new Point(277, 171);
+            listBox5.Margin = new Padding(1);
+            listBox5.Name = "listBox5";
+            listBox5.SelectionMode = SelectionMode.None;
+            listBox5.Size = new Size(84, 30);
+            listBox5.TabIndex = 8;
+            // 
+            // listBox2
+            // 
+            listBox2.Anchor = AnchorStyles.Left;
+            listBox2.BackColor = SystemColors.ControlDarkDark;
+            listBox2.BorderStyle = BorderStyle.None;
+            listBox2.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
+            listBox2.ForeColor = Color.White;
+            listBox2.FormattingEnabled = true;
+            listBox2.ItemHeight = 30;
+            listBox2.Items.AddRange(new object[] { "126" });
+            listBox2.Location = new Point(277, 130);
+            listBox2.Margin = new Padding(1);
+            listBox2.Name = "listBox2";
+            listBox2.SelectionMode = SelectionMode.None;
+            listBox2.Size = new Size(84, 30);
+            listBox2.TabIndex = 7;
+            // 
             // listBox9
             // 
             listBox9.Anchor = AnchorStyles.Left;
@@ -1263,6 +1262,40 @@
             listBox9.SelectionMode = SelectionMode.None;
             listBox9.Size = new Size(219, 30);
             listBox9.TabIndex = 12;
+            // 
+            // listBox3
+            // 
+            listBox3.Anchor = AnchorStyles.Left;
+            listBox3.BackColor = SystemColors.ControlDarkDark;
+            listBox3.BorderStyle = BorderStyle.None;
+            listBox3.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
+            listBox3.ForeColor = Color.White;
+            listBox3.FormattingEnabled = true;
+            listBox3.ItemHeight = 30;
+            listBox3.Items.AddRange(new object[] { "Hours in progress:" });
+            listBox3.Location = new Point(4, 89);
+            listBox3.Margin = new Padding(1);
+            listBox3.Name = "listBox3";
+            listBox3.SelectionMode = SelectionMode.None;
+            listBox3.Size = new Size(198, 30);
+            listBox3.TabIndex = 13;
+            // 
+            // listBox10
+            // 
+            listBox10.Anchor = AnchorStyles.Left;
+            listBox10.BackColor = SystemColors.ControlDarkDark;
+            listBox10.BorderStyle = BorderStyle.None;
+            listBox10.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
+            listBox10.ForeColor = Color.White;
+            listBox10.FormattingEnabled = true;
+            listBox10.ItemHeight = 30;
+            listBox10.Items.AddRange(new object[] { "0" });
+            listBox10.Location = new Point(277, 89);
+            listBox10.Margin = new Padding(1);
+            listBox10.Name = "listBox10";
+            listBox10.SelectionMode = SelectionMode.None;
+            listBox10.Size = new Size(84, 30);
+            listBox10.TabIndex = 14;
             // 
             // majorDisplay1
             // 
@@ -1312,40 +1345,6 @@
             openSaveFileDialog.FileName = "openSaveFileDialog";
             openSaveFileDialog.Title = "Select your save data.";
             openSaveFileDialog.FileOk += openSaveFileDialog_FileOk;
-            // 
-            // listBox3
-            // 
-            listBox3.Anchor = AnchorStyles.Left;
-            listBox3.BackColor = SystemColors.ControlDarkDark;
-            listBox3.BorderStyle = BorderStyle.None;
-            listBox3.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
-            listBox3.ForeColor = Color.White;
-            listBox3.FormattingEnabled = true;
-            listBox3.ItemHeight = 30;
-            listBox3.Items.AddRange(new object[] { "Hours in progress:" });
-            listBox3.Location = new Point(4, 89);
-            listBox3.Margin = new Padding(1);
-            listBox3.Name = "listBox3";
-            listBox3.SelectionMode = SelectionMode.None;
-            listBox3.Size = new Size(198, 30);
-            listBox3.TabIndex = 13;
-            // 
-            // listBox10
-            // 
-            listBox10.Anchor = AnchorStyles.Left;
-            listBox10.BackColor = SystemColors.ControlDarkDark;
-            listBox10.BorderStyle = BorderStyle.None;
-            listBox10.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
-            listBox10.ForeColor = Color.White;
-            listBox10.FormattingEnabled = true;
-            listBox10.ItemHeight = 30;
-            listBox10.Items.AddRange(new object[] { "0" });
-            listBox10.Location = new Point(277, 89);
-            listBox10.Margin = new Padding(1);
-            listBox10.Name = "listBox10";
-            listBox10.SelectionMode = SelectionMode.None;
-            listBox10.Size = new Size(84, 30);
-            listBox10.TabIndex = 14;
             // 
             // Form1
             // 

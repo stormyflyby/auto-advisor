@@ -22,6 +22,17 @@ namespace Auto_Advisor
             mainScreenPanel.Visible = false;
         }
 
+        // This class stores properties for each course in the specified degree's catalog
+        public class DegreeCourse
+        {
+            public string code { get; set; }
+            public string name { get; set; }
+            public List<string> prerequisites { get; set; }
+            public int hours { get; set; }
+            public string description { get; set; }
+        }
+
+        // This class is used to store recommended course info
         public class User
         {
             public int semester { get; set; }
@@ -30,7 +41,11 @@ namespace Auto_Advisor
             public int hours { get; set; }
         }
 
-        // Loads a JSON file with course info into the display grid
+        /**
+         * Loads a json file with course info into the display grid
+         * @param filePath the location of the json file to be loaded
+         * @param grid the grid where data is being sent
+         */
         private void LoadCoursesIntoGrid(string filePath, DataGridView grid)
         {
             string json = File.ReadAllText(filePath); // Read the file to a string
@@ -44,30 +59,30 @@ namespace Auto_Advisor
 
             foreach (var course in courses)
             {
-                // Store each course in a grid row
+                // Store each course and its values in a grid row
                 int rowIndex = grid.Rows.Add();
                 var row = grid.Rows[rowIndex];
-                row.Cells[0].Value = course.code;
-                row.Cells[1].Value = course.name;
-                row.Cells[2].Value = course.hours;
+                row.Cells[0].Value = course.code;          // Course Code
+                row.Cells[1].Value = course.name;          // Course Name
+                row.Cells[2].Value = course.hours;         // Hours
 
                 // Update the total hours for the given major
                 TotalHoursNeeded += course.hours;
 
-                // Determine color of row
+                // Determine color of the row
                 if (courseInTextBox(course.code, textBox1)) // Course already taken
                 {
                     row.DefaultCellStyle.BackColor = Color.LightGreen;
                     row.DefaultCellStyle.SelectionBackColor = Color.LightGreen;
-                    TotalHours += course.hours;
+                    TotalHours += course.hours; // Update hours already taken
                 }
                 else if (courseInTextBox(course.code, textBox2)) // Course currently being taken
                 {
                     row.DefaultCellStyle.BackColor = Color.Yellow;
                     row.DefaultCellStyle.SelectionBackColor = Color.Yellow;
-                    HoursInProgress += course.hours;
+                    HoursInProgress += course.hours; // Update hours in progress
                 }
-                else
+                else // Course not taken yet
                 {
                     row.DefaultCellStyle.SelectionBackColor = grid.DefaultCellStyle.BackColor;
                 }
@@ -75,15 +90,22 @@ namespace Auto_Advisor
             grid.DefaultCellStyle.SelectionForeColor = grid.DefaultCellStyle.ForeColor;
         }
 
+        /**
+         * Loads recommended course up to and including the current semester
+         * from the json file into the display grid. Hours are not recalculated.
+         * @param filePath the location of the json file to be loaded
+         * @param grid the grid where data is being sent
+         */
         private void recommendedCourses(string filePath, DataGridView grid)
         {
-            string json = File.ReadAllText(filePath);
+            string json = File.ReadAllText(filePath); // Read the file to a string
             List<User> users = JsonConvert.DeserializeObject<List<User>>(json);
             grid.Rows.Clear();
             foreach (var course in users)
             {
                 int sem = int.Parse(comboBox4.SelectedItem.ToString());
                 DataGridViewRow row = null;
+                // Doesn't load courses beyond current semester or courses already/currently taken
                 if (course.semester <= sem && (!courseInTextBox(course.code, textBox1) && !courseInTextBox(course.code, textBox2)))
                 {
                     int rowIndex = grid.Rows.Add();
@@ -107,7 +129,7 @@ namespace Auto_Advisor
                         row.DefaultCellStyle.BackColor = Color.Yellow;
                         row.DefaultCellStyle.SelectionBackColor = Color.Yellow;
                     }
-                    else
+                    else // Course not taken yet
                     {
                         row.DefaultCellStyle.SelectionBackColor = grid.DefaultCellStyle.BackColor;
                     }
@@ -117,6 +139,12 @@ namespace Auto_Advisor
             grid.DefaultCellStyle.SelectionForeColor = grid.DefaultCellStyle.ForeColor;
         }
 
+        /**
+         * Checks to see if a given course was entered in a start screen textbox.
+         * @param code the class code being checked
+         * @param grid the textbox where the code may have been entered
+         * @return true if course found
+         */
         private bool courseInTextBox(string code, TextBox textbox)
         {
             // Split textbox content by line
@@ -132,12 +160,10 @@ namespace Auto_Advisor
             return false; // Code not found
         }
 
-        private void moreButtonCell(object sender, EventArgs e)
-        {
-
-        }
-
-        // Check that required course info is filled on first screen
+        /**
+         * Checks to see if required course info is fully filled on start screen
+         * @return true if all data entered
+         */
         private bool CheckCourseInfo()
         {
             if (MajorList.SelectedItem == null || comboBox3.SelectedItem == null || comboBox4.SelectedItem == null)
@@ -147,25 +173,13 @@ namespace Auto_Advisor
             return true;
         }
 
+        /**
+         * Displays an error message indicating start screen info is missing
+         */
         private void FieldsMissingError()
         {
             MessageBox.Show("Fields missing", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
             return;
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged_1(object sender, EventArgs e)
-        {
-
         }
 
         // Adding/removing a second major
@@ -586,15 +600,5 @@ namespace Auto_Advisor
 
             suppressMajorDisplayEvent = false;
         }
-    }
-
-    // Class with properties for each course in the specified degree's catalog
-    public class DegreeCourse
-    {
-        public string code { get; set; }
-        public string name { get; set; }
-        public List<string> prerequisites { get; set; }
-        public int hours { get; set; }
-        public string description { get; set; }
     }
 }
