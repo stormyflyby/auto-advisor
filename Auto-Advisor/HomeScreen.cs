@@ -355,7 +355,7 @@ namespace Auto_Advisor
                 if (course.name == className)
                 {
                     // Pass course details to form2 for display (course.code may be null)
-                    Form2 form2 = new Form2(course.code, course.name, course.prerequisites, course.hours, course.description);
+                    CourseDetails form2 = new CourseDetails(course.code, course.name, course.prerequisites, course.hours, course.description);
                     form2.Show();
                     break;
                 }

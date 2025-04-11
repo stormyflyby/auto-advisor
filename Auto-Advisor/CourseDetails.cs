@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Auto_Advisor
 {
-    public partial class Form2 : Form
+    public partial class CourseDescription : Form
     {
-        public Form2(string code, string name, List<String> prerequisites, int hours, string description)
+        public CourseDescription(string code, string name, List<String> prerequisites, int hours, string description)
         {
             InitializeComponent();
             if(code != null)
