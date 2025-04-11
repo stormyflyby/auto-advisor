@@ -8,3 +8,4 @@
 4/7/25 7:30 PM to 9:30 PM - made significant progress in a variety of tasks, including work on the course details page and completion of save functionality
 4/8/25 7:35 PM to 9:35 PM - made progress on implementation of minors and additional majors
 4/9/25 7:35 PM to 9:45 PM - made progress on a variety of tasks, including finishing course JSON files, improving course recommendations, and bug fixes
+4/11/25 11:45 AM to 12:40 PM - 

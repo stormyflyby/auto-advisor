@@ -120,6 +120,8 @@
             minorDisplay1 = new ComboBox();
             button1 = new Button();
             openSaveFileDialog = new OpenFileDialog();
+            listBox3 = new ListBox();
+            listBox10 = new ListBox();
             tableLayoutPanel3.SuspendLayout();
             tableLayoutPanel4.SuspendLayout();
             mainScreenPanel.SuspendLayout();
@@ -1017,12 +1019,12 @@
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 8.370837F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 4.320432F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 7.830783F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 22.50225F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 6.840684F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 46.2646255F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 19F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 19F));
-            tableLayoutPanel1.Size = new Size(281, 667);
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 25.8834763F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 7.354346F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 41.92932F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 31F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 31F));
+            tableLayoutPanel1.Size = new Size(401, 1111);
             tableLayoutPanel1.TabIndex = 1;
             tableLayoutPanel1.Paint += tableLayoutPanel1_Paint;
             // 
@@ -1058,8 +1060,8 @@
             // button2
             // 
             button2.Anchor = AnchorStyles.None;
-            button2.Location = new Point(57, 295);
-            button2.Margin = new Padding(1, 1, 1, 1);
+            button2.Location = new Point(81, 536);
+            button2.Margin = new Padding(1, 2, 1, 2);
             button2.Name = "button2";
             button2.Size = new Size(167, 40);
             button2.TabIndex = 6;
@@ -1076,23 +1078,26 @@
             tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 75F));
             tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
             tableLayoutPanel2.Controls.Add(listBox4, 1, 0);
-            tableLayoutPanel2.Controls.Add(listBox2, 1, 2);
-            tableLayoutPanel2.Controls.Add(listBox5, 1, 3);
             tableLayoutPanel2.Controls.Add(listBox6, 1, 1);
             tableLayoutPanel2.Controls.Add(listBox7, 0, 0);
             tableLayoutPanel2.Controls.Add(listBox8, 0, 1);
-            tableLayoutPanel2.Controls.Add(listBox1, 0, 3);
-            tableLayoutPanel2.Controls.Add(listBox9, 0, 2);
-            tableLayoutPanel2.Location = new Point(11, 161);
+            tableLayoutPanel2.Controls.Add(listBox1, 0, 4);
+            tableLayoutPanel2.Controls.Add(listBox5, 1, 4);
+            tableLayoutPanel2.Controls.Add(listBox2, 1, 3);
+            tableLayoutPanel2.Controls.Add(listBox9, 0, 3);
+            tableLayoutPanel2.Controls.Add(listBox3, 0, 2);
+            tableLayoutPanel2.Controls.Add(listBox10, 1, 2);
+            tableLayoutPanel2.Location = new Point(16, 291);
             tableLayoutPanel2.Margin = new Padding(1);
             tableLayoutPanel2.Name = "tableLayoutPanel2";
             tableLayoutPanel2.RightToLeft = RightToLeft.No;
-            tableLayoutPanel2.RowCount = 4;
-            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 25.96154F));
-            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 23.0769234F));
-            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 25.48077F));
-            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 25.48077F));
-            tableLayoutPanel2.Size = new Size(258, 125);
+            tableLayoutPanel2.RowCount = 5;
+            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 20F));
+            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 20F));
+            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 20F));
+            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 20F));
+            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 20F));
+            tableLayoutPanel2.Size = new Size(369, 209);
             tableLayoutPanel2.TabIndex = 5;
             // 
             // listBox4
@@ -1105,7 +1110,7 @@
             listBox4.FormattingEnabled = true;
             listBox4.ItemHeight = 20;
             listBox4.Items.AddRange(new object[] { "0" });
-            listBox4.Location = new Point(193, 17);
+            listBox4.Location = new Point(277, 7);
             listBox4.Margin = new Padding(1);
             listBox4.Name = "listBox4";
             listBox4.SelectionMode = SelectionMode.None;
@@ -1123,7 +1128,7 @@
             listBox2.FormattingEnabled = true;
             listBox2.ItemHeight = 20;
             listBox2.Items.AddRange(new object[] { "126" });
-            listBox2.Location = new Point(193, 76);
+            listBox2.Location = new Point(277, 130);
             listBox2.Margin = new Padding(1);
             listBox2.Name = "listBox2";
             listBox2.SelectionMode = SelectionMode.None;
@@ -1140,7 +1145,7 @@
             listBox5.FormattingEnabled = true;
             listBox5.ItemHeight = 20;
             listBox5.Items.AddRange(new object[] { "0" });
-            listBox5.Location = new Point(193, 107);
+            listBox5.Location = new Point(277, 171);
             listBox5.Margin = new Padding(1);
             listBox5.Name = "listBox5";
             listBox5.SelectionMode = SelectionMode.None;
@@ -1157,7 +1162,7 @@
             listBox6.FormattingEnabled = true;
             listBox6.ItemHeight = 20;
             listBox6.Items.AddRange(new object[] { "0" });
-            listBox6.Location = new Point(193, 46);
+            listBox6.Location = new Point(277, 48);
             listBox6.Margin = new Padding(1);
             listBox6.Name = "listBox6";
             listBox6.SelectionMode = SelectionMode.None;
@@ -1174,11 +1179,11 @@
             listBox7.FormattingEnabled = true;
             listBox7.ItemHeight = 20;
             listBox7.Items.AddRange(new object[] { "Current Semester:" });
-            listBox7.Location = new Point(4, 17);
+            listBox7.Location = new Point(4, 7);
             listBox7.Margin = new Padding(1);
             listBox7.Name = "listBox7";
             listBox7.SelectionMode = SelectionMode.None;
-            listBox7.Size = new Size(118, 0);
+            listBox7.Size = new Size(198, 30);
             listBox7.TabIndex = 10;
             // 
             // listBox8
@@ -1189,13 +1194,13 @@
             listBox8.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
             listBox8.ForeColor = Color.White;
             listBox8.FormattingEnabled = true;
-            listBox8.ItemHeight = 20;
-            listBox8.Items.AddRange(new object[] { "Total Hours:" });
-            listBox8.Location = new Point(4, 46);
+            listBox8.ItemHeight = 30;
+            listBox8.Items.AddRange(new object[] { "Hours completed:" });
+            listBox8.Location = new Point(4, 48);
             listBox8.Margin = new Padding(1);
             listBox8.Name = "listBox8";
             listBox8.SelectionMode = SelectionMode.None;
-            listBox8.Size = new Size(118, 0);
+            listBox8.Size = new Size(198, 30);
             listBox8.TabIndex = 11;
             // 
             // listBox1
@@ -1208,7 +1213,7 @@
             listBox1.FormattingEnabled = true;
             listBox1.ItemHeight = 20;
             listBox1.Items.AddRange(new object[] { "Hours still needed:" });
-            listBox1.Location = new Point(4, 107);
+            listBox1.Location = new Point(4, 171);
             listBox1.Margin = new Padding(1);
             listBox1.Name = "listBox1";
             listBox1.SelectionMode = SelectionMode.None;
@@ -1225,7 +1230,7 @@
             listBox9.FormattingEnabled = true;
             listBox9.ItemHeight = 20;
             listBox9.Items.AddRange(new object[] { "Total Hours Needed:" });
-            listBox9.Location = new Point(4, 76);
+            listBox9.Location = new Point(4, 130);
             listBox9.Margin = new Padding(1);
             listBox9.Name = "listBox9";
             listBox9.SelectionMode = SelectionMode.None;
@@ -1281,6 +1286,40 @@
             openSaveFileDialog.Title = "Select your save data.";
             openSaveFileDialog.FileOk += openSaveFileDialog_FileOk;
             // 
+            // listBox3
+            // 
+            listBox3.Anchor = AnchorStyles.Left;
+            listBox3.BackColor = SystemColors.ControlDarkDark;
+            listBox3.BorderStyle = BorderStyle.None;
+            listBox3.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
+            listBox3.ForeColor = Color.White;
+            listBox3.FormattingEnabled = true;
+            listBox3.ItemHeight = 30;
+            listBox3.Items.AddRange(new object[] { "Hours in progress:" });
+            listBox3.Location = new Point(4, 89);
+            listBox3.Margin = new Padding(1);
+            listBox3.Name = "listBox3";
+            listBox3.SelectionMode = SelectionMode.None;
+            listBox3.Size = new Size(198, 30);
+            listBox3.TabIndex = 13;
+            // 
+            // listBox10
+            // 
+            listBox10.Anchor = AnchorStyles.Left;
+            listBox10.BackColor = SystemColors.ControlDarkDark;
+            listBox10.BorderStyle = BorderStyle.None;
+            listBox10.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
+            listBox10.ForeColor = Color.White;
+            listBox10.FormattingEnabled = true;
+            listBox10.ItemHeight = 30;
+            listBox10.Items.AddRange(new object[] { "0" });
+            listBox10.Location = new Point(277, 89);
+            listBox10.Margin = new Padding(1);
+            listBox10.Name = "listBox10";
+            listBox10.SelectionMode = SelectionMode.None;
+            listBox10.Size = new Size(84, 30);
+            listBox10.TabIndex = 14;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -1288,7 +1327,7 @@
             AutoScroll = true;
             AutoSize = true;
             BackColor = SystemColors.ControlDarkDark;
-            ClientSize = new Size(959, 449);
+            ClientSize = new Size(1924, 1050);
             Controls.Add(mainScreenPanel);
             Controls.Add(textBox2);
             Controls.Add(textBox1);
@@ -1415,5 +1454,7 @@
         private DataGridViewButtonColumn dataGridViewButtonColumn5;
         private ComboBox majorDisplay1;
         private ComboBox minorDisplay1;
+        private ListBox listBox3;
+        private ListBox listBox10;
     }
 }
