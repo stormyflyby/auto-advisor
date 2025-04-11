@@ -1,6 +1,6 @@
 ﻿namespace Auto_Advisor
 {
-    partial class Form2
+    partial class CourseDescription
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CourseDescription));
             courseDetailsLabel = new Label();
             courseTitleLabel = new Label();
             descriptionLabel = new Label();
@@ -44,9 +44,10 @@
             courseDetailsLabel.AutoSize = true;
             courseDetailsLabel.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
             courseDetailsLabel.ForeColor = Color.White;
-            courseDetailsLabel.Location = new Point(400, 5);
+            courseDetailsLabel.Location = new Point(280, 3);
+            courseDetailsLabel.Margin = new Padding(2, 0, 2, 0);
             courseDetailsLabel.Name = "courseDetailsLabel";
-            courseDetailsLabel.Size = new Size(215, 41);
+            courseDetailsLabel.Size = new Size(140, 28);
             courseDetailsLabel.TabIndex = 0;
             courseDetailsLabel.Text = "Course Details:";
             // 
@@ -56,9 +57,10 @@
             courseTitleLabel.AutoSize = true;
             courseTitleLabel.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
             courseTitleLabel.ForeColor = Color.White;
-            courseTitleLabel.Location = new Point(303, 46);
+            courseTitleLabel.Location = new Point(212, 28);
+            courseTitleLabel.Margin = new Padding(2, 0, 2, 0);
             courseTitleLabel.Name = "courseTitleLabel";
-            courseTitleLabel.Size = new Size(395, 41);
+            courseTitleLabel.Size = new Size(262, 28);
             courseTitleLabel.TabIndex = 1;
             courseTitleLabel.Text = "ABCD 1234 - Intro to English";
             courseTitleLabel.Click += label1_Click;
@@ -66,9 +68,10 @@
             // descriptionLabel
             // 
             descriptionLabel.ForeColor = Color.White;
-            descriptionLabel.Location = new Point(76, 145);
+            descriptionLabel.Location = new Point(53, 87);
+            descriptionLabel.Margin = new Padding(2, 0, 2, 0);
             descriptionLabel.Name = "descriptionLabel";
-            descriptionLabel.Size = new Size(363, 349);
+            descriptionLabel.Size = new Size(254, 209);
             descriptionLabel.TabIndex = 2;
             descriptionLabel.Text = resources.GetString("descriptionLabel.Text");
             // 
@@ -78,9 +81,10 @@
             descriptionTitle.BorderStyle = BorderStyle.Fixed3D;
             descriptionTitle.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
             descriptionTitle.ForeColor = Color.White;
-            descriptionTitle.Location = new Point(76, 106);
+            descriptionTitle.Location = new Point(53, 64);
+            descriptionTitle.Margin = new Padding(2, 0, 2, 0);
             descriptionTitle.Name = "descriptionTitle";
-            descriptionTitle.Size = new Size(363, 37);
+            descriptionTitle.Size = new Size(254, 22);
             descriptionTitle.TabIndex = 3;
             descriptionTitle.Text = "Description:";
             // 
@@ -90,18 +94,20 @@
             label1.BorderStyle = BorderStyle.Fixed3D;
             label1.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
             label1.ForeColor = Color.White;
-            label1.Location = new Point(558, 106);
+            label1.Location = new Point(391, 64);
+            label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
-            label1.Size = new Size(363, 37);
+            label1.Size = new Size(254, 22);
             label1.TabIndex = 5;
             label1.Text = "Prerequisites:";
             // 
             // prereqsLabel
             // 
             prereqsLabel.ForeColor = Color.White;
-            prereqsLabel.Location = new Point(558, 145);
+            prereqsLabel.Location = new Point(391, 87);
+            prereqsLabel.Margin = new Padding(2, 0, 2, 0);
             prereqsLabel.Name = "prereqsLabel";
-            prereqsLabel.Size = new Size(363, 150);
+            prereqsLabel.Size = new Size(254, 90);
             prereqsLabel.TabIndex = 4;
             prereqsLabel.Text = "List of prereqs\r\nList of prereqs\r\nList of prereqs\r\nList of prereqs\r\nList of prereqs\r\n";
             // 
@@ -111,27 +117,29 @@
             infoTitle.BorderStyle = BorderStyle.Fixed3D;
             infoTitle.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
             infoTitle.ForeColor = Color.White;
-            infoTitle.Location = new Point(558, 310);
+            infoTitle.Location = new Point(391, 186);
+            infoTitle.Margin = new Padding(2, 0, 2, 0);
             infoTitle.Name = "infoTitle";
-            infoTitle.Size = new Size(363, 37);
+            infoTitle.Size = new Size(254, 22);
             infoTitle.TabIndex = 7;
             infoTitle.Text = "Additional info:";
             // 
             // label4
             // 
             label4.ForeColor = Color.White;
-            label4.Location = new Point(558, 349);
+            label4.Location = new Point(391, 209);
+            label4.Margin = new Padding(2, 0, 2, 0);
             label4.Name = "label4";
-            label4.Size = new Size(363, 126);
+            label4.Size = new Size(254, 76);
             label4.TabIndex = 6;
             label4.Text = "N/A\r\n";
             // 
             // Form2
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ControlDarkDark;
-            ClientSize = new Size(1006, 543);
+            ClientSize = new Size(704, 326);
             Controls.Add(infoTitle);
             Controls.Add(label4);
             Controls.Add(label1);
@@ -140,8 +148,9 @@
             Controls.Add(descriptionLabel);
             Controls.Add(courseTitleLabel);
             Controls.Add(courseDetailsLabel);
+            Margin = new Padding(2, 2, 2, 2);
             Name = "Form2";
-            Text = "Form2";
+            Text = "CourseDetails";
             ResumeLayout(false);
             PerformLayout();
         }
