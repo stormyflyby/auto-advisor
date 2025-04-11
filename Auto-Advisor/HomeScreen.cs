@@ -355,7 +355,7 @@ namespace Auto_Advisor
                 if (course.name == className)
                 {
                     // Pass course details to form2 for display (course.code may be null)
-                    CourseDetails form2 = new CourseDetails(course.code, course.name, course.prerequisites, course.hours, course.description);
+                    CourseDescription form2 = new CourseDescription(course.code, course.name, course.prerequisites, course.hours, course.description);
                     form2.Show();
                     break;
                 }
@@ -463,8 +463,17 @@ namespace Auto_Advisor
                         textBox2.Text += $"{s} \r\n";
                     }
 
-                    if (cis.Major1 != string.Empty) MajorList2.Visible = true;
-                    if (cis.Minor1 != string.Empty) MinorBox2.Visible = true;
+                    if (cis.Major1 != string.Empty)
+                    {
+                        MajorList2.Visible = true;
+                        MajorButton.Text = "Remove";
+                    }
+
+                    if (cis.Minor1 != string.Empty)
+                    {
+                        MinorBox2.Visible = true;
+                        button6.Text = "Remove";
+                    }
                 }
                 catch
                 {
