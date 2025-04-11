@@ -5,14 +5,17 @@ namespace Auto_Advisor
 {
     public partial class Form1 : Form
     {
-        string majorPath = "";
+        /* Global variables */
+        string majorPath = ""; // File paths for the selected major/minor
         string minorPath = "";
-        string removedMajor = null;
+        string removedMajor = null; // Major/minor that can't be displayed in the second dropdown because it was selected in the first
         string removedMinor = null;
-        int TotalHours = 0;
-        int TotalHoursStillNeeded = 0;
-        int TotalHoursNeeded = 0;
-        bool suppressMajorDisplayEvent = false;
+        int TotalHours = 0; // Hours the student has taken already
+        int TotalHoursStillNeeded = 0; // Remaining hours the student needs to graduate
+        int TotalHoursNeeded = 0; // Total hours for the selected major
+        int HoursInProgress = 0; // Hours currently being taken
+        bool suppressMajorDisplayEvent = false; // Prevents major display update from retriggering itself
+
         public Form1()
         {
             InitializeComponent();
@@ -62,6 +65,7 @@ namespace Auto_Advisor
                 {
                     row.DefaultCellStyle.BackColor = Color.Yellow;
                     row.DefaultCellStyle.SelectionBackColor = Color.Yellow;
+                    HoursInProgress += course.hours;
                 }
                 else
                 {
@@ -204,7 +208,7 @@ namespace Auto_Advisor
         // This is the continue button
         private void button5_Click(object sender, EventArgs e)
         {
-            suppressMajorDisplayEvent = true;
+            suppressMajorDisplayEvent = true; // Prevents major display update from retriggering itself
             continueFunction();
             suppressMajorDisplayEvent = false;
         }
@@ -281,6 +285,8 @@ namespace Auto_Advisor
             listBox5.Items.Add(TotalHoursStillNeeded); // Load hours still needed
             listBox2.Items.Clear();
             listBox2.Items.Add(TotalHoursNeeded); // Load total hours for major
+            listBox10.Items.Clear();
+            listBox10.Items.Add(HoursInProgress); // Load hours currently being taken
 
             // Load minor courses if one was selected, else delete display box
             if (MinorBox.SelectedItem != null)
@@ -550,7 +556,7 @@ namespace Auto_Advisor
         // Switch which major is displayed from the main page
         private void majorDisplay1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (suppressMajorDisplayEvent) return;
+            if (suppressMajorDisplayEvent) return; // When set to true, display is being changed by the continue button and should not cause this method to execute
             if (MajorList2.SelectedItem == null) return; // no second major was selected
             suppressMajorDisplayEvent = true;
 
@@ -569,7 +575,7 @@ namespace Auto_Advisor
 
         private void minorDisplay1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (suppressMajorDisplayEvent) return;
+            if (suppressMajorDisplayEvent) return; // When set to true, display is being changed by the continue button and should not cause this method to execute
             if (MinorBox2.SelectedItem == null) return; // no second minor was selected
             suppressMajorDisplayEvent = true;
 
