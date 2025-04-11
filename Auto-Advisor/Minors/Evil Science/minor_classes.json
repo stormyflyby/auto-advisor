@@ -1,43 +1,50 @@
 [
-    {
-        "code": "EVLS 1001",
-        "name": "Intro to Villainous Thinking",
-        "prerequisites": [],
-        "hours": 3,
-        "description": "Covers basic evil theory, monologue pacing, and villain archetypes. Students begin developing their own evil laugh and a preliminary blueprint for world domination."
-    },
-    {
-        "code": "EVLS 2013",
-        "name": "Doomsday Devices",
-        "prerequisites": [ "EVLS 1001" ],
-        "hours": 3,
-        "description": "Covers the design, construction, and tasteful unveiling of high-stakes doomsday devices. Learn why the button must always be red, the difference between countdowns and count-ups, and how to stall for time while monologuing."
-    },
-    {
-        "name": "Evil Tech Elective",
-        "prerequisites": [],
-        "hours": 3,
-        "description": "Choose a technology course on designing devices for world domination. Taught by faculty on probation."
-    },
-    {
-        "code": "EVLS 3027",
-        "name": "Mind Control and Psychological Influence",
-        "prerequisites": [ "EVLS 1001" ],
-        "hours": 3,
-        "description": "Learn how to weaponize subliminal messaging, classic hypnotism, and social influence through the use of TikTok dances."
-    },
-    {
-        "code": "EVLS 4010",
-        "name": "Dramatic Entrances and Exit Strategies",
-        "prerequisites": [],
-        "hours": 3,
-        "description": "Master the art of showing up late, uninvited, and with ominous music. Learn how to escape explosions without looking back, vanish into smoke clouds, and crash events with flair. Capes are optional, but encouraged."
-    },
-    {
-        "code": "EVLS 4023",
-        "name": "Ethics for Supervillains",
-        "prerequisites": [],
-        "hours": 3,
-        "description": "This reflective course tackles the moral dilemmas of modern villainy. Topics include: ethical cloning, humane dungeon design, and the long-term sustainability of global domination. Includes group debates on whether monologuing counts as consent."
-    }
+  {
+    "code": "EVLS 1001",
+    "name": "Intro to Villainous Thinking",
+    "prerequisites": [],
+    "hours": 3,
+    "description": "Covers basic evil theory, monologue pacing, and villain archetypes. Students begin developing their own evil laugh and a preliminary blueprint for world domination."
+  },
+  {
+    "code": "EVLS 2013",
+    "name": "Doomsday Devices",
+    "prerequisites": [ "EVLS 1001" ],
+    "hours": 3,
+    "description": "Covers the design, construction, and tasteful unveiling of high-stakes doomsday devices. Learn why the button must always be red, the difference between countdowns and count-ups, and how to stall for time while monologuing."
+  },
+  {
+    "name": "Evil Tech Elective",
+    "prerequisites": [],
+    "hours": 3,
+    "description": "Choose a technology course on designing devices for world domination. Taught by faculty on probation."
+  },
+  {
+    "code": "EVLS 3027",
+    "name": "Mind Control and Psychological Influence",
+    "prerequisites": [ "EVLS 1001" ],
+    "hours": 3,
+    "description": "Learn how to weaponize subliminal messaging, classic hypnotism, and social influence through the use of TikTok dances."
+  },
+  {
+    "code": "EVLS 4010",
+    "name": "Dramatic Entrances and Exit Strategies",
+    "prerequisites": [],
+    "hours": 3,
+    "description": "Master the art of showing up late, uninvited, and with ominous music. Learn how to escape explosions without looking back, vanish into smoke clouds, and crash events with flair. Capes are optional, but encouraged."
+  },
+  {
+    "code": "EVLS 4023",
+    "name": "Ethics for Supervillains",
+    "prerequisites": [],
+    "hours": 3,
+    "description": "This reflective course tackles the moral dilemmas of modern villainy. Topics include: ethical cloning, humane dungeon design, and the long-term sustainability of global domination. Includes group debates on whether monologuing counts as consent."
+  },
+  {
+    "code": "EVLS 4104",
+    "name": "Platypus self defense",
+    "prerequisites": [],
+    "hours": 3,
+    "description": "You will Learn how to defend yourself against a semi-aquatic egg-layin' mammal of action because they have more than just mad skill, they got a beaver tail and bill. You will learn how to protect the women's ears from their siren song since the women swoon whenever they hear them say...,(*Platypus chatter*). You will also learn how to tell the difference between a platypus whether they are wearing or not wearing a brown fedora"
+  }
 ]
