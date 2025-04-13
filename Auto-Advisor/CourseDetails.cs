@@ -15,7 +15,7 @@ namespace Auto_Advisor
         public CourseDescription(string code, string name, List<String> prerequisites, int hours, string description)
         {
             InitializeComponent();
-            if(code != null)
+            if (code != null)
             {
                 courseTitleLabel.Text = code + " - " + name;
             }
@@ -26,7 +26,7 @@ namespace Auto_Advisor
             courseTitleLabel.Left = (this.ClientSize.Width - courseTitleLabel.Width) / 2;
             descriptionLabel.Text = description;
             prereqsLabel.Text = "";
-            if(prerequisites != null)
+            if (prerequisites != null)
             {
                 foreach (string prerequisite in prerequisites)
                 {
