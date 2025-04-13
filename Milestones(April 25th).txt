@@ -1,0 +1,7 @@
+•    Milestone Name: Give each milestone a descriptive name.
+•    Milestone Description: Explain what the milestone represents and its significance.
+•    Milestone Deliverables: List the specific outputs or tasks that need to be completed for the milestone to be considered successful.
+•    Milestone Timeline: Specify the start and end dates for the milestone.
+•    Dependencies: Identify any other milestones or tasks that must be completed before a given milestone can begin.
+•    Success Criteria: Define how the completion of the milestone will be measured and verified.
+•    Risk Assessment: Identify potential risks associated with each milestone and outline mitigation strategies. 
