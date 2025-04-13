@@ -462,7 +462,7 @@
             dataGridViewCellStyle1.SelectionBackColor = Color.White;
             dataGridViewCellStyle1.SelectionForeColor = Color.Black;
             dataGridMinors.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            dataGridMinors.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridMinors.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
             dataGridMinors.BorderStyle = BorderStyle.None;
             dataGridMinors.CellBorderStyle = DataGridViewCellBorderStyle.Raised;
             dataGridMinors.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
@@ -516,6 +516,7 @@
             dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
             dataGridViewTextBoxColumn15.ReadOnly = true;
             dataGridViewTextBoxColumn15.SortMode = DataGridViewColumnSortMode.NotSortable;
+            dataGridViewTextBoxColumn15.Width = 54;
             // 
             // dataGridViewButtonColumn5
             // 
@@ -554,7 +555,7 @@
             dataGridViewCellStyle3.SelectionBackColor = Color.White;
             dataGridViewCellStyle3.SelectionForeColor = Color.Black;
             dataGridTheology.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
-            dataGridTheology.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridTheology.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
             dataGridTheology.BorderStyle = BorderStyle.None;
             dataGridTheology.CellBorderStyle = DataGridViewCellBorderStyle.Raised;
             dataGridTheology.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
@@ -608,6 +609,7 @@
             dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
             dataGridViewTextBoxColumn12.ReadOnly = true;
             dataGridViewTextBoxColumn12.SortMode = DataGridViewColumnSortMode.NotSortable;
+            dataGridViewTextBoxColumn12.Width = 54;
             // 
             // dataGridViewButtonColumn4
             // 
@@ -632,7 +634,7 @@
             dataGridViewCellStyle5.SelectionBackColor = Color.White;
             dataGridViewCellStyle5.SelectionForeColor = Color.Black;
             dataGridRecommended.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
-            dataGridRecommended.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridRecommended.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
             dataGridRecommended.BorderStyle = BorderStyle.None;
             dataGridRecommended.CellBorderStyle = DataGridViewCellBorderStyle.Raised;
             dataGridRecommended.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
@@ -678,6 +680,7 @@
             dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             dataGridViewTextBoxColumn3.ReadOnly = true;
             dataGridViewTextBoxColumn3.SortMode = DataGridViewColumnSortMode.NotSortable;
+            dataGridViewTextBoxColumn3.Width = 54;
             // 
             // dataGridViewButtonColumn2
             // 
@@ -702,7 +705,7 @@
             dataGridViewCellStyle6.SelectionBackColor = Color.White;
             dataGridViewCellStyle6.SelectionForeColor = Color.Black;
             dataGridGenEd.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
-            dataGridGenEd.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridGenEd.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
             dataGridGenEd.BorderStyle = BorderStyle.None;
             dataGridGenEd.CellBorderStyle = DataGridViewCellBorderStyle.Raised;
             dataGridGenEd.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
@@ -756,6 +759,7 @@
             dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
             dataGridViewTextBoxColumn9.ReadOnly = true;
             dataGridViewTextBoxColumn9.SortMode = DataGridViewColumnSortMode.NotSortable;
+            dataGridViewTextBoxColumn9.Width = 54;
             // 
             // dataGridViewButtonColumn3
             // 
@@ -794,7 +798,7 @@
             dataGridViewCellStyle8.SelectionBackColor = Color.White;
             dataGridViewCellStyle8.SelectionForeColor = Color.Black;
             dataGridCognate.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle8;
-            dataGridCognate.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridCognate.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
             dataGridCognate.BorderStyle = BorderStyle.None;
             dataGridCognate.CellBorderStyle = DataGridViewCellBorderStyle.Raised;
             dataGridCognate.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
@@ -848,6 +852,7 @@
             dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
             dataGridViewTextBoxColumn6.ReadOnly = true;
             dataGridViewTextBoxColumn6.SortMode = DataGridViewColumnSortMode.NotSortable;
+            dataGridViewTextBoxColumn6.Width = 54;
             // 
             // dataGridViewButtonColumn1
             // 
@@ -916,7 +921,7 @@
             dataGridViewCellStyle10.SelectionBackColor = Color.White;
             dataGridViewCellStyle10.SelectionForeColor = Color.Black;
             dataGridMajors.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
-            dataGridMajors.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridMajors.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
             dataGridMajors.BorderStyle = BorderStyle.None;
             dataGridMajors.CellBorderStyle = DataGridViewCellBorderStyle.Raised;
             dataGridMajors.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
@@ -970,6 +975,7 @@
             Hours.Name = "Hours";
             Hours.ReadOnly = true;
             Hours.SortMode = DataGridViewColumnSortMode.NotSortable;
+            Hours.Width = 54;
             // 
             // Details
             // 
