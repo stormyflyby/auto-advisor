@@ -1,7 +1,53 @@
-•    Milestone Name: Give each milestone a descriptive name.
-•    Milestone Description: Explain what the milestone represents and its significance.
-•    Milestone Deliverables: List the specific outputs or tasks that need to be completed for the milestone to be considered successful.
-•    Milestone Timeline: Specify the start and end dates for the milestone.
-•    Dependencies: Identify any other milestones or tasks that must be completed before a given milestone can begin.
-•    Success Criteria: Define how the completion of the milestone will be measured and verified.
-•    Risk Assessment: Identify potential risks associated with each milestone and outline mitigation strategies. 
+1.
+    Milestone Name: Finished Product
+    Milestone Description: This milestone represents the end of the project
+    Milestone Deliverables: The UI and the code work to our liking and match our vision
+    Milestone Timeline: 4/14/25 - 4/25/25
+    Dependencies: Every other milestone
+    Success Criteria: When all milestones are reached and little to no errors exist.
+    Risk Assessment: We have some errors pop up, or we run out of time
+
+2. 
+    Milestone Name: Search Function
+    Milestone Description: This milestone will help the user to search for a class, and courses will only stay on the screen if they match the search
+    Milestone Deliverables: A search function that will only display names that the user inputed.
+    Milestone Timeline: 4/14/25 - 4/22/25
+    Dependencies: Depends on the course and class names to continue working. 
+    Success Criteria: The user can search for a class and be shown which class they need.
+    Risk Assessment: We run into errors with the search function, and it does not correctly display the input.
+
+3.
+    Milestone Name: Reworked User Interface
+    Milestone Description: This milestone will have a nicer and cleaner-looking UI.
+    Milestone Deliverables: The UI has a cleaner look and is more pleasing to the eyes.
+    Milestone Timeline: 4/14/25 - 4/25/25
+    Dependencies: The search function and other functions would need to be complete in order to be properly placed into the UI.
+    Success Criteria: The UI is to our liking, and we consider it perfected
+    Risk Assessment: We could change the UI, and it could cause issues with some functions and hard-coded segments
+
+4.
+    Milestone Name: Courses not being hardcoded
+    Milestone Description: The class categories will change with the major and will be generated based on course files and their names.
+    Milestone Deliverables: Every major will have their correct electives.
+    Milestone Timeline: 4/14/25 - 4/18/25
+    Dependencies: Depends on how the courses are loaded into their data grid tables
+    Success Criteria: The courses are successfully loaded based on the majors
+    Risk Assessment: Might involve trial and error with the UI, and the courses could try to load a file that cannot be found and cause the application to crash.
+
+5.
+    Milestone Name: Testing with potential users
+    Milestone Description: We will have other people test the code and get their feedback.
+    Milestone Deliverables: We get feedback from the testers.
+    Milestone Timeline: 4/14/25 - 4/25/25
+    Dependencies: Finding people who are willing to test the code.
+    Success Criteria: We learn a reasonable amount from user feedback.
+    Risk Assessment: The users may lead us astray with bad feedback.
+
+6.
+    Milestone Name: Improve performance 
+    Milestone Description: decrease the time it takes the main screen to pop up when you hit the continue button.
+    Milestone Deliverables: The continue button is quicker.
+    Milestone Timeline: 4/14/25 - 4/25/25
+    Dependencies: The code related to course categories.
+    Success Criteria: The time is decreased.
+    Risk Assessment: Efforts to decrease the time may not show strong results
