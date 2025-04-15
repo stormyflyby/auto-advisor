@@ -468,11 +468,23 @@ namespace Auto_Advisor
                         MajorList2.Visible = true;
                         MajorButton.Text = "Remove";
                     }
+                    else
+                    {
+                        MajorList2.Visible = false;
+                        MajorButton.Text = "Add";
+                        MajorList2.SelectedItem = null;
+                    }
 
                     if (cis.Minor1 != string.Empty)
                     {
                         MinorBox2.Visible = true;
                         button6.Text = "Remove";
+                    }
+                    else
+                    {
+                        MinorBox2.Visible = false;
+                        button6.Text = "Add";
+                        MinorBox2.SelectedItem = null;
                     }
                 }
                 catch
