@@ -240,6 +240,7 @@ namespace Auto_Advisor
             TotalHours = 0;
             TotalHoursStillNeeded = 0;
             TotalHoursNeeded = 0;
+            HoursInProgress = 0;
 
             // Populate majors sidebar display
             majorDisplay1.Items.Clear();
