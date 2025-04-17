@@ -225,6 +225,8 @@ namespace Auto_Advisor
             suppressMajorDisplayEvent = true; // Prevents major display update from retriggering itself
             continueFunction();
             suppressMajorDisplayEvent = false;
+            textBox7.Visible = false;
+            button5.Visible = false;
         }
 
         public void continueFunction()
@@ -324,6 +326,8 @@ namespace Auto_Advisor
         private void button1_Click(object sender, EventArgs e)
         {
             mainScreenPanel.Visible = false;
+            textBox7.Visible = true;
+            button5.Visible = true;
             TotalHours = 0;
         }
 
@@ -622,5 +626,22 @@ namespace Auto_Advisor
 
             suppressMajorDisplayEvent = false;
         }
+
+        private void button5_Click_2(object sender, EventArgs e)
+        {
+            System.Windows.Forms.MessageBox.Show("The AutoAdvisor helps you with knowing what classes you need to take for your Major(s) and Minor(s)\n\nFor help with Majors/Minors -\nSelect a Major/Minor from the dropdown menu and if you are double Majoring/Minoring then hit the add Major/Minor button then select your second Major/Minor from the dropdown menu\n\nFor help with Honors - \nIf you are a Honors student hit 'yes' and if you're not then hit 'no' \n\nFor help with Upcoming Semester - \nUpcoming semester means the next semester such as if you are currently in semester 4, your upcoming semester will be semester 5\n\nFor help with Completed or Currently Taking courses - \nEnter your Course Code in all caps and hit enter after every entry and only have one course code on every line\n\nFor help with Download data - \nWhen you click download data all of your dropdown menu and data entered will be saved to a document so when you use AutoAdvisor again you do not need to readd the info\n\nFor help with Enter Saved Data - \nIf you have a data file from the Download Data button then you can click the Enter Saved Data button and have all of your info reentered for you. ");
+        }
+
+        private void mainScreenPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            System.Windows.Forms.MessageBox.Show("The AutoAdvisor splits your classes into different tables to help show what classes you need to take and what category each class is in\n\n                                        Some Helpful Questions - \n\nWhat are Recommended Classes - \nRecommended Classes are the classes that are the highest priority to take whether that be classes that you were meant to take in previous semesters or classes that are made for the upcoming semester, all of your classes that you have not taken will show up in this table.\n\nWhat do the different colors mean -\nThe different colors are Green meaning you have completed the class, Yellow meaning you are currently taking the class and white meaning that you have not taken the class and are not currently in the class.\n\nHow do I find the course description or the Prerequisites - \nIf you find the more button under details on the tables that will display the course info, Prerequisites and additional info.   \n\nHow do I switch between Majors/Minors - \nIf you are trying to switch between different Majors/Minors all you need to do it click the drop down menu and select which Major/Minor you want to see classes for.\n\n What does the box with different hour totals mean - That box tells you five things 1. What semester you are picking classes for, 2. How many hours you have completed, 3. How many hours you are currently taking, 4. How many hours your degree needs to graduate, 5. How many hours you still need to earn to graduate(classes in progress will still show here ");
+        }
+
+        
     }
 }

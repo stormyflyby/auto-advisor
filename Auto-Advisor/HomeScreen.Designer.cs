@@ -64,6 +64,7 @@
             textBox1 = new TextBox();
             textBox2 = new TextBox();
             mainScreenPanel = new Panel();
+            button7 = new Button();
             panel1 = new Panel();
             dataGridMinors = new DataGridView();
             dataGridViewTextBoxColumn13 = new DataGridViewTextBoxColumn();
@@ -106,7 +107,6 @@
             tableLayoutPanel1 = new TableLayoutPanel();
             label10 = new Label();
             label11 = new Label();
-            button2 = new Button();
             tableLayoutPanel2 = new TableLayoutPanel();
             listBox4 = new ListBox();
             listBox6 = new ListBox();
@@ -121,7 +121,10 @@
             majorDisplay1 = new ComboBox();
             minorDisplay1 = new ComboBox();
             button1 = new Button();
+            button2 = new Button();
             openSaveFileDialog = new OpenFileDialog();
+            textBox7 = new TextBox();
+            button5 = new Button();
             tableLayoutPanel3.SuspendLayout();
             tableLayoutPanel4.SuspendLayout();
             mainScreenPanel.SuspendLayout();
@@ -139,11 +142,12 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 25F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.Font = new Font("Segoe UI", 20.25F, FontStyle.Regular, GraphicsUnit.Point);
             label1.ForeColor = Color.White;
-            label1.Location = new Point(375, 79);
+            label1.Location = new Point(357, 66);
+            label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
-            label1.Size = new Size(741, 57);
+            label1.Size = new Size(471, 37);
             label1.TabIndex = 1;
             label1.Text = "Please enter your information below - ";
             // 
@@ -152,9 +156,10 @@
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
             label2.ForeColor = Color.White;
-            label2.Location = new Point(133, 193);
+            label2.Location = new Point(120, 148);
+            label2.Margin = new Padding(2, 0, 2, 0);
             label2.Name = "label2";
-            label2.Size = new Size(260, 35);
+            label2.Size = new Size(204, 28);
             label2.TabIndex = 2;
             label2.Text = "Select your Major(s) - ";
             // 
@@ -163,20 +168,22 @@
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
             label3.ForeColor = Color.White;
-            label3.Location = new Point(133, 249);
+            label3.Location = new Point(120, 193);
+            label3.Margin = new Padding(2, 0, 2, 0);
             label3.Name = "label3";
-            label3.Size = new Size(254, 35);
+            label3.Size = new Size(205, 28);
             label3.TabIndex = 3;
-            label3.Text = "Select your Minor(s)- ";
+            label3.Text = "Select your Minor(s) - ";
             // 
             // label4
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
             label4.ForeColor = Color.White;
-            label4.Location = new Point(133, 311);
+            label4.Location = new Point(120, 241);
+            label4.Margin = new Padding(2, 0, 2, 0);
             label4.Name = "label4";
-            label4.Size = new Size(349, 35);
+            label4.Size = new Size(273, 28);
             label4.TabIndex = 4;
             label4.Text = "Are you an Honors student? - ";
             // 
@@ -185,9 +192,10 @@
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
             label5.ForeColor = Color.White;
-            label5.Location = new Point(133, 367);
+            label5.Location = new Point(120, 289);
+            label5.Margin = new Padding(2, 0, 2, 0);
             label5.Name = "label5";
-            label5.Size = new Size(468, 35);
+            label5.Size = new Size(367, 28);
             label5.TabIndex = 5;
             label5.Text = "What is your upcoming semester?(1-8) - ";
             // 
@@ -196,9 +204,10 @@
             label6.AutoSize = true;
             label6.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
             label6.ForeColor = Color.White;
-            label6.Location = new Point(133, 423);
+            label6.Location = new Point(120, 330);
+            label6.Margin = new Padding(2, 0, 2, 0);
             label6.Name = "label6";
-            label6.Size = new Size(418, 35);
+            label6.Size = new Size(327, 28);
             label6.TabIndex = 6;
             label6.Text = "What classes have you completed? -";
             // 
@@ -207,9 +216,10 @@
             label7.AutoSize = true;
             label7.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
             label7.ForeColor = Color.White;
-            label7.Location = new Point(133, 647);
+            label7.Location = new Point(124, 500);
+            label7.Margin = new Padding(2, 0, 2, 0);
             label7.Name = "label7";
-            label7.Size = new Size(454, 35);
+            label7.Size = new Size(356, 28);
             label7.TabIndex = 7;
             label7.Text = "What classes are you currently taking?- ";
             // 
@@ -218,10 +228,10 @@
             MajorList.DropDownStyle = ComboBoxStyle.DropDownList;
             MajorList.FormattingEnabled = true;
             MajorList.Items.AddRange(new object[] { "Computer Science", "Gender Studies" });
-            MajorList.Location = new Point(3, 4);
-            MajorList.Margin = new Padding(3, 4, 3, 4);
+            MajorList.Location = new Point(2, 3);
+            MajorList.Margin = new Padding(2, 3, 2, 3);
             MajorList.Name = "MajorList";
-            MajorList.Size = new Size(133, 28);
+            MajorList.Size = new Size(107, 23);
             MajorList.TabIndex = 8;
             MajorList.SelectedIndexChanged += MajorList_SelectedIndexChanged;
             // 
@@ -230,10 +240,10 @@
             MinorBox.DropDownStyle = ComboBoxStyle.DropDownList;
             MinorBox.FormattingEnabled = true;
             MinorBox.Items.AddRange(new object[] { "None", "Biblical Studies", "Bagpipe Engineering", "Evil Science" });
-            MinorBox.Location = new Point(3, 4);
-            MinorBox.Margin = new Padding(3, 4, 3, 4);
+            MinorBox.Location = new Point(2, 3);
+            MinorBox.Margin = new Padding(2, 3, 2, 3);
             MinorBox.Name = "MinorBox";
-            MinorBox.Size = new Size(133, 28);
+            MinorBox.Size = new Size(107, 23);
             MinorBox.TabIndex = 9;
             MinorBox.SelectedIndexChanged += MinorBox_SelectedIndexChanged;
             // 
@@ -242,10 +252,10 @@
             comboBox3.DropDownStyle = ComboBoxStyle.DropDownList;
             comboBox3.FormattingEnabled = true;
             comboBox3.Items.AddRange(new object[] { "No", "Yes" });
-            comboBox3.Location = new Point(693, 308);
-            comboBox3.Margin = new Padding(3, 4, 3, 4);
+            comboBox3.Location = new Point(545, 246);
+            comboBox3.Margin = new Padding(2, 3, 2, 3);
             comboBox3.Name = "comboBox3";
-            comboBox3.Size = new Size(139, 28);
+            comboBox3.Size = new Size(112, 23);
             comboBox3.TabIndex = 10;
             // 
             // comboBox4
@@ -253,10 +263,10 @@
             comboBox4.DropDownStyle = ComboBoxStyle.DropDownList;
             comboBox4.FormattingEnabled = true;
             comboBox4.Items.AddRange(new object[] { "1", "2", "3", "4", "5", "6", "7", "8" });
-            comboBox4.Location = new Point(695, 367);
-            comboBox4.Margin = new Padding(3, 4, 3, 4);
+            comboBox4.Location = new Point(545, 294);
+            comboBox4.Margin = new Padding(2, 3, 2, 3);
             comboBox4.Name = "comboBox4";
-            comboBox4.Size = new Size(139, 28);
+            comboBox4.Size = new Size(112, 23);
             comboBox4.TabIndex = 11;
             // 
             // label8
@@ -265,11 +275,12 @@
             label8.BackColor = Color.Transparent;
             label8.Font = new Font("Segoe UI", 8F, FontStyle.Regular, GraphicsUnit.Point);
             label8.ForeColor = Color.White;
-            label8.Location = new Point(161, 463);
+            label8.Location = new Point(147, 358);
+            label8.Margin = new Padding(2, 0, 2, 0);
             label8.Name = "label8";
-            label8.Size = new Size(276, 57);
+            label8.Size = new Size(232, 39);
             label8.TabIndex = 13;
-            label8.Text = "Please enter class codes, separated by a line\r\n Example: COSC 1303\r\n                  BIBL 1023";
+            label8.Text = "Please enter class codes, separated by a line\r\n Example: COSC 1303\r\n                  BIBL 1033";
             label8.Click += label8_Click;
             // 
             // label9
@@ -278,18 +289,19 @@
             label9.BackColor = Color.Transparent;
             label9.Font = new Font("Segoe UI", 8F, FontStyle.Regular, GraphicsUnit.Point);
             label9.ForeColor = Color.White;
-            label9.Location = new Point(161, 695);
+            label9.Location = new Point(147, 538);
+            label9.Margin = new Padding(2, 0, 2, 0);
             label9.Name = "label9";
-            label9.Size = new Size(276, 57);
+            label9.Size = new Size(232, 39);
             label9.TabIndex = 14;
-            label9.Text = "Please enter class codes, separated by a line\r\n Example: COSC 1303\r\n                  BIBL 1023\r\n";
+            label9.Text = "Please enter class codes, separated by a line\r\n Example: COSC 1303\r\n                  BIBL 1033\r\n";
             // 
             // button3
             // 
-            button3.Location = new Point(558, 847);
-            button3.Margin = new Padding(3, 4, 3, 4);
+            button3.Location = new Point(446, 678);
+            button3.Margin = new Padding(2, 3, 2, 3);
             button3.Name = "button3";
-            button3.Size = new Size(150, 31);
+            button3.Size = new Size(120, 25);
             button3.TabIndex = 18;
             button3.Text = "Download Data";
             button3.UseVisualStyleBackColor = true;
@@ -297,10 +309,10 @@
             // 
             // button4
             // 
-            button4.Location = new Point(747, 847);
-            button4.Margin = new Padding(3, 4, 3, 4);
+            button4.Location = new Point(598, 678);
+            button4.Margin = new Padding(2, 3, 2, 3);
             button4.Name = "button4";
-            button4.Size = new Size(160, 31);
+            button4.Size = new Size(128, 25);
             button4.TabIndex = 19;
             button4.Text = "Enter Saved Data";
             button4.UseVisualStyleBackColor = true;
@@ -308,10 +320,10 @@
             // 
             // continueButton
             // 
-            continueButton.Location = new Point(935, 847);
-            continueButton.Margin = new Padding(3, 4, 3, 4);
+            continueButton.Location = new Point(748, 678);
+            continueButton.Margin = new Padding(2, 3, 2, 3);
             continueButton.Name = "continueButton";
-            continueButton.Size = new Size(83, 31);
+            continueButton.Size = new Size(66, 25);
             continueButton.TabIndex = 20;
             continueButton.Text = "Continue";
             continueButton.UseVisualStyleBackColor = true;
@@ -324,12 +336,12 @@
             tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
             tableLayoutPanel3.Controls.Add(MajorList2, 1, 0);
             tableLayoutPanel3.Controls.Add(MajorList, 0, 0);
-            tableLayoutPanel3.Location = new Point(679, 185);
-            tableLayoutPanel3.Margin = new Padding(3, 4, 3, 4);
+            tableLayoutPanel3.Location = new Point(543, 148);
+            tableLayoutPanel3.Margin = new Padding(2, 3, 2, 3);
             tableLayoutPanel3.Name = "tableLayoutPanel3";
             tableLayoutPanel3.RowCount = 1;
             tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tableLayoutPanel3.Size = new Size(281, 63);
+            tableLayoutPanel3.Size = new Size(225, 50);
             tableLayoutPanel3.TabIndex = 6;
             // 
             // MajorList2
@@ -337,30 +349,35 @@
             MajorList2.DropDownStyle = ComboBoxStyle.DropDownList;
             MajorList2.FormattingEnabled = true;
             MajorList2.Items.AddRange(new object[] { "Computer Science", "Gender Studies" });
-            MajorList2.Location = new Point(143, 4);
-            MajorList2.Margin = new Padding(3, 4, 3, 4);
+            MajorList2.Location = new Point(114, 3);
+            MajorList2.Margin = new Padding(2, 3, 2, 3);
             MajorList2.Name = "MajorList2";
-            MajorList2.Size = new Size(133, 28);
+            MajorList2.Size = new Size(107, 23);
             MajorList2.TabIndex = 9;
             MajorList2.Visible = false;
             // 
             // MajorButton
             // 
-            MajorButton.Location = new Point(591, 188);
-            MajorButton.Margin = new Padding(3, 4, 3, 4);
+            MajorButton.BackColor = Color.White;
+            MajorButton.FlatAppearance.BorderColor = Color.Red;
+            MajorButton.FlatAppearance.BorderSize = 0;
+            MajorButton.FlatAppearance.MouseDownBackColor = Color.Red;
+            MajorButton.FlatAppearance.MouseOverBackColor = Color.Red;
+            MajorButton.Location = new Point(446, 150);
+            MajorButton.Margin = new Padding(2, 3, 2, 3);
             MajorButton.Name = "MajorButton";
-            MajorButton.Size = new Size(85, 31);
+            MajorButton.Size = new Size(95, 25);
             MajorButton.TabIndex = 21;
             MajorButton.Text = "Add Major";
-            MajorButton.UseVisualStyleBackColor = true;
+            MajorButton.UseVisualStyleBackColor = false;
             MajorButton.Click += button6_Click;
             // 
             // button6
             // 
-            button6.Location = new Point(591, 249);
-            button6.Margin = new Padding(3, 4, 3, 4);
+            button6.Location = new Point(446, 199);
+            button6.Margin = new Padding(2, 3, 2, 3);
             button6.Name = "button6";
-            button6.Size = new Size(85, 31);
+            button6.Size = new Size(95, 25);
             button6.TabIndex = 22;
             button6.Text = "Add Minor";
             button6.UseVisualStyleBackColor = true;
@@ -373,12 +390,12 @@
             tableLayoutPanel4.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
             tableLayoutPanel4.Controls.Add(MinorBox2, 1, 0);
             tableLayoutPanel4.Controls.Add(MinorBox, 0, 0);
-            tableLayoutPanel4.Location = new Point(679, 249);
-            tableLayoutPanel4.Margin = new Padding(3, 4, 3, 4);
+            tableLayoutPanel4.Location = new Point(543, 199);
+            tableLayoutPanel4.Margin = new Padding(2, 3, 2, 3);
             tableLayoutPanel4.Name = "tableLayoutPanel4";
             tableLayoutPanel4.RowCount = 1;
             tableLayoutPanel4.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tableLayoutPanel4.Size = new Size(281, 52);
+            tableLayoutPanel4.Size = new Size(225, 42);
             tableLayoutPanel4.TabIndex = 23;
             // 
             // MinorBox2
@@ -386,45 +403,58 @@
             MinorBox2.DropDownStyle = ComboBoxStyle.DropDownList;
             MinorBox2.FormattingEnabled = true;
             MinorBox2.Items.AddRange(new object[] { "None", "Biblical Studies", "Bagpipe Engineering", "Evil Science" });
-            MinorBox2.Location = new Point(143, 4);
-            MinorBox2.Margin = new Padding(3, 4, 3, 4);
+            MinorBox2.Location = new Point(114, 3);
+            MinorBox2.Margin = new Padding(2, 3, 2, 3);
             MinorBox2.Name = "MinorBox2";
-            MinorBox2.Size = new Size(133, 28);
+            MinorBox2.Size = new Size(107, 23);
             MinorBox2.TabIndex = 24;
             MinorBox2.Visible = false;
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(679, 423);
+            textBox1.Location = new Point(543, 338);
             textBox1.Margin = new Padding(1);
             textBox1.Multiline = true;
             textBox1.Name = "textBox1";
             textBox1.ScrollBars = ScrollBars.Vertical;
-            textBox1.Size = new Size(239, 211);
+            textBox1.Size = new Size(192, 170);
             textBox1.TabIndex = 24;
             // 
             // textBox2
             // 
-            textBox2.Location = new Point(679, 647);
+            textBox2.Location = new Point(543, 518);
             textBox2.Margin = new Padding(1);
             textBox2.Multiline = true;
             textBox2.Name = "textBox2";
             textBox2.ScrollBars = ScrollBars.Vertical;
-            textBox2.Size = new Size(239, 156);
+            textBox2.Size = new Size(192, 126);
             textBox2.TabIndex = 25;
             // 
             // mainScreenPanel
             // 
+            mainScreenPanel.Controls.Add(button7);
             mainScreenPanel.Controls.Add(panel1);
             mainScreenPanel.Controls.Add(label12);
             mainScreenPanel.Controls.Add(label13);
             mainScreenPanel.Controls.Add(tableLayoutPanel1);
             mainScreenPanel.Controls.Add(button1);
-            mainScreenPanel.Location = new Point(1, 1);
-            mainScreenPanel.Margin = new Padding(1, 3, 1, 3);
+            mainScreenPanel.Controls.Add(button2);
+            mainScreenPanel.Location = new Point(10, 11);
+            mainScreenPanel.Margin = new Padding(1, 2, 1, 2);
             mainScreenPanel.Name = "mainScreenPanel";
-            mainScreenPanel.Size = new Size(1718, 895);
+            mainScreenPanel.Size = new Size(1374, 1800);
             mainScreenPanel.TabIndex = 26;
+            mainScreenPanel.Paint += mainScreenPanel_Paint;
+            // 
+            // button7
+            // 
+            button7.Location = new Point(17, 55);
+            button7.Name = "button7";
+            button7.Size = new Size(122, 30);
+            button7.TabIndex = 243;
+            button7.Text = "Help";
+            button7.UseVisualStyleBackColor = true;
+            button7.Click += button7_Click;
             // 
             // panel1
             // 
@@ -443,10 +473,10 @@
             panel1.Controls.Add(textBox74);
             panel1.Controls.Add(dataGridMajors);
             panel1.Controls.Add(textBox42);
-            panel1.Location = new Point(177, 0);
+            panel1.Location = new Point(146, 31);
             panel1.Margin = new Padding(1);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1029, 887);
+            panel1.Size = new Size(823, 1500);
             panel1.TabIndex = 242;
             panel1.Paint += panel1_Paint;
             // 
@@ -476,7 +506,7 @@
             dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
             dataGridMinors.DefaultCellStyle = dataGridViewCellStyle2;
-            dataGridMinors.Location = new Point(57, 1673);
+            dataGridMinors.Location = new Point(46, 1338);
             dataGridMinors.Margin = new Padding(1);
             dataGridMinors.Name = "dataGridMinors";
             dataGridMinors.RowHeadersVisible = false;
@@ -484,7 +514,7 @@
             dataGridMinors.RowTemplate.Height = 33;
             dataGridMinors.ScrollBars = ScrollBars.Vertical;
             dataGridMinors.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dataGridMinors.Size = new Size(871, 209);
+            dataGridMinors.Size = new Size(697, 167);
             dataGridMinors.TabIndex = 248;
             dataGridMinors.CellContentClick += dataGridMinors_CellContentClick;
             // 
@@ -516,7 +546,7 @@
             dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
             dataGridViewTextBoxColumn15.ReadOnly = true;
             dataGridViewTextBoxColumn15.SortMode = DataGridViewColumnSortMode.NotSortable;
-            dataGridViewTextBoxColumn15.Width = 54;
+            dataGridViewTextBoxColumn15.Width = 45;
             // 
             // dataGridViewButtonColumn5
             // 
@@ -534,11 +564,11 @@
             textBox5.BackColor = Color.DimGray;
             textBox5.Font = new Font("Segoe UI", 25F, FontStyle.Regular, GraphicsUnit.Point);
             textBox5.ForeColor = Color.White;
-            textBox5.Location = new Point(59, 1605);
-            textBox5.Margin = new Padding(5);
+            textBox5.Location = new Point(47, 1284);
+            textBox5.Margin = new Padding(4);
             textBox5.Name = "textBox5";
             textBox5.ReadOnly = true;
-            textBox5.Size = new Size(869, 63);
+            textBox5.Size = new Size(696, 52);
             textBox5.TabIndex = 247;
             textBox5.Text = "Minor Courses";
             textBox5.TextAlign = HorizontalAlignment.Center;
@@ -569,7 +599,7 @@
             dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle4.WrapMode = DataGridViewTriState.False;
             dataGridTheology.DefaultCellStyle = dataGridViewCellStyle4;
-            dataGridTheology.Location = new Point(57, 1364);
+            dataGridTheology.Location = new Point(46, 1091);
             dataGridTheology.Margin = new Padding(1);
             dataGridTheology.Name = "dataGridTheology";
             dataGridTheology.RowHeadersVisible = false;
@@ -577,7 +607,7 @@
             dataGridTheology.RowTemplate.Height = 33;
             dataGridTheology.ScrollBars = ScrollBars.Vertical;
             dataGridTheology.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dataGridTheology.Size = new Size(871, 209);
+            dataGridTheology.Size = new Size(697, 167);
             dataGridTheology.TabIndex = 245;
             dataGridTheology.CellContentClick += dataGridTheology_CellContentClick;
             // 
@@ -609,7 +639,7 @@
             dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
             dataGridViewTextBoxColumn12.ReadOnly = true;
             dataGridViewTextBoxColumn12.SortMode = DataGridViewColumnSortMode.NotSortable;
-            dataGridViewTextBoxColumn12.Width = 54;
+            dataGridViewTextBoxColumn12.Width = 45;
             // 
             // dataGridViewButtonColumn4
             // 
@@ -640,7 +670,7 @@
             dataGridRecommended.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
             dataGridRecommended.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridRecommended.Columns.AddRange(new DataGridViewColumn[] { dataGridViewTextBoxColumn1, dataGridViewTextBoxColumn2, dataGridViewTextBoxColumn3, dataGridViewButtonColumn2 });
-            dataGridRecommended.Location = new Point(57, 124);
+            dataGridRecommended.Location = new Point(46, 99);
             dataGridRecommended.Margin = new Padding(1);
             dataGridRecommended.Name = "dataGridRecommended";
             dataGridRecommended.RowHeadersVisible = false;
@@ -648,7 +678,7 @@
             dataGridRecommended.RowTemplate.Height = 33;
             dataGridRecommended.ScrollBars = ScrollBars.Vertical;
             dataGridRecommended.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dataGridRecommended.Size = new Size(871, 209);
+            dataGridRecommended.Size = new Size(697, 167);
             dataGridRecommended.TabIndex = 234;
             dataGridRecommended.CellContentClick += dataGridRecommended_CellContentClick;
             // 
@@ -680,7 +710,7 @@
             dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             dataGridViewTextBoxColumn3.ReadOnly = true;
             dataGridViewTextBoxColumn3.SortMode = DataGridViewColumnSortMode.NotSortable;
-            dataGridViewTextBoxColumn3.Width = 54;
+            dataGridViewTextBoxColumn3.Width = 45;
             // 
             // dataGridViewButtonColumn2
             // 
@@ -719,7 +749,7 @@
             dataGridViewCellStyle7.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle7.WrapMode = DataGridViewTriState.False;
             dataGridGenEd.DefaultCellStyle = dataGridViewCellStyle7;
-            dataGridGenEd.Location = new Point(57, 1053);
+            dataGridGenEd.Location = new Point(46, 842);
             dataGridGenEd.Margin = new Padding(1);
             dataGridGenEd.Name = "dataGridGenEd";
             dataGridGenEd.RowHeadersVisible = false;
@@ -727,7 +757,7 @@
             dataGridGenEd.RowTemplate.Height = 33;
             dataGridGenEd.ScrollBars = ScrollBars.Vertical;
             dataGridGenEd.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dataGridGenEd.Size = new Size(871, 209);
+            dataGridGenEd.Size = new Size(697, 167);
             dataGridGenEd.TabIndex = 244;
             dataGridGenEd.CellContentClick += dataGridGenEd_CellContentClick;
             // 
@@ -759,7 +789,7 @@
             dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
             dataGridViewTextBoxColumn9.ReadOnly = true;
             dataGridViewTextBoxColumn9.SortMode = DataGridViewColumnSortMode.NotSortable;
-            dataGridViewTextBoxColumn9.Width = 54;
+            dataGridViewTextBoxColumn9.Width = 45;
             // 
             // dataGridViewButtonColumn3
             // 
@@ -777,11 +807,11 @@
             textBox6.BackColor = Color.DimGray;
             textBox6.Font = new Font("Segoe UI", 25F, FontStyle.Regular, GraphicsUnit.Point);
             textBox6.ForeColor = Color.White;
-            textBox6.Location = new Point(57, 984);
-            textBox6.Margin = new Padding(3, 4, 3, 4);
+            textBox6.Location = new Point(46, 787);
+            textBox6.Margin = new Padding(2, 3, 2, 3);
             textBox6.Name = "textBox6";
             textBox6.ReadOnly = true;
-            textBox6.Size = new Size(869, 63);
+            textBox6.Size = new Size(696, 52);
             textBox6.TabIndex = 243;
             textBox6.Text = "General Education Courses";
             textBox6.TextAlign = HorizontalAlignment.Center;
@@ -812,7 +842,7 @@
             dataGridViewCellStyle9.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle9.WrapMode = DataGridViewTriState.False;
             dataGridCognate.DefaultCellStyle = dataGridViewCellStyle9;
-            dataGridCognate.Location = new Point(57, 741);
+            dataGridCognate.Location = new Point(46, 593);
             dataGridCognate.Margin = new Padding(1);
             dataGridCognate.Name = "dataGridCognate";
             dataGridCognate.RowHeadersVisible = false;
@@ -820,7 +850,7 @@
             dataGridCognate.RowTemplate.Height = 33;
             dataGridCognate.ScrollBars = ScrollBars.Vertical;
             dataGridCognate.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dataGridCognate.Size = new Size(871, 209);
+            dataGridCognate.Size = new Size(697, 167);
             dataGridCognate.TabIndex = 242;
             dataGridCognate.CellContentClick += dataGridCognate_CellContentClick;
             // 
@@ -852,7 +882,7 @@
             dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
             dataGridViewTextBoxColumn6.ReadOnly = true;
             dataGridViewTextBoxColumn6.SortMode = DataGridViewColumnSortMode.NotSortable;
-            dataGridViewTextBoxColumn6.Width = 54;
+            dataGridViewTextBoxColumn6.Width = 45;
             // 
             // dataGridViewButtonColumn1
             // 
@@ -870,11 +900,11 @@
             textBox4.BackColor = Color.DimGray;
             textBox4.Font = new Font("Segoe UI", 25F, FontStyle.Regular, GraphicsUnit.Point);
             textBox4.ForeColor = Color.White;
-            textBox4.Location = new Point(57, 1296);
-            textBox4.Margin = new Padding(3, 4, 3, 4);
+            textBox4.Location = new Point(46, 1037);
+            textBox4.Margin = new Padding(2, 3, 2, 3);
             textBox4.Name = "textBox4";
             textBox4.ReadOnly = true;
-            textBox4.Size = new Size(869, 63);
+            textBox4.Size = new Size(696, 52);
             textBox4.TabIndex = 238;
             textBox4.Text = "Theology and Vocation Courses";
             textBox4.TextAlign = HorizontalAlignment.Center;
@@ -884,11 +914,11 @@
             textBox3.BackColor = Color.DimGray;
             textBox3.Font = new Font("Segoe UI", 25F, FontStyle.Regular, GraphicsUnit.Point);
             textBox3.ForeColor = Color.White;
-            textBox3.Location = new Point(57, 57);
-            textBox3.Margin = new Padding(3, 4, 3, 4);
+            textBox3.Location = new Point(46, 46);
+            textBox3.Margin = new Padding(2, 3, 2, 3);
             textBox3.Name = "textBox3";
             textBox3.ReadOnly = true;
-            textBox3.Size = new Size(869, 63);
+            textBox3.Size = new Size(696, 52);
             textBox3.TabIndex = 158;
             textBox3.Text = "Recommended Classes";
             textBox3.TextAlign = HorizontalAlignment.Center;
@@ -899,11 +929,11 @@
             textBox74.BackColor = Color.DimGray;
             textBox74.Font = new Font("Segoe UI", 25F, FontStyle.Regular, GraphicsUnit.Point);
             textBox74.ForeColor = Color.White;
-            textBox74.Location = new Point(57, 671);
-            textBox74.Margin = new Padding(3, 4, 3, 4);
+            textBox74.Location = new Point(46, 537);
+            textBox74.Margin = new Padding(2, 3, 2, 3);
             textBox74.Name = "textBox74";
             textBox74.ReadOnly = true;
-            textBox74.Size = new Size(869, 63);
+            textBox74.Size = new Size(696, 52);
             textBox74.TabIndex = 208;
             textBox74.Text = "Cognate Courses";
             textBox74.TextAlign = HorizontalAlignment.Center;
@@ -935,7 +965,7 @@
             dataGridViewCellStyle11.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle11.WrapMode = DataGridViewTriState.False;
             dataGridMajors.DefaultCellStyle = dataGridViewCellStyle11;
-            dataGridMajors.Location = new Point(57, 429);
+            dataGridMajors.Location = new Point(46, 343);
             dataGridMajors.Margin = new Padding(1);
             dataGridMajors.Name = "dataGridMajors";
             dataGridMajors.RowHeadersVisible = false;
@@ -943,7 +973,7 @@
             dataGridMajors.RowTemplate.Height = 33;
             dataGridMajors.ScrollBars = ScrollBars.Vertical;
             dataGridMajors.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dataGridMajors.Size = new Size(871, 209);
+            dataGridMajors.Size = new Size(697, 167);
             dataGridMajors.TabIndex = 233;
             dataGridMajors.CellContentClick += dataGridView1_CellContentClick;
             // 
@@ -975,7 +1005,7 @@
             Hours.Name = "Hours";
             Hours.ReadOnly = true;
             Hours.SortMode = DataGridViewColumnSortMode.NotSortable;
-            Hours.Width = 54;
+            Hours.Width = 45;
             // 
             // Details
             // 
@@ -993,11 +1023,11 @@
             textBox42.BackColor = Color.DimGray;
             textBox42.Font = new Font("Segoe UI", 25F, FontStyle.Regular, GraphicsUnit.Point);
             textBox42.ForeColor = Color.White;
-            textBox42.Location = new Point(57, 361);
-            textBox42.Margin = new Padding(3, 4, 3, 4);
+            textBox42.Location = new Point(46, 289);
+            textBox42.Margin = new Padding(2, 3, 2, 3);
             textBox42.Name = "textBox42";
             textBox42.ReadOnly = true;
-            textBox42.Size = new Size(869, 63);
+            textBox42.Size = new Size(696, 52);
             textBox42.TabIndex = 183;
             textBox42.Text = "Major Classes";
             textBox42.TextAlign = HorizontalAlignment.Center;
@@ -1005,22 +1035,22 @@
             // label12
             // 
             label12.BackColor = SystemColors.ControlLight;
-            label12.Location = new Point(1205, 1033);
+            label12.Location = new Point(964, 826);
             label12.Margin = new Padding(1, 0, 1, 0);
-            label12.MaximumSize = new Size(200, 2000);
+            label12.MaximumSize = new Size(160, 1600);
             label12.Name = "label12";
-            label12.Size = new Size(1, 665);
+            label12.Size = new Size(1, 532);
             label12.TabIndex = 241;
             label12.Text = " ";
             // 
             // label13
             // 
             label13.BackColor = SystemColors.ControlLight;
-            label13.Location = new Point(1205, 0);
+            label13.Location = new Point(964, 0);
             label13.Margin = new Padding(1, 0, 1, 0);
-            label13.MaximumSize = new Size(200, 2000);
+            label13.MaximumSize = new Size(160, 1600);
             label13.Name = "label13";
-            label13.Size = new Size(1, 1335);
+            label13.Size = new Size(1, 1068);
             label13.TabIndex = 4;
             label13.Text = " ";
             // 
@@ -1030,24 +1060,19 @@
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle());
             tableLayoutPanel1.Controls.Add(label10, 0, 0);
             tableLayoutPanel1.Controls.Add(label11, 0, 2);
-            tableLayoutPanel1.Controls.Add(button2, 0, 5);
             tableLayoutPanel1.Controls.Add(tableLayoutPanel2, 0, 4);
             tableLayoutPanel1.Controls.Add(majorDisplay1, 0, 1);
             tableLayoutPanel1.Controls.Add(minorDisplay1, 0, 3);
-            tableLayoutPanel1.Location = new Point(1211, 20);
+            tableLayoutPanel1.Location = new Point(969, 16);
             tableLayoutPanel1.Margin = new Padding(1);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
-            tableLayoutPanel1.RowCount = 9;
+            tableLayoutPanel1.RowCount = 5;
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 4.410441F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 8.370837F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 4.320432F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 7.830783F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 25.8834763F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 7.354346F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 41.92932F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 41F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 41F));
-            tableLayoutPanel1.Size = new Size(458, 1481);
+            tableLayoutPanel1.Size = new Size(366, 441);
             tableLayoutPanel1.TabIndex = 1;
             tableLayoutPanel1.Paint += tableLayoutPanel1_Paint;
             // 
@@ -1057,10 +1082,10 @@
             label10.AutoSize = true;
             label10.Font = new Font("Segoe UI", 17F, FontStyle.Regular, GraphicsUnit.Point);
             label10.ForeColor = Color.White;
-            label10.Location = new Point(165, 0);
+            label10.Location = new Point(131, 0);
             label10.Margin = new Padding(1, 0, 1, 0);
             label10.Name = "label10";
-            label10.Size = new Size(128, 40);
+            label10.Size = new Size(103, 31);
             label10.TabIndex = 0;
             label10.Text = "Major(s):";
             label10.TextAlign = ContentAlignment.MiddleCenter;
@@ -1072,25 +1097,13 @@
             label11.AutoSize = true;
             label11.Font = new Font("Segoe UI", 17F, FontStyle.Regular, GraphicsUnit.Point);
             label11.ForeColor = Color.White;
-            label11.Location = new Point(164, 177);
+            label11.Location = new Point(131, 110);
             label11.Margin = new Padding(1, 0, 1, 0);
             label11.Name = "label11";
-            label11.Size = new Size(129, 40);
+            label11.Size = new Size(104, 31);
             label11.TabIndex = 2;
             label11.Text = "Minor(s):";
             label11.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // button2
-            // 
-            button2.Anchor = AnchorStyles.None;
-            button2.Location = new Point(133, 731);
-            button2.Margin = new Padding(1, 3, 1, 3);
-            button2.Name = "button2";
-            button2.Size = new Size(191, 53);
-            button2.TabIndex = 6;
-            button2.Text = "Download data";
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
             // 
             // tableLayoutPanel2
             // 
@@ -1110,7 +1123,7 @@
             tableLayoutPanel2.Controls.Add(listBox9, 0, 3);
             tableLayoutPanel2.Controls.Add(listBox3, 0, 2);
             tableLayoutPanel2.Controls.Add(listBox10, 1, 2);
-            tableLayoutPanel2.Location = new Point(18, 387);
+            tableLayoutPanel2.Location = new Point(14, 216);
             tableLayoutPanel2.Margin = new Padding(1);
             tableLayoutPanel2.Name = "tableLayoutPanel2";
             tableLayoutPanel2.RightToLeft = RightToLeft.No;
@@ -1120,7 +1133,7 @@
             tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 20F));
             tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 20F));
             tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 20F));
-            tableLayoutPanel2.Size = new Size(422, 279);
+            tableLayoutPanel2.Size = new Size(338, 223);
             tableLayoutPanel2.TabIndex = 5;
             // 
             // listBox4
@@ -1131,13 +1144,13 @@
             listBox4.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
             listBox4.ForeColor = Color.White;
             listBox4.FormattingEnabled = true;
-            listBox4.ItemHeight = 25;
+            listBox4.ItemHeight = 20;
             listBox4.Items.AddRange(new object[] { "0" });
-            listBox4.Location = new Point(316, 16);
+            listBox4.Location = new Point(253, 13);
             listBox4.Margin = new Padding(1);
             listBox4.Name = "listBox4";
             listBox4.SelectionMode = SelectionMode.None;
-            listBox4.Size = new Size(67, 25);
+            listBox4.Size = new Size(54, 20);
             listBox4.TabIndex = 5;
             listBox4.SelectedIndexChanged += listBox4_SelectedIndexChanged;
             // 
@@ -1149,13 +1162,13 @@
             listBox6.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
             listBox6.ForeColor = Color.White;
             listBox6.FormattingEnabled = true;
-            listBox6.ItemHeight = 25;
+            listBox6.ItemHeight = 20;
             listBox6.Items.AddRange(new object[] { "0" });
-            listBox6.Location = new Point(316, 71);
+            listBox6.Location = new Point(253, 57);
             listBox6.Margin = new Padding(1);
             listBox6.Name = "listBox6";
             listBox6.SelectionMode = SelectionMode.None;
-            listBox6.Size = new Size(67, 25);
+            listBox6.Size = new Size(54, 20);
             listBox6.TabIndex = 9;
             // 
             // listBox7
@@ -1166,13 +1179,13 @@
             listBox7.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
             listBox7.ForeColor = Color.White;
             listBox7.FormattingEnabled = true;
-            listBox7.ItemHeight = 25;
+            listBox7.ItemHeight = 20;
             listBox7.Items.AddRange(new object[] { "Current Semester:" });
-            listBox7.Location = new Point(4, 16);
+            listBox7.Location = new Point(4, 13);
             listBox7.Margin = new Padding(1);
             listBox7.Name = "listBox7";
             listBox7.SelectionMode = SelectionMode.None;
-            listBox7.Size = new Size(226, 25);
+            listBox7.Size = new Size(181, 20);
             listBox7.TabIndex = 10;
             // 
             // listBox8
@@ -1183,13 +1196,13 @@
             listBox8.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
             listBox8.ForeColor = Color.White;
             listBox8.FormattingEnabled = true;
-            listBox8.ItemHeight = 25;
+            listBox8.ItemHeight = 20;
             listBox8.Items.AddRange(new object[] { "Hours completed:" });
-            listBox8.Location = new Point(4, 71);
+            listBox8.Location = new Point(4, 57);
             listBox8.Margin = new Padding(1);
             listBox8.Name = "listBox8";
             listBox8.SelectionMode = SelectionMode.None;
-            listBox8.Size = new Size(226, 25);
+            listBox8.Size = new Size(181, 20);
             listBox8.TabIndex = 11;
             // 
             // listBox1
@@ -1200,13 +1213,13 @@
             listBox1.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
             listBox1.ForeColor = Color.White;
             listBox1.FormattingEnabled = true;
-            listBox1.ItemHeight = 25;
+            listBox1.ItemHeight = 20;
             listBox1.Items.AddRange(new object[] { "Hours still needed:" });
-            listBox1.Location = new Point(4, 237);
+            listBox1.Location = new Point(4, 189);
             listBox1.Margin = new Padding(1);
             listBox1.Name = "listBox1";
             listBox1.SelectionMode = SelectionMode.None;
-            listBox1.Size = new Size(201, 25);
+            listBox1.Size = new Size(161, 20);
             listBox1.TabIndex = 6;
             // 
             // listBox5
@@ -1217,13 +1230,13 @@
             listBox5.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
             listBox5.ForeColor = Color.White;
             listBox5.FormattingEnabled = true;
-            listBox5.ItemHeight = 25;
+            listBox5.ItemHeight = 20;
             listBox5.Items.AddRange(new object[] { "0", "0" });
-            listBox5.Location = new Point(316, 237);
+            listBox5.Location = new Point(253, 189);
             listBox5.Margin = new Padding(1);
             listBox5.Name = "listBox5";
             listBox5.SelectionMode = SelectionMode.None;
-            listBox5.Size = new Size(96, 25);
+            listBox5.Size = new Size(77, 20);
             listBox5.TabIndex = 8;
             // 
             // listBox2
@@ -1234,13 +1247,13 @@
             listBox2.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
             listBox2.ForeColor = Color.White;
             listBox2.FormattingEnabled = true;
-            listBox2.ItemHeight = 25;
+            listBox2.ItemHeight = 20;
             listBox2.Items.AddRange(new object[] { "126", "126" });
-            listBox2.Location = new Point(316, 181);
+            listBox2.Location = new Point(253, 145);
             listBox2.Margin = new Padding(1);
             listBox2.Name = "listBox2";
             listBox2.SelectionMode = SelectionMode.None;
-            listBox2.Size = new Size(96, 25);
+            listBox2.Size = new Size(77, 20);
             listBox2.TabIndex = 7;
             // 
             // listBox9
@@ -1251,13 +1264,13 @@
             listBox9.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
             listBox9.ForeColor = Color.White;
             listBox9.FormattingEnabled = true;
-            listBox9.ItemHeight = 25;
+            listBox9.ItemHeight = 20;
             listBox9.Items.AddRange(new object[] { "Total Hours Needed:" });
-            listBox9.Location = new Point(4, 181);
+            listBox9.Location = new Point(4, 145);
             listBox9.Margin = new Padding(1);
             listBox9.Name = "listBox9";
             listBox9.SelectionMode = SelectionMode.None;
-            listBox9.Size = new Size(175, 25);
+            listBox9.Size = new Size(140, 20);
             listBox9.TabIndex = 12;
             // 
             // listBox3
@@ -1268,13 +1281,13 @@
             listBox3.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
             listBox3.ForeColor = Color.White;
             listBox3.FormattingEnabled = true;
-            listBox3.ItemHeight = 25;
+            listBox3.ItemHeight = 20;
             listBox3.Items.AddRange(new object[] { "Hours in progress:" });
-            listBox3.Location = new Point(4, 126);
+            listBox3.Location = new Point(4, 101);
             listBox3.Margin = new Padding(1);
             listBox3.Name = "listBox3";
             listBox3.SelectionMode = SelectionMode.None;
-            listBox3.Size = new Size(226, 25);
+            listBox3.Size = new Size(181, 20);
             listBox3.TabIndex = 13;
             // 
             // listBox10
@@ -1285,13 +1298,13 @@
             listBox10.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
             listBox10.ForeColor = Color.White;
             listBox10.FormattingEnabled = true;
-            listBox10.ItemHeight = 25;
+            listBox10.ItemHeight = 20;
             listBox10.Items.AddRange(new object[] { "0" });
-            listBox10.Location = new Point(316, 126);
+            listBox10.Location = new Point(253, 101);
             listBox10.Margin = new Padding(1);
             listBox10.Name = "listBox10";
             listBox10.SelectionMode = SelectionMode.None;
-            listBox10.Size = new Size(96, 25);
+            listBox10.Size = new Size(77, 20);
             listBox10.TabIndex = 14;
             // 
             // majorDisplay1
@@ -1301,11 +1314,12 @@
             majorDisplay1.DropDownStyle = ComboBoxStyle.DropDownList;
             majorDisplay1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             majorDisplay1.FormattingEnabled = true;
-            majorDisplay1.ItemHeight = 28;
+            majorDisplay1.ItemHeight = 21;
             majorDisplay1.Items.AddRange(new object[] { "Item 1", "Item 2" });
-            majorDisplay1.Location = new Point(99, 64);
+            majorDisplay1.Location = new Point(78, 40);
+            majorDisplay1.Margin = new Padding(2);
             majorDisplay1.Name = "majorDisplay1";
-            majorDisplay1.Size = new Size(260, 36);
+            majorDisplay1.Size = new Size(209, 29);
             majorDisplay1.TabIndex = 249;
             majorDisplay1.SelectedIndexChanged += majorDisplay1_SelectedIndexChanged;
             // 
@@ -1316,24 +1330,37 @@
             minorDisplay1.DropDownStyle = ComboBoxStyle.DropDownList;
             minorDisplay1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             minorDisplay1.FormattingEnabled = true;
-            minorDisplay1.ItemHeight = 28;
+            minorDisplay1.ItemHeight = 21;
             minorDisplay1.Items.AddRange(new object[] { "Item 1", "Item 2" });
-            minorDisplay1.Location = new Point(100, 240);
+            minorDisplay1.Location = new Point(80, 149);
+            minorDisplay1.Margin = new Padding(2);
             minorDisplay1.Name = "minorDisplay1";
-            minorDisplay1.Size = new Size(257, 36);
+            minorDisplay1.Size = new Size(206, 29);
             minorDisplay1.TabIndex = 250;
             minorDisplay1.SelectedIndexChanged += minorDisplay1_SelectedIndexChanged;
             // 
             // button1
             // 
-            button1.Location = new Point(21, 17);
+            button1.Location = new Point(17, 14);
             button1.Margin = new Padding(1);
             button1.Name = "button1";
-            button1.Size = new Size(153, 31);
+            button1.Size = new Size(122, 25);
             button1.TabIndex = 0;
             button1.Text = "Back";
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
+            // 
+            // button2
+            // 
+            button2.Anchor = AnchorStyles.None;
+            button2.Location = new Point(1100, 507);
+            button2.Margin = new Padding(1, 2, 1, 2);
+            button2.Name = "button2";
+            button2.Size = new Size(153, 42);
+            button2.TabIndex = 6;
+            button2.Text = "Download data";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // openSaveFileDialog
             // 
@@ -1341,14 +1368,39 @@
             openSaveFileDialog.Title = "Select your save data.";
             openSaveFileDialog.FileOk += openSaveFileDialog_FileOk;
             // 
+            // textBox7
+            // 
+            textBox7.BackColor = SystemColors.ControlDarkDark;
+            textBox7.BorderStyle = BorderStyle.None;
+            textBox7.Font = new Font("Segoe UI", 24.75F, FontStyle.Bold, GraphicsUnit.Point);
+            textBox7.ForeColor = Color.White;
+            textBox7.Location = new Point(397, 32);
+            textBox7.Name = "textBox7";
+            textBox7.ReadOnly = true;
+            textBox7.Size = new Size(400, 44);
+            textBox7.TabIndex = 27;
+            textBox7.Text = "Welcome to AutoAdvisor";
+            // 
+            // button5
+            // 
+            button5.Location = new Point(346, 680);
+            button5.Name = "button5";
+            button5.Size = new Size(75, 23);
+            button5.TabIndex = 244;
+            button5.Text = "Help";
+            button5.UseVisualStyleBackColor = true;
+            button5.Click += button5_Click_2;
+            // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(120F, 120F);
+            AutoScaleDimensions = new SizeF(96F, 96F);
             AutoScaleMode = AutoScaleMode.Dpi;
             AutoScroll = true;
             AutoSize = true;
             BackColor = SystemColors.ControlDarkDark;
-            ClientSize = new Size(1924, 1175);
+            ClientSize = new Size(1308, 616);
+            Controls.Add(button5);
+            Controls.Add(textBox7);
             Controls.Add(mainScreenPanel);
             Controls.Add(textBox2);
             Controls.Add(textBox1);
@@ -1371,7 +1423,7 @@
             Controls.Add(label2);
             Controls.Add(label1);
             ForeColor = SystemColors.ControlText;
-            Margin = new Padding(3, 4, 3, 4);
+            Margin = new Padding(2, 3, 2, 3);
             Name = "Form1";
             Text = "HomeScreen ";
             Load += Form1_Load;
@@ -1478,5 +1530,8 @@
         private ComboBox minorDisplay1;
         private ListBox listBox3;
         private ListBox listBox10;
+        private TextBox textBox7;
+        private Button button7;
+        private Button button5;
     }
 }
