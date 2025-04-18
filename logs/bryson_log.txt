@@ -4,5 +4,5 @@
 04/07/2025 10:00pm - 12:00am - I got the recommended classes to work and I added every class to the course catalog
 04/08/2025 12:15am - 1:20am - I got the total hours feature to work 
 04/16/2025 9:30pm - 11:00pm - I fixed up the UI and added some help buttons 
-04/17/2025 9:40pm - 
+04/17/2025 9:40pm - 11:30pm - I added the honors box 
 
