@@ -30,6 +30,8 @@ namespace Auto_Advisor
             public List<string> prerequisites { get; set; }
             public int hours { get; set; }
             public string description { get; set; }
+
+            public int honors { get; set; }
         }
 
         // This class is used to store recommended course info
@@ -59,6 +61,16 @@ namespace Auto_Advisor
 
             foreach (var course in courses)
             {
+                //Filters out the classes that are replaced with the honor classes
+                if(course.honors == 1 && comboBox3.Text == "Yes")
+                {
+                    continue;
+                }
+                else if(course.honors == 2 && comboBox3.Text == "No")
+                {
+                    continue;
+                }
+
                 // Store each course and its values in a grid row
                 int rowIndex = grid.Rows.Add();
                 var row = grid.Rows[rowIndex];
@@ -227,6 +239,7 @@ namespace Auto_Advisor
             suppressMajorDisplayEvent = false;
             textBox7.Visible = false;
             button5.Visible = false;
+
         }
 
         public void continueFunction()
@@ -291,6 +304,7 @@ namespace Auto_Advisor
             LoadCoursesIntoGrid(Path.Combine(majorPath, "General_Education.json"), dataGridGenEd);
             LoadCoursesIntoGrid(Path.Combine(majorPath, "Theology_Courses.json"), dataGridTheology);
             recommendedCourses(Path.Combine(majorPath, "recommended.json"), dataGridRecommended);
+            LoadCoursesIntoGrid(Path.Combine(majorPath, "Honors_classes.json"), DataGridHonors);
 
             // Populate other sidebar data
             listBox4.Items.Clear();
@@ -534,6 +548,11 @@ namespace Auto_Advisor
             }
         }
 
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            
+        }
+
         private void dataGridTheology_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.ColumnIndex == 3)
@@ -542,10 +561,7 @@ namespace Auto_Advisor
             }
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void dataGridMinors_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -554,7 +570,13 @@ namespace Auto_Advisor
                 displayCourseDetails(dataGridMinors, e.RowIndex, Path.Combine(minorPath, "minor_classes.json"));
             }
         }
-
+        private void DataGridHonors_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == 3)
+            {
+                displayCourseDetails(DataGridHonors, e.RowIndex, Path.Combine(majorPath, "Honors_classes.json"));
+            }
+        }
         // This method makes major selections non-duplicable
         private void MajorList_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -643,5 +665,21 @@ namespace Auto_Advisor
         }
 
         
+        //The Honors combobox that shows the honors box
+        private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboBox3.Text == "No")
+            {
+                DataGridHonors.Visible = false;
+                HonorsBox.Visible = false;
+                
+            }
+            else if (comboBox3.Text == "Yes")
+            {
+                DataGridHonors.Visible = true;
+                HonorsBox.Visible = true;
+            }
+      
+        }
     }
 }

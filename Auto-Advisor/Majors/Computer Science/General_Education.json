@@ -18,6 +18,7 @@
     "name": "English Composition 2",
     "prerequisites": [ "ENGL 1014 or ENGL 1013" ],
     "hours": 3,
+    "honors": 1,
     "description": "A study of argumentation/logic and writing for the professions with an emphasis on using the personal computer to plan, draft, and revise written projects. Each student is required to write a fully documented research paper and give oral presentations in class."
   },
   {
@@ -30,6 +31,7 @@
   {
     "name": "Civic Engagement Elective",
     "hours": 6,
+    "honors": 1,
     "description": "Any HIST, INTL, POLS, ECON, or CRIJ."
   },
   {

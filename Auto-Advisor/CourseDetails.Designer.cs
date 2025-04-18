@@ -44,10 +44,10 @@
             courseDetailsLabel.AutoSize = true;
             courseDetailsLabel.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
             courseDetailsLabel.ForeColor = Color.White;
-            courseDetailsLabel.Location = new Point(320, 4);
+            courseDetailsLabel.Location = new Point(256, 3);
             courseDetailsLabel.Margin = new Padding(2, 0, 2, 0);
             courseDetailsLabel.Name = "courseDetailsLabel";
-            courseDetailsLabel.Size = new Size(179, 35);
+            courseDetailsLabel.Size = new Size(140, 28);
             courseDetailsLabel.TabIndex = 0;
             courseDetailsLabel.Text = "Course Details:";
             // 
@@ -57,10 +57,10 @@
             courseTitleLabel.AutoSize = true;
             courseTitleLabel.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
             courseTitleLabel.ForeColor = Color.White;
-            courseTitleLabel.Location = new Point(242, 37);
+            courseTitleLabel.Location = new Point(194, 30);
             courseTitleLabel.Margin = new Padding(2, 0, 2, 0);
             courseTitleLabel.Name = "courseTitleLabel";
-            courseTitleLabel.Size = new Size(330, 35);
+            courseTitleLabel.Size = new Size(262, 28);
             courseTitleLabel.TabIndex = 1;
             courseTitleLabel.Text = "ABCD 1234 - Intro to English";
             courseTitleLabel.Click += label1_Click;
@@ -68,10 +68,10 @@
             // descriptionLabel
             // 
             descriptionLabel.ForeColor = Color.White;
-            descriptionLabel.Location = new Point(61, 116);
+            descriptionLabel.Location = new Point(49, 93);
             descriptionLabel.Margin = new Padding(2, 0, 2, 0);
             descriptionLabel.Name = "descriptionLabel";
-            descriptionLabel.Size = new Size(290, 279);
+            descriptionLabel.Size = new Size(232, 223);
             descriptionLabel.TabIndex = 2;
             descriptionLabel.Text = resources.GetString("descriptionLabel.Text");
             // 
@@ -81,10 +81,10 @@
             descriptionTitle.BorderStyle = BorderStyle.Fixed3D;
             descriptionTitle.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
             descriptionTitle.ForeColor = Color.White;
-            descriptionTitle.Location = new Point(61, 85);
+            descriptionTitle.Location = new Point(49, 68);
             descriptionTitle.Margin = new Padding(2, 0, 2, 0);
             descriptionTitle.Name = "descriptionTitle";
-            descriptionTitle.Size = new Size(290, 29);
+            descriptionTitle.Size = new Size(232, 23);
             descriptionTitle.TabIndex = 3;
             descriptionTitle.Text = "Description:";
             // 
@@ -94,20 +94,21 @@
             label1.BorderStyle = BorderStyle.Fixed3D;
             label1.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
             label1.ForeColor = Color.White;
-            label1.Location = new Point(447, 85);
+            label1.Location = new Point(358, 68);
             label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
-            label1.Size = new Size(290, 29);
+            label1.Size = new Size(232, 23);
             label1.TabIndex = 5;
             label1.Text = "Prerequisites:";
+            label1.Click += label1_Click_1;
             // 
             // prereqsLabel
             // 
             prereqsLabel.ForeColor = Color.White;
-            prereqsLabel.Location = new Point(447, 116);
+            prereqsLabel.Location = new Point(358, 93);
             prereqsLabel.Margin = new Padding(2, 0, 2, 0);
             prereqsLabel.Name = "prereqsLabel";
-            prereqsLabel.Size = new Size(290, 120);
+            prereqsLabel.Size = new Size(232, 96);
             prereqsLabel.TabIndex = 4;
             prereqsLabel.Text = "List of prereqs\r\nList of prereqs\r\nList of prereqs\r\nList of prereqs\r\nList of prereqs\r\n";
             // 
@@ -117,29 +118,29 @@
             infoTitle.BorderStyle = BorderStyle.Fixed3D;
             infoTitle.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
             infoTitle.ForeColor = Color.White;
-            infoTitle.Location = new Point(447, 248);
+            infoTitle.Location = new Point(358, 198);
             infoTitle.Margin = new Padding(2, 0, 2, 0);
             infoTitle.Name = "infoTitle";
-            infoTitle.Size = new Size(290, 29);
+            infoTitle.Size = new Size(232, 23);
             infoTitle.TabIndex = 7;
             infoTitle.Text = "Additional info:";
             // 
             // label4
             // 
             label4.ForeColor = Color.White;
-            label4.Location = new Point(447, 279);
+            label4.Location = new Point(358, 223);
             label4.Margin = new Padding(2, 0, 2, 0);
             label4.Name = "label4";
-            label4.Size = new Size(290, 101);
+            label4.Size = new Size(232, 81);
             label4.TabIndex = 6;
             label4.Text = "N/A\r\n";
             // 
             // CourseDescription
             // 
-            AutoScaleDimensions = new SizeF(120F, 120F);
+            AutoScaleDimensions = new SizeF(96F, 96F);
             AutoScaleMode = AutoScaleMode.Dpi;
             BackColor = SystemColors.ControlDarkDark;
-            ClientSize = new Size(805, 435);
+            ClientSize = new Size(644, 348);
             Controls.Add(infoTitle);
             Controls.Add(label4);
             Controls.Add(label1);
@@ -148,7 +149,7 @@
             Controls.Add(descriptionLabel);
             Controls.Add(courseTitleLabel);
             Controls.Add(courseDetailsLabel);
-            Margin = new Padding(2, 3, 2, 3);
+            Margin = new Padding(2, 2, 2, 2);
             Name = "CourseDescription";
             Text = "CourseDetails";
             ResumeLayout(false);
