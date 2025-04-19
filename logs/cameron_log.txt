@@ -4,3 +4,4 @@
 4/8/25 9:35 PM to 9:45 PM - debugged an issue from the end of the meeting
 4/11/25 2:35 PM to 3:00 PM - finished some fixes I didn't finish in the class meeting
 4/14/25 6:40 PM to 7:10 PM - did some minor bug fixing
+4/18/25 10:30 PM to 11:30 PM - implemented search functionality
