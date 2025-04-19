@@ -1,5 +1,6 @@
 
 using Newtonsoft.Json;
+using System.Diagnostics;
 
 namespace Auto_Advisor
 {
@@ -16,10 +17,22 @@ namespace Auto_Advisor
         int HoursInProgress = 0; // Hours currently being taken
         bool suppressMajorDisplayEvent = false; // Prevents major display update from retriggering itself
 
+        DataGridView[] dgvs;
+
         public Form1()
         {
             InitializeComponent();
             mainScreenPanel.Visible = false;
+
+            dgvs = new DataGridView[] {
+                dataGridRecommended,
+                dataGridCognate,
+                dataGridGenEd,
+                dataGridMajors,
+                dataGridMinors,
+                dataGridTheology,
+                DataGridHonors
+            };
         }
 
         // This class stores properties for each course in the specified degree's catalog
@@ -62,11 +75,11 @@ namespace Auto_Advisor
             foreach (var course in courses)
             {
                 //Filters out the classes that are replaced with the honor classes
-                if(course.honors == 1 && comboBox3.Text == "Yes")
+                if (course.honors == 1 && comboBox3.Text == "Yes")
                 {
                     continue;
                 }
-                else if(course.honors == 2 && comboBox3.Text == "No")
+                else if (course.honors == 2 && comboBox3.Text == "No")
                 {
                     continue;
                 }
@@ -550,7 +563,7 @@ namespace Auto_Advisor
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            
+
         }
 
         private void dataGridTheology_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -561,7 +574,7 @@ namespace Auto_Advisor
             }
         }
 
-        
+
 
         private void dataGridMinors_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -664,7 +677,7 @@ namespace Auto_Advisor
             System.Windows.Forms.MessageBox.Show("The AutoAdvisor splits your classes into different tables to help show what classes you need to take and what category each class is in\n\n                                        Some Helpful Questions - \n\nWhat are Recommended Classes - \nRecommended Classes are the classes that are the highest priority to take whether that be classes that you were meant to take in previous semesters or classes that are made for the upcoming semester, all of your classes that you have not taken will show up in this table.\n\nWhat do the different colors mean -\nThe different colors are Green meaning you have completed the class, Yellow meaning you are currently taking the class and white meaning that you have not taken the class and are not currently in the class.\n\nHow do I find the course description or the Prerequisites - \nIf you find the more button under details on the tables that will display the course info, Prerequisites and additional info.   \n\nHow do I switch between Majors/Minors - \nIf you are trying to switch between different Majors/Minors all you need to do it click the drop down menu and select which Major/Minor you want to see classes for.\n\n What does the box with different hour totals mean - That box tells you five things 1. What semester you are picking classes for, 2. How many hours you have completed, 3. How many hours you are currently taking, 4. How many hours your degree needs to graduate, 5. How many hours you still need to earn to graduate(classes in progress will still show here ");
         }
 
-        
+
         //The Honors combobox that shows the honors box
         private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -672,14 +685,62 @@ namespace Auto_Advisor
             {
                 DataGridHonors.Visible = false;
                 HonorsBox.Visible = false;
-                
+
             }
             else if (comboBox3.Text == "Yes")
             {
                 DataGridHonors.Visible = true;
                 HonorsBox.Visible = true;
             }
-      
+
+        }
+
+        // Searches one data grid box; returns true if match found
+        private bool courseSearch(string txt, DataGridViewCell cell)
+        {
+            if (cell.Value != null)
+            {
+                if ((cell.Value?.ToString().ToLower()).Contains(txt.ToLower())) return true;
+            }
+
+            return false;
+        }
+
+        // Performs a course search; makes all listed courses that do not match the search invisible; does not seach if user does not enter string
+        private void searchButton_Click(object sender, EventArgs e)
+        {
+            string txt = searchTextBox.Text;
+
+            if (txt == null || txt.Equals("")) return;
+
+            searchBackButton.Visible = true;
+
+            foreach (DataGridView dgv in dgvs)
+            {
+                foreach (DataGridViewRow row in dgv.Rows)
+                {
+                    row.Visible = true;
+                    if (!(courseSearch(txt, row.Cells[0]) || courseSearch(txt, row.Cells[1])))
+                    {
+                        row.Visible = false;
+                        Debug.WriteLine($"Invisible: {row.Cells[0].Value}");
+                    }
+                }
+            }
+        }
+
+        // Makes all course rows visible, undoing a search
+        private void searchBackButton_Click(object sender, EventArgs e)
+        {
+            searchBackButton.Visible = false;
+            
+            foreach (DataGridView dgv in dgvs)
+            {
+                foreach (DataGridViewRow row in dgv.Rows)
+                {
+                    row.Visible = true;
+                }
+            }
         }
     }
 }
