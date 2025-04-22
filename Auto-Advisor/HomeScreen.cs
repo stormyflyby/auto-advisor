@@ -250,8 +250,8 @@ namespace Auto_Advisor
             suppressMajorDisplayEvent = true; // Prevents major display update from retriggering itself
             continueFunction();
             suppressMajorDisplayEvent = false;
-            textBox7.Visible = false;
-            button5.Visible = false;
+            //textBox7.Visible = false;
+            //button5.Visible = false;
 
         }
 
