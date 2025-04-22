@@ -733,7 +733,7 @@ namespace Auto_Advisor
         private void searchBackButton_Click(object sender, EventArgs e)
         {
             searchBackButton.Visible = false;
-            
+
             foreach (DataGridView dgv in dgvs)
             {
                 foreach (DataGridViewRow row in dgv.Rows)
