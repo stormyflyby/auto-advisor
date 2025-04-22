@@ -668,7 +668,14 @@ namespace Auto_Advisor
 
         private void button5_Click_2(object sender, EventArgs e)
         {
-            System.Windows.Forms.MessageBox.Show("The AutoAdvisor helps you with knowing what classes you need to take for your Major(s) and Minor(s)\n\nFor help with Majors/Minors -\nSelect a Major/Minor from the dropdown menu and if you are double Majoring/Minoring then hit the add Major/Minor button then select your second Major/Minor from the dropdown menu\n\nFor help with Honors - \nIf you are a Honors student hit 'yes' and if you're not then hit 'no' \n\nFor help with Upcoming Semester - \nUpcoming semester means the next semester such as if you are currently in semester 4, your upcoming semester will be semester 5\n\nFor help with Completed or Currently Taking courses - \nEnter your Course Code in all caps and hit enter after every entry and only have one course code on every line\n\nFor help with Download data - \nWhen you click download data all of your dropdown menu and data entered will be saved to a document so when you use AutoAdvisor again you do not need to readd the info\n\nFor help with Enter Saved Data - \nIf you have a data file from the Download Data button then you can click the Enter Saved Data button and have all of your info reentered for you. ");
+            System.Windows.Forms.MessageBox.Show(
+                "The AutoAdvisor displays the classes you need to take for your Major(s) and Minor(s).\n\n" +
+                "Major(s)/Minor(s) -\nSelect a Major/Minor from the dropdown menu. If you have two Majors or Minors, hit the Add Major/Minor button and select your second Major/Minor from the dropdown menu.\n\n" +
+                "Honors - \nIf you are an Honors student, hit 'yes'. Otherwise, hit 'no'. \n\n" +
+                "Upcoming Semester - \nEnter the number of your next semester. If you are currently in semester 4 (second sophomore year), your upcoming semester will be semester 5 (first junior semester).\n\n" +
+                "Completed or Currently Taking courses - \nEnter each of your course's codes in all caps. Only enter one course code per line.\n\n" +
+                "Download Data - \nClick the Download Data button to save your input to a file. When you use AutoAdvisor again, you can reenter your info with the file.\n\n" +
+                "Enter Saved Data - \nIf you have a saved data file, enter it from the files on your device. The software will rebuild your input from this file.");
         }
 
         private void mainScreenPanel_Paint(object sender, PaintEventArgs e)
