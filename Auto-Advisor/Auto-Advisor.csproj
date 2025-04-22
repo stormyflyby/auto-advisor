@@ -10,7 +10,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Honors_classes.json" />
     <None Remove="Majors\Computer Science\Cognate.json" />
     <None Remove="Majors\Computer Science\General_Education.json" />
     <None Remove="Majors\Computer Science\major_classes.json" />
@@ -25,7 +24,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include="Majors\Computer Science\Honors_classes.json">
+    <Content Include="Honors_classes.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Majors\Computer Science\Cognate.json">

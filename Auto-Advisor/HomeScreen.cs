@@ -317,7 +317,7 @@ namespace Auto_Advisor
             LoadCoursesIntoGrid(Path.Combine(majorPath, "General_Education.json"), dataGridGenEd);
             LoadCoursesIntoGrid(Path.Combine(majorPath, "Theology_Courses.json"), dataGridTheology);
             recommendedCourses(Path.Combine(majorPath, "recommended.json"), dataGridRecommended);
-            LoadCoursesIntoGrid(Path.Combine(majorPath, "Honors_classes.json"), DataGridHonors);
+            LoadCoursesIntoGrid("Honors_classes.json", DataGridHonors);
 
             // Populate other sidebar data
             listBox4.Items.Clear();
