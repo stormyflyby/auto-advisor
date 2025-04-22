@@ -356,6 +356,8 @@ namespace Auto_Advisor
             textBox7.Visible = true;
             button5.Visible = true;
             TotalHours = 0;
+            searchClear();
+            searchTextBox.Text = "";
         }
 
         private void label10_Click(object sender, EventArgs e)
@@ -639,6 +641,7 @@ namespace Auto_Advisor
             MajorList.SelectedItem = MajorList2.SelectedItem;
             MajorList2.SelectedItem = temp;
             continueFunction();
+            searchClear();
 
             suppressMajorDisplayEvent = false;
         }
@@ -658,6 +661,7 @@ namespace Auto_Advisor
             MinorBox.SelectedItem = MinorBox2.SelectedItem;
             MinorBox2.SelectedItem = temp;
             continueFunction();
+            searchClear();
 
             suppressMajorDisplayEvent = false;
         }
