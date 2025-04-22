@@ -130,8 +130,10 @@ namespace Auto_Advisor
             {
                 int sem = int.Parse(comboBox4.SelectedItem.ToString());
                 DataGridViewRow row = null;
+                bool inTxtBx1 = courseInTextBox(course.code, textBox1);
+                bool inTxtBx2 = courseInTextBox(course.code, textBox2);
                 // Doesn't load courses beyond current semester or courses already/currently taken
-                if (course.semester <= sem && (!courseInTextBox(course.code, textBox1) && !courseInTextBox(course.code, textBox2)))
+                if (course.semester <= sem && (!inTxtBx1 && !inTxtBx2))
                 {
                     int rowIndex = grid.Rows.Add();
                     row = grid.Rows[rowIndex];
@@ -143,13 +145,13 @@ namespace Auto_Advisor
                 // Determine color of row
                 if (row != null)
                 {
-                    if (courseInTextBox(course.code, textBox1)) // Course already taken
+                    if (inTxtBx1) // Course already taken
                     {
                         row.DefaultCellStyle.BackColor = Color.LightGreen;
                         row.DefaultCellStyle.SelectionBackColor = Color.LightGreen;
 
                     }
-                    else if (courseInTextBox(course.code, textBox2)) // Course currently being taken
+                    else if (inTxtBx2) // Course currently being taken
                     {
                         row.DefaultCellStyle.BackColor = Color.Yellow;
                         row.DefaultCellStyle.SelectionBackColor = Color.Yellow;
@@ -172,12 +174,16 @@ namespace Auto_Advisor
          */
         private bool courseInTextBox(string code, TextBox textbox)
         {
+            if (code == null) return false;
+
             // Split textbox content by line
             string[] lines = textbox.Text.Split(new[] { Environment.NewLine }, StringSplitOptions.None);
             // Check if code exists on any line
             foreach (var line in lines)
             {
-                if (line.Trim() == code)
+                string lineStr = string.Concat(line.Trim().ToLower().Where(ch => ch != ' '));
+                string codeStr = string.Concat(code.ToLower().Where(ch => ch != ' '));
+                if (lineStr == codeStr)
                 {
                     return true; // Code was found
                 }
@@ -250,8 +256,6 @@ namespace Auto_Advisor
             suppressMajorDisplayEvent = true; // Prevents major display update from retriggering itself
             continueFunction();
             suppressMajorDisplayEvent = false;
-            //textBox7.Visible = false;
-            //button5.Visible = false;
 
         }
 
@@ -673,7 +677,7 @@ namespace Auto_Advisor
                 "Major(s)/Minor(s) -\nSelect a Major/Minor from the dropdown menu. If you have two Majors or Minors, hit the Add Major/Minor button and select your second Major/Minor from the dropdown menu.\n\n" +
                 "Honors - \nIf you are an Honors student, hit 'yes'. Otherwise, hit 'no'. \n\n" +
                 "Upcoming Semester - \nEnter the number of your next semester. If you are currently in semester 4 (second sophomore year), your upcoming semester will be semester 5 (first junior semester).\n\n" +
-                "Completed or Currently Taking courses - \nEnter each of your course's codes in all caps. Only enter one course code per line.\n\n" +
+                "Completed or Currently Taking courses - \nEnter each of your course's codes. Only enter one course code per line.\n\n" +
                 "Download Data - \nClick the Download Data button to save your input to a file. When you use AutoAdvisor again, you can reenter your info with the file.\n\n" +
                 "Enter Saved Data - \nIf you have a saved data file, enter it from the files on your device. The software will rebuild your input from this file.");
         }
@@ -685,7 +689,17 @@ namespace Auto_Advisor
 
         private void button7_Click(object sender, EventArgs e)
         {
-            System.Windows.Forms.MessageBox.Show("The AutoAdvisor splits your classes into different tables to help show what classes you need to take and what category each class is in\n\n                                        Some Helpful Questions - \n\nWhat are Recommended Classes - \nRecommended Classes are the classes that are the highest priority to take whether that be classes that you were meant to take in previous semesters or classes that are made for the upcoming semester, all of your classes that you have not taken will show up in this table.\n\nWhat do the different colors mean -\nThe different colors are Green meaning you have completed the class, Yellow meaning you are currently taking the class and white meaning that you have not taken the class and are not currently in the class.\n\nHow do I find the course description or the Prerequisites - \nIf you find the more button under details on the tables that will display the course info, Prerequisites and additional info.   \n\nHow do I switch between Majors/Minors - \nIf you are trying to switch between different Majors/Minors all you need to do it click the drop down menu and select which Major/Minor you want to see classes for.\n\n What does the box with different hour totals mean - That box tells you five things 1. What semester you are picking classes for, 2. How many hours you have completed, 3. How many hours you are currently taking, 4. How many hours your degree needs to graduate, 5. How many hours you still need to earn to graduate(classes in progress will still show here ");
+            System.Windows.Forms.MessageBox.Show("The tables on this screen show you classes you need to take for various class categories.\n\n" +
+                "                                        Some Helpful Questions - \n\n" +
+                "What are Recommended Classes?\nRecommended Classes are high-priority. Classes in this table are suited for the upcoming semester or previous semesters and have not been taken.\n\n" +
+                "What do the different colors mean?\nGreen indicates taken classes. Yellow indicates in-progress classes. White indicates untaken classes.\n\n" +
+                "How do I find course descriptions or prerequisites? \nClick a class's More button to display additional information.   \n\n" +
+                "How do I switch between Majors/Minors? \nClick the drop down menu and select your desired Major/Minor.\n\n" +
+                "What do the different hour totals mean? \n" +
+                "Hours completed: The total hours of classes you have already taken.\n" +
+                "Hours in progress: The total hours of classes you are currently taking.\n" +
+                "Total hours needed: The total hours needed for your major (not including minor hours).\n" +
+                "Hours still needed: The difference between your completed hours and your total needed hours.");
         }
 
 
