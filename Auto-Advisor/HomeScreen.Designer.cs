@@ -135,6 +135,7 @@
             openSaveFileDialog = new OpenFileDialog();
             textBox7 = new TextBox();
             button5 = new Button();
+            tableLayoutPanel5 = new TableLayoutPanel();
             tableLayoutPanel3.SuspendLayout();
             tableLayoutPanel4.SuspendLayout();
             mainScreenPanel.SuspendLayout();
@@ -148,6 +149,7 @@
             ((System.ComponentModel.ISupportInitialize)dataGridMajors).BeginInit();
             tableLayoutPanel1.SuspendLayout();
             tableLayoutPanel2.SuspendLayout();
+            tableLayoutPanel5.SuspendLayout();
             SuspendLayout();
             // 
             // label1
@@ -444,9 +446,6 @@
             // 
             // mainScreenPanel
             // 
-            mainScreenPanel.Controls.Add(searchBackButton);
-            mainScreenPanel.Controls.Add(searchButton);
-            mainScreenPanel.Controls.Add(searchTextBox);
             mainScreenPanel.Controls.Add(button7);
             mainScreenPanel.Controls.Add(panel1);
             mainScreenPanel.Controls.Add(label13);
@@ -462,8 +461,9 @@
             // 
             // searchBackButton
             // 
-            searchBackButton.Location = new Point(1170, 524);
-            searchBackButton.Margin = new Padding(2, 2, 2, 2);
+            searchBackButton.Anchor = AnchorStyles.Top;
+            searchBackButton.Location = new Point(189, 36);
+            searchBackButton.Margin = new Padding(2);
             searchBackButton.Name = "searchBackButton";
             searchBackButton.Size = new Size(86, 22);
             searchBackButton.TabIndex = 246;
@@ -474,8 +474,9 @@
             // 
             // searchButton
             // 
-            searchButton.Location = new Point(1170, 494);
-            searchButton.Margin = new Padding(2, 2, 2, 2);
+            searchButton.Anchor = AnchorStyles.Top;
+            searchButton.Location = new Point(189, 2);
+            searchButton.Margin = new Padding(2);
             searchButton.Name = "searchButton";
             searchButton.Size = new Size(86, 22);
             searchButton.TabIndex = 245;
@@ -485,10 +486,11 @@
             // 
             // searchTextBox
             // 
-            searchTextBox.Location = new Point(993, 494);
-            searchTextBox.Margin = new Padding(2, 2, 2, 2);
+            searchTextBox.Anchor = AnchorStyles.Top;
+            searchTextBox.Location = new Point(13, 2);
+            searchTextBox.Margin = new Padding(2);
             searchTextBox.Name = "searchTextBox";
-            searchTextBox.Size = new Size(170, 23);
+            searchTextBox.Size = new Size(149, 23);
             searchTextBox.TabIndex = 244;
             // 
             // button7
@@ -612,7 +614,7 @@
             HonorsBox.Font = new Font("Segoe UI", 25F, FontStyle.Regular, GraphicsUnit.Point);
             HonorsBox.ForeColor = Color.White;
             HonorsBox.Location = new Point(47, 1538);
-            HonorsBox.Margin = new Padding(4, 4, 4, 4);
+            HonorsBox.Margin = new Padding(4);
             HonorsBox.Name = "HonorsBox";
             HonorsBox.ReadOnly = true;
             HonorsBox.Size = new Size(696, 52);
@@ -705,7 +707,7 @@
             textBox5.Font = new Font("Segoe UI", 25F, FontStyle.Regular, GraphicsUnit.Point);
             textBox5.ForeColor = Color.White;
             textBox5.Location = new Point(47, 1284);
-            textBox5.Margin = new Padding(4, 4, 4, 4);
+            textBox5.Margin = new Padding(4);
             textBox5.Name = "textBox5";
             textBox5.ReadOnly = true;
             textBox5.Size = new Size(696, 52);
@@ -1187,21 +1189,23 @@
             // 
             tableLayoutPanel1.ColumnCount = 1;
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle());
+            tableLayoutPanel1.Controls.Add(tableLayoutPanel5, 0, 5);
             tableLayoutPanel1.Controls.Add(label10, 0, 0);
             tableLayoutPanel1.Controls.Add(label11, 0, 2);
             tableLayoutPanel1.Controls.Add(tableLayoutPanel2, 0, 4);
             tableLayoutPanel1.Controls.Add(majorDisplay1, 0, 1);
             tableLayoutPanel1.Controls.Add(minorDisplay1, 0, 3);
-            tableLayoutPanel1.Location = new Point(969, 16);
+            tableLayoutPanel1.Location = new Point(972, 21);
             tableLayoutPanel1.Margin = new Padding(1);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
-            tableLayoutPanel1.RowCount = 5;
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 4.410441F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 8.370837F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 4.320432F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 7.830783F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 25.8834763F));
-            tableLayoutPanel1.Size = new Size(366, 441);
+            tableLayoutPanel1.RowCount = 6;
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 6.22803164F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 11.82055F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 6.100929F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 11.0579338F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 43.4125252F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 22.0302372F));
+            tableLayoutPanel1.Size = new Size(344, 503);
             tableLayoutPanel1.TabIndex = 1;
             tableLayoutPanel1.Paint += tableLayoutPanel1_Paint;
             // 
@@ -1211,7 +1215,7 @@
             label10.AutoSize = true;
             label10.Font = new Font("Segoe UI", 17F, FontStyle.Regular, GraphicsUnit.Point);
             label10.ForeColor = Color.White;
-            label10.Location = new Point(131, 0);
+            label10.Location = new Point(120, 0);
             label10.Margin = new Padding(1, 0, 1, 0);
             label10.Name = "label10";
             label10.Size = new Size(103, 31);
@@ -1226,10 +1230,10 @@
             label11.AutoSize = true;
             label11.Font = new Font("Segoe UI", 17F, FontStyle.Regular, GraphicsUnit.Point);
             label11.ForeColor = Color.White;
-            label11.Location = new Point(131, 110);
+            label11.Location = new Point(120, 90);
             label11.Margin = new Padding(1, 0, 1, 0);
             label11.Name = "label11";
-            label11.Size = new Size(104, 31);
+            label11.Size = new Size(104, 30);
             label11.TabIndex = 2;
             label11.Text = "Minor(s):";
             label11.TextAlign = ContentAlignment.MiddleCenter;
@@ -1252,7 +1256,7 @@
             tableLayoutPanel2.Controls.Add(listBox9, 0, 3);
             tableLayoutPanel2.Controls.Add(listBox3, 0, 2);
             tableLayoutPanel2.Controls.Add(listBox10, 1, 2);
-            tableLayoutPanel2.Location = new Point(56, 241);
+            tableLayoutPanel2.Location = new Point(45, 196);
             tableLayoutPanel2.Margin = new Padding(1);
             tableLayoutPanel2.Name = "tableLayoutPanel2";
             tableLayoutPanel2.RightToLeft = RightToLeft.No;
@@ -1445,7 +1449,7 @@
             majorDisplay1.FormattingEnabled = true;
             majorDisplay1.ItemHeight = 21;
             majorDisplay1.Items.AddRange(new object[] { "Item 1", "Item 2" });
-            majorDisplay1.Location = new Point(78, 40);
+            majorDisplay1.Location = new Point(67, 33);
             majorDisplay1.Margin = new Padding(2);
             majorDisplay1.Name = "majorDisplay1";
             majorDisplay1.Size = new Size(209, 29);
@@ -1461,7 +1465,7 @@
             minorDisplay1.FormattingEnabled = true;
             minorDisplay1.ItemHeight = 21;
             minorDisplay1.Items.AddRange(new object[] { "Item 1", "Item 2" });
-            minorDisplay1.Location = new Point(80, 149);
+            minorDisplay1.Location = new Point(69, 122);
             minorDisplay1.Margin = new Padding(2);
             minorDisplay1.Name = "minorDisplay1";
             minorDisplay1.Size = new Size(206, 29);
@@ -1482,7 +1486,7 @@
             // button2
             // 
             button2.Anchor = AnchorStyles.None;
-            button2.Location = new Point(1019, 44);
+            button2.Location = new Point(1075, 540);
             button2.Margin = new Padding(1, 2, 1, 2);
             button2.Name = "button2";
             button2.Size = new Size(153, 42);
@@ -1520,6 +1524,23 @@
             button5.UseVisualStyleBackColor = true;
             button5.Click += button5_Click_2;
             // 
+            // tableLayoutPanel5
+            // 
+            tableLayoutPanel5.Anchor = AnchorStyles.Top;
+            tableLayoutPanel5.ColumnCount = 2;
+            tableLayoutPanel5.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 61.21212F));
+            tableLayoutPanel5.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 38.78788F));
+            tableLayoutPanel5.Controls.Add(searchButton, 1, 0);
+            tableLayoutPanel5.Controls.Add(searchTextBox, 0, 0);
+            tableLayoutPanel5.Controls.Add(searchBackButton, 1, 1);
+            tableLayoutPanel5.Location = new Point(28, 394);
+            tableLayoutPanel5.Name = "tableLayoutPanel5";
+            tableLayoutPanel5.RowCount = 2;
+            tableLayoutPanel5.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
+            tableLayoutPanel5.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
+            tableLayoutPanel5.Size = new Size(288, 69);
+            tableLayoutPanel5.TabIndex = 247;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(96F, 96F);
@@ -1527,7 +1548,7 @@
             AutoScroll = true;
             AutoSize = true;
             BackColor = SystemColors.ControlDarkDark;
-            ClientSize = new Size(1319, 799);
+            ClientSize = new Size(1324, 799);
             Controls.Add(textBox7);
             Controls.Add(mainScreenPanel);
             Controls.Add(textBox2);
@@ -1559,7 +1580,6 @@
             tableLayoutPanel3.ResumeLayout(false);
             tableLayoutPanel4.ResumeLayout(false);
             mainScreenPanel.ResumeLayout(false);
-            mainScreenPanel.PerformLayout();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)DataGridHonors).EndInit();
@@ -1572,6 +1592,8 @@
             tableLayoutPanel1.ResumeLayout(false);
             tableLayoutPanel1.PerformLayout();
             tableLayoutPanel2.ResumeLayout(false);
+            tableLayoutPanel5.ResumeLayout(false);
+            tableLayoutPanel5.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -1672,5 +1694,6 @@
         private Button searchBackButton;
         private Button searchButton;
         private TextBox searchTextBox;
+        private TableLayoutPanel tableLayoutPanel5;
     }
 }
