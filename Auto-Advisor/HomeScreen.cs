@@ -77,11 +77,11 @@ namespace Auto_Advisor
                 //Filters out the classes that are replaced with the honor classes
                 if (course.honors == 1 && comboBox3.Text == "Yes")
                 {
-                    continue;
+                    continue; // The student is in honors, but this class is replaced by an honors version
                 }
                 else if (course.honors == 2 && comboBox3.Text == "No")
                 {
-                    continue;
+                    continue; // This is an honors class, but the student is not in honors
                 }
 
                 // Store each course and its values in a grid row

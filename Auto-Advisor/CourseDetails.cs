@@ -37,6 +37,10 @@ namespace Auto_Advisor
             {
                 prereqsLabel.Text = "Not applicable.";
             }
+            if(code == "ENGL 1023" || code == "THEO 2043")
+            {
+                label4.Text = "If student is in honors, replace with honors version";
+            }
         }
 
         private void label1_Click(object sender, EventArgs e)
