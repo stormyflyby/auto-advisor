@@ -732,7 +732,7 @@ namespace Auto_Advisor
         // Makes all course rows visible, undoing a search
         private void searchBackButton_Click(object sender, EventArgs e)
         {
-            searchBackButton.Visible = false;
+            searchClear();
 
             foreach (DataGridView dgv in dgvs)
             {
@@ -741,6 +741,11 @@ namespace Auto_Advisor
                     row.Visible = true;
                 }
             }
+        }
+
+        private void searchClear()
+        {
+            searchBackButton.Visible = false;
         }
     }
 }
