@@ -356,6 +356,8 @@ namespace Auto_Advisor
             textBox7.Visible = true;
             button5.Visible = true;
             TotalHours = 0;
+            searchClear();
+            searchTextBox.Text = "";
         }
 
         private void label10_Click(object sender, EventArgs e)
@@ -639,6 +641,7 @@ namespace Auto_Advisor
             MajorList.SelectedItem = MajorList2.SelectedItem;
             MajorList2.SelectedItem = temp;
             continueFunction();
+            searchClear();
 
             suppressMajorDisplayEvent = false;
         }
@@ -658,6 +661,7 @@ namespace Auto_Advisor
             MinorBox.SelectedItem = MinorBox2.SelectedItem;
             MinorBox2.SelectedItem = temp;
             continueFunction();
+            searchClear();
 
             suppressMajorDisplayEvent = false;
         }
@@ -732,8 +736,8 @@ namespace Auto_Advisor
         // Makes all course rows visible, undoing a search
         private void searchBackButton_Click(object sender, EventArgs e)
         {
-            searchBackButton.Visible = false;
-            
+            searchClear();
+
             foreach (DataGridView dgv in dgvs)
             {
                 foreach (DataGridViewRow row in dgv.Rows)
@@ -741,6 +745,11 @@ namespace Auto_Advisor
                     row.Visible = true;
                 }
             }
+        }
+
+        private void searchClear()
+        {
+            searchBackButton.Visible = false;
         }
     }
 }
