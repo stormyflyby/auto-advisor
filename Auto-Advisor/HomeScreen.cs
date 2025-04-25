@@ -1,6 +1,9 @@
 
+using Microsoft.VisualBasic.Devices;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using System.Diagnostics;
+using System.Reflection.Metadata;
 
 namespace Auto_Advisor
 {
@@ -41,16 +44,71 @@ namespace Auto_Advisor
             public string code { get; set; }
             public string name { get; set; }
             public List<string> prerequisites { get; set; }
-            public int hours { get; set; }
+            [JsonConverter(typeof(IntOrArrConverter))]
+            public object semester { get; set; }
+            private int hrs;
+            public int hours
+            {
+                get
+                {
+                    return hrs;
+                }
+                /*set
+                {
+                    if (semester != null)
+                    {
+                        if (semester.GetType().BaseType == typeof(Array))
+                        {
+                            int[] arr = (int[])semester;
+                            hrs = value * arr.Length;
+                        }
+                        else
+                        {
+                            hrs = value;
+                        }
+                    }
+                    else hrs = value;
+                }*/
+                set { hrs = value; }
+            }
             public string description { get; set; }
 
             public int honors { get; set; }
         }
 
+        public void SetDegreeCourseHours(DegreeCourse dc)
+        {
+            dc.hours = dc.hours;
+        }
+
+        public class IntOrArrConverter : JsonConverter
+        {
+            public override bool CanConvert(Type objectType) => true;
+
+            public override object? ReadJson(JsonReader reader, Type objectType, object? existingValue, JsonSerializer serializer)
+            {
+                var token = JToken.Load(reader);
+                if (token.Type == JTokenType.Integer)
+                    return token.ToObject<int>();
+                if (token.Type == JTokenType.Array)
+                    return token.ToObject<int[]>();
+                return null;
+            }
+
+            public override void WriteJson(JsonWriter writer, object? value, JsonSerializer serializer)
+            {
+                JToken t = JToken.FromObject(value);
+                t.WriteTo(writer);
+            }
+        }
+
         // This class is used to store recommended course info
         public class User
         {
-            public int semester { get; set; }
+            private int semInt;
+            private List<int> semList = new List<int>();
+            [JsonConverter(typeof(IntOrArrConverter))]
+            public object semester { get; set; }
             public string code { get; set; }
             public string name { get; set; }
             public int hours { get; set; }
@@ -84,32 +142,44 @@ namespace Auto_Advisor
                     continue; // This is an honors class, but the student is not in honors
                 }
 
-                // Store each course and its values in a grid row
-                int rowIndex = grid.Rows.Add();
-                var row = grid.Rows[rowIndex];
-                row.Cells[0].Value = course.code;          // Course Code
-                row.Cells[1].Value = course.name;          // Course Name
-                row.Cells[2].Value = course.hours;         // Hours
-
-                // Update the total hours for the given major
-                TotalHoursNeeded += course.hours;
-
-                // Determine color of the row
-                if (courseInTextBox(course.code, textBox1)) // Course already taken
+                int end = 1;
+                bool isArr = false;
+                if (course.semester is int[])
                 {
-                    row.DefaultCellStyle.BackColor = Color.LightGreen;
-                    row.DefaultCellStyle.SelectionBackColor = Color.LightGreen;
-                    TotalHours += course.hours; // Update hours already taken
+                    end = ((int[])course.semester).Length;
+                    isArr = true;
                 }
-                else if (courseInTextBox(course.code, textBox2)) // Course currently being taken
+
+                for (int i = 0; i < end; i++)
                 {
-                    row.DefaultCellStyle.BackColor = Color.Yellow;
-                    row.DefaultCellStyle.SelectionBackColor = Color.Yellow;
-                    HoursInProgress += course.hours; // Update hours in progress
-                }
-                else // Course not taken yet
-                {
-                    row.DefaultCellStyle.SelectionBackColor = grid.DefaultCellStyle.BackColor;
+                    int rowIndex = grid.Rows.Add();
+                    var row = grid.Rows[rowIndex];
+                    row.Cells[0].Value = course.code + (isArr ? i.ToString() : "");          // Course Code
+                    row.Cells[1].Value = course.name;          // Course Name
+                    row.Cells[2].Value = course.hours;         // Hours
+
+
+                    // Update the total hours for the given major
+                    if (grid != dataGridMinors)
+                        TotalHoursNeeded += course.hours;
+
+                    // Determine color of the row
+                    if (courseInTextBox(course.code, textBox1)) // Course already taken
+                    {
+                        row.DefaultCellStyle.BackColor = Color.LightGreen;
+                        row.DefaultCellStyle.SelectionBackColor = Color.LightGreen;
+                        TotalHours += course.hours; // Update hours already taken
+                    }
+                    else if (courseInTextBox(course.code, textBox2)) // Course currently being taken
+                    {
+                        row.DefaultCellStyle.BackColor = Color.Yellow;
+                        row.DefaultCellStyle.SelectionBackColor = Color.Yellow;
+                        HoursInProgress += course.hours; // Update hours in progress
+                    }
+                    else // Course not taken yet
+                    {
+                        row.DefaultCellStyle.SelectionBackColor = grid.DefaultCellStyle.BackColor;
+                    }
                 }
             }
             grid.DefaultCellStyle.SelectionForeColor = grid.DefaultCellStyle.ForeColor;
@@ -123,45 +193,82 @@ namespace Auto_Advisor
          */
         private void recommendedCourses(string filePath, DataGridView grid)
         {
-            string json = File.ReadAllText(filePath); // Read the file to a string
-            List<User> users = JsonConvert.DeserializeObject<List<User>>(json);
+            string fullPath = Path.GetFullPath(filePath);
+            DirectoryInfo di = new DirectoryInfo(fullPath);
+
             grid.Rows.Clear();
-            foreach (var course in users)
+
+            foreach (FileInfo fi in di.GetFiles())
             {
-                int sem = int.Parse(comboBox4.SelectedItem.ToString());
-                DataGridViewRow row = null;
-                bool inTxtBx1 = courseInTextBox(course.code, textBox1);
-                bool inTxtBx2 = courseInTextBox(course.code, textBox2);
-                // Doesn't load courses beyond current semester or courses already/currently taken
-                if (course.semester <= sem && (!inTxtBx1 && !inTxtBx2))
+
+
+
+                string json = File.ReadAllText(Path.Combine(filePath, fi.Name)); // Read the file to a string
+                List<User> users = JsonConvert.DeserializeObject<List<User>>(json);
+
+                foreach (var course in users)
                 {
-                    int rowIndex = grid.Rows.Add();
-                    row = grid.Rows[rowIndex];
-                    row.Cells[0].Value = course.code;          // Course Code
-                    row.Cells[1].Value = course.name;          // Course Name
-                    row.Cells[2].Value = course.hours;         // Hours
+                    int sem = int.Parse(comboBox4.SelectedItem.ToString());
+                    DataGridViewRow row = null;
+                    bool inTxtBx1 = courseInTextBox(course.code, textBox1);
+                    bool inTxtBx2 = courseInTextBox(course.code, textBox2);
+                    // Doesn't load courses beyond current semester or courses already/currently taken
+
+
+                    if (course.semester.GetType().BaseType != typeof(Array))
+                    {
+                        if ((int)course.semester <= sem)
+                        {
+                            int rowIndex = grid.Rows.Add();
+                            row = grid.Rows[rowIndex];
+                            row.Cells[0].Value = course.code;          // Course Code
+                            row.Cells[1].Value = course.name;          // Course Name
+                            row.Cells[2].Value = course.hours;         // Hours
+                            
+                            if (inTxtBx1 || inTxtBx2) row.Visible = false;
+                        }
+                    }
+
+                    else
+                    {
+                        int i = 0;
+                        foreach (int semInt in (int[])course.semester)
+                        {
+                            if (semInt <= sem)
+                            {
+                                int rowIndex = grid.Rows.Add();
+                                row = grid.Rows[rowIndex];
+                                row.Cells[0].Value = course.code + i.ToString();          // Course Code
+                                row.Cells[1].Value = course.name;          // Course Name
+                                row.Cells[2].Value = course.hours;         // Hours
+
+                                if (inTxtBx1 || inTxtBx2) row.Visible = false;
+                            }
+                            i++;
+                        }
+                    }
+
+                    // Determine color of row
+                    if (row != null)
+                    {
+                        if (inTxtBx1) // Course already taken
+                        {
+                            row.DefaultCellStyle.BackColor = Color.LightGreen;
+                            row.DefaultCellStyle.SelectionBackColor = Color.LightGreen;
+
+                        }
+                        else if (inTxtBx2) // Course currently being taken
+                        {
+                            row.DefaultCellStyle.BackColor = Color.Yellow;
+                            row.DefaultCellStyle.SelectionBackColor = Color.Yellow;
+                        }
+                        else // Course not taken yet
+                        {
+                            row.DefaultCellStyle.SelectionBackColor = grid.DefaultCellStyle.BackColor;
+                        }
+                    }
+
                 }
-
-                // Determine color of row
-                if (row != null)
-                {
-                    if (inTxtBx1) // Course already taken
-                    {
-                        row.DefaultCellStyle.BackColor = Color.LightGreen;
-                        row.DefaultCellStyle.SelectionBackColor = Color.LightGreen;
-
-                    }
-                    else if (inTxtBx2) // Course currently being taken
-                    {
-                        row.DefaultCellStyle.BackColor = Color.Yellow;
-                        row.DefaultCellStyle.SelectionBackColor = Color.Yellow;
-                    }
-                    else // Course not taken yet
-                    {
-                        row.DefaultCellStyle.SelectionBackColor = grid.DefaultCellStyle.BackColor;
-                    }
-                }
-
             }
             grid.DefaultCellStyle.SelectionForeColor = grid.DefaultCellStyle.ForeColor;
         }
@@ -320,7 +427,7 @@ namespace Auto_Advisor
             LoadCoursesIntoGrid(Path.Combine(majorPath, "Cognate.json"), dataGridCognate);
             LoadCoursesIntoGrid(Path.Combine(majorPath, "General_Education.json"), dataGridGenEd);
             LoadCoursesIntoGrid(Path.Combine(majorPath, "Theology_Courses.json"), dataGridTheology);
-            recommendedCourses(Path.Combine(majorPath, "recommended.json"), dataGridRecommended);
+            recommendedCourses(majorPath, dataGridRecommended);
             LoadCoursesIntoGrid("Honors_classes.json", DataGridHonors);
 
             // Populate other sidebar data
@@ -353,6 +460,21 @@ namespace Auto_Advisor
             mainScreenPanel.Visible = true;
         }
 
+        private void RefreshSidebar()
+        {
+            listBox4.Items.Clear();
+            listBox4.Items.Add(comboBox4.SelectedItem); // Load current semester
+            listBox6.Items.Clear();
+            listBox6.Items.Add(TotalHours); // Load total hours taken
+            TotalHoursStillNeeded = TotalHoursNeeded - TotalHours;
+            listBox5.Items.Clear();
+            listBox5.Items.Add(TotalHoursStillNeeded); // Load hours still needed
+            listBox2.Items.Clear();
+            listBox2.Items.Add(TotalHoursNeeded); // Load total hours for major
+            listBox10.Items.Clear();
+            listBox10.Items.Add(HoursInProgress); // Load hours currently being taken
+        }
+
         // Back to first screen
         private void button1_Click(object sender, EventArgs e)
         {
@@ -375,11 +497,20 @@ namespace Auto_Advisor
         }
 
         // Displays details view for major classes
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void dataGridViewMajors_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            if (e.RowIndex < 0) return;
             if (e.ColumnIndex == 3)
             {
                 displayCourseDetails(dataGridMajors, e.RowIndex, Path.Combine(majorPath, "major_classes.json"));
+            }
+            else
+            {
+                var code = dataGridMajors.Rows[e.RowIndex].Cells[0].Value?.ToString();
+                if (code != null)
+                {
+                    SetCourseStatus(code.ToString(), courseClickComBox.SelectedIndex);
+                }
             }
         }
 
@@ -394,7 +525,7 @@ namespace Auto_Advisor
                 {
                     // Pass course details to form2 for display (course.code may be null)
                     CourseDescription form2 = new CourseDescription(course.code, course.name, course.prerequisites, course.hours, course.description);
-                    form2.Show();
+                    form2.ShowDialog();
                     break;
                 }
             }
@@ -543,57 +674,209 @@ namespace Auto_Advisor
 
         }
 
-        private void dataGridRecommended_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void dataGridRecommended_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            if (e.RowIndex < 0) return;
             if (e.ColumnIndex == 3)
             {
                 displayCourseDetails(dataGridRecommended, e.RowIndex, Path.Combine(majorPath, "recommended.json"));
             }
+            else
+            {
+                var code = dataGridRecommended.Rows[e.RowIndex].Cells[0].Value?.ToString();
+                if (code != null)
+                {
+                    SetCourseStatus(code.ToString(), courseClickComBox.SelectedIndex);
+                }
+            }
         }
 
-        private void dataGridCognate_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void dataGridCognate_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            if (e.RowIndex < 0) return;
             if (e.ColumnIndex == 3)
             {
                 displayCourseDetails(dataGridCognate, e.RowIndex, Path.Combine(majorPath, "Cognate.json"));
             }
+            else
+            {
+                var code = dataGridCognate.Rows[e.RowIndex].Cells[0].Value?.ToString();
+                if (code != null)
+                {
+                    SetCourseStatus(code.ToString(), courseClickComBox.SelectedIndex);
+                }
+            }
         }
 
-        private void dataGridGenEd_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void dataGridGenEd_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            if (e.RowIndex < 0) return;
             if (e.ColumnIndex == 3)
             {
                 displayCourseDetails(dataGridGenEd, e.RowIndex, Path.Combine(majorPath, "General_Education.json"));
+            }
+            else
+            {
+                var code = dataGridGenEd.Rows[e.RowIndex].Cells[0].Value?.ToString();
+                if (code != null)
+                {
+                    SetCourseStatus(code.ToString(), courseClickComBox.SelectedIndex);
+                }
             }
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            courseClickComBox.SelectedIndex = 0;
         }
 
-        private void dataGridTheology_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private DataGridViewRow hasCode(string code, DataGridView dgv)
         {
+            foreach (DataGridViewRow row in dgv.Rows)
+            {
+                var str = row.Cells[0].Value;
+                if (str != null)
+                {
+                    if (str.ToString().Equals(code))
+                    {
+                        return row;
+                    }
+                }
+            }
+            return null;
+        }
+
+        private void SetCourseStatus(string code, int status)
+        {
+            if (status == 0)
+            {
+                bool hoursSet = false;
+                foreach (DataGridView dgv in dgvs)
+                {
+                    DataGridViewRow row = hasCode(code, dgv);
+                    if (row != null)
+                    {
+                        if (row.Cells[0].Value.ToString().Equals(code))
+                        {
+                            if (!hoursSet && row.DefaultCellStyle.BackColor != Color.LightGreen)
+                            {
+                                hoursSet = true;
+                                TotalHours += (int)row.Cells[2].Value;
+                                RefreshSidebar();
+                            }
+                            row.DefaultCellStyle.BackColor = Color.LightGreen;
+                            row.DefaultCellStyle.SelectionBackColor = Color.LightGreen;
+                            if (dgv == dataGridRecommended)
+                            {
+                                row.Visible = false;
+                            }
+                        }
+                    }
+                }
+            }
+
+            else if (status == 1)
+            {
+                bool hoursSet = false;
+                foreach (DataGridView dgv in dgvs)
+                {
+                    DataGridViewRow row = hasCode(code, dgv);
+                    if (row != null)
+                    {
+                        if (row.Cells[0].Value.ToString().Equals(code))
+                        {
+                            if (!hoursSet && row.DefaultCellStyle.BackColor == Color.LightGreen)
+                            {
+                                hoursSet = true;
+                                TotalHours -= (int)row.Cells[2].Value;
+                                RefreshSidebar();
+                            }
+                            row.DefaultCellStyle.BackColor = Color.Yellow;
+                            row.DefaultCellStyle.SelectionBackColor = Color.Yellow;
+                            if (dgv == dataGridRecommended)
+                            {
+                                row.Visible = false;
+                            }
+                        }
+                    }
+                }
+            }
+
+            else if (status == 2)
+            {
+                bool hoursSet = false;
+                foreach (DataGridView dgv in dgvs)
+                {
+                    DataGridViewRow row = hasCode(code, dgv);
+                    if (row != null)
+                    {
+                        if (row.Cells[0].Value.ToString().Equals(code))
+                        {
+                            if (!hoursSet && row.DefaultCellStyle.BackColor == Color.LightGreen)
+                            {
+                                hoursSet = true;
+                                TotalHours -= (int)row.Cells[2].Value;
+                                RefreshSidebar();
+                            }
+                            row.DefaultCellStyle.BackColor = Color.White;
+                            row.DefaultCellStyle.SelectionBackColor = Color.White;
+                            if (dgv == dataGridRecommended)
+                            {
+                                row.Visible = true;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        private void dataGridTheology_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex < 0) return;
             if (e.ColumnIndex == 3)
             {
                 displayCourseDetails(dataGridTheology, e.RowIndex, Path.Combine(majorPath, "Theology_Courses.json"));
             }
+            else
+            {
+                var code = dataGridTheology.Rows[e.RowIndex].Cells[0].Value?.ToString();
+                if (code != null)
+                {
+                    SetCourseStatus(code.ToString(), courseClickComBox.SelectedIndex);
+                }
+            }
         }
 
-
-
-        private void dataGridMinors_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void dataGridMinors_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            if (e.RowIndex < 0) return;
             if (e.ColumnIndex == 3)
             {
                 displayCourseDetails(dataGridMinors, e.RowIndex, Path.Combine(minorPath, "minor_classes.json"));
             }
+            else
+            {
+                var code = dataGridMinors.Rows[e.RowIndex].Cells[0].Value?.ToString();
+                if (code != null)
+                {
+                    SetCourseStatus(code.ToString(), courseClickComBox.SelectedIndex);
+                }
+            }
         }
-        private void DataGridHonors_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void DataGridHonors_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            if (e.RowIndex < 0) return;
             if (e.ColumnIndex == 3)
             {
-                displayCourseDetails(DataGridHonors, e.RowIndex, Path.Combine(majorPath, "Honors_classes.json"));
+                displayCourseDetails(DataGridHonors, e.RowIndex, Path.Combine("Honors_classes.json"));
+            }
+            else
+            {
+                var code = DataGridHonors.Rows[e.RowIndex].Cells[0].Value?.ToString();
+                if (code != null)
+                {
+                    SetCourseStatus(code.ToString(), courseClickComBox.SelectedIndex);
+                }
             }
         }
         // This method makes major selections non-duplicable
@@ -763,7 +1046,8 @@ namespace Auto_Advisor
             {
                 foreach (DataGridViewRow row in dgv.Rows)
                 {
-                    row.Visible = true;
+                    if (dgv != dataGridRecommended || row.DefaultCellStyle.BackColor != Color.White)
+                        row.Visible = true;
                 }
             }
         }

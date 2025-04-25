@@ -7,18 +7,21 @@
         "description": "This course surveys the content and theological message of biblical story. Special emphasis is placed on considering the biblical story of redemption as a unified and coherent narrative of God’s ongoing work within his kingdom. Understanding the Bible within historical, cultural, and literary settings is highlighted. Throughout the course the students will begin to develop skills in interpreting the Bible with care and wisdom as well as move toward finding and articulating their place within God’s story of redemption."
     },
     {
+        "code": "NEWT ELEV",
         "name": "BIBL New Testament Jr. Level Elective",
         "prerequisites": [],
         "hours": 3,
         "description": "Must be Jr. Level or above"
     },
     {
+        "code": "OLDT ELEV",
         "name": "BIBL Old Testament Jr. Level Elective",
         "prerequisites": [],
         "hours": 3,
         "description": "Must be Jr. Level or above"
     },
     {
+        "code": "BIB2 ELEV",
         "name": "BIBL 2000 Level or above Elective",
         "prerequisites": [],
         "hours": 3,

@@ -4,6 +4,7 @@
         "name": "Computer Science I",
         "prerequisites": [],
         "hours": 3,
+        "semester": 1,
         "description": "An introduction to the field of computer science. Problem solving strategies, basic data structures, and an introduction to algorithms in the context of a modern programming language. A first course in programming with an emphasis on scientific and engineering applications."
     },
     {
@@ -11,6 +12,7 @@
         "name": "Computer Science II",
         "prerequisites": [ "COSC 1303" ],
         "hours": 3,
+        "semester": 2,
         "description": "A second semester study of computing principles. Abstract data types, object-oriented programming concepts, and introductory topics of graphical-user interfaces, unit testing, and file structures. Students hone their problem solving skills through a variety of programming assignments."
     },
     {
@@ -18,6 +20,7 @@
         "name": "Data Structures",
         "prerequisites": [ "COSC 2103", "MATH 2003" ],
         "hours": 3,
+        "semester": 3,
         "description": "A second-year course in data structures and algorithms. Topics include commonly used data structures, recursive algorithms, computational complexity, sorting and searching techniques, and an introduction to run-time storage management. Course assignments emphasize both program design and implementation."
     },
     {
@@ -25,6 +28,7 @@
         "name": "Computer Architecture",
         "prerequisites": [ "COSC 2203" ],
         "hours": 3,
+        "semester": 6,
         "description": "A study of design alternatives in computer architecture. Topics include machine organization, memory subsystem organization, interfacing concepts, issues that arise in managing communication with the processor, and alternative computer architectures. Assembly language is studied and used to implement a variety of small programs."
     },
     {
@@ -32,6 +36,7 @@
         "name": "Software Engineering I",
         "prerequisites": [ "COSC 2103", "COSC 2203" ],
         "hours": 3,
+        "semester": 6,
         "description": "The application of object-oriented analysis and design methods to develop commercial software. Emphasis is placed on software process maturity, software development life cycles, software documentation, and team projects."
     },
     {
@@ -39,6 +44,7 @@
         "name": "Operating Systems",
         "prerequisites": [ "COSC 2103", "COSC 2203" ],
         "hours": 3,
+        "semester": 4,
         "description": "An introduction to the principles and concepts of operating systems to include process management, memory management, and storage management. Emphasis is placed on learning the principles and then applying them in various systems programming exercises."
     },
     {
@@ -46,6 +52,7 @@
         "name": "Analysis Of Algorithms",
         "prerequisites": [ "COSC 2203" ],
         "hours": 3,
+        "semester": 5,
         "description": "The analysis, design, and implementation of popular algorithms methods. Topics include specific algorithms for searching, sorting, set operations, and graph-related operations. Emphasis on empirical and theoretical measures of the space and time efficiency."
     },
     {
@@ -53,6 +60,7 @@
         "name": "Networks and Data Communications",
         "prerequisites": [ "Cosc 2103 or COSC 2203" ],
         "hours": 3,
+        "semester": 5,
         "description": "An introduction to the principles and concepts of network-based communication between software processes. This includes the organization of WANs and LANs, the function of gateways and routers, and the use of protocols at the application, transport and network layers. Emphasis is placed on the TCP/IP protocol suite. Exercises focus on studying network traffic and developing TCP- and UDP-based client/server programs."
     },
     {
@@ -60,6 +68,7 @@
         "name": "Programming Languages",
         "prerequisites": [ "Cosc 2103" ],
         "hours": 3,
+        "semester": 6,
         "description": "A survey of language classes, such as imperative, functional, logic, concurrent and object- oriented paradigms, as well as their run-time structures. The student will gain experience writing programs in a variety of languages and develop an appreciation of the strengths and weaknesses of each language. Includes historical precedents and current trends in design and philosophy of languages. Formal approaches to defining the syntax and semantics are used to describe the fundamental concepts underlying programming languages."
     },
     {
@@ -67,6 +76,7 @@
         "name": "Database Management",
         "prerequisites": [ "COSC 2103 or COSC 2203" ],
         "hours": 3,
+        "semester": 7,
         "description": "A study of data modeling, relational databases, normalizing techniques, query languages, managerial aspects of database administration, and trends in database administration. Programming is done in a 4GL language."
     },
     {
@@ -74,6 +84,7 @@
         "name": "Software Engineering 2",
         "prerequisites": [ "All major COSC cources" ],
         "hours": 3,
+        "semester": 7,
         "description": "Application of software project management, requirements analysis, design, implementation, and testing to the development of large software systems. Emphasis is on software process improvement, requirements management, software testing techniques, quality assurance, configuration management, risk management and group projects."
     },
     {
@@ -81,6 +92,7 @@
         "name": "Program Translation",
         "prerequisites": [ "COSC 3303", "COSC 3403" ],
         "hours": 3,
+        "semester": 8,
         "description": "A study of language design and translation, including the various types of compilers, LL and LR parsing, support mechanisms for access and storage of translation data, scoping concerns, lifetime, visibility, and overloading mechanisms; all within the context of the program translation stages."
     },
     {
@@ -88,13 +100,15 @@
         "name": "Computer Theory",
         "prerequisites": [ "COSC 3523", "MATH 2003" ],
         "hours": 3,
+        "semester": 8,
         "description": "A study of the computational and linguistic theory on which the field of computer science is based. Topics include finite state automata, context-free grammars, push-down automata, Turing machines, undecidability, computability, and complexity theory."
     },
     {
-        "code": "COSC ELEC",
+        "code": "COSC ELEV",
         "name": "COSC Jr.-Sr. Level Elective",
         "prerequisites": [],
         "hours": 3,
+        "semester": 7,
         "description": "Any COSC class"
     },
     {
@@ -102,6 +116,7 @@
         "name": "DC Circuits Laboratory",
         "prerequisites": [ "EETC 1022" ],
         "hours": 1,
+        "semester": 2,
         "description": "Experimental practice exercise in the wiring of DC electrical circuits, instrumentation and meter reading, circuit analysis, and lab safety."
     },
     {
@@ -109,6 +124,7 @@
         "name": "DC Circuits",
         "prerequisites": [ "EETC 1021" ],
         "hours": 2,
+        "semester": 2,
         "description": "Principles of electricity covering direct currents and voltages; electrical units, Ohm’s Law, power law, Kirchhoff’s voltage and current laws, and series, parallel, and series-parallel circuitry."
     },
     {
@@ -116,6 +132,7 @@
         "name": "Digital Electronics Laboratory",
         "prerequisites": [ "EETC 1021", "AVTC 1401" ],
         "hours": 1,
+        "semester": 4,
         "description": "Experimental practice exercises in the design, wiring, and measurements of combinational and sequential digital circuits.  Utilization of a digital design software platform to design, simulate, program, and test programmable logic devices"
     },
     {
@@ -123,6 +140,7 @@
         "name": "Digital Electronics",
         "prerequisites": [ "EETC 1022" ],
         "hours": 2,
+        "semester": 4,
         "description": "Number systems; switching algebra and combinational logic design; logic gate circuits; latches, flip-flops, counters, registers, multiplexers, and memory devices; data coding and decoding; applications of digital circuits."
     }
 ]

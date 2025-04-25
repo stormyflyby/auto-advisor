@@ -7,20 +7,22 @@
     "honors": 2,
     "description": "(Substitutes for THEO 2043)\n     [offered Fall]\nAn introduction to the relationship between Christian teaching and the Christian life.  This course focuses on the way in which the identity of God as Father, Son and Holy Spirit sharpens our understanding of the coherence of the Bible, the purpose for creation (and by extension humans), the meaning of salvation, the place of work, and the basis for ethics.  Special attention is given to sustained analysis of biblical texts, attending to the way in which the biblical witness integrates theology and ethics, faith and work, worship and discipleship."
   },
-  {
-    "name": "Honors Comp or Ingenuity Requirement",
-    "prerequisites": [],
-    "hours": 3,
-    "honors": 2,
-    "description": "One of:\n         - HNRS 1023: Honors Freshman Composition 2 (Substitutes for ENGL 1023)\n         - HNRS 3xxx General English Elective"
-  },
-  {
-    "name": "Honors General Education Requirement",
-    "prerequisites": [],
-    "hours": 6,
-    "honors": 2,
-    "description": "Two of any HNRS classes or Guild Civic Engagement"
-  },
+    {
+        "code": "COMP ELEV",
+        "name": "Honors Comp or Ingenuity Requirement",
+        "prerequisites": [],
+        "hours": 3,
+        "honors": 2,
+        "description": "One of:\n         - HNRS 1023: Honors Freshman Composition 2 (Substitutes for ENGL 1023)\n         - HNRS 3xxx General English Elective"
+    },
+    {
+      "code": "HGEN ELEV",
+        "name": "Honors General Education Requirement",
+        "prerequisites": [],
+        "hours": 6,
+        "honors": 2,
+        "description": "Two of any HNRS classes or Guild Civic Engagement"
+    },
   {
     "code": "HNRS 3523",
     "name": "Encountering New Communities 2",
@@ -29,11 +31,12 @@
     "honors": 2,
     "description": "Honors Theological Engagement Requirement\n        [Offered Spring only]\nIn partnership with LeTourneau’s Global Scholars and with development agencies in Gregg County, this course develops a basic theology of place. Students will encounter biblical and theological reflection on community development and the significance of localism. The class will develop or carry forward a sustainable development initiative in the local community. This course fulfills a General Education theology requirement"
   },
-  {
-    "name": "Honors Seminars Requirement",
-    "prerequisites": [],
-    "hours": 4,
-    "honors": 2,
-    "description": "4x HNRS 3xx1: Honors 1 Credit Seminars"
-  }
+    {
+      "code": "HSEM ELEV",
+        "name": "Honors Seminars Requirement",
+        "prerequisites": [],
+        "hours": 4,
+        "honors": 2,
+        "description": "4x HNRS 3xx1: Honors 1 Credit Seminars"
+    }
 ]

@@ -4,6 +4,7 @@
     "name": "Calculus 1",
     "prerequisites": [ "MATH 1304 OR MATH 1203 & MATH 1253" ],
     "hours": 3,
+    "semester": 1,
     "description": "An introduction to calculus with emphasis on concepts and principles. Topics studied include limits, derivatives, applications of derivatives, and antiderivatives."
   },
   {
@@ -11,6 +12,7 @@
     "name": "Discrete Mathematics",
     "prerequisites": [ "MATH 1203" ],
     "hours": 3,
+    "semester": 2,
     "description": "Discrete mathematical structures (in contrast to continuous functions) are essential for many mathematical disciplines, including computer science.  This course provides a foundation for the study of such structures by introducing students to set theory, propositional logic, proofs, induction, relations, algorithms, number theory, and graph theory."
   },
 
@@ -19,17 +21,21 @@
     "name": "Calculus 2",
     "prerequisites": [ "MATH 1903" ],
     "hours": 3,
+    "semester": 2,
     "description": "A continuation of MATH 1903 including techniques and applications of integration, polar coordinates, and infinite series."
   },
   {
+    "code": "COGN ELEV",
     "name": "Cognate Elective Courses",
-    "hours": 24,
+    "hours": 3,
+    "semester": [2,3,4,5,6,7,8,8],
     "description": "Half of the required cognate courses must be Jr.-Sr. level."
   },
   {
     "code":  "ENGL ELEV",
     "name": "Literature Elective",
     "hours": 3,
+    "semester":  5,
     "description": "Any ENGL class."
   }
 ]

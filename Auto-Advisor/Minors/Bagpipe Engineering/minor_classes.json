@@ -14,6 +14,7 @@
         "description": "Explores the delicate art of applying precise pressure to inflatable livestock. Emphasis on rhythm, endurance, and not popping the bag mid-solo."
     },
     {
+        "code": "CELT ELEV",
         "name": "Celtic Sound Design Elective",
         "prerequisites": [],
         "hours": 3,
@@ -34,6 +35,7 @@
         "description": "Learn to march with swagger while wearing a kilt and playing the pipes. Includes bagpipe yoga and tactical pivoting for parades and spontaneous duels."
     },
     {
+        "code": "BAGP ELEV",
         "name": "Experimental Bagpipe Elective",
         "prerequisites": [],
         "hours": 3,

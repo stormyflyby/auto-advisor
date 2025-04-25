@@ -66,6 +66,9 @@
             textBox1 = new TextBox();
             textBox2 = new TextBox();
             mainScreenPanel = new Panel();
+            label14 = new Label();
+            label12 = new Label();
+            courseClickComBox = new ComboBox();
             button7 = new Button();
             panel1 = new Panel();
             DataGridHonors = new DataGridView();
@@ -446,6 +449,9 @@
             // 
             // mainScreenPanel
             // 
+            mainScreenPanel.Controls.Add(label14);
+            mainScreenPanel.Controls.Add(label12);
+            mainScreenPanel.Controls.Add(courseClickComBox);
             mainScreenPanel.Controls.Add(button7);
             mainScreenPanel.Controls.Add(panel1);
             mainScreenPanel.Controls.Add(label13);
@@ -458,6 +464,44 @@
             mainScreenPanel.Size = new Size(1646, 991);
             mainScreenPanel.TabIndex = 26;
             mainScreenPanel.Paint += mainScreenPanel_Paint;
+            // 
+            // label14
+            // 
+            label14.Anchor = AnchorStyles.Top;
+            label14.AutoSize = true;
+            label14.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            label14.ForeColor = Color.White;
+            label14.Location = new Point(5, 153);
+            label14.Margin = new Padding(1, 0, 1, 0);
+            label14.Name = "label14";
+            label14.Size = new Size(177, 46);
+            label14.TabIndex = 246;
+            label14.Text = "Click courses to\r\nchange their statuses!";
+            label14.TextAlign = ContentAlignment.MiddleLeft;
+            // 
+            // label12
+            // 
+            label12.Anchor = AnchorStyles.Top;
+            label12.AutoSize = true;
+            label12.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            label12.ForeColor = Color.White;
+            label12.Location = new Point(1, 208);
+            label12.Margin = new Padding(1, 0, 1, 0);
+            label12.Name = "label12";
+            label12.Size = new Size(181, 32);
+            label12.TabIndex = 245;
+            label12.Text = "On course click:";
+            label12.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // courseClickComBox
+            // 
+            courseClickComBox.DropDownStyle = ComboBoxStyle.DropDownList;
+            courseClickComBox.FormattingEnabled = true;
+            courseClickComBox.Items.AddRange(new object[] { "Set complete", "Set in progress", "Set incomplete" });
+            courseClickComBox.Location = new Point(21, 250);
+            courseClickComBox.Name = "courseClickComBox";
+            courseClickComBox.Size = new Size(136, 28);
+            courseClickComBox.TabIndex = 244;
             // 
             // button7
             // 
@@ -532,7 +576,7 @@
             DataGridHonors.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             DataGridHonors.Size = new Size(871, 209);
             DataGridHonors.TabIndex = 250;
-            DataGridHonors.CellContentClick += DataGridHonors_CellContentClick;
+            DataGridHonors.CellClick += DataGridHonors_CellClick;
             // 
             // dataGridViewTextBoxColumn16
             // 
@@ -625,7 +669,7 @@
             dataGridMinors.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dataGridMinors.Size = new Size(871, 209);
             dataGridMinors.TabIndex = 248;
-            dataGridMinors.CellContentClick += dataGridMinors_CellContentClick;
+            dataGridMinors.CellClick += dataGridMinors_CellClick;
             // 
             // dataGridViewTextBoxColumn13
             // 
@@ -718,7 +762,7 @@
             dataGridTheology.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dataGridTheology.Size = new Size(871, 209);
             dataGridTheology.TabIndex = 245;
-            dataGridTheology.CellContentClick += dataGridTheology_CellContentClick;
+            dataGridTheology.CellClick += dataGridTheology_CellClick;
             // 
             // dataGridViewTextBoxColumn10
             // 
@@ -789,7 +833,7 @@
             dataGridRecommended.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dataGridRecommended.Size = new Size(871, 209);
             dataGridRecommended.TabIndex = 234;
-            dataGridRecommended.CellContentClick += dataGridRecommended_CellContentClick;
+            dataGridRecommended.CellClick += dataGridRecommended_CellClick;
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -868,7 +912,7 @@
             dataGridGenEd.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dataGridGenEd.Size = new Size(871, 209);
             dataGridGenEd.TabIndex = 244;
-            dataGridGenEd.CellContentClick += dataGridGenEd_CellContentClick;
+            dataGridGenEd.CellClick += dataGridGenEd_CellClick;
             // 
             // dataGridViewTextBoxColumn7
             // 
@@ -961,7 +1005,7 @@
             dataGridCognate.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dataGridCognate.Size = new Size(871, 209);
             dataGridCognate.TabIndex = 242;
-            dataGridCognate.CellContentClick += dataGridCognate_CellContentClick;
+            dataGridCognate.CellClick += dataGridCognate_CellClick;
             // 
             // dataGridViewTextBoxColumn4
             // 
@@ -1084,7 +1128,7 @@
             dataGridMajors.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dataGridMajors.Size = new Size(871, 209);
             dataGridMajors.TabIndex = 233;
-            dataGridMajors.CellContentClick += dataGridView1_CellContentClick;
+            dataGridMajors.CellClick += dataGridViewMajors_CellClick;
             // 
             // ClassCode
             // 
@@ -1584,6 +1628,7 @@
             tableLayoutPanel3.ResumeLayout(false);
             tableLayoutPanel4.ResumeLayout(false);
             mainScreenPanel.ResumeLayout(false);
+            mainScreenPanel.PerformLayout();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)DataGridHonors).EndInit();
@@ -1699,5 +1744,8 @@
         private Button searchButton;
         private TextBox searchTextBox;
         private TableLayoutPanel tableLayoutPanel5;
+        private Label label12;
+        private ComboBox courseClickComBox;
+        private Label label14;
     }
 }

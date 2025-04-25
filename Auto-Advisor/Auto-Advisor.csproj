@@ -36,7 +36,7 @@
     <Content Include="Majors\Computer Science\major_classes.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Majors\Computer Science\recommended.json">
+    <Content Include="recommended.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Majors\Computer Science\Theology_Courses.json">
