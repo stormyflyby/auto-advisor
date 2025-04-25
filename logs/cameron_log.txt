@@ -6,3 +6,4 @@
 4/14/25 6:40 PM to 7:10 PM - did some minor bug fixing.
 4/18/25 10:30 PM to 11:30 PM - implemented search functionality.
 4/22/25 10:00 AM to 10:50 PM - added flexibility to course code input and revised the second help screen; had a potential user test the program before these changes.
+4/24/25 4:15 PM to 4:45 PM and 6:10 PM to 11:10 PM (with around an hour-long break in there) - implemented many changes, including the ability to click courses on the second screen to change their statuses, which is reflected by the sidebar; also got electives functioning correctly; other fixes; created a few breaks in the process that still need to be fixed
