@@ -4,6 +4,7 @@
         "name": "What is a Woman?",
         "prerequisites": [],
         "hours": 21,
+        "semester": 1,
         "description": "Daily three-hour sessions watching political commentator Matt Walsh's documentary, 'What is a Woman?'. Study topics include people portrayed in the documentary, dialogue in various scenes, and the innotations of Walsh's voice.'"
     },
     {
@@ -11,6 +12,7 @@
         "name": "Starbucks Training",
         "prerequisites": [],
         "hours": 4,
+        "semester": 1,
         "description": "A study of duties and work environments in Starbucks sites worldwide. Study topics include preparing food, interacting with customers, and lethal self-defense."
     },
     {
@@ -18,6 +20,7 @@
         "name": "History of Gender Studies",
         "prerequisites": [],
         "hours": 2,
+        "semester": 2,
         "description": "A study of the field of gender studies across history. Special attention will be given to trends like the LGBTQ movement and the Salem witch trials."
     },
     {
@@ -25,6 +28,7 @@
         "name": "Internet Meme History",
         "prerequisites": [ "GENS 1031" ],
         "hours": 8,
+        "semester": 2,
         "description": "A study of memes through the history of the Internet. Special attention will be given to the gender-related undertones of memes and how memes can be weaponized for political gain"
     },
     {
@@ -32,6 +36,7 @@
         "name": "Gender Reveal Parties",
         "prerequisites": [ "GENS 1031" ],
         "hours": 5,
+        "semester": 3,
         "description": "A course exploring gender reveal parties"
     },
     {
@@ -39,6 +44,7 @@
         "name": "Evils of Generation Z",
         "prerequisites": [ "GENS 1031" ],
         "hours": 7,
+        "semester": 3,
         "description": "A course on the evil nature of Generation Z-ers. Readings and class discussions will explore Gen Z's impact on anti-feminism, occultic Gen Z rituals, and students' personal hatred toward people in Gen Z"
     },
     {
@@ -46,6 +52,7 @@
         "name": "Dating and Marriage",
         "prerequisites": [],
         "hours": 90,
+        "semester": 4,
         "description": "A course on dating with a major focus on hands-on experience. By the end of the course, students will be married."
     },
     {
@@ -53,6 +60,7 @@
         "name": "Divorce",
         "prerequisites": [ "GENS 2086" ],
         "hours": 1,
+        "semester": 5,
         "description": "A course on divorce with a major focus on hands-on experience. Students will file divorce papers in court."
     },
     {
@@ -60,6 +68,7 @@
         "name": "Gender Biology",
         "prerequisites": [],
         "hours": 1,
+        "semester": 6,
         "description": "A study into the biology behind the human genders"
     },
     {
@@ -67,6 +76,7 @@
         "name": "Learning to Love Again",
         "prerequisites": [ "GENS 3011" ],
         "hours": 70,
+        "semester": 7,
         "description": "A course on recovering from a broken relationship. By the end of this course, students will have recovered from their losses, found new suitable partners, and remarried."
     },
     {
@@ -74,6 +84,7 @@
         "name": "Gender Psychology",
         "prerequisites": [ "GENS 3032" ],
         "hours": 2,
+        "semester": 7,
         "description": "A study into the psychological distinctions of the human genders"
     },
     {
@@ -81,6 +92,7 @@
         "name": "Dr. Rouse",
         "prerequisites": [],
         "hours": 1,
+        "semester": 7,
         "description": "A study into Dr. Rouse, the ultimate embodiment of the male gender."
     },
     {
@@ -88,6 +100,7 @@
         "name": "Psychological Warfare",
         "prerequisites": [ "GENS 4054", "GENS 4067", "GENS 4073" ],
         "hours": 150,
+        "semester": 1,
         "description": "The capstone class for gender studies. An in-depth study into using the knowledge in previous classes for domination and suppression of political enemies. Topics will include blackmail, deception, girlbossing, operating military weapons, raising children, and persuading Dr. Rouse to do one's bidding. The course will end with a forceful takeover of LeTourneau and Longview."
     }
 ]
