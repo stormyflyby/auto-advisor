@@ -12,4 +12,4 @@
 4/13/25 6:15 PM to 7:30 PM - Cameron and Bryson fixed some UI issues, checked the code to ensure the prototype could be turned in, and made the milestones due April 25th.
 4/16/25 8:00 PM to 9:15 PM - Discussed various milestones (especially connecting with the course catalog), added a help button, and started cleaning up UI
 4/21/25 7:00 PM to 9:00 PM - Discussed the milestones and tested more 
-4/27/25 7:00 PM to 8:45 PM - Cameron and Bryson worked on fixing issues caused by the change to a push system
+4/27/25 7:00 PM to 8:45 PM - Cameron and Bryson worked on fixing issues caused by the addition of the course status system on the second screen
