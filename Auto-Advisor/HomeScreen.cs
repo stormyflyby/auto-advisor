@@ -53,22 +53,7 @@ namespace Auto_Advisor
                 {
                     return hrs;
                 }
-                /*set
-                {
-                    if (semester != null)
-                    {
-                        if (semester.GetType().BaseType == typeof(Array))
-                        {
-                            int[] arr = (int[])semester;
-                            hrs = value * arr.Length;
-                        }
-                        else
-                        {
-                            hrs = value;
-                        }
-                    }
-                    else hrs = value;
-                }*/
+
                 set { hrs = value; }
             }
             public string description { get; set; }
@@ -221,7 +206,7 @@ namespace Auto_Advisor
                         {
                             int rowIndex = grid.Rows.Add();
                             row = grid.Rows[rowIndex];
-                            row.Cells[0].Value = course.code;          // Course Code
+                            row.Cells[0].Value = course.code;          // Course Code.User.semester.get returned null.
                             row.Cells[1].Value = course.name;          // Course Name
                             row.Cells[2].Value = course.hours;         // Hours
                             
