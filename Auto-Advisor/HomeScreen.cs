@@ -514,7 +514,15 @@ namespace Auto_Advisor
             }
         }
 
-        private void displayCourseDetails(DataGridView grid, int rowIndex, string filePath)
+        private void recommendedCourseDetails(DataGridView grid, int rowIndex, string majorPath)
+        {
+            if (displayCourseDetails(grid, rowIndex, Path.Combine(majorPath, "Cognate.json"))) return;
+            else if (displayCourseDetails(grid, rowIndex, Path.Combine(majorPath, "General_Education.json"))) return;
+            else if (displayCourseDetails(grid, rowIndex, Path.Combine(majorPath, "major_classes.json"))) return;
+            else if (displayCourseDetails(grid, rowIndex, Path.Combine(majorPath, "Theology_Courses.json"))) return;
+        }
+
+        private bool displayCourseDetails(DataGridView grid, int rowIndex, string filePath)
         {
             string? className = grid.Rows[rowIndex].Cells[1].Value.ToString(); // Determine which course the user clicked
             string json = File.ReadAllText(filePath);
@@ -526,9 +534,10 @@ namespace Auto_Advisor
                     // Pass course details to form2 for display (course.code may be null)
                     CourseDescription form2 = new CourseDescription(course.code, course.name, course.prerequisites, course.hours, course.description);
                     form2.ShowDialog();
-                    break;
+                    return true;
                 }
             }
+            return false;
         }
 
         private void textBox74_TextChanged(object sender, EventArgs e)
@@ -679,7 +688,7 @@ namespace Auto_Advisor
             if (e.RowIndex < 0) return;
             if (e.ColumnIndex == 3)
             {
-                displayCourseDetails(dataGridRecommended, e.RowIndex, Path.Combine(majorPath, "recommended.json"));
+                recommendedCourseDetails(dataGridRecommended, e.RowIndex, majorPath);
             }
             else
             {
