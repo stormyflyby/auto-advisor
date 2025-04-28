@@ -462,6 +462,7 @@ namespace Auto_Advisor
 
         private void RefreshSidebar()
         {
+            MessageBox.Show("Refreshing");
             listBox4.Items.Clear();
             listBox4.Items.Add(comboBox4.SelectedItem); // Load current semester
             listBox6.Items.Clear();
@@ -767,9 +768,16 @@ namespace Auto_Advisor
                     {
                         if (row.Cells[0].Value.ToString().Equals(code))
                         {
-                            if (!hoursSet && row.DefaultCellStyle.BackColor != Color.LightGreen)
+                            if (!hoursSet && row.DefaultCellStyle.BackColor == Color.Empty)
                             {
                                 hoursSet = true;
+                                TotalHours += (int)row.Cells[2].Value;
+                                RefreshSidebar();
+                            }
+                            if (!hoursSet && row.DefaultCellStyle.BackColor == Color.Yellow)
+                            {
+                                hoursSet = true;
+                                HoursInProgress -= (int)row.Cells[2].Value;
                                 TotalHours += (int)row.Cells[2].Value;
                                 RefreshSidebar();
                             }
@@ -798,6 +806,13 @@ namespace Auto_Advisor
                             {
                                 hoursSet = true;
                                 TotalHours -= (int)row.Cells[2].Value;
+                                HoursInProgress += (int)row.Cells[2].Value;
+                                RefreshSidebar();
+                            }
+                            if (!hoursSet && row.DefaultCellStyle.BackColor == Color.Empty)
+                            {
+                                hoursSet = true;
+                                HoursInProgress += (int)row.Cells[2].Value;
                                 RefreshSidebar();
                             }
                             row.DefaultCellStyle.BackColor = Color.Yellow;
@@ -827,8 +842,14 @@ namespace Auto_Advisor
                                 TotalHours -= (int)row.Cells[2].Value;
                                 RefreshSidebar();
                             }
-                            row.DefaultCellStyle.BackColor = Color.White;
-                            row.DefaultCellStyle.SelectionBackColor = Color.White;
+                            if (!hoursSet && row.DefaultCellStyle.BackColor == Color.Yellow)
+                            {
+                                hoursSet = true;
+                                HoursInProgress -= (int)row.Cells[2].Value;
+                                RefreshSidebar();
+                            }
+                            row.DefaultCellStyle.BackColor = Color.Empty;
+                            row.DefaultCellStyle.SelectionBackColor = Color.Empty;
                             if (dgv == dataGridRecommended)
                             {
                                 row.Visible = true;
