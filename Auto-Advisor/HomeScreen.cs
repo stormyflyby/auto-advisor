@@ -447,7 +447,6 @@ namespace Auto_Advisor
 
         private void RefreshSidebar()
         {
-            MessageBox.Show("Refreshing");
             listBox4.Items.Clear();
             listBox4.Items.Add(comboBox4.SelectedItem); // Load current semester
             listBox6.Items.Clear();
@@ -572,9 +571,26 @@ namespace Auto_Advisor
             string[] compCourses = compCourseStr.Split('\n');
 
             CourseInfoMediator.Instance.ClearCompletedCourses();
-            foreach (string s in compCourses)
+            if (!mainScreenPanel.Visible)
             {
-                CourseInfoMediator.Instance.AddCompletedCourse(s);
+                foreach (string s in compCourses)
+                {
+                    CourseInfoMediator.Instance.AddCompletedCourse(s);
+                }
+            }
+            // Get courses from second screen
+            foreach (DataGridView dgv in dgvs)
+            {
+                if (dgv != dataGridRecommended)
+                {
+                    foreach (DataGridViewRow row in dgv.Rows)
+                    {
+                        if (row.DefaultCellStyle.BackColor == Color.LightGreen)
+                        {
+                            CourseInfoMediator.Instance.AddCompletedCourse(row.Cells[0].Value.ToString());
+                        }
+                    }
+                }
             }
 
             string tb2Txt = textBox2.Text;
@@ -582,9 +598,26 @@ namespace Auto_Advisor
             string[] inPrCourses = inPrCourseStr.Split('\n').Where(s => s.Length != 0).ToArray();
 
             CourseInfoMediator.Instance.ClearInProgressCourses();
-            foreach (string s in inPrCourses)
+            if (mainScreenPanel.Visible)
             {
-                CourseInfoMediator.Instance.AddInProgressCourse(s);
+                foreach (string s in inPrCourses)
+                {
+                    CourseInfoMediator.Instance.AddInProgressCourse(s);
+                }
+            }
+            // Get courses from second screen
+            foreach(DataGridView dgv in dgvs)
+            {
+                if (dgv != dataGridRecommended)
+                {
+                    foreach (DataGridViewRow row in dgv.Rows)
+                    {
+                        if (row.DefaultCellStyle.BackColor == Color.Yellow)
+                        {
+                            CourseInfoMediator.Instance.AddInProgressCourse(row.Cells[0].Value.ToString());
+                        }
+                    }
+                }
             }
 
             // Download save
