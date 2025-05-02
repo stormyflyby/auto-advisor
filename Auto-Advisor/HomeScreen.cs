@@ -1003,7 +1003,7 @@ namespace Auto_Advisor
                 {
                     foreach (DataGridViewRow row in dgv.Rows)
                     {
-                        if (row.Index > 0)
+                        if (row.Index >= 0)
                         {
                             string code = row.Cells[0].Value.ToString();
                             if (row.DefaultCellStyle.BackColor == Color.Empty)
