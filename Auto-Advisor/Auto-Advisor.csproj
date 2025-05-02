@@ -21,6 +21,7 @@
     <None Remove="Majors\Gender Studies\recommended.json" />
     <None Remove="Majors\Gender Studies\Theology_Courses.json" />
     <None Remove="Minors\Biblical Studies\minor_classes.json" />
+    <None Remove="recommended.json" />
   </ItemGroup>
 
   <ItemGroup>
@@ -49,9 +50,6 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Majors\Gender Studies\major_classes.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Majors\Gender Studies\recommended.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Majors\Gender Studies\Theology_Courses.json">

@@ -1,5 +1,29 @@
 [
     {
+        "code": "GENS 1011",
+        "name": "What is a Woman?",
+        "prerequisites": [],
+        "hours": 21,
+        "semester": 1,
+        "description": "Daily three-hour sessions watching political commentator Matt Walsh's documentary, 'What is a Woman?'. Study topics include people portrayed in the documentary, dialogue in various scenes, and the innotations of Walsh's voice.'"
+    },
+    {
+        "code": "GENS 1012",
+        "name": "Starbucks Training",
+        "prerequisites": [],
+        "hours": 4,
+        "semester": 1,
+        "description": "A study of duties and work environments in Starbucks sites worldwide. Study topics include preparing food, interacting with customers, and lethal self-defense."
+    },
+    {
+        "code": "LETU 1011",
+        "name": "Cornerstones Of Life And Learning",
+        "prerequisites": [],
+        "hours": 1,
+        "semester": 1,
+        "description": "LETU 1101 is required for all First Time in College Students.  First Time in College Students will be defined for these purposes as any student who has not yet successfully completed 1 semester (12 hours) of college as a residential student or 2 semester of college (24 hours) online.  This requirement can also be waived for students who are of age 22 or older, are married, have children, or who have served in the military.  Hours earned through dual credit do NOT count toward the 12/24 hour quota. All students (including transfers) have the option to enroll in Cornerstones if desired."
+    },
+    {
         "code": "ENGL 1013",
         "name": "English Composition 1",
         "prerequisites": [ "MATH 1304 OR MATH 1203 & MATH 1253" ],
@@ -16,58 +40,12 @@
         "description": "This course surveys the content and theological message of biblical story. Special emphasis is placed on considering the biblical story of redemption as a unified and coherent narrative of God’s ongoing work within his kingdom. Understanding the Bible within historical, cultural, and literary settings is highlighted. Throughout the course the students will begin to develop skills in interpreting the Bible with care and wisdom as well as move toward finding and articulating their place within God’s story of redemption."
     },
     {
-        "code": "LETU 1101",
-        "name": "Cornerstones Of Life And Learning",
-        "prerequisites": [],
-        "hours": 1,
-        "semester": 1,
-        "description": "LETU 1101 is required for all First Time in College Students.  First Time in College Students will be defined for these purposes as any student who has not yet successfully completed 1 semester (12 hours) of college as a residential student or 2 semester of college (24 hours) online.  This requirement can also be waived for students who are of age 22 or older, are married, have children, or who have served in the military.  Hours earned through dual credit do NOT count toward the 12/24 hour quota. All students (including transfers) have the option to enroll in Cornerstones if desired."
-    },
-    {
-        "code": "COSC 1303",
-        "name": "Computer Science I",
-        "prerequisites": [],
-        "hours": 3,
-        "semester": 1,
-        "description": "An introduction to the field of computer science. Problem solving strategies, basic data structures, and an introduction to algorithms in the context of a modern programming language. A first course in programming with an emphasis on scientific and engineering applications."
-    },
-    {
         "code": "MATH 1903",
         "name": "Calculus 1",
         "prerequisites": [ "MATH 1304 OR MATH 1203 & MATH 1253" ],
         "hours": 3,
         "semester": 1,
         "description": "An introduction to calculus with emphasis on concepts and principles. Topics studied include limits, derivatives, applications of derivatives, and antiderivatives."
-    },
-    {
-        "name": "Civic Engagement Elective",
-        "hours": 3,
-        "semester": 1,
-        "description": "Any HIST, INTL, POLS, ECON, or CRIJ."
-    },
-    {
-        "code": "EETC 1021",
-        "name": "DC Circuits Laboratory",
-        "prerequisites": [ "EETC 1022" ],
-        "hours": 1,
-        "semester": 2,
-        "description": "Experimental practice exercise in the wiring of DC electrical circuits, instrumentation and meter reading, circuit analysis, and lab safety."
-    },
-    {
-        "code": "EETC 1022",
-        "name": "DC Circuits",
-        "prerequisites": [ "EETC 1021" ],
-        "hours": 2,
-        "semester": 2,
-        "description": "Principles of electricity covering direct currents and voltages; electrical units, Ohm’s Law, power law, Kirchhoff’s voltage and current laws, and series, parallel, and series-parallel circuitry."
-    },
-    {
-        "code": "ENGL 1023",
-        "name": "English Composition 2",
-        "prerequisites": [ "ENGL 1014 or ENGL 1013" ],
-        "hours": 3,
-        "semester": 2,
-        "description": "A study of argumentation/logic and writing for the professions with an emphasis on using the personal computer to plan, draft, and revise written projects. Each student is required to write a fully documented research paper and give oral presentations in class."
     },
     {
         "code": "MATH 2003",
@@ -78,50 +56,66 @@
         "description": "Discrete mathematical structures (in contrast to continuous functions) are essential for many mathematical disciplines, including computer science.  This course provides a foundation for the study of such structures by introducing students to set theory, propositional logic, proofs, induction, relations, algorithms, number theory, and graph theory."
     },
     {
-        "code": "MATH 2013",
-        "name": "Calculus 2",
-        "prerequisites": [ "MATH 1903" ],
-        "hours": 3,
+        "code": "GENS 1031",
+        "name": "History of Gender Studies",
+        "prerequisites": [],
+        "hours": 2,
         "semester": 2,
-        "description": "A continuation of MATH 1903 including techniques and applications of integration, polar coordinates, and infinite series."
+        "description": "A study of the field of gender studies across history. Special attention will be given to trends like the LGBTQ movement and the Salem witch trials."
     },
     {
-        "code": "COSC 2103",
-        "name": "Computer Science II",
-        "prerequisites": [ "COSC 1303" ],
-        "hours": 3,
+        "code": "GENS 2013",
+        "name": "Internet Meme History",
+        "prerequisites": [ "GENS 1031" ],
+        "hours": 8,
         "semester": 2,
-        "description": "A second semester study of computing principles. Abstract data types, object-oriented programming concepts, and introductory topics of graphical-user interfaces, unit testing, and file structures. Students hone their problem solving skills through a variety of programming assignments."
+        "description": "A study of memes through the history of the Internet. Special attention will be given to the gender-related undertones of memes and how memes can be weaponized for political gain"
     },
     {
-        "name": "Ingenuity Electives",
+        "code": "ENGL 1023",
+        "name": "English Composition 2",
+        "prerequisites": [ "ENGL 1014 or ENGL 1013" ],
         "hours": 3,
         "semester": 2,
-        "description": "Cross-Cultural ( CCLT 3203 only), Fine Arts (HUMA), Literature (All ENGL 2000-level courses except ENGL 2603 , ENGL 3213, ENGL 3223, ENGL 3931, ENGL 4923, & ENGL 4933, and ENGL 4991-4993., Philosophy (PHIL), Music (MUSC), and Foreign Language (to count as part of a 6 hour Humanities elective requirement, the student must have two semesters in one foreign language)."
+        "description": "A study of argumentation/logic and writing for the professions with an emphasis on using the personal computer to plan, draft, and revise written projects. Each student is required to write a fully documented research paper and give oral presentations in class."
     },
     {
         "code": "COMM 1113",
         "name": "Introduction To Speech Communication",
         "prerequisites": [],
         "hours": 3,
-        "semester": 3,
+        "semester": 2,
         "description": "A study of basic communication principles, with emphasis placed on public speaking. Topics include classical origins of communication, communication theory, speech development and organization, use of visual aids, and strategies for informative, persuasive, and special occasion speeches. Students have multiple speaking opportunities in class. NOTE: This is a General Education core course for all degrees."
+    },
+    {
+        "code": "MATH 4403",
+        "name": "Numerical Analysis",
+        "prerequisites": [],
+        "hours": 3,
+        "semester": 2,
+        "description": "A study of topics from methods of finding zeros of functions, approximation of functions by polynomials, finite differences, numerical integration, solutions of systems of linear equations, numerical solutions of differential equations, and round-off error analysis."
     },
     {
         "code": "THEO 2043",
         "name": "Biblical Theology for the Christian Life",
         "prerequisites": [ "BIBL 1033" ],
         "hours": 3,
-        "semester": 3,
+        "semester": 2,
         "description": "An introduction to the relationship between Christian teaching and the Christian life.  This course focuses on the way in which the identity of God as Father, Son and Holy Spirit sharpens our understanding of the coherence of the Bible, the purpose for creation (and by extension humans), the meaning of salvation, the place of work, and the basis for ethics.  Special attention is given to sustained analysis of biblical texts, attending to the way in which the biblical witness integrates theology and ethics, faith and work, worship and discipleship. "
     },
     {
-        "code": "COSC 2203",
-        "name": "Data Structures",
-        "prerequisites": [ "COSC 2103", "MATH 2003" ],
-        "hours": 3,
+        "code": "GENS 2054",
+        "name": "Gender Reveal Parties",
+        "prerequisites": [ "GENS 1031" ],
+        "hours": 5,
         "semester": 3,
-        "description": "A second-year course in data structures and algorithms. Topics include commonly used data structures, recursive algorithms, computational complexity, sorting and searching techniques, and an introduction to run-time storage management. Course assignments emphasize both program design and implementation."
+        "description": "A course exploring gender reveal parties"
+    },
+    {
+        "name": "Civic Engagement Elective",
+        "hours": 3,
+        "semester": 4,
+        "description": "Any HIST, INTL, POLS, ECON, or CRIJ."
     },
     {
         "name": "Civic Engagement Elective",
@@ -130,86 +124,50 @@
         "description": "Any HIST, INTL, POLS, ECON, or CRIJ."
     },
     {
-        "name": "Cognate Elective Courses",
-        "hours": 3,
+        "code": "GENS 2063",
+        "name": "Evils of Generation Z",
+        "prerequisites": [ "GENS 1031" ],
+        "hours": 7,
         "semester": 3,
-        "description": "Half of the required cognate courses must be Jr.-Sr. level."
+        "description": "A course on the evil nature of Generation Z-ers. Readings and class discussions will explore Gen Z's impact on anti-feminism, occultic Gen Z rituals, and students' personal hatred toward people in Gen Z"
     },
     {
-        "name": "Math Elective",
+        "code": "BIBL 4091",
+        "name": "Song of Solomon",
+        "prerequisites": [],
         "hours": 3,
         "semester": 3,
-        "description": "Any Math Elective"
+        "description": "An exploration into the many cultural, religious, and romantic themes in Song of Solomon."
     },
     {
-        "code": "EETC 3211",
-        "name": "Digital Electronics Laboratory",
-        "prerequisites": [ "EETC 1021", "AVTC 1401" ],
+        "code": "GENS 2086",
+        "name": "Dating and Marriage",
+        "prerequisites": [],
+        "hours": 90,
+        "semester": 4,
+        "description": "A course on dating with a major focus on hands-on experience. By the end of the course, students will be married."
+    },
+    {
+        "code": "COUN 5113",
+        "name": "Human Sexuality & Sex Therapy",
+        "prerequisites": [ "COUN 5023", "COUN 5043", "COUN 5083", "COUN 5383" ],
+        "hours": 3,
+        "semester": 4,
+        "description": "This course provides an introduction to counseling for sexual issues. Students are introduced to a theology of sexuality, a basic model of addressing sexual issues in counseling, basics of sexual biology and psychology, and sexual development. Students will take an in-depth look at asessment and treaatment of sexual dysfunctions and sexual problems. Students are also challenged in their own growth and development in this area."
+    },
+    {
+        "name": "Political Science Elective",
+        "hours": 23,
+        "semester": 4,
+        "description": "Any political science elective"
+    },
+    {
+        "code": "GENS 3011",
+        "name": "Divorce",
+        "prerequisites": [ "GENS 2086" ],
         "hours": 1,
-        "semester": 4,
-        "description": "Experimental practice exercises in the design, wiring, and measurements of combinational and sequential digital circuits.  Utilization of a digital design software platform to design, simulate, program, and test programmable logic devices"
-    },
-    {
-        "code": "EETC 3212",
-        "name": "Digital Electronics",
-        "prerequisites": [ "EETC 1022" ],
-        "hours": 2,
-        "semester": 4,
-        "description": "Number systems; switching algebra and combinational logic design; logic gate circuits; latches, flip-flops, counters, registers, multiplexers, and memory devices; data coding and decoding; applications of digital circuits."
-    },
-    {
-        "code": "COSC 3503",
-        "name": "Operating Systems",
-        "prerequisites": [ "COSC 2103", "COSC 2203" ],
-        "hours": 3,
-        "semester": 4,
-        "description": "An introduction to the principles and concepts of operating systems to include process management, memory management, and storage management. Emphasis is placed on learning the principles and then applying them in various systems programming exercises."
-    },
-    {
-        "name": "Cognate Elective Courses",
-        "hours": 3,
-        "semester": 4,
-        "description": "Half of the required cognate courses must be Jr.-Sr. level."
-    },
-    {
-        "name": "Lab Science Elective",
-        "hours": 4,
-        "semester": 4,
-        "description": "Science Electives for BA or BS degrees: BIOL 1011/1013, BIOL 1111/1113; BIOL 1121/1123; CHEM 1014, CHEM 1111/1113; CHEM 1121/1123; ENVT1111/1113; GEOL1114; PHYS 1014; PHYS 1111/1113; PHYS 1121/1123; PHYS 2011/2013; PHYS 2021/2023. For Bach degrees: any three credit hour course with the BIOL, CHEM, ENVT, GEOL or PHYS prefix."
-    },
-    {
-        "code": "COSC 3523",
-        "name": "Analysis Of Algorithms",
-        "prerequisites": [ "COSC 2203" ],
-        "hours": 3,
         "semester": 5,
-        "description": "The analysis, design, and implementation of popular algorithms methods. Topics include specific algorithms for searching, sorting, set operations, and graph-related operations. Emphasis on empirical and theoretical measures of the space and time efficiency."
-    },
-    {
-        "code": "COSC 3603",
-        "name": "Networks and Data Communications",
-        "prerequisites": [ "Cosc 2103 or COSC 2203" ],
-        "hours": 3,
-        "semester": 5,
-        "description": "An introduction to the principles and concepts of network-based communication between software processes. This includes the organization of WANs and LANs, the function of gateways and routers, and the use of protocols at the application, transport and network layers. Emphasis is placed on the TCP/IP protocol suite. Exercises focus on studying network traffic and developing TCP- and UDP-based client/server programs."
-    },
-    {
-        "name": "Math Elective",
-        "hours": 3,
-        "semester": 5,
-        "description": "Any Math Elective"
-    },
-    {
-        "name": "Civic Engagement Elective",
-        "hours": 3,
-        "semester": 5,
-        "description": "Any HIST, INTL, POLS, ECON, or CRIJ."
-    },
-    {
-        "name": "Cognate Elective Courses",
-        "hours": 3,
-        "semester": 5,
-        "description": "Half of the required cognate courses must be Jr.-Sr. level."
+        "description": "A course on divorce with a major focus on hands-on experience. Students will file divorce papers in court."
     },
     {
         "code": "ENGL ELEV",
@@ -219,28 +177,30 @@
         "description": "Any ENGL class."
     },
     {
-        "code": "COSC 3303",
-        "name": "Computer Architecture",
-        "prerequisites": [ "COSC 2203" ],
+        "name": "Ingenuity Electives",
         "hours": 3,
-        "semester": 6,
-        "description": "A study of design alternatives in computer architecture. Topics include machine organization, memory subsystem organization, interfacing concepts, issues that arise in managing communication with the processor, and alternative computer architectures. Assembly language is studied and used to implement a variety of small programs."
+        "semester": 5,
+        "description": "Cross-Cultural ( CCLT 3203 only), Fine Arts (HUMA), Literature (All ENGL 2000-level courses except ENGL 2603 , ENGL 3213, ENGL 3223, ENGL 3931, ENGL 4923, & ENGL 4933, and ENGL 4991-4993., Philosophy (PHIL), Music (MUSC), and Foreign Language (to count as part of a 6 hour Humanities elective requirement, the student must have two semesters in one foreign language)."
     },
     {
-        "code": "COSC 3403",
-        "name": "Software Engineering I",
-        "prerequisites": [ "COSC 2103", "COSC 2203" ],
-        "hours": 3,
-        "semester": 6,
-        "description": "The application of object-oriented analysis and design methods to develop commercial software. Emphasis is placed on software process maturity, software development life cycles, software documentation, and team projects."
+        "name": "Lab Science Elective",
+        "hours": 4,
+        "semester": 5,
+        "description": "Science Electives for BA or BS degrees: BIOL 1011/1013, BIOL 1111/1113; BIOL 1121/1123; CHEM 1014, CHEM 1111/1113; CHEM 1121/1123; ENVT1111/1113; GEOL1114; PHYS 1014; PHYS 1111/1113; PHYS 1121/1123; PHYS 2011/2013; PHYS 2021/2023. For Bach degrees: any three credit hour course with the BIOL, CHEM, ENVT, GEOL or PHYS prefix."
     },
     {
-        "code": "COSC 4153",
-        "name": "Programming Languages",
-        "prerequisites": [ "Cosc 2103" ],
-        "hours": 3,
+        "name": "Lab Science Elective",
+        "hours": 4,
         "semester": 6,
-        "description": "A survey of language classes, such as imperative, functional, logic, concurrent and object- oriented paradigms, as well as their run-time structures. The student will gain experience writing programs in a variety of languages and develop an appreciation of the strengths and weaknesses of each language. Includes historical precedents and current trends in design and philosophy of languages. Formal approaches to defining the syntax and semantics are used to describe the fundamental concepts underlying programming languages."
+        "description": "Science Electives for BA or BS degrees: BIOL 1011/1013, BIOL 1111/1113; BIOL 1121/1123; CHEM 1014, CHEM 1111/1113; CHEM 1121/1123; ENVT1111/1113; GEOL1114; PHYS 1014; PHYS 1111/1113; PHYS 1121/1123; PHYS 2011/2013; PHYS 2021/2023. For Bach degrees: any three credit hour course with the BIOL, CHEM, ENVT, GEOL or PHYS prefix."
+    },
+    {
+        "code": "GENS 3032",
+        "name": "Gender Biology",
+        "prerequisites": [],
+        "hours": 1,
+        "semester": 6,
+        "description": "A study into the biology behind the human genders"
     },
     {
         "name": "Biblical Engagement Electives",
@@ -250,78 +210,58 @@
     },
     {
         "name": "Cognate Elective Courses",
-        "hours": 3,
+        "hours": 24,
         "semester": 6,
         "description": "Half of the required cognate courses must be Jr.-Sr. level."
     },
     {
-        "code": "COSC 4203",
-        "name": "Database Management",
-        "prerequisites": [ "COSC 2103 or COSC 2203" ],
-        "hours": 3,
-        "semester": 7,
-        "description": "A study of data modeling, relational databases, normalizing techniques, query languages, managerial aspects of database administration, and trends in database administration. Programming is done in a 4GL language."
-    },
-    {
-        "code": "COSC 4303",
-        "name": "Software Engineering 2",
-        "prerequisites": [ "All major COSC cources" ],
-        "hours": 3,
-        "semester": 7,
-        "description": "Application of software project management, requirements analysis, design, implementation, and testing to the development of large software systems. Emphasis is on software process improvement, requirements management, software testing techniques, quality assurance, configuration management, risk management and group projects."
-    },
-    {
-        "name": "Cognate Elective Courses",
-        "hours": 3,
-        "semester": 7,
-        "description": "Half of the required cognate courses must be Jr.-Sr. level."
-    },
-    {
-        "name": "Cognate Elective Courses",
-        "hours": 3,
-        "semester": 7,
-        "description": "Half of the required cognate courses must be Jr.-Sr. level."
-    },
-    {
-        "code": "COSC ELEC",
-        "name": "COSC Jr.-Sr. Level Elective",
-        "prerequisites": [],
-        "hours": 3,
-        "semester": 7,
-        "description": "Any COSC class"
-    },
-    {
-        "code": "COSC 4503",
-        "name": "Program Translation",
-        "prerequisites": [ "COSC 3303", "COSC 3403" ],
-        "hours": 3,
-        "semester": 8,
-        "description": "A study of language design and translation, including the various types of compilers, LL and LR parsing, support mechanisms for access and storage of translation data, scoping concerns, lifetime, visibility, and overloading mechanisms; all within the context of the program translation stages."
-    },
-    {
-        "code": "COSC 4603",
-        "name": "Computer Theory",
-        "prerequisites": [ "COSC 3523", "MATH 2003" ],
-        "hours": 3,
-        "semester": 8,
-        "description": "A study of the computational and linguistic theory on which the field of computer science is based. Topics include finite state automata, context-free grammars, push-down automata, Turing machines, undecidability, computability, and complexity theory."
-    },
-    {
         "name": "Biblical or Theological Engagement",
         "hours": 3,
-        "semester": 8,
+        "semester": 6,
         "description": "2000-level or above BIBL, CCLT 3103 - Cultural Anthropology, CCLT 3203 - Religions Of The World, CCLT 4103 - Biblical & Strategic Paradigms for Missions, CMIN 3303 - Evangelism And Discipleship, CMIN 3403 - Ministry of Teaching, THEO 3063 - Christian Ethics, THEO 3103 - Christian Doctrine, THEO 3133 - The History of Christian Thought, THEO 3203 - Christian Apologetics, THEO 4941-4993 - Special Topics classes that engage Theology and specific disciplines."
     },
     {
-        "name": "Cognate Elective Courses",
-        "hours": 3,
-        "semester": 8,
-        "description": "Half of the required cognate courses must be Jr.-Sr. level."
+        "code": "GENS 4054",
+        "name": "Learning to Love Again",
+        "prerequisites": [ "GENS 3011" ],
+        "hours": 70,
+        "semester": 7,
+        "description": "A course on recovering from a broken relationship. By the end of this course, students will have recovered from their losses, found new suitable partners, and remarried."
     },
     {
-        "name": "Cognate Elective Courses",
+        "code": "GENS 4067",
+        "name": "Gender Psychology",
+        "prerequisites": [ "GENS 3032" ],
+        "hours": 2,
+        "semester": 7,
+        "description": "A study into the psychological distinctions of the human genders"
+    },
+    {
+        "code": "GENS 4073",
+        "name": "Dr. Rouse",
+        "prerequisites": [],
+        "hours": 1,
+        "semester": 7,
+        "description": "A study into Dr. Rouse, the ultimate embodiment of the male gender."
+    },
+    {
+        "name": "Math Elective",
         "hours": 3,
         "semester": 8,
-        "description": "Half of the required cognate courses must be Jr.-Sr. level."
+        "description": "Any Math Elective"
+    },
+    {
+        "name": "Math Elective",
+        "hours": 3,
+        "semester": 8,
+        "description": "Any Math Elective"
+    },
+    {
+        "code": "GENS 4089",
+        "name": "Psychological Warfare",
+        "prerequisites": [ "GENS 4054", "GENS 4067", "GENS 4073" ],
+        "hours": 150,
+        "semester": 8,
+        "description": "The capstone class for gender studies. An in-depth study into using the knowledge in previous classes for domination and suppression of political enemies. Topics will include blackmail, deception, girlbossing, operating military weapons, raising children, and persuading Dr. Rouse to do one's bidding. The course will end with a forceful takeover of LeTourneau and Longview."
     }
 ]

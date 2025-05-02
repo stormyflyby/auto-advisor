@@ -569,6 +569,7 @@
             DataGridHonors.Location = new Point(58, 1990);
             DataGridHonors.Margin = new Padding(1);
             DataGridHonors.Name = "DataGridHonors";
+            DataGridHonors.ReadOnly = true;
             DataGridHonors.RowHeadersVisible = false;
             DataGridHonors.RowHeadersWidth = 62;
             DataGridHonors.RowTemplate.Height = 33;
@@ -614,6 +615,7 @@
             dataGridViewButtonColumn6.HeaderText = "Details";
             dataGridViewButtonColumn6.MinimumWidth = 8;
             dataGridViewButtonColumn6.Name = "dataGridViewButtonColumn6";
+            dataGridViewButtonColumn6.ReadOnly = true;
             dataGridViewButtonColumn6.Resizable = DataGridViewTriState.True;
             dataGridViewButtonColumn6.Text = "More...";
             dataGridViewButtonColumn6.UseColumnTextForButtonValue = true;
@@ -662,6 +664,7 @@
             dataGridMinors.Location = new Point(58, 1672);
             dataGridMinors.Margin = new Padding(1);
             dataGridMinors.Name = "dataGridMinors";
+            dataGridMinors.ReadOnly = true;
             dataGridMinors.RowHeadersVisible = false;
             dataGridMinors.RowHeadersWidth = 62;
             dataGridMinors.RowTemplate.Height = 33;
@@ -707,6 +710,7 @@
             dataGridViewButtonColumn5.HeaderText = "Details";
             dataGridViewButtonColumn5.MinimumWidth = 8;
             dataGridViewButtonColumn5.Name = "dataGridViewButtonColumn5";
+            dataGridViewButtonColumn5.ReadOnly = true;
             dataGridViewButtonColumn5.Resizable = DataGridViewTriState.True;
             dataGridViewButtonColumn5.Text = "More...";
             dataGridViewButtonColumn5.UseColumnTextForButtonValue = true;
@@ -755,6 +759,7 @@
             dataGridTheology.Location = new Point(58, 1364);
             dataGridTheology.Margin = new Padding(1);
             dataGridTheology.Name = "dataGridTheology";
+            dataGridTheology.ReadOnly = true;
             dataGridTheology.RowHeadersVisible = false;
             dataGridTheology.RowHeadersWidth = 62;
             dataGridTheology.RowTemplate.Height = 33;
@@ -800,6 +805,7 @@
             dataGridViewButtonColumn4.HeaderText = "Details";
             dataGridViewButtonColumn4.MinimumWidth = 8;
             dataGridViewButtonColumn4.Name = "dataGridViewButtonColumn4";
+            dataGridViewButtonColumn4.ReadOnly = true;
             dataGridViewButtonColumn4.Resizable = DataGridViewTriState.True;
             dataGridViewButtonColumn4.Text = "More...";
             dataGridViewButtonColumn4.UseColumnTextForButtonValue = true;
@@ -826,6 +832,7 @@
             dataGridRecommended.Location = new Point(58, 124);
             dataGridRecommended.Margin = new Padding(1);
             dataGridRecommended.Name = "dataGridRecommended";
+            dataGridRecommended.ReadOnly = true;
             dataGridRecommended.RowHeadersVisible = false;
             dataGridRecommended.RowHeadersWidth = 62;
             dataGridRecommended.RowTemplate.Height = 33;
@@ -871,6 +878,7 @@
             dataGridViewButtonColumn2.HeaderText = "Details";
             dataGridViewButtonColumn2.MinimumWidth = 8;
             dataGridViewButtonColumn2.Name = "dataGridViewButtonColumn2";
+            dataGridViewButtonColumn2.ReadOnly = true;
             dataGridViewButtonColumn2.Resizable = DataGridViewTriState.True;
             dataGridViewButtonColumn2.Text = "More...";
             dataGridViewButtonColumn2.UseColumnTextForButtonValue = true;
@@ -905,6 +913,7 @@
             dataGridGenEd.Location = new Point(58, 1052);
             dataGridGenEd.Margin = new Padding(1);
             dataGridGenEd.Name = "dataGridGenEd";
+            dataGridGenEd.ReadOnly = true;
             dataGridGenEd.RowHeadersVisible = false;
             dataGridGenEd.RowHeadersWidth = 62;
             dataGridGenEd.RowTemplate.Height = 33;
@@ -950,6 +959,7 @@
             dataGridViewButtonColumn3.HeaderText = "Details";
             dataGridViewButtonColumn3.MinimumWidth = 8;
             dataGridViewButtonColumn3.Name = "dataGridViewButtonColumn3";
+            dataGridViewButtonColumn3.ReadOnly = true;
             dataGridViewButtonColumn3.Resizable = DataGridViewTriState.True;
             dataGridViewButtonColumn3.Text = "More...";
             dataGridViewButtonColumn3.UseColumnTextForButtonValue = true;
@@ -998,6 +1008,7 @@
             dataGridCognate.Location = new Point(58, 741);
             dataGridCognate.Margin = new Padding(1);
             dataGridCognate.Name = "dataGridCognate";
+            dataGridCognate.ReadOnly = true;
             dataGridCognate.RowHeadersVisible = false;
             dataGridCognate.RowHeadersWidth = 62;
             dataGridCognate.RowTemplate.Height = 33;
@@ -1043,6 +1054,7 @@
             dataGridViewButtonColumn1.HeaderText = "Details";
             dataGridViewButtonColumn1.MinimumWidth = 8;
             dataGridViewButtonColumn1.Name = "dataGridViewButtonColumn1";
+            dataGridViewButtonColumn1.ReadOnly = true;
             dataGridViewButtonColumn1.Resizable = DataGridViewTriState.True;
             dataGridViewButtonColumn1.Text = "More...";
             dataGridViewButtonColumn1.UseColumnTextForButtonValue = true;
@@ -1121,6 +1133,7 @@
             dataGridMajors.Location = new Point(58, 429);
             dataGridMajors.Margin = new Padding(1);
             dataGridMajors.Name = "dataGridMajors";
+            dataGridMajors.ReadOnly = true;
             dataGridMajors.RowHeadersVisible = false;
             dataGridMajors.RowHeadersWidth = 62;
             dataGridMajors.RowTemplate.Height = 33;
@@ -1166,6 +1179,7 @@
             Details.HeaderText = "Details";
             Details.MinimumWidth = 8;
             Details.Name = "Details";
+            Details.ReadOnly = true;
             Details.Resizable = DataGridViewTriState.True;
             Details.Text = "More...";
             Details.UseColumnTextForButtonValue = true;

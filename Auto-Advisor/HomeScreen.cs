@@ -36,6 +36,11 @@ namespace Auto_Advisor
                 dataGridTheology,
                 DataGridHonors
             };
+
+            foreach (DataGridView dgv in dgvs)
+            {
+                dgv.DefaultCellStyle = dgv.AlternatingRowsDefaultCellStyle;
+            }
         }
 
         // This class stores properties for each course in the specified degree's catalog
@@ -149,13 +154,13 @@ namespace Auto_Advisor
                         TotalHoursNeeded += course.hours;
 
                     // Determine color of the row
-                    if (courseInTextBox(course.code, textBox1)) // Course already taken
+                    if (CourseInfoMediator.Instance.IsTaken(row.Cells[0].Value.ToString())) // Course already taken
                     {
                         row.DefaultCellStyle.BackColor = Color.LightGreen;
                         row.DefaultCellStyle.SelectionBackColor = Color.LightGreen;
                         TotalHours += course.hours; // Update hours already taken
                     }
-                    else if (courseInTextBox(course.code, textBox2)) // Course currently being taken
+                    else if (CourseInfoMediator.Instance.IsInProgress(row.Cells[0].Value.ToString())) // Course currently being taken
                     {
                         row.DefaultCellStyle.BackColor = Color.Yellow;
                         row.DefaultCellStyle.SelectionBackColor = Color.Yellow;
@@ -189,16 +194,26 @@ namespace Auto_Advisor
 
 
                 string json = File.ReadAllText(Path.Combine(filePath, fi.Name)); // Read the file to a string
-                List<User> users = JsonConvert.DeserializeObject<List<User>>(json);
+                List<DegreeCourse> dCourses = JsonConvert.DeserializeObject<List<DegreeCourse>>(json);
 
-                foreach (var course in users)
+                foreach (var course in dCourses)
                 {
+                    //Filters out the classes that are replaced with the honor classes
+                    if (course.honors == 1 && comboBox3.Text.Equals("Yes"))
+                    {
+                        continue; // The student is in honors, but this class is replaced by an honors version
+                    }
+                    else if (course.honors == 2 && comboBox3.Text.Equals("No"))
+                    {
+                        continue; // This is an honors class, but the student is not in honors
+                    }
+
                     int sem = int.Parse(comboBox4.SelectedItem.ToString());
                     DataGridViewRow row = null;
-                    bool inTxtBx1 = courseInTextBox(course.code, textBox1);
-                    bool inTxtBx2 = courseInTextBox(course.code, textBox2);
-                    // Doesn't load courses beyond current semester or courses already/currently taken
 
+                    // Doesn't load courses beyond current semester or courses already/currently taken
+                    bool inTxtBx1 = CourseInfoMediator.Instance.IsTaken(course.code);
+                    bool inTxtBx2 = CourseInfoMediator.Instance.IsInProgress(course.code);
 
                     if (course.semester.GetType().BaseType != typeof(Array))
                     {
@@ -209,8 +224,11 @@ namespace Auto_Advisor
                             row.Cells[0].Value = course.code;          // Course Code.User.semester.get returned null.
                             row.Cells[1].Value = course.name;          // Course Name
                             row.Cells[2].Value = course.hours;         // Hours
-                            
-                            if (inTxtBx1 || inTxtBx2) row.Visible = false;
+
+                            if (inTxtBx1 || inTxtBx2)
+                            {
+                                row.Visible = false;
+                            }
                         }
                     }
 
@@ -226,6 +244,9 @@ namespace Auto_Advisor
                                 row.Cells[0].Value = course.code + i.ToString();          // Course Code
                                 row.Cells[1].Value = course.name;          // Course Name
                                 row.Cells[2].Value = course.hours;         // Hours
+
+                                inTxtBx1 = CourseInfoMediator.Instance.IsTaken(row.Cells[0].Value.ToString());
+                                inTxtBx2 = CourseInfoMediator.Instance.IsInProgress(row.Cells[0].Value.ToString());
 
                                 if (inTxtBx1 || inTxtBx2) row.Visible = false;
                             }
@@ -249,7 +270,8 @@ namespace Auto_Advisor
                         }
                         else // Course not taken yet
                         {
-                            row.DefaultCellStyle.SelectionBackColor = grid.DefaultCellStyle.BackColor;
+                            row.DefaultCellStyle.SelectionBackColor = Color.Empty;
+                            row.DefaultCellStyle.BackColor = Color.Empty;
                         }
                     }
 
@@ -351,6 +373,15 @@ namespace Auto_Advisor
 
         }
 
+        private string[] tBoxToArray(TextBox tBox)
+        {
+            // Puts all the courses from a text box into an array
+            string tbTxt = tBox.Text;
+            string courseStr = new string(tbTxt.Where(c => c != '\r').ToArray());
+            string[] courses = courseStr.Split('\n');
+            return courses;
+        }
+
         public void continueFunction()
         {
             // First, check that all boxes are populated
@@ -359,6 +390,24 @@ namespace Auto_Advisor
                 FieldsMissingError();
                 return;
             }
+
+            string[] compCourses = tBoxToArray(textBox1);
+
+            foreach (string s in compCourses)
+            {
+                CourseInfoMediator.Instance.AddCompletedCourse(s);
+            }
+
+            string[] inPrCourses = tBoxToArray(textBox2);
+
+            foreach (string s in inPrCourses)
+            {
+                CourseInfoMediator.Instance.AddInProgressCourse(s);
+            }
+
+            UpdateCourseInfoMediator();
+            textBox1.Clear();
+            textBox2.Clear();
 
             // Reset calculated hours values
             TotalHours = 0;
@@ -463,6 +512,7 @@ namespace Auto_Advisor
         // Back to first screen
         private void button1_Click(object sender, EventArgs e)
         {
+
             mainScreenPanel.Visible = false;
             textBox7.Visible = true;
             button5.Visible = true;
@@ -559,6 +609,8 @@ namespace Auto_Advisor
                 return;
             }
 
+            UpdateCourseInfoMediator();
+
             CourseInfoMediator.Instance.Major0 = MajorList.Text;
             CourseInfoMediator.Instance.Major1 = MajorList2.Text;
             CourseInfoMediator.Instance.Minor0 = MinorBox.Text;
@@ -566,11 +618,8 @@ namespace Auto_Advisor
             CourseInfoMediator.Instance.Honors = comboBox3.SelectedItem == comboBox3.Items[1] ? true : false;
             CourseInfoMediator.Instance.SemesterNumber = short.Parse(comboBox4.SelectedItem.ToString());
 
-            string tb1Txt = textBox1.Text;
-            string compCourseStr = new string(tb1Txt.Where(c => c != '\r').ToArray());
-            string[] compCourses = compCourseStr.Split('\n');
+            string[] compCourses = tBoxToArray(textBox1);
 
-            CourseInfoMediator.Instance.ClearCompletedCourses();
             if (!mainScreenPanel.Visible)
             {
                 foreach (string s in compCourses)
@@ -579,7 +628,7 @@ namespace Auto_Advisor
                 }
             }
             // Get courses from second screen
-            foreach (DataGridView dgv in dgvs)
+            /*foreach (DataGridView dgv in dgvs)
             {
                 if (dgv != dataGridRecommended)
                 {
@@ -591,22 +640,19 @@ namespace Auto_Advisor
                         }
                     }
                 }
-            }
+            }*/
 
-            string tb2Txt = textBox2.Text;
-            string inPrCourseStr = new string(tb2Txt.Where(c => c != '\r').ToArray());
-            string[] inPrCourses = inPrCourseStr.Split('\n').Where(s => s.Length != 0).ToArray();
+            string[] inPrCourses = tBoxToArray(textBox2);
 
-            CourseInfoMediator.Instance.ClearInProgressCourses();
-            if (mainScreenPanel.Visible)
+            if (!mainScreenPanel.Visible)
             {
                 foreach (string s in inPrCourses)
                 {
                     CourseInfoMediator.Instance.AddInProgressCourse(s);
                 }
             }
-            // Get courses from second screen
-            foreach(DataGridView dgv in dgvs)
+           /* // Get courses from second screen
+            foreach (DataGridView dgv in dgvs)
             {
                 if (dgv != dataGridRecommended)
                 {
@@ -618,7 +664,7 @@ namespace Auto_Advisor
                         }
                     }
                 }
-            }
+            }*/
 
             // Download save
             CourseInfoMediator.Instance.SendToDownloads();
@@ -649,15 +695,15 @@ namespace Auto_Advisor
                     comboBox4.SelectedItem = comboBox4.Items[cis.SemesterNumber - 1];
 
                     textBox1.Clear();
-                    foreach (string s in cis.CompletedCourses)
+                    foreach (string s in cis.CompletedCourses.Where(s => !s.Equals("")))
                     {
-                        textBox1.Text += $"{s} \r\n";
+                        textBox1.Text += $"{s.Trim()}\r\n";
                     }
 
                     textBox2.Clear();
-                    foreach (string s in cis.InProgressCourses)
+                    foreach (string s in cis.InProgressCourses.Where(s => !s.Equals("")))
                     {
-                        textBox2.Text += $"{s} \r\n";
+                        textBox2.Text += $"{s.Trim()}\r\n";
                     }
 
                     if (cis.Major1 != string.Empty)
@@ -965,12 +1011,49 @@ namespace Auto_Advisor
         {
 
         }
+
+        // Update course statuses on the CourseInfoMediator
+        private void UpdateCourseInfoMediator()
+        {
+            foreach (DataGridView dgv in dgvs)
+            {
+                if (dgv != dataGridRecommended)
+                {
+                    foreach (DataGridViewRow row in dgv.Rows)
+                    {
+                        if (row.Index > 0)
+                        {
+                            string code = row.Cells[0].Value.ToString();
+                            if (row.DefaultCellStyle.BackColor == Color.Empty)
+                            {
+                                CourseInfoMediator.Instance.RemoveCompletedCourse(code);
+                                CourseInfoMediator.Instance.RemoveInProgressCourse(code);
+                            }
+                            else if (row.DefaultCellStyle.BackColor == Color.LightGreen)
+                            {
+                                CourseInfoMediator.Instance.AddCompletedCourse(code);
+                                CourseInfoMediator.Instance.RemoveInProgressCourse(code);
+                            }
+                            else if (row.DefaultCellStyle.BackColor == Color.Yellow)
+                            {
+                                CourseInfoMediator.Instance.AddInProgressCourse(code);
+                                CourseInfoMediator.Instance.RemoveCompletedCourse(code);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
         // Switch which major is displayed from the main page
         private void majorDisplay1_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (suppressMajorDisplayEvent) return; // When set to true, display is being changed by the continue button and should not cause this method to execute
             if (MajorList2.SelectedItem == null) return; // no second major was selected
             suppressMajorDisplayEvent = true;
+
+            // Update course statuses on the CourseInfoMediator
+            UpdateCourseInfoMediator();
 
             var temp = MajorList.SelectedItem;
             MajorList.SelectedItem = MajorList2.SelectedItem;
@@ -991,6 +1074,9 @@ namespace Auto_Advisor
             if (suppressMajorDisplayEvent) return; // When set to true, display is being changed by the continue button and should not cause this method to execute
             if (MinorBox2.SelectedItem == null) return; // no second minor was selected
             suppressMajorDisplayEvent = true;
+
+            // Update course statuses on CourseInfoMediator
+            UpdateCourseInfoMediator();
 
             var temp = MinorBox.SelectedItem;
             MinorBox.SelectedItem = MinorBox2.SelectedItem;

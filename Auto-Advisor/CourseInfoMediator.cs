@@ -40,8 +40,8 @@ namespace Auto_Advisor
         public string Minor1 { get; set; }
         public bool Honors { get; set; }
         public short SemesterNumber { get; set; }
-        public List<string> CompletedCourses { get; set; }
-        public List<string> InProgressCourses { get; set; }
+        public HashSet<string> CompletedCourses { get; set; }
+        public HashSet<string> InProgressCourses { get; set; }
 
         private CourseInfoMediator()
         {
@@ -51,8 +51,8 @@ namespace Auto_Advisor
             Minor1 = string.Empty;
             Honors = false;
             SemesterNumber = 0;
-            CompletedCourses = new List<string>();
-            InProgressCourses = new List<string>();
+            CompletedCourses = new HashSet<string>();
+            InProgressCourses = new HashSet<string>();
         }
 
         public void AddCompletedCourse(string course)
@@ -83,6 +83,32 @@ namespace Auto_Advisor
         public void ClearInProgressCourses()
         {
             InProgressCourses.Clear();
+        }
+
+        public bool IsTaken(string course)
+        {
+            return CompletedCourses.FirstOrDefault(s => s.Equals(course), null) != null;
+        }
+
+        public bool IsInProgress(string course)
+        {
+            return InProgressCourses.FirstOrDefault(s => s.Equals(course), null) != null;
+        }
+
+        public void AllCompleted()
+        {
+            foreach (string course in CompletedCourses)
+            {
+                MessageBox.Show(course);
+            }
+        }
+
+        public void AllInProgress()
+        {
+            foreach (string course in InProgressCourses)
+            {
+                MessageBox.Show(course);
+            }
         }
 
         // Returns a JSON string representing this object
