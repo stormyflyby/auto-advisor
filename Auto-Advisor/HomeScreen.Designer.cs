@@ -297,7 +297,6 @@
             label8.Size = new Size(165, 91);
             label8.TabIndex = 13;
             label8.Text = "Enter class codes (one per line)\r\nExample: COSC 1303\r\n                  BIBL 1033\r\n\r\nOR\r\n\r\nAdd them on the next page";
-            label8.Click += label8_Click;
             // 
             // button3
             // 
@@ -449,7 +448,6 @@
             mainScreenPanel.Name = "mainScreenPanel";
             mainScreenPanel.Size = new Size(1317, 793);
             mainScreenPanel.TabIndex = 26;
-            mainScreenPanel.Paint += mainScreenPanel_Paint;
             // 
             // label14
             // 
@@ -524,7 +522,6 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(823, 730);
             panel1.TabIndex = 242;
-            panel1.Paint += panel1_Paint;
             // 
             // DataGridHonors
             // 
@@ -1067,7 +1064,6 @@
             textBox3.TabIndex = 158;
             textBox3.Text = "Recommended Classes";
             textBox3.TextAlign = HorizontalAlignment.Center;
-            textBox3.TextChanged += textBox3_TextChanged;
             // 
             // textBox74
             // 
@@ -1082,7 +1078,6 @@
             textBox74.TabIndex = 208;
             textBox74.Text = "Cognate Courses";
             textBox74.TextAlign = HorizontalAlignment.Center;
-            textBox74.TextChanged += textBox74_TextChanged;
             // 
             // dataGridMajors
             // 
@@ -1211,7 +1206,6 @@
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 22.0302372F));
             tableLayoutPanel1.Size = new Size(344, 503);
             tableLayoutPanel1.TabIndex = 1;
-            tableLayoutPanel1.Paint += tableLayoutPanel1_Paint;
             // 
             // tableLayoutPanel5
             // 
@@ -1554,7 +1548,6 @@
             // 
             openSaveFileDialog.FileName = "openSaveFileDialog";
             openSaveFileDialog.Title = "Select your save data.";
-            openSaveFileDialog.FileOk += openSaveFileDialog_FileOk;
             // 
             // textBox7
             // 
