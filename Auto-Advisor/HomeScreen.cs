@@ -643,20 +643,20 @@ namespace Auto_Advisor
                     CourseInfoMediator.Instance.AddInProgressCourse(s);
                 }
             }
-           /* // Get courses from second screen
-            foreach (DataGridView dgv in dgvs)
-            {
-                if (dgv != dataGridRecommended)
-                {
-                    foreach (DataGridViewRow row in dgv.Rows)
-                    {
-                        if (row.DefaultCellStyle.BackColor == Color.Yellow)
-                        {
-                            CourseInfoMediator.Instance.AddInProgressCourse(row.Cells[0].Value.ToString());
-                        }
-                    }
-                }
-            }*/
+            /* // Get courses from second screen
+             foreach (DataGridView dgv in dgvs)
+             {
+                 if (dgv != dataGridRecommended)
+                 {
+                     foreach (DataGridViewRow row in dgv.Rows)
+                     {
+                         if (row.DefaultCellStyle.BackColor == Color.Yellow)
+                         {
+                             CourseInfoMediator.Instance.AddInProgressCourse(row.Cells[0].Value.ToString());
+                         }
+                     }
+                 }
+             }*/
 
             // Download save
             CourseInfoMediator.Instance.SendToDownloads();
@@ -1135,7 +1135,10 @@ namespace Auto_Advisor
             {
                 foreach (DataGridViewRow row in dgv.Rows)
                 {
-                    row.Visible = true;
+                    if (dgv != dataGridRecommended || row.DefaultCellStyle.BackColor == Color.Empty)
+                    {
+                        row.Visible = true;
+                    }
                     if (!(courseSearch(txt, row.Cells[0]) || courseSearch(txt, row.Cells[1])))
                     {
                         row.Visible = false;
@@ -1154,7 +1157,7 @@ namespace Auto_Advisor
             {
                 foreach (DataGridViewRow row in dgv.Rows)
                 {
-                    if (dgv != dataGridRecommended || row.DefaultCellStyle.BackColor != Color.White)
+                    if (dgv != dataGridRecommended || row.DefaultCellStyle.BackColor == Color.Empty)
                         row.Visible = true;
                 }
             }
