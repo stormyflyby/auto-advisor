@@ -1010,7 +1010,8 @@ namespace Auto_Advisor
                 "Upcoming Semester - \nEnter the number of your next semester. If you are currently in semester 4 (second sophomore year), your upcoming semester will be semester 5 (first junior semester).\n\n" +
                 "Completed or Currently Taking courses - \nEnter each of your course's codes. Only enter one course code per line.\n\n" +
                 "Download Data - \nClick the Download Data button to save your input to a file. When you use AutoAdvisor again, you can reenter your info with the file.\n\n" +
-                "Enter Saved Data - \nIf you have a saved data file, enter it from the files on your device. The software will rebuild your input from this file.");
+                "Enter Saved Data - \nIf you have a saved data file, enter it from the files on your device. The software will rebuild your input from this file.\n"+
+                "\nWhat does You can click them on the next page mean? - \nWhen you hit continue it will show you your classes and you can select the option on the left side of the screen to mark them as complete, in progress or not taking.");
         }
 
         private void mainScreenPanel_Paint(object sender, PaintEventArgs e)
@@ -1024,12 +1025,13 @@ namespace Auto_Advisor
                 "                                        Some Helpful Questions - \n\n" +
                 "What are Recommended Classes?\nRecommended Classes are high-priority. Classes in this table are suited for the upcoming semester or previous semesters and have not been taken.\n\n" +
                 "What do the different colors mean?\nGreen indicates taken classes. Yellow indicates in-progress classes. White indicates untaken classes.\n\n" +
+                "How do I mark my classes? \nThe dropdown menu that says On course click is where you can change what happens when you click each course. You can change between completed(green & the default), in progress(yellow) and have not taken(white) \n\n" +
                 "How do I find course descriptions or prerequisites? \nClick a class's More button to display additional information.   \n\n" +
                 "How do I switch between Majors/Minors? \nClick the drop down menu and select your desired Major/Minor.\n\n" +
                 "What do the different hour totals mean? \n" +
-                "Hours completed: The total hours of classes you have already taken.\n" +
-                "Hours in progress: The total hours of classes you are currently taking.\n" +
-                "Total hours needed: The total hours needed for your major (not including minor hours).\n" +
+                "Hours completed: The total hours of classes you have already taken.\n\n" +
+                "Hours in progress: The total hours of classes you are currently taking.\n\n" +
+                "Total hours needed: The total hours needed for your major (not including minor hours).\n\n" +
                 "Hours still needed: The difference between your completed hours and your total needed hours.");
         }
 
