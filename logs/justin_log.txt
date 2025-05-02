@@ -12,3 +12,7 @@
 4/9/25 Made it so you can't select a major or minor twice
 4/9/25 Added the ability to switch between majors being displayed on the main page
 4/9/25 Lots of bug fixing
+4/10/25 Added more minors, as well as the ability to switch between minors
+4/11/25 Added an hours in progress display, began formalizing code comments
+4/21/25 Fixed major UI bugs and corrected data in honors .json file
+5/1/25 More UI changes, cleaning up the code, discussed CourseInfoMediator class functionality
