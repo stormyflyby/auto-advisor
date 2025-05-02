@@ -225,10 +225,7 @@ namespace Auto_Advisor
                             row.Cells[1].Value = course.name;          // Course Name
                             row.Cells[2].Value = course.hours;         // Hours
 
-                            if (inTxtBx1 || inTxtBx2)
-                            {
-                                row.Visible = false;
-                            }
+                            if (inTxtBx1 || inTxtBx2) row.Visible = false;
                         }
                     }
 
@@ -327,7 +324,9 @@ namespace Auto_Advisor
             return;
         }
 
-        // Adding/removing a second major
+        /**
+         * This button is for adding/removing a second major
+         */
         private void button6_Click(object sender, EventArgs e)
         {
             if (MajorList2.Visible == false) // make visible
@@ -343,7 +342,9 @@ namespace Auto_Advisor
             }
         }
 
-        // Adding a second minor
+        /**
+         * This button is for adding/removing a second minor
+         */
         private void button6_Click_1(object sender, EventArgs e)
         {
             if (MinorBox2.Visible == false) // make visible
@@ -359,12 +360,9 @@ namespace Auto_Advisor
             }
         }
 
-        private void label8_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        // This is the continue button
+        /**
+         * This is the continue button that takes a user from the start screen to the main screen
+         */
         private void button5_Click(object sender, EventArgs e)
         {
             suppressMajorDisplayEvent = true; // Prevents major display update from retriggering itself
@@ -382,6 +380,9 @@ namespace Auto_Advisor
             return courses;
         }
 
+        /**
+         * This method is used to update, load, and display the main screen based on start screen data
+         */
         public void continueFunction()
         {
             // First, check that all boxes are populated
@@ -575,26 +576,17 @@ namespace Auto_Advisor
             return false;
         }
 
-        private void textBox74_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void listBox3_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
+        /**
+         * This is the download button on the main screen
+         */
         private void button2_Click(object sender, EventArgs e)
         {
             Download();
         }
 
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
+        /**
+         * This is the download button on the start screen
+         */
         private void button3_Click(object sender, EventArgs e)
         {
             Download();
@@ -736,16 +728,6 @@ namespace Auto_Advisor
                     return;
                 }
             }
-        }
-
-        private void openSaveFileDialog_FileOk(object sender, System.ComponentModel.CancelEventArgs e)
-        {
-
-        }
-
-        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
         }
 
         private void dataGridRecommended_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -1064,11 +1046,6 @@ namespace Auto_Advisor
             suppressMajorDisplayEvent = false;
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void minorDisplay1_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (suppressMajorDisplayEvent) return; // When set to true, display is being changed by the continue button and should not cause this method to execute
@@ -1096,12 +1073,8 @@ namespace Auto_Advisor
                 "Upcoming Semester - \nEnter the number of your next semester. If you are currently in semester 4 (second sophomore year), your upcoming semester will be semester 5 (first junior semester).\n\n" +
                 "Completed or Currently Taking courses - \nEnter each of your course's codes. Only enter one course code per line.\n\n" +
                 "Download Data - \nClick the Download Data button to save your input to a file. When you use AutoAdvisor again, you can reenter your info with the file.\n\n" +
-                "Enter Saved Data - \nIf you have a saved data file, enter it from the files on your device. The software will rebuild your input from this file.");
-        }
-
-        private void mainScreenPanel_Paint(object sender, PaintEventArgs e)
-        {
-
+                "Enter Saved Data - \nIf you have a saved data file, enter it from the files on your device. The software will rebuild your input from this file.\n" +
+                "\nWhat does 'Add them on the next page' mean? \nWhen you hit continue it will show you your classes and you can select the option on the left side of the screen to mark them as complete, in progress or not taking.");
         }
 
         private void button7_Click(object sender, EventArgs e)
@@ -1110,12 +1083,13 @@ namespace Auto_Advisor
                 "                                        Some Helpful Questions - \n\n" +
                 "What are Recommended Classes?\nRecommended Classes are high-priority. Classes in this table are suited for the upcoming semester or previous semesters and have not been taken.\n\n" +
                 "What do the different colors mean?\nGreen indicates taken classes. Yellow indicates in-progress classes. White indicates untaken classes.\n\n" +
+                "How do I mark my classes? \nThe dropdown menu that says On course click is where you can change what happens when you click each course. You can change between completed(green & the default), in progress(yellow) and have not taken(white) \n\n" +
                 "How do I find course descriptions or prerequisites? \nClick a class's More button to display additional information.   \n\n" +
                 "How do I switch between Majors/Minors? \nClick the drop down menu and select your desired Major/Minor.\n\n" +
                 "What do the different hour totals mean? \n" +
-                "Hours completed: The total hours of classes you have already taken.\n" +
-                "Hours in progress: The total hours of classes you are currently taking.\n" +
-                "Total hours needed: The total hours needed for your major (not including minor hours).\n" +
+                "Hours completed: The total hours of classes you have already taken.\n\n" +
+                "Hours in progress: The total hours of classes you are currently taking.\n\n" +
+                "Total hours needed: The total hours needed for your major (not including minor hours).\n\n" +
                 "Hours still needed: The difference between your completed hours and your total needed hours.");
         }
 

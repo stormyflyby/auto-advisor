@@ -77,7 +77,7 @@
             // 
             // descriptionTitle
             // 
-            descriptionTitle.BackColor = SystemColors.ControlDark;
+            descriptionTitle.BackColor = Color.FromArgb(0, 0, 64);
             descriptionTitle.BorderStyle = BorderStyle.Fixed3D;
             descriptionTitle.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
             descriptionTitle.ForeColor = Color.White;
@@ -90,7 +90,7 @@
             // 
             // label1
             // 
-            label1.BackColor = SystemColors.ControlDark;
+            label1.BackColor = Color.FromArgb(0, 0, 64);
             label1.BorderStyle = BorderStyle.Fixed3D;
             label1.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
             label1.ForeColor = Color.White;
@@ -114,7 +114,7 @@
             // 
             // infoTitle
             // 
-            infoTitle.BackColor = SystemColors.ControlDark;
+            infoTitle.BackColor = Color.FromArgb(0, 0, 64);
             infoTitle.BorderStyle = BorderStyle.Fixed3D;
             infoTitle.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
             infoTitle.ForeColor = Color.White;
@@ -139,7 +139,7 @@
             // 
             AutoScaleDimensions = new SizeF(96F, 96F);
             AutoScaleMode = AutoScaleMode.Dpi;
-            BackColor = SystemColors.ControlDarkDark;
+            BackColor = Color.FromArgb(0, 0, 40);
             ClientSize = new Size(644, 348);
             Controls.Add(infoTitle);
             Controls.Add(label4);
@@ -149,7 +149,7 @@
             Controls.Add(descriptionLabel);
             Controls.Add(courseTitleLabel);
             Controls.Add(courseDetailsLabel);
-            Margin = new Padding(2, 2, 2, 2);
+            Margin = new Padding(2);
             Name = "CourseDescription";
             Text = "CourseDetails";
             ResumeLayout(false);
