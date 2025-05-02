@@ -458,7 +458,7 @@
             mainScreenPanel.Controls.Add(tableLayoutPanel1);
             mainScreenPanel.Controls.Add(button1);
             mainScreenPanel.Controls.Add(button2);
-            mainScreenPanel.Location = new Point(10, 11);
+            mainScreenPanel.Location = new Point(2, 1);
             mainScreenPanel.Margin = new Padding(1, 2, 1, 2);
             mainScreenPanel.Name = "mainScreenPanel";
             mainScreenPanel.Size = new Size(1317, 793);
@@ -553,6 +553,7 @@
             dataGridViewCellStyle1.SelectionForeColor = Color.Black;
             DataGridHonors.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             DataGridHonors.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            DataGridHonors.BackgroundColor = Color.FromArgb(0, 0, 64);
             DataGridHonors.BorderStyle = BorderStyle.None;
             DataGridHonors.CellBorderStyle = DataGridViewCellBorderStyle.Raised;
             DataGridHonors.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
@@ -621,7 +622,7 @@
             // 
             // HonorsBox
             // 
-            HonorsBox.BackColor = Color.DimGray;
+            HonorsBox.BackColor = Color.FromArgb(0, 0, 64);
             HonorsBox.Font = new Font("Segoe UI", 25F, FontStyle.Regular, GraphicsUnit.Point);
             HonorsBox.ForeColor = Color.White;
             HonorsBox.Location = new Point(47, 1538);
@@ -646,6 +647,7 @@
             dataGridViewCellStyle3.SelectionForeColor = Color.Black;
             dataGridMinors.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
             dataGridMinors.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            dataGridMinors.BackgroundColor = Color.FromArgb(0, 0, 64);
             dataGridMinors.BorderStyle = BorderStyle.None;
             dataGridMinors.CellBorderStyle = DataGridViewCellBorderStyle.Raised;
             dataGridMinors.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
@@ -714,7 +716,7 @@
             // 
             // textBox5
             // 
-            textBox5.BackColor = Color.DimGray;
+            textBox5.BackColor = Color.FromArgb(0, 0, 64);
             textBox5.Font = new Font("Segoe UI", 25F, FontStyle.Regular, GraphicsUnit.Point);
             textBox5.ForeColor = Color.White;
             textBox5.Location = new Point(47, 1284);
@@ -739,6 +741,7 @@
             dataGridViewCellStyle5.SelectionForeColor = Color.Black;
             dataGridTheology.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
             dataGridTheology.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            dataGridTheology.BackgroundColor = Color.FromArgb(0, 0, 64);
             dataGridTheology.BorderStyle = BorderStyle.None;
             dataGridTheology.CellBorderStyle = DataGridViewCellBorderStyle.Raised;
             dataGridTheology.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
@@ -818,6 +821,7 @@
             dataGridViewCellStyle7.SelectionForeColor = Color.Black;
             dataGridRecommended.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
             dataGridRecommended.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            dataGridRecommended.BackgroundColor = Color.FromArgb(0, 0, 64);
             dataGridRecommended.BorderStyle = BorderStyle.None;
             dataGridRecommended.CellBorderStyle = DataGridViewCellBorderStyle.Raised;
             dataGridRecommended.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
@@ -889,6 +893,7 @@
             dataGridViewCellStyle8.SelectionForeColor = Color.Black;
             dataGridGenEd.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle8;
             dataGridGenEd.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            dataGridGenEd.BackgroundColor = Color.FromArgb(0, 0, 64);
             dataGridGenEd.BorderStyle = BorderStyle.None;
             dataGridGenEd.CellBorderStyle = DataGridViewCellBorderStyle.Raised;
             dataGridGenEd.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
@@ -957,7 +962,7 @@
             // 
             // textBox6
             // 
-            textBox6.BackColor = Color.DimGray;
+            textBox6.BackColor = Color.FromArgb(0, 0, 64);
             textBox6.Font = new Font("Segoe UI", 25F, FontStyle.Regular, GraphicsUnit.Point);
             textBox6.ForeColor = Color.White;
             textBox6.Location = new Point(46, 787);
@@ -982,6 +987,7 @@
             dataGridViewCellStyle10.SelectionForeColor = Color.Black;
             dataGridCognate.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
             dataGridCognate.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            dataGridCognate.BackgroundColor = Color.FromArgb(0, 0, 64);
             dataGridCognate.BorderStyle = BorderStyle.None;
             dataGridCognate.CellBorderStyle = DataGridViewCellBorderStyle.Raised;
             dataGridCognate.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
@@ -1050,7 +1056,7 @@
             // 
             // textBox4
             // 
-            textBox4.BackColor = Color.DimGray;
+            textBox4.BackColor = Color.FromArgb(0, 0, 64);
             textBox4.Font = new Font("Segoe UI", 25F, FontStyle.Regular, GraphicsUnit.Point);
             textBox4.ForeColor = Color.White;
             textBox4.Location = new Point(46, 1037);
@@ -1064,7 +1070,7 @@
             // 
             // textBox3
             // 
-            textBox3.BackColor = Color.DimGray;
+            textBox3.BackColor = Color.FromArgb(0, 0, 64);
             textBox3.Font = new Font("Segoe UI", 25F, FontStyle.Regular, GraphicsUnit.Point);
             textBox3.ForeColor = Color.White;
             textBox3.Location = new Point(46, 46);
@@ -1079,7 +1085,7 @@
             // 
             // textBox74
             // 
-            textBox74.BackColor = Color.DimGray;
+            textBox74.BackColor = Color.FromArgb(0, 0, 64);
             textBox74.Font = new Font("Segoe UI", 25F, FontStyle.Regular, GraphicsUnit.Point);
             textBox74.ForeColor = Color.White;
             textBox74.Location = new Point(46, 537);
@@ -1105,6 +1111,7 @@
             dataGridViewCellStyle12.SelectionForeColor = Color.Black;
             dataGridMajors.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle12;
             dataGridMajors.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            dataGridMajors.BackgroundColor = Color.FromArgb(0, 0, 64);
             dataGridMajors.BorderStyle = BorderStyle.None;
             dataGridMajors.CellBorderStyle = DataGridViewCellBorderStyle.Raised;
             dataGridMajors.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
@@ -1173,7 +1180,7 @@
             // 
             // textBox42
             // 
-            textBox42.BackColor = Color.DimGray;
+            textBox42.BackColor = Color.FromArgb(0, 0, 64);
             textBox42.Font = new Font("Segoe UI", 25F, FontStyle.Regular, GraphicsUnit.Point);
             textBox42.ForeColor = Color.White;
             textBox42.Location = new Point(46, 289);
@@ -1303,7 +1310,7 @@
             // tableLayoutPanel2
             // 
             tableLayoutPanel2.Anchor = AnchorStyles.None;
-            tableLayoutPanel2.BackColor = SystemColors.ControlDarkDark;
+            tableLayoutPanel2.BackColor = Color.FromArgb(0, 0, 40);
             tableLayoutPanel2.CellBorderStyle = TableLayoutPanelCellBorderStyle.OutsetPartial;
             tableLayoutPanel2.ColumnCount = 2;
             tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 75F));
@@ -1334,7 +1341,7 @@
             // listBox4
             // 
             listBox4.Anchor = AnchorStyles.Left;
-            listBox4.BackColor = SystemColors.ControlDarkDark;
+            listBox4.BackColor = Color.FromArgb(0, 0, 40);
             listBox4.BorderStyle = BorderStyle.None;
             listBox4.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
             listBox4.ForeColor = Color.White;
@@ -1352,7 +1359,7 @@
             // listBox6
             // 
             listBox6.Anchor = AnchorStyles.Left;
-            listBox6.BackColor = SystemColors.ControlDarkDark;
+            listBox6.BackColor = Color.FromArgb(0, 0, 40);
             listBox6.BorderStyle = BorderStyle.None;
             listBox6.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
             listBox6.ForeColor = Color.White;
@@ -1369,7 +1376,7 @@
             // listBox7
             // 
             listBox7.Anchor = AnchorStyles.Left;
-            listBox7.BackColor = SystemColors.ControlDarkDark;
+            listBox7.BackColor = Color.FromArgb(0, 0, 40);
             listBox7.BorderStyle = BorderStyle.None;
             listBox7.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
             listBox7.ForeColor = Color.White;
@@ -1386,7 +1393,7 @@
             // listBox8
             // 
             listBox8.Anchor = AnchorStyles.Left;
-            listBox8.BackColor = SystemColors.ControlDarkDark;
+            listBox8.BackColor = Color.FromArgb(0, 0, 40);
             listBox8.BorderStyle = BorderStyle.None;
             listBox8.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
             listBox8.ForeColor = Color.White;
@@ -1403,7 +1410,7 @@
             // listBox1
             // 
             listBox1.Anchor = AnchorStyles.Left;
-            listBox1.BackColor = SystemColors.ControlDarkDark;
+            listBox1.BackColor = Color.FromArgb(0, 0, 40);
             listBox1.BorderStyle = BorderStyle.None;
             listBox1.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
             listBox1.ForeColor = Color.White;
@@ -1420,7 +1427,7 @@
             // listBox5
             // 
             listBox5.Anchor = AnchorStyles.Left;
-            listBox5.BackColor = SystemColors.ControlDarkDark;
+            listBox5.BackColor = Color.FromArgb(0, 0, 40);
             listBox5.BorderStyle = BorderStyle.None;
             listBox5.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
             listBox5.ForeColor = Color.White;
@@ -1437,7 +1444,7 @@
             // listBox2
             // 
             listBox2.Anchor = AnchorStyles.Left;
-            listBox2.BackColor = SystemColors.ControlDarkDark;
+            listBox2.BackColor = Color.FromArgb(0, 0, 40);
             listBox2.BorderStyle = BorderStyle.None;
             listBox2.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
             listBox2.ForeColor = Color.White;
@@ -1454,7 +1461,7 @@
             // listBox9
             // 
             listBox9.Anchor = AnchorStyles.Left;
-            listBox9.BackColor = SystemColors.ControlDarkDark;
+            listBox9.BackColor = Color.FromArgb(0, 0, 40);
             listBox9.BorderStyle = BorderStyle.None;
             listBox9.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
             listBox9.ForeColor = Color.White;
@@ -1471,7 +1478,7 @@
             // listBox3
             // 
             listBox3.Anchor = AnchorStyles.Left;
-            listBox3.BackColor = SystemColors.ControlDarkDark;
+            listBox3.BackColor = Color.FromArgb(0, 0, 40);
             listBox3.BorderStyle = BorderStyle.None;
             listBox3.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
             listBox3.ForeColor = Color.White;
@@ -1488,7 +1495,7 @@
             // listBox10
             // 
             listBox10.Anchor = AnchorStyles.Left;
-            listBox10.BackColor = SystemColors.ControlDarkDark;
+            listBox10.BackColor = Color.FromArgb(0, 0, 40);
             listBox10.BorderStyle = BorderStyle.None;
             listBox10.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
             listBox10.ForeColor = Color.White;
@@ -1521,7 +1528,7 @@
             // minorDisplay1
             // 
             minorDisplay1.Anchor = AnchorStyles.Top;
-            minorDisplay1.BackColor = SystemColors.ControlDark;
+            minorDisplay1.BackColor = Color.FromArgb(0, 0, 64);
             minorDisplay1.DropDownStyle = ComboBoxStyle.DropDownList;
             minorDisplay1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             minorDisplay1.FormattingEnabled = true;
@@ -1565,7 +1572,7 @@
             // 
             // textBox7
             // 
-            textBox7.BackColor = SystemColors.ControlDarkDark;
+            textBox7.BackColor = Color.FromArgb(0, 0, 40);
             textBox7.BorderStyle = BorderStyle.None;
             textBox7.Font = new Font("Segoe UI", 24.75F, FontStyle.Bold, GraphicsUnit.Point);
             textBox7.ForeColor = Color.White;
@@ -1592,8 +1599,8 @@
             AutoScaleMode = AutoScaleMode.Dpi;
             AutoScroll = true;
             AutoSize = true;
-            BackColor = SystemColors.ControlDarkDark;
-            ClientSize = new Size(1096, 599);
+            BackColor = Color.FromArgb(0, 0, 40);
+            ClientSize = new Size(1346, 771);
             Controls.Add(mainScreenPanel);
             Controls.Add(textBox2);
             Controls.Add(textBox1);
