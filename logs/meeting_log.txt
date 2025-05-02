@@ -13,3 +13,4 @@
 4/16/25 8:00 PM to 9:15 PM - Discussed various milestones (especially connecting with the course catalog), added a help button, and started cleaning up UI
 4/21/25 7:00 PM to 9:00 PM - Discussed the milestones and tested more 
 4/27/25 7:00 PM to 8:45 PM - Cameron and Bryson worked on fixing issues caused by the addition of the course status system on the second screen
+5/1/25 7:10 PM to 9:00 PM - Refined the UI and continued fixing issues caused by the addition of the course status system
