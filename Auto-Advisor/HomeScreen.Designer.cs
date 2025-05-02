@@ -53,7 +53,6 @@
             comboBox3 = new ComboBox();
             comboBox4 = new ComboBox();
             label8 = new Label();
-            label9 = new Label();
             button3 = new Button();
             button4 = new Button();
             continueButton = new Button();
@@ -158,50 +157,50 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 20.25F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.Font = new Font("Segoe UI", 19F, FontStyle.Regular, GraphicsUnit.Point);
             label1.ForeColor = Color.White;
-            label1.Location = new Point(357, 66);
+            label1.Location = new Point(377, 78);
             label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
-            label1.Size = new Size(471, 37);
+            label1.Size = new Size(437, 36);
             label1.TabIndex = 1;
-            label1.Text = "Please enter your information below - ";
+            label1.Text = "Please enter your information below:";
             // 
             // label2
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
             label2.ForeColor = Color.White;
-            label2.Location = new Point(120, 148);
+            label2.Location = new Point(120, 146);
             label2.Margin = new Padding(2, 0, 2, 0);
             label2.Name = "label2";
-            label2.Size = new Size(204, 28);
+            label2.Size = new Size(190, 28);
             label2.TabIndex = 2;
-            label2.Text = "Select your Major(s) - ";
+            label2.Text = "Select your Major(s):";
             // 
             // label3
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
             label3.ForeColor = Color.White;
-            label3.Location = new Point(120, 193);
+            label3.Location = new Point(120, 194);
             label3.Margin = new Padding(2, 0, 2, 0);
             label3.Name = "label3";
-            label3.Size = new Size(205, 28);
+            label3.Size = new Size(191, 28);
             label3.TabIndex = 3;
-            label3.Text = "Select your Minor(s) - ";
+            label3.Text = "Select your Minor(s):";
             // 
             // label4
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
             label4.ForeColor = Color.White;
-            label4.Location = new Point(120, 241);
+            label4.Location = new Point(120, 242);
             label4.Margin = new Padding(2, 0, 2, 0);
             label4.Name = "label4";
-            label4.Size = new Size(273, 28);
+            label4.Size = new Size(255, 28);
             label4.TabIndex = 4;
-            label4.Text = "Are you an Honors student? - ";
+            label4.Text = "Are you an Honors student?";
             // 
             // label5
             // 
@@ -211,33 +210,33 @@
             label5.Location = new Point(120, 289);
             label5.Margin = new Padding(2, 0, 2, 0);
             label5.Name = "label5";
-            label5.Size = new Size(367, 28);
+            label5.Size = new Size(354, 28);
             label5.TabIndex = 5;
-            label5.Text = "What is your upcoming semester?(1-8) - ";
+            label5.Text = "What is your upcoming semester (1-8)?";
             // 
             // label6
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
             label6.ForeColor = Color.White;
-            label6.Location = new Point(120, 330);
+            label6.Location = new Point(120, 335);
             label6.Margin = new Padding(2, 0, 2, 0);
             label6.Name = "label6";
-            label6.Size = new Size(327, 28);
+            label6.Size = new Size(314, 28);
             label6.TabIndex = 6;
-            label6.Text = "What classes have you completed? -";
+            label6.Text = "What classes have you completed?";
             // 
             // label7
             // 
             label7.AutoSize = true;
             label7.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
             label7.ForeColor = Color.White;
-            label7.Location = new Point(124, 500);
+            label7.Location = new Point(120, 521);
             label7.Margin = new Padding(2, 0, 2, 0);
             label7.Name = "label7";
-            label7.Size = new Size(356, 28);
+            label7.Size = new Size(343, 28);
             label7.TabIndex = 7;
-            label7.Text = "What classes are you currently taking?- ";
+            label7.Text = "What classes are you currently taking?";
             // 
             // MajorList
             // 
@@ -292,30 +291,17 @@
             label8.BackColor = Color.Transparent;
             label8.Font = new Font("Segoe UI", 8F, FontStyle.Regular, GraphicsUnit.Point);
             label8.ForeColor = Color.White;
-            label8.Location = new Point(147, 358);
+            label8.Location = new Point(195, 380);
             label8.Margin = new Padding(2, 0, 2, 0);
             label8.Name = "label8";
-            label8.Size = new Size(232, 78);
+            label8.Size = new Size(165, 91);
             label8.TabIndex = 13;
-            label8.Text = "Please enter class codes, separated by a line\r\nExample: COSC 1303\r\n                  BIBL 1033\r\nOr\r\n\r\nYou can click them on the next page";
+            label8.Text = "Enter class codes (one per line)\r\nExample: COSC 1303\r\n                  BIBL 1033\r\n\r\nOR\r\n\r\nAdd them on the next page";
             label8.Click += label8_Click;
-            // 
-            // label9
-            // 
-            label9.AutoSize = true;
-            label9.BackColor = Color.Transparent;
-            label9.Font = new Font("Segoe UI", 8F, FontStyle.Regular, GraphicsUnit.Point);
-            label9.ForeColor = Color.White;
-            label9.Location = new Point(147, 538);
-            label9.Margin = new Padding(2, 0, 2, 0);
-            label9.Name = "label9";
-            label9.Size = new Size(232, 78);
-            label9.TabIndex = 14;
-            label9.Text = "Please enter class codes, separated by a line\r\n Example: COSC 1303\r\n                  BIBL 1033\r\nOr\r\n\r\nYou can click them on the next page\r\n";
             // 
             // button3
             // 
-            button3.Location = new Point(446, 678);
+            button3.Location = new Point(456, 678);
             button3.Margin = new Padding(2, 3, 2, 3);
             button3.Name = "button3";
             button3.Size = new Size(120, 25);
@@ -458,7 +444,7 @@
             mainScreenPanel.Controls.Add(tableLayoutPanel1);
             mainScreenPanel.Controls.Add(button1);
             mainScreenPanel.Controls.Add(button2);
-            mainScreenPanel.Location = new Point(2, 1);
+            mainScreenPanel.Location = new Point(0, 1);
             mainScreenPanel.Margin = new Padding(1, 2, 1, 2);
             mainScreenPanel.Name = "mainScreenPanel";
             mainScreenPanel.Size = new Size(1317, 793);
@@ -471,12 +457,12 @@
             label14.AutoSize = true;
             label14.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
             label14.ForeColor = Color.White;
-            label14.Location = new Point(4, 122);
+            label14.Location = new Point(19, 122);
             label14.Margin = new Padding(1, 0, 1, 0);
             label14.Name = "label14";
-            label14.Size = new Size(143, 38);
+            label14.Size = new Size(112, 38);
             label14.TabIndex = 246;
-            label14.Text = "Click courses to\r\nchange their statuses!";
+            label14.Text = "Click a course to\r\nchange its status";
             label14.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // label12
@@ -485,7 +471,7 @@
             label12.AutoSize = true;
             label12.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
             label12.ForeColor = Color.White;
-            label12.Location = new Point(1, 166);
+            label12.Location = new Point(2, 186);
             label12.Margin = new Padding(1, 0, 1, 0);
             label12.Name = "label12";
             label12.Size = new Size(144, 25);
@@ -498,7 +484,7 @@
             courseClickComBox.DropDownStyle = ComboBoxStyle.DropDownList;
             courseClickComBox.FormattingEnabled = true;
             courseClickComBox.Items.AddRange(new object[] { "Set complete", "Set in progress", "Set incomplete" });
-            courseClickComBox.Location = new Point(17, 200);
+            courseClickComBox.Location = new Point(19, 225);
             courseClickComBox.Margin = new Padding(2);
             courseClickComBox.Name = "courseClickComBox";
             courseClickComBox.Size = new Size(110, 23);
@@ -1585,7 +1571,7 @@
             // 
             // button5
             // 
-            button5.Location = new Point(346, 680);
+            button5.Location = new Point(359, 680);
             button5.Name = "button5";
             button5.Size = new Size(75, 23);
             button5.TabIndex = 244;
@@ -1611,7 +1597,6 @@
             Controls.Add(button4);
             Controls.Add(button3);
             Controls.Add(tableLayoutPanel3);
-            Controls.Add(label9);
             Controls.Add(label8);
             Controls.Add(comboBox4);
             Controls.Add(comboBox3);
@@ -1665,7 +1650,6 @@
         private ComboBox comboBox3;
         private ComboBox comboBox4;
         private Label label8;
-        private Label label9;
         private Button button3;
         private Button button4;
         private Button continueButton;
@@ -1708,10 +1692,6 @@
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private DataGridViewButtonColumn dataGridViewButtonColumn1;
         private DataGridView dataGridRecommended;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private DataGridViewButtonColumn dataGridViewButtonColumn2;
         private TextBox textBox6;
         private Panel panel1;
         private DataGridView dataGridGenEd;
@@ -1751,5 +1731,9 @@
         private Label label12;
         private ComboBox courseClickComBox;
         private Label label14;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private DataGridViewButtonColumn dataGridViewButtonColumn2;
     }
 }

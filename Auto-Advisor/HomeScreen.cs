@@ -209,7 +209,7 @@ namespace Auto_Advisor
                             row.Cells[0].Value = course.code;          // Course Code.User.semester.get returned null.
                             row.Cells[1].Value = course.name;          // Course Name
                             row.Cells[2].Value = course.hours;         // Hours
-                            
+
                             if (inTxtBx1 || inTxtBx2) row.Visible = false;
                         }
                     }
@@ -606,7 +606,7 @@ namespace Auto_Advisor
                 }
             }
             // Get courses from second screen
-            foreach(DataGridView dgv in dgvs)
+            foreach (DataGridView dgv in dgvs)
             {
                 if (dgv != dataGridRecommended)
                 {
@@ -1010,8 +1010,8 @@ namespace Auto_Advisor
                 "Upcoming Semester - \nEnter the number of your next semester. If you are currently in semester 4 (second sophomore year), your upcoming semester will be semester 5 (first junior semester).\n\n" +
                 "Completed or Currently Taking courses - \nEnter each of your course's codes. Only enter one course code per line.\n\n" +
                 "Download Data - \nClick the Download Data button to save your input to a file. When you use AutoAdvisor again, you can reenter your info with the file.\n\n" +
-                "Enter Saved Data - \nIf you have a saved data file, enter it from the files on your device. The software will rebuild your input from this file.\n"+
-                "\nWhat does You can click them on the next page mean? - \nWhen you hit continue it will show you your classes and you can select the option on the left side of the screen to mark them as complete, in progress or not taking.");
+                "Enter Saved Data - \nIf you have a saved data file, enter it from the files on your device. The software will rebuild your input from this file.\n" +
+                "\nWhat does 'Add them on the next page' mean? \nWhen you hit continue it will show you your classes and you can select the option on the left side of the screen to mark them as complete, in progress or not taking.");
         }
 
         private void mainScreenPanel_Paint(object sender, PaintEventArgs e)
@@ -1105,6 +1105,11 @@ namespace Auto_Advisor
         private void searchClear()
         {
             searchBackButton.Visible = false;
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
