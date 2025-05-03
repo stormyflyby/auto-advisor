@@ -8,4 +8,5 @@
 4/22/25 10:00 AM to 10:50 PM - added flexibility to course code input and revised the second help screen; had a potential user test the program before these changes.
 4/24/25 4:15 PM to 4:45 PM and 6:10 PM to 11:10 PM (with around an hour-long break in there) - implemented many changes, including the ability to click courses on the second screen to change their statuses, which is reflected by the sidebar; also got electives functioning correctly; other fixes; created a few breaks in the process that still need to be fixed
 4/30/25 8:45 PM to 9:15 PM - made some progress in restructuring code to fix an issue: course statuses are not saved when moving between screens or switching majors/minors; my goal is to fix this tomorrow
-5/1/25 9:00 to 11:00 PM - finished fixing the issues that I couldn't fix during the meeting
+5/1/25 9:00 PM to 11:00 PM - finished fixing the issues that I couldn't fix during the meeting
+5/2/25 4:20 PM to 5:15 PM and 5:45 PM to 7:15 PM - fixed some newly discovered problems and added a custom message box to resolve conflicts that occur when the user returns to the first screen to add new courses
