@@ -1,4 +1,5 @@
 
+using Microsoft.VisualBasic;
 using Microsoft.VisualBasic.Devices;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
@@ -21,6 +22,7 @@ namespace Auto_Advisor
         bool suppressMajorDisplayEvent = false; // Prevents major display update from retriggering itself
 
         DataGridView[] dgvs;
+        HashSet<string> defef = CourseInfoMediator.Instance.CompletedCourses;
 
         public Form1()
         {
@@ -376,7 +378,7 @@ namespace Auto_Advisor
             // Puts all the courses from a text box into an array
             string tbTxt = tBox.Text;
             string courseStr = new string(tbTxt.Where(c => c != '\r').ToArray());
-            string[] courses = courseStr.Split('\n');
+            string[] courses = courseStr.Split('\n').Where(s => !s.Equals("")).ToArray();
             return courses;
         }
 
@@ -392,23 +394,53 @@ namespace Auto_Advisor
                 return;
             }
 
+            UpdateCourseInfoMediator();
+
             string[] compCourses = tBoxToArray(textBox1);
-
-            foreach (string s in compCourses)
-            {
-                CourseInfoMediator.Instance.AddCompletedCourse(s);
-            }
-
             string[] inPrCourses = tBoxToArray(textBox2);
 
-            foreach (string s in inPrCourses)
+            DialogResult msg = DialogResult.None;
+
+            // Display dialog box on course conflict
+            if ((compCourses.Length > 0 || inPrCourses.Length > 0) && (CourseInfoMediator.Instance.CompletedCourses.Count > 0 || CourseInfoMediator.Instance.InProgressCourses.Count > 0))
             {
-                CourseInfoMediator.Instance.AddInProgressCourse(s);
+                CourseConflict cc = new CourseConflict();
+                msg = cc.ShowDialog(this);
             }
 
-            UpdateCourseInfoMediator();
-            textBox1.Clear();
-            textBox2.Clear();
+            // Cancel
+            if (msg == DialogResult.Cancel)
+            {
+                return;
+            }
+
+            // Replace existing courses
+            if (msg == DialogResult.Yes)
+            {
+                CourseInfoMediator.Instance.ClearCompletedCourses();
+                CourseInfoMediator.Instance.ClearInProgressCourses();
+            }
+
+            // Do not add courses on "Continue without new courses"
+            if (msg != DialogResult.Abort)
+            {
+                foreach (string s in compCourses)
+                {
+                    CourseInfoMediator.Instance.AddCompletedCourse(s);
+                }
+
+                foreach (string s in inPrCourses)
+                {
+                    CourseInfoMediator.Instance.AddInProgressCourse(s);
+                }
+            }
+
+            // If on first screen, clear text boxes
+            if (!mainScreenPanel.Visible)
+            {
+                textBox1.Clear();
+                textBox2.Clear();
+            }
 
             // Reset calculated hours values
             TotalHours = 0;

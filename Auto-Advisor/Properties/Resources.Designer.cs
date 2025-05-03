@@ -59,5 +59,16 @@ namespace Auto_Advisor.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap warning_sign_icon_transparent_background_free_png_ezgif_com_webp_to_png_converter {
+            get {
+                object obj = ResourceManager.GetObject("warning-sign-icon-transparent-background-free-png-ezgif.com-webp-to-png-converter" +
+                        "", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }
