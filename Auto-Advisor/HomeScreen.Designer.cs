@@ -71,46 +71,18 @@
             button7 = new Button();
             panel1 = new Panel();
             DataGridHonors = new DataGridView();
-            dataGridViewTextBoxColumn16 = new DataGridViewTextBoxColumn();
-            dataGridViewTextBoxColumn17 = new DataGridViewTextBoxColumn();
-            dataGridViewTextBoxColumn18 = new DataGridViewTextBoxColumn();
-            dataGridViewButtonColumn6 = new DataGridViewButtonColumn();
             HonorsBox = new TextBox();
             dataGridMinors = new DataGridView();
-            dataGridViewTextBoxColumn13 = new DataGridViewTextBoxColumn();
-            dataGridViewTextBoxColumn14 = new DataGridViewTextBoxColumn();
-            dataGridViewTextBoxColumn15 = new DataGridViewTextBoxColumn();
-            dataGridViewButtonColumn5 = new DataGridViewButtonColumn();
             textBox5 = new TextBox();
             dataGridTheology = new DataGridView();
-            dataGridViewTextBoxColumn10 = new DataGridViewTextBoxColumn();
-            dataGridViewTextBoxColumn11 = new DataGridViewTextBoxColumn();
-            dataGridViewTextBoxColumn12 = new DataGridViewTextBoxColumn();
-            dataGridViewButtonColumn4 = new DataGridViewButtonColumn();
             dataGridRecommended = new DataGridView();
-            dataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
-            dataGridViewTextBoxColumn2 = new DataGridViewTextBoxColumn();
-            dataGridViewTextBoxColumn3 = new DataGridViewTextBoxColumn();
-            dataGridViewButtonColumn2 = new DataGridViewButtonColumn();
             dataGridGenEd = new DataGridView();
-            dataGridViewTextBoxColumn7 = new DataGridViewTextBoxColumn();
-            dataGridViewTextBoxColumn8 = new DataGridViewTextBoxColumn();
-            dataGridViewTextBoxColumn9 = new DataGridViewTextBoxColumn();
-            dataGridViewButtonColumn3 = new DataGridViewButtonColumn();
             textBox6 = new TextBox();
             dataGridCognate = new DataGridView();
-            dataGridViewTextBoxColumn4 = new DataGridViewTextBoxColumn();
-            dataGridViewTextBoxColumn5 = new DataGridViewTextBoxColumn();
-            dataGridViewTextBoxColumn6 = new DataGridViewTextBoxColumn();
-            dataGridViewButtonColumn1 = new DataGridViewButtonColumn();
             textBox4 = new TextBox();
             textBox3 = new TextBox();
             textBox74 = new TextBox();
             dataGridMajors = new DataGridView();
-            ClassCode = new DataGridViewTextBoxColumn();
-            ClassName = new DataGridViewTextBoxColumn();
-            Hours = new DataGridViewTextBoxColumn();
-            Details = new DataGridViewButtonColumn();
             textBox42 = new TextBox();
             label13 = new Label();
             tableLayoutPanel1 = new TableLayoutPanel();
@@ -138,6 +110,34 @@
             openSaveFileDialog = new OpenFileDialog();
             textBox7 = new TextBox();
             button5 = new Button();
+            dataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
+            dataGridViewTextBoxColumn2 = new DataGridViewTextBoxColumn();
+            dataGridViewTextBoxColumn3 = new DataGridViewTextBoxColumn();
+            dataGridViewButtonColumn2 = new DataGridViewButtonColumn();
+            ClassCode = new DataGridViewTextBoxColumn();
+            ClassName = new DataGridViewTextBoxColumn();
+            Hours = new DataGridViewTextBoxColumn();
+            Details = new DataGridViewButtonColumn();
+            dataGridViewTextBoxColumn4 = new DataGridViewTextBoxColumn();
+            dataGridViewTextBoxColumn5 = new DataGridViewTextBoxColumn();
+            dataGridViewTextBoxColumn6 = new DataGridViewTextBoxColumn();
+            dataGridViewButtonColumn1 = new DataGridViewButtonColumn();
+            dataGridViewTextBoxColumn13 = new DataGridViewTextBoxColumn();
+            dataGridViewTextBoxColumn14 = new DataGridViewTextBoxColumn();
+            dataGridViewTextBoxColumn15 = new DataGridViewTextBoxColumn();
+            dataGridViewButtonColumn5 = new DataGridViewButtonColumn();
+            dataGridViewTextBoxColumn16 = new DataGridViewTextBoxColumn();
+            dataGridViewTextBoxColumn17 = new DataGridViewTextBoxColumn();
+            dataGridViewTextBoxColumn18 = new DataGridViewTextBoxColumn();
+            dataGridViewButtonColumn6 = new DataGridViewButtonColumn();
+            dataGridViewTextBoxColumn7 = new DataGridViewTextBoxColumn();
+            dataGridViewTextBoxColumn8 = new DataGridViewTextBoxColumn();
+            dataGridViewTextBoxColumn9 = new DataGridViewTextBoxColumn();
+            dataGridViewButtonColumn3 = new DataGridViewButtonColumn();
+            dataGridViewTextBoxColumn10 = new DataGridViewTextBoxColumn();
+            dataGridViewTextBoxColumn11 = new DataGridViewTextBoxColumn();
+            dataGridViewTextBoxColumn12 = new DataGridViewTextBoxColumn();
+            dataGridViewButtonColumn4 = new DataGridViewButtonColumn();
             tableLayoutPanel3.SuspendLayout();
             tableLayoutPanel4.SuspendLayout();
             mainScreenPanel.SuspendLayout();
@@ -535,7 +535,7 @@
             dataGridViewCellStyle1.SelectionBackColor = Color.White;
             dataGridViewCellStyle1.SelectionForeColor = Color.Black;
             DataGridHonors.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            DataGridHonors.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            DataGridHonors.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             DataGridHonors.BackgroundColor = Color.FromArgb(0, 0, 64);
             DataGridHonors.BorderStyle = BorderStyle.None;
             DataGridHonors.CellBorderStyle = DataGridViewCellBorderStyle.Raised;
@@ -563,48 +563,6 @@
             DataGridHonors.TabIndex = 250;
             DataGridHonors.CellClick += DataGridHonors_CellClick;
             // 
-            // dataGridViewTextBoxColumn16
-            // 
-            dataGridViewTextBoxColumn16.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
-            dataGridViewTextBoxColumn16.Frozen = true;
-            dataGridViewTextBoxColumn16.HeaderText = "Class Code";
-            dataGridViewTextBoxColumn16.MinimumWidth = 8;
-            dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
-            dataGridViewTextBoxColumn16.ReadOnly = true;
-            dataGridViewTextBoxColumn16.Width = 178;
-            // 
-            // dataGridViewTextBoxColumn17
-            // 
-            dataGridViewTextBoxColumn17.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
-            dataGridViewTextBoxColumn17.Frozen = true;
-            dataGridViewTextBoxColumn17.HeaderText = "Class Name";
-            dataGridViewTextBoxColumn17.MinimumWidth = 8;
-            dataGridViewTextBoxColumn17.Name = "dataGridViewTextBoxColumn17";
-            dataGridViewTextBoxColumn17.ReadOnly = true;
-            dataGridViewTextBoxColumn17.SortMode = DataGridViewColumnSortMode.NotSortable;
-            dataGridViewTextBoxColumn17.Width = 320;
-            // 
-            // dataGridViewTextBoxColumn18
-            // 
-            dataGridViewTextBoxColumn18.HeaderText = "Hours";
-            dataGridViewTextBoxColumn18.MinimumWidth = 8;
-            dataGridViewTextBoxColumn18.Name = "dataGridViewTextBoxColumn18";
-            dataGridViewTextBoxColumn18.ReadOnly = true;
-            dataGridViewTextBoxColumn18.SortMode = DataGridViewColumnSortMode.NotSortable;
-            dataGridViewTextBoxColumn18.Width = 45;
-            // 
-            // dataGridViewButtonColumn6
-            // 
-            dataGridViewButtonColumn6.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
-            dataGridViewButtonColumn6.HeaderText = "Details";
-            dataGridViewButtonColumn6.MinimumWidth = 8;
-            dataGridViewButtonColumn6.Name = "dataGridViewButtonColumn6";
-            dataGridViewButtonColumn6.ReadOnly = true;
-            dataGridViewButtonColumn6.Resizable = DataGridViewTriState.True;
-            dataGridViewButtonColumn6.Text = "More...";
-            dataGridViewButtonColumn6.UseColumnTextForButtonValue = true;
-            dataGridViewButtonColumn6.Width = 178;
-            // 
             // HonorsBox
             // 
             HonorsBox.BackColor = Color.FromArgb(0, 0, 64);
@@ -631,7 +589,7 @@
             dataGridViewCellStyle3.SelectionBackColor = Color.White;
             dataGridViewCellStyle3.SelectionForeColor = Color.Black;
             dataGridMinors.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
-            dataGridMinors.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            dataGridMinors.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridMinors.BackgroundColor = Color.FromArgb(0, 0, 64);
             dataGridMinors.BorderStyle = BorderStyle.None;
             dataGridMinors.CellBorderStyle = DataGridViewCellBorderStyle.Raised;
@@ -659,48 +617,6 @@
             dataGridMinors.TabIndex = 248;
             dataGridMinors.CellClick += dataGridMinors_CellClick;
             // 
-            // dataGridViewTextBoxColumn13
-            // 
-            dataGridViewTextBoxColumn13.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
-            dataGridViewTextBoxColumn13.Frozen = true;
-            dataGridViewTextBoxColumn13.HeaderText = "Class Code";
-            dataGridViewTextBoxColumn13.MinimumWidth = 8;
-            dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
-            dataGridViewTextBoxColumn13.ReadOnly = true;
-            dataGridViewTextBoxColumn13.Width = 178;
-            // 
-            // dataGridViewTextBoxColumn14
-            // 
-            dataGridViewTextBoxColumn14.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
-            dataGridViewTextBoxColumn14.Frozen = true;
-            dataGridViewTextBoxColumn14.HeaderText = "Class Name";
-            dataGridViewTextBoxColumn14.MinimumWidth = 8;
-            dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
-            dataGridViewTextBoxColumn14.ReadOnly = true;
-            dataGridViewTextBoxColumn14.SortMode = DataGridViewColumnSortMode.NotSortable;
-            dataGridViewTextBoxColumn14.Width = 320;
-            // 
-            // dataGridViewTextBoxColumn15
-            // 
-            dataGridViewTextBoxColumn15.HeaderText = "Hours";
-            dataGridViewTextBoxColumn15.MinimumWidth = 8;
-            dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
-            dataGridViewTextBoxColumn15.ReadOnly = true;
-            dataGridViewTextBoxColumn15.SortMode = DataGridViewColumnSortMode.NotSortable;
-            dataGridViewTextBoxColumn15.Width = 45;
-            // 
-            // dataGridViewButtonColumn5
-            // 
-            dataGridViewButtonColumn5.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
-            dataGridViewButtonColumn5.HeaderText = "Details";
-            dataGridViewButtonColumn5.MinimumWidth = 8;
-            dataGridViewButtonColumn5.Name = "dataGridViewButtonColumn5";
-            dataGridViewButtonColumn5.ReadOnly = true;
-            dataGridViewButtonColumn5.Resizable = DataGridViewTriState.True;
-            dataGridViewButtonColumn5.Text = "More...";
-            dataGridViewButtonColumn5.UseColumnTextForButtonValue = true;
-            dataGridViewButtonColumn5.Width = 178;
-            // 
             // textBox5
             // 
             textBox5.BackColor = Color.FromArgb(0, 0, 64);
@@ -727,7 +643,7 @@
             dataGridViewCellStyle5.SelectionBackColor = Color.White;
             dataGridViewCellStyle5.SelectionForeColor = Color.Black;
             dataGridTheology.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
-            dataGridTheology.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            dataGridTheology.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridTheology.BackgroundColor = Color.FromArgb(0, 0, 64);
             dataGridTheology.BorderStyle = BorderStyle.None;
             dataGridTheology.CellBorderStyle = DataGridViewCellBorderStyle.Raised;
@@ -755,48 +671,6 @@
             dataGridTheology.TabIndex = 245;
             dataGridTheology.CellClick += dataGridTheology_CellClick;
             // 
-            // dataGridViewTextBoxColumn10
-            // 
-            dataGridViewTextBoxColumn10.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
-            dataGridViewTextBoxColumn10.Frozen = true;
-            dataGridViewTextBoxColumn10.HeaderText = "Class Code";
-            dataGridViewTextBoxColumn10.MinimumWidth = 8;
-            dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
-            dataGridViewTextBoxColumn10.ReadOnly = true;
-            dataGridViewTextBoxColumn10.Width = 178;
-            // 
-            // dataGridViewTextBoxColumn11
-            // 
-            dataGridViewTextBoxColumn11.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
-            dataGridViewTextBoxColumn11.Frozen = true;
-            dataGridViewTextBoxColumn11.HeaderText = "Class Name";
-            dataGridViewTextBoxColumn11.MinimumWidth = 8;
-            dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
-            dataGridViewTextBoxColumn11.ReadOnly = true;
-            dataGridViewTextBoxColumn11.SortMode = DataGridViewColumnSortMode.NotSortable;
-            dataGridViewTextBoxColumn11.Width = 320;
-            // 
-            // dataGridViewTextBoxColumn12
-            // 
-            dataGridViewTextBoxColumn12.HeaderText = "Hours";
-            dataGridViewTextBoxColumn12.MinimumWidth = 8;
-            dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
-            dataGridViewTextBoxColumn12.ReadOnly = true;
-            dataGridViewTextBoxColumn12.SortMode = DataGridViewColumnSortMode.NotSortable;
-            dataGridViewTextBoxColumn12.Width = 45;
-            // 
-            // dataGridViewButtonColumn4
-            // 
-            dataGridViewButtonColumn4.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
-            dataGridViewButtonColumn4.HeaderText = "Details";
-            dataGridViewButtonColumn4.MinimumWidth = 8;
-            dataGridViewButtonColumn4.Name = "dataGridViewButtonColumn4";
-            dataGridViewButtonColumn4.ReadOnly = true;
-            dataGridViewButtonColumn4.Resizable = DataGridViewTriState.True;
-            dataGridViewButtonColumn4.Text = "More...";
-            dataGridViewButtonColumn4.UseColumnTextForButtonValue = true;
-            dataGridViewButtonColumn4.Width = 178;
-            // 
             // dataGridRecommended
             // 
             dataGridRecommended.AllowUserToAddRows = false;
@@ -809,7 +683,7 @@
             dataGridViewCellStyle7.SelectionBackColor = Color.White;
             dataGridViewCellStyle7.SelectionForeColor = Color.Black;
             dataGridRecommended.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
-            dataGridRecommended.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            dataGridRecommended.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridRecommended.BackgroundColor = Color.FromArgb(0, 0, 64);
             dataGridRecommended.BorderStyle = BorderStyle.None;
             dataGridRecommended.CellBorderStyle = DataGridViewCellBorderStyle.Raised;
@@ -829,48 +703,6 @@
             dataGridRecommended.TabIndex = 234;
             dataGridRecommended.CellClick += dataGridRecommended_CellClick;
             // 
-            // dataGridViewTextBoxColumn1
-            // 
-            dataGridViewTextBoxColumn1.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
-            dataGridViewTextBoxColumn1.Frozen = true;
-            dataGridViewTextBoxColumn1.HeaderText = "Class Code";
-            dataGridViewTextBoxColumn1.MinimumWidth = 8;
-            dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            dataGridViewTextBoxColumn1.ReadOnly = true;
-            dataGridViewTextBoxColumn1.Width = 178;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            dataGridViewTextBoxColumn2.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
-            dataGridViewTextBoxColumn2.Frozen = true;
-            dataGridViewTextBoxColumn2.HeaderText = "Class Name";
-            dataGridViewTextBoxColumn2.MinimumWidth = 8;
-            dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            dataGridViewTextBoxColumn2.ReadOnly = true;
-            dataGridViewTextBoxColumn2.SortMode = DataGridViewColumnSortMode.NotSortable;
-            dataGridViewTextBoxColumn2.Width = 320;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            dataGridViewTextBoxColumn3.HeaderText = "Hours";
-            dataGridViewTextBoxColumn3.MinimumWidth = 8;
-            dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            dataGridViewTextBoxColumn3.ReadOnly = true;
-            dataGridViewTextBoxColumn3.SortMode = DataGridViewColumnSortMode.NotSortable;
-            dataGridViewTextBoxColumn3.Width = 45;
-            // 
-            // dataGridViewButtonColumn2
-            // 
-            dataGridViewButtonColumn2.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
-            dataGridViewButtonColumn2.HeaderText = "Details";
-            dataGridViewButtonColumn2.MinimumWidth = 8;
-            dataGridViewButtonColumn2.Name = "dataGridViewButtonColumn2";
-            dataGridViewButtonColumn2.ReadOnly = true;
-            dataGridViewButtonColumn2.Resizable = DataGridViewTriState.True;
-            dataGridViewButtonColumn2.Text = "More...";
-            dataGridViewButtonColumn2.UseColumnTextForButtonValue = true;
-            dataGridViewButtonColumn2.Width = 178;
-            // 
             // dataGridGenEd
             // 
             dataGridGenEd.AllowUserToAddRows = false;
@@ -883,7 +715,7 @@
             dataGridViewCellStyle8.SelectionBackColor = Color.White;
             dataGridViewCellStyle8.SelectionForeColor = Color.Black;
             dataGridGenEd.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle8;
-            dataGridGenEd.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            dataGridGenEd.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridGenEd.BackgroundColor = Color.FromArgb(0, 0, 64);
             dataGridGenEd.BorderStyle = BorderStyle.None;
             dataGridGenEd.CellBorderStyle = DataGridViewCellBorderStyle.Raised;
@@ -911,48 +743,6 @@
             dataGridGenEd.TabIndex = 244;
             dataGridGenEd.CellClick += dataGridGenEd_CellClick;
             // 
-            // dataGridViewTextBoxColumn7
-            // 
-            dataGridViewTextBoxColumn7.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
-            dataGridViewTextBoxColumn7.Frozen = true;
-            dataGridViewTextBoxColumn7.HeaderText = "Class Code";
-            dataGridViewTextBoxColumn7.MinimumWidth = 8;
-            dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            dataGridViewTextBoxColumn7.ReadOnly = true;
-            dataGridViewTextBoxColumn7.Width = 178;
-            // 
-            // dataGridViewTextBoxColumn8
-            // 
-            dataGridViewTextBoxColumn8.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
-            dataGridViewTextBoxColumn8.Frozen = true;
-            dataGridViewTextBoxColumn8.HeaderText = "Class Name";
-            dataGridViewTextBoxColumn8.MinimumWidth = 8;
-            dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            dataGridViewTextBoxColumn8.ReadOnly = true;
-            dataGridViewTextBoxColumn8.SortMode = DataGridViewColumnSortMode.NotSortable;
-            dataGridViewTextBoxColumn8.Width = 320;
-            // 
-            // dataGridViewTextBoxColumn9
-            // 
-            dataGridViewTextBoxColumn9.HeaderText = "Hours";
-            dataGridViewTextBoxColumn9.MinimumWidth = 8;
-            dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
-            dataGridViewTextBoxColumn9.ReadOnly = true;
-            dataGridViewTextBoxColumn9.SortMode = DataGridViewColumnSortMode.NotSortable;
-            dataGridViewTextBoxColumn9.Width = 45;
-            // 
-            // dataGridViewButtonColumn3
-            // 
-            dataGridViewButtonColumn3.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
-            dataGridViewButtonColumn3.HeaderText = "Details";
-            dataGridViewButtonColumn3.MinimumWidth = 8;
-            dataGridViewButtonColumn3.Name = "dataGridViewButtonColumn3";
-            dataGridViewButtonColumn3.ReadOnly = true;
-            dataGridViewButtonColumn3.Resizable = DataGridViewTriState.True;
-            dataGridViewButtonColumn3.Text = "More...";
-            dataGridViewButtonColumn3.UseColumnTextForButtonValue = true;
-            dataGridViewButtonColumn3.Width = 178;
-            // 
             // textBox6
             // 
             textBox6.BackColor = Color.FromArgb(0, 0, 64);
@@ -979,7 +769,7 @@
             dataGridViewCellStyle10.SelectionBackColor = Color.White;
             dataGridViewCellStyle10.SelectionForeColor = Color.Black;
             dataGridCognate.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
-            dataGridCognate.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            dataGridCognate.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridCognate.BackgroundColor = Color.FromArgb(0, 0, 64);
             dataGridCognate.BorderStyle = BorderStyle.None;
             dataGridCognate.CellBorderStyle = DataGridViewCellBorderStyle.Raised;
@@ -1006,48 +796,6 @@
             dataGridCognate.Size = new Size(697, 167);
             dataGridCognate.TabIndex = 242;
             dataGridCognate.CellClick += dataGridCognate_CellClick;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            dataGridViewTextBoxColumn4.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
-            dataGridViewTextBoxColumn4.Frozen = true;
-            dataGridViewTextBoxColumn4.HeaderText = "Class Code";
-            dataGridViewTextBoxColumn4.MinimumWidth = 8;
-            dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            dataGridViewTextBoxColumn4.ReadOnly = true;
-            dataGridViewTextBoxColumn4.Width = 178;
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            dataGridViewTextBoxColumn5.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
-            dataGridViewTextBoxColumn5.Frozen = true;
-            dataGridViewTextBoxColumn5.HeaderText = "Class Name";
-            dataGridViewTextBoxColumn5.MinimumWidth = 8;
-            dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            dataGridViewTextBoxColumn5.ReadOnly = true;
-            dataGridViewTextBoxColumn5.SortMode = DataGridViewColumnSortMode.NotSortable;
-            dataGridViewTextBoxColumn5.Width = 320;
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            dataGridViewTextBoxColumn6.HeaderText = "Hours";
-            dataGridViewTextBoxColumn6.MinimumWidth = 8;
-            dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            dataGridViewTextBoxColumn6.ReadOnly = true;
-            dataGridViewTextBoxColumn6.SortMode = DataGridViewColumnSortMode.NotSortable;
-            dataGridViewTextBoxColumn6.Width = 45;
-            // 
-            // dataGridViewButtonColumn1
-            // 
-            dataGridViewButtonColumn1.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
-            dataGridViewButtonColumn1.HeaderText = "Details";
-            dataGridViewButtonColumn1.MinimumWidth = 8;
-            dataGridViewButtonColumn1.Name = "dataGridViewButtonColumn1";
-            dataGridViewButtonColumn1.ReadOnly = true;
-            dataGridViewButtonColumn1.Resizable = DataGridViewTriState.True;
-            dataGridViewButtonColumn1.Text = "More...";
-            dataGridViewButtonColumn1.UseColumnTextForButtonValue = true;
-            dataGridViewButtonColumn1.Width = 178;
             // 
             // textBox4
             // 
@@ -1103,7 +851,7 @@
             dataGridViewCellStyle12.SelectionBackColor = Color.White;
             dataGridViewCellStyle12.SelectionForeColor = Color.Black;
             dataGridMajors.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle12;
-            dataGridMajors.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            dataGridMajors.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridMajors.BackgroundColor = Color.FromArgb(0, 0, 64);
             dataGridMajors.BorderStyle = BorderStyle.None;
             dataGridMajors.CellBorderStyle = DataGridViewCellBorderStyle.Raised;
@@ -1130,48 +878,6 @@
             dataGridMajors.Size = new Size(697, 167);
             dataGridMajors.TabIndex = 233;
             dataGridMajors.CellClick += dataGridViewMajors_CellClick;
-            // 
-            // ClassCode
-            // 
-            ClassCode.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
-            ClassCode.Frozen = true;
-            ClassCode.HeaderText = "Class Code";
-            ClassCode.MinimumWidth = 8;
-            ClassCode.Name = "ClassCode";
-            ClassCode.ReadOnly = true;
-            ClassCode.Width = 178;
-            // 
-            // ClassName
-            // 
-            ClassName.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
-            ClassName.Frozen = true;
-            ClassName.HeaderText = "Class Name";
-            ClassName.MinimumWidth = 8;
-            ClassName.Name = "ClassName";
-            ClassName.ReadOnly = true;
-            ClassName.SortMode = DataGridViewColumnSortMode.NotSortable;
-            ClassName.Width = 320;
-            // 
-            // Hours
-            // 
-            Hours.HeaderText = "Hours";
-            Hours.MinimumWidth = 8;
-            Hours.Name = "Hours";
-            Hours.ReadOnly = true;
-            Hours.SortMode = DataGridViewColumnSortMode.NotSortable;
-            Hours.Width = 45;
-            // 
-            // Details
-            // 
-            Details.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
-            Details.HeaderText = "Details";
-            Details.MinimumWidth = 8;
-            Details.Name = "Details";
-            Details.ReadOnly = true;
-            Details.Resizable = DataGridViewTriState.True;
-            Details.Text = "More...";
-            Details.UseColumnTextForButtonValue = true;
-            Details.Width = 178;
             // 
             // textBox42
             // 
@@ -1586,6 +1292,285 @@
             button5.UseVisualStyleBackColor = true;
             button5.Click += button5_Click_2;
             // 
+            // dataGridViewTextBoxColumn1
+            // 
+            dataGridViewTextBoxColumn1.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+            dataGridViewTextBoxColumn1.HeaderText = "Class Code";
+            dataGridViewTextBoxColumn1.MinimumWidth = 170;
+            dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            dataGridViewTextBoxColumn1.ReadOnly = true;
+            dataGridViewTextBoxColumn1.Width = 170;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            dataGridViewTextBoxColumn2.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewTextBoxColumn2.HeaderText = "Class Name";
+            dataGridViewTextBoxColumn2.MinimumWidth = 250;
+            dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            dataGridViewTextBoxColumn2.ReadOnly = true;
+            dataGridViewTextBoxColumn2.SortMode = DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            dataGridViewTextBoxColumn3.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+            dataGridViewTextBoxColumn3.HeaderText = "Hours";
+            dataGridViewTextBoxColumn3.MinimumWidth = 150;
+            dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            dataGridViewTextBoxColumn3.ReadOnly = true;
+            dataGridViewTextBoxColumn3.SortMode = DataGridViewColumnSortMode.NotSortable;
+            dataGridViewTextBoxColumn3.Width = 150;
+            // 
+            // dataGridViewButtonColumn2
+            // 
+            dataGridViewButtonColumn2.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+            dataGridViewButtonColumn2.HeaderText = "Details";
+            dataGridViewButtonColumn2.MinimumWidth = 150;
+            dataGridViewButtonColumn2.Name = "dataGridViewButtonColumn2";
+            dataGridViewButtonColumn2.ReadOnly = true;
+            dataGridViewButtonColumn2.Resizable = DataGridViewTriState.True;
+            dataGridViewButtonColumn2.Text = "More...";
+            dataGridViewButtonColumn2.UseColumnTextForButtonValue = true;
+            dataGridViewButtonColumn2.Width = 150;
+            // 
+            // ClassCode
+            // 
+            ClassCode.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+            ClassCode.HeaderText = "Class Code";
+            ClassCode.MinimumWidth = 170;
+            ClassCode.Name = "ClassCode";
+            ClassCode.ReadOnly = true;
+            ClassCode.Width = 170;
+            // 
+            // ClassName
+            // 
+            ClassName.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            ClassName.HeaderText = "Class Name";
+            ClassName.MinimumWidth = 250;
+            ClassName.Name = "ClassName";
+            ClassName.ReadOnly = true;
+            ClassName.SortMode = DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Hours
+            // 
+            Hours.HeaderText = "Hours";
+            Hours.MinimumWidth = 150;
+            Hours.Name = "Hours";
+            Hours.ReadOnly = true;
+            Hours.SortMode = DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Details
+            // 
+            Details.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+            Details.HeaderText = "Details";
+            Details.MinimumWidth = 150;
+            Details.Name = "Details";
+            Details.ReadOnly = true;
+            Details.Resizable = DataGridViewTriState.True;
+            Details.Text = "More...";
+            Details.UseColumnTextForButtonValue = true;
+            Details.Width = 150;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            dataGridViewTextBoxColumn4.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+            dataGridViewTextBoxColumn4.Frozen = true;
+            dataGridViewTextBoxColumn4.HeaderText = "Class Code";
+            dataGridViewTextBoxColumn4.MinimumWidth = 170;
+            dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            dataGridViewTextBoxColumn4.ReadOnly = true;
+            dataGridViewTextBoxColumn4.Width = 170;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            dataGridViewTextBoxColumn5.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewTextBoxColumn5.HeaderText = "Class Name";
+            dataGridViewTextBoxColumn5.MinimumWidth = 250;
+            dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            dataGridViewTextBoxColumn5.ReadOnly = true;
+            dataGridViewTextBoxColumn5.SortMode = DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            dataGridViewTextBoxColumn6.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+            dataGridViewTextBoxColumn6.HeaderText = "Hours";
+            dataGridViewTextBoxColumn6.MinimumWidth = 150;
+            dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            dataGridViewTextBoxColumn6.ReadOnly = true;
+            dataGridViewTextBoxColumn6.SortMode = DataGridViewColumnSortMode.NotSortable;
+            dataGridViewTextBoxColumn6.Width = 150;
+            // 
+            // dataGridViewButtonColumn1
+            // 
+            dataGridViewButtonColumn1.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+            dataGridViewButtonColumn1.HeaderText = "Details";
+            dataGridViewButtonColumn1.MinimumWidth = 150;
+            dataGridViewButtonColumn1.Name = "dataGridViewButtonColumn1";
+            dataGridViewButtonColumn1.ReadOnly = true;
+            dataGridViewButtonColumn1.Resizable = DataGridViewTriState.True;
+            dataGridViewButtonColumn1.Text = "More...";
+            dataGridViewButtonColumn1.UseColumnTextForButtonValue = true;
+            dataGridViewButtonColumn1.Width = 150;
+            // 
+            // dataGridViewTextBoxColumn13
+            // 
+            dataGridViewTextBoxColumn13.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+            dataGridViewTextBoxColumn13.HeaderText = "Class Code";
+            dataGridViewTextBoxColumn13.MinimumWidth = 170;
+            dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
+            dataGridViewTextBoxColumn13.ReadOnly = true;
+            dataGridViewTextBoxColumn13.Width = 170;
+            // 
+            // dataGridViewTextBoxColumn14
+            // 
+            dataGridViewTextBoxColumn14.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewTextBoxColumn14.HeaderText = "Class Name";
+            dataGridViewTextBoxColumn14.MinimumWidth = 250;
+            dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
+            dataGridViewTextBoxColumn14.ReadOnly = true;
+            dataGridViewTextBoxColumn14.SortMode = DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn15
+            // 
+            dataGridViewTextBoxColumn15.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+            dataGridViewTextBoxColumn15.HeaderText = "Hours";
+            dataGridViewTextBoxColumn15.MinimumWidth = 150;
+            dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
+            dataGridViewTextBoxColumn15.ReadOnly = true;
+            dataGridViewTextBoxColumn15.SortMode = DataGridViewColumnSortMode.NotSortable;
+            dataGridViewTextBoxColumn15.Width = 150;
+            // 
+            // dataGridViewButtonColumn5
+            // 
+            dataGridViewButtonColumn5.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+            dataGridViewButtonColumn5.HeaderText = "Details";
+            dataGridViewButtonColumn5.MinimumWidth = 150;
+            dataGridViewButtonColumn5.Name = "dataGridViewButtonColumn5";
+            dataGridViewButtonColumn5.ReadOnly = true;
+            dataGridViewButtonColumn5.Resizable = DataGridViewTriState.True;
+            dataGridViewButtonColumn5.Text = "More...";
+            dataGridViewButtonColumn5.UseColumnTextForButtonValue = true;
+            dataGridViewButtonColumn5.Width = 150;
+            // 
+            // dataGridViewTextBoxColumn16
+            // 
+            dataGridViewTextBoxColumn16.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+            dataGridViewTextBoxColumn16.HeaderText = "Class Code";
+            dataGridViewTextBoxColumn16.MinimumWidth = 170;
+            dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
+            dataGridViewTextBoxColumn16.ReadOnly = true;
+            dataGridViewTextBoxColumn16.Width = 170;
+            // 
+            // dataGridViewTextBoxColumn17
+            // 
+            dataGridViewTextBoxColumn17.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewTextBoxColumn17.HeaderText = "Class Name";
+            dataGridViewTextBoxColumn17.MinimumWidth = 250;
+            dataGridViewTextBoxColumn17.Name = "dataGridViewTextBoxColumn17";
+            dataGridViewTextBoxColumn17.ReadOnly = true;
+            dataGridViewTextBoxColumn17.SortMode = DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn18
+            // 
+            dataGridViewTextBoxColumn18.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+            dataGridViewTextBoxColumn18.HeaderText = "Hours";
+            dataGridViewTextBoxColumn18.MinimumWidth = 150;
+            dataGridViewTextBoxColumn18.Name = "dataGridViewTextBoxColumn18";
+            dataGridViewTextBoxColumn18.ReadOnly = true;
+            dataGridViewTextBoxColumn18.SortMode = DataGridViewColumnSortMode.NotSortable;
+            dataGridViewTextBoxColumn18.Width = 150;
+            // 
+            // dataGridViewButtonColumn6
+            // 
+            dataGridViewButtonColumn6.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+            dataGridViewButtonColumn6.HeaderText = "Details";
+            dataGridViewButtonColumn6.MinimumWidth = 150;
+            dataGridViewButtonColumn6.Name = "dataGridViewButtonColumn6";
+            dataGridViewButtonColumn6.ReadOnly = true;
+            dataGridViewButtonColumn6.Resizable = DataGridViewTriState.True;
+            dataGridViewButtonColumn6.Text = "More...";
+            dataGridViewButtonColumn6.UseColumnTextForButtonValue = true;
+            dataGridViewButtonColumn6.Width = 150;
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            dataGridViewTextBoxColumn7.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+            dataGridViewTextBoxColumn7.HeaderText = "Class Code";
+            dataGridViewTextBoxColumn7.MinimumWidth = 170;
+            dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            dataGridViewTextBoxColumn7.ReadOnly = true;
+            dataGridViewTextBoxColumn7.Width = 170;
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            dataGridViewTextBoxColumn8.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewTextBoxColumn8.HeaderText = "Class Name";
+            dataGridViewTextBoxColumn8.MinimumWidth = 250;
+            dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            dataGridViewTextBoxColumn8.ReadOnly = true;
+            dataGridViewTextBoxColumn8.SortMode = DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn9
+            // 
+            dataGridViewTextBoxColumn9.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+            dataGridViewTextBoxColumn9.HeaderText = "Hours";
+            dataGridViewTextBoxColumn9.MinimumWidth = 150;
+            dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            dataGridViewTextBoxColumn9.ReadOnly = true;
+            dataGridViewTextBoxColumn9.SortMode = DataGridViewColumnSortMode.NotSortable;
+            dataGridViewTextBoxColumn9.Width = 150;
+            // 
+            // dataGridViewButtonColumn3
+            // 
+            dataGridViewButtonColumn3.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+            dataGridViewButtonColumn3.HeaderText = "Details";
+            dataGridViewButtonColumn3.MinimumWidth = 150;
+            dataGridViewButtonColumn3.Name = "dataGridViewButtonColumn3";
+            dataGridViewButtonColumn3.ReadOnly = true;
+            dataGridViewButtonColumn3.Resizable = DataGridViewTriState.True;
+            dataGridViewButtonColumn3.Text = "More...";
+            dataGridViewButtonColumn3.UseColumnTextForButtonValue = true;
+            dataGridViewButtonColumn3.Width = 150;
+            // 
+            // dataGridViewTextBoxColumn10
+            // 
+            dataGridViewTextBoxColumn10.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+            dataGridViewTextBoxColumn10.HeaderText = "Class Code";
+            dataGridViewTextBoxColumn10.MinimumWidth = 170;
+            dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+            dataGridViewTextBoxColumn10.ReadOnly = true;
+            dataGridViewTextBoxColumn10.Width = 170;
+            // 
+            // dataGridViewTextBoxColumn11
+            // 
+            dataGridViewTextBoxColumn11.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewTextBoxColumn11.HeaderText = "Class Name";
+            dataGridViewTextBoxColumn11.MinimumWidth = 250;
+            dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
+            dataGridViewTextBoxColumn11.ReadOnly = true;
+            dataGridViewTextBoxColumn11.SortMode = DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn12
+            // 
+            dataGridViewTextBoxColumn12.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+            dataGridViewTextBoxColumn12.HeaderText = "Hours";
+            dataGridViewTextBoxColumn12.MinimumWidth = 150;
+            dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
+            dataGridViewTextBoxColumn12.ReadOnly = true;
+            dataGridViewTextBoxColumn12.SortMode = DataGridViewColumnSortMode.NotSortable;
+            dataGridViewTextBoxColumn12.Width = 150;
+            // 
+            // dataGridViewButtonColumn4
+            // 
+            dataGridViewButtonColumn4.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+            dataGridViewButtonColumn4.HeaderText = "Details";
+            dataGridViewButtonColumn4.MinimumWidth = 150;
+            dataGridViewButtonColumn4.Name = "dataGridViewButtonColumn4";
+            dataGridViewButtonColumn4.ReadOnly = true;
+            dataGridViewButtonColumn4.Resizable = DataGridViewTriState.True;
+            dataGridViewButtonColumn4.Text = "More...";
+            dataGridViewButtonColumn4.UseColumnTextForButtonValue = true;
+            dataGridViewButtonColumn4.Width = 150;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(96F, 96F);
@@ -1593,7 +1578,7 @@
             AutoScroll = true;
             AutoSize = true;
             BackColor = Color.FromArgb(0, 0, 40);
-            ClientSize = new Size(1346, 771);
+            ClientSize = new Size(1283, 700);
             Controls.Add(mainScreenPanel);
             Controls.Add(textBox2);
             Controls.Add(textBox1);
@@ -1689,35 +1674,15 @@
         private ListBox listBox8;
         private ListBox listBox1;
         private ListBox listBox9;
-        private DataGridViewTextBoxColumn ClassCode;
-        private DataGridViewTextBoxColumn ClassName;
-        private DataGridViewTextBoxColumn Hours;
-        private DataGridViewButtonColumn Details;
         private DataGridView dataGridCognate;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private DataGridViewButtonColumn dataGridViewButtonColumn1;
         private DataGridView dataGridRecommended;
         private TextBox textBox6;
         private Panel panel1;
         private DataGridView dataGridGenEd;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
-        private DataGridViewButtonColumn dataGridViewButtonColumn3;
         private DataGridView dataGridTheology;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
-        private DataGridViewButtonColumn dataGridViewButtonColumn4;
         private OpenFileDialog openSaveFileDialog;
         private TextBox textBox5;
         private DataGridView dataGridMinors;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn15;
-        private DataGridViewButtonColumn dataGridViewButtonColumn5;
         private ComboBox majorDisplay1;
         private ComboBox minorDisplay1;
         private ListBox listBox3;
@@ -1726,10 +1691,6 @@
         private Button button7;
         private Button button5;
         private DataGridView DataGridHonors;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn16;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn17;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn18;
-        private DataGridViewButtonColumn dataGridViewButtonColumn6;
         private TextBox HonorsBox;
         private Button searchBackButton;
         private Button searchButton;
@@ -1742,5 +1703,29 @@
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private DataGridViewButtonColumn dataGridViewButtonColumn2;
+        private DataGridViewTextBoxColumn ClassCode;
+        private DataGridViewTextBoxColumn ClassName;
+        private DataGridViewTextBoxColumn Hours;
+        private DataGridViewButtonColumn Details;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn16;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn17;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn18;
+        private DataGridViewButtonColumn dataGridViewButtonColumn6;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn15;
+        private DataGridViewButtonColumn dataGridViewButtonColumn5;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
+        private DataGridViewButtonColumn dataGridViewButtonColumn4;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
+        private DataGridViewButtonColumn dataGridViewButtonColumn3;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private DataGridViewButtonColumn dataGridViewButtonColumn1;
     }
 }
